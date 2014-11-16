@@ -103,7 +103,7 @@
     display:none;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 960px) {
     #mobile_menu {
         display:none;
     }
