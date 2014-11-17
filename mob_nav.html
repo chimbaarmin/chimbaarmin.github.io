@@ -6,8 +6,9 @@
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="stil.css" />
         <link rel="stylesheet" href="slicknav.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     </head>
     <body>
         <nav>
@@ -20,13 +21,15 @@
                 <li><a href="http://www.nummer-index.de/letzte-eintraege/">Letzte Eintraege</a></li>
             </ul>
             <ul id="mobile_menu">
+                <li><form action="http://www.nummer-index.de/" method="get" role="search" class="ni-search">
+                <input class="form-control input-sm" type="text" name="s" value="" length="20" placeholder="Telefonnummer eingeben">
+                </form></li>
                 <li><a href="http://www.nummer-index.de">Home</a></li>
-                <li><a href="http://www.nummer-index.de/suche">Suche</a></li>
                 <li><a href="http://www.nummer-index.de/vorwahlbereich/1">Telefonnummern nach Vorwahl</a></li>
                 <li><a href="http://www.nummer-index.de/nummer-eintragen/">Telefonnummern nach Stadt</a></li>
             </ul>
         </nav>
-        <p>If not using mobile device, please resize your browser window to less than 960px to see the effect.</p>
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script type="text/javascript" src="jquery.slicknav.js"></script>
         <script>

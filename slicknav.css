@@ -54,7 +54,6 @@
     padding:0;
     font-size:0.875em;
     text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
 }
 .slicknav_nav, .slicknav_nav ul {
     list-style: none;
@@ -95,6 +94,11 @@
 }
 .slicknav_nav .slicknav_txtnode {
     margin-left:15px;   
+}
+
+/**Custom code to format search box**/
+.ni-search {
+margin:10px;
 }
 
 /**Custom code to remove menus**/
