@@ -43,7 +43,7 @@
   background-color: #f5f5f5;
 }
 .slicknav_menu {
-    background-image: url("bckg.gif");
+    background-image: url("../mob_nav_alpha/bckg.gif");
     background-repeat: no-repeat;
     background-color: #3B5998;
     padding:5px;
@@ -115,7 +115,7 @@
     #mobile_menu {
         display:none;
     }
-    .menu-2 {
+    .header-layout-2 {
         display:none;
     }
     .slicknav_menu {

@@ -432,3 +432,15 @@
         }
     };
 }(jQuery, document, window));
+
+//ni.de code
+
+var new_menu = '<ul id="mobile_menu"><li><form action="http://www.nummer-index.de/" method="get" role="search" class="ni-search form-inline"><div class="input-group"><input class="form-control" type="text" name="s" value="" length="20" placeholder="Telefonnummer eingeben"><span class="input-group-btn"><button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div></form></li><li><a href="http://www.nummer-index.de">Home</a></li><li><a href="http://www.nummer-index.de/vorwahlbereich/1">Telefonnummern nach Vorwahl</a></li><li><a href="http://www.nummer-index.de/nummer-eintragen/">Telefonnummern nach Stadt</a></li></ul>';
+
+$(document).ready(function(){
+    $('body').append(new_menu);
+});
+
+$(document).ready(function(){
+                $('#mobile_menu').slicknav();
+            });

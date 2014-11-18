@@ -1,16 +1,16 @@
-ul.menu-2 {
+ul.header-layout-2 {
     list-style-type: none;
     margin: 0;
     padding: 10px;
     background-color: #3B5998;
 }
 
-ul.menu-2 li {
+ul.header-layout-2 li {
     display: inline;
     margin: 0px 20px 0px 0px;
 }
 
-ul.menu-2 a {
+ul.header-layout-2 a {
     text-decoration: none;
     color: #fff;
 }
