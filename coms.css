@@ -45,7 +45,7 @@ div.comment-box > h3 {
 
 .comment-date {
     font-size: 10px;
-    margin:2px 2px 2px 10px;
+    margin:2px 0px 2px 0px;
 }
 
 div.comment-box > p:nth-child(4) {
