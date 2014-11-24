@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="coms.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     </head>
     <body>
        <div class="container-fluid">
@@ -75,12 +76,12 @@
            </div>
         </div>
         <script>
-            hashtag_regexp = /#([a-zA-Z0-9]+)/g;
+            hshtg = /#([a-zA-Z0-9_]+)/g;
 
             function linkHashtags(text) {
                 return text.replace(
-                    hashtag_regexp,
-                    '<a class="hashtag" href="http://twitter.com/#search?q=$1">#$1</a>'
+                    hshtg,
+                    '<span class="hshtg">#$1</span>'
                 );
             }
 
