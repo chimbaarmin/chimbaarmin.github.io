@@ -54,18 +54,18 @@ div.comment-box > p:nth-child(4) {
 }
 
 div.comment-box > p:nth-child(3) {
-    font-size: 12px;
-    margin-top: 10px;
+    font-size: 14px;
+    margin: 10px 0px 10px 0px;
 }
 
 .hshtg {
     background-color: #f0ad4e;
     display: inline;
     padding: 3px;
-    margin: 0px 5px 0px 0px;
+    margin: 0px;
     font-size: 10px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 2;
     color: #fff;
     text-align: center;
     white-space: nowrap;
@@ -77,5 +77,6 @@ div.comment-box > p:nth-child(3) {
 }
 
 div.comment-box > p:nth-child(4) {
-    
+    font-size: 12px;
+    margin: 10px;
 }
