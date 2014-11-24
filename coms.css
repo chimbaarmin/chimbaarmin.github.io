@@ -51,3 +51,11 @@ div.comment-box > h3 {
 div.comment-box > p:nth-child(4) {
     margin-top: 20px;
 }
+
+div.comment-box > p:nth-child(3) {
+    font-size: 12px;
+}
+
+.hashtag {
+    color: green;
+}
