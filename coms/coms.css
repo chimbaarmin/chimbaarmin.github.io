@@ -2,22 +2,6 @@ body {
 
 }
 
-aaaa {
-border: 1px solid #000;
-background-color: #777;
-display: inline;
-padding: .2em .6em .3em;
-font-size: 75%;
-font-weight: 700;
-line-height: 1;
-color: #fff;
-text-align: center;
-white-space: nowrap;
-vertical-align: baseline;
-border-radius: .25em;
-box-sizing: border-box;
-}
-
 ol {
     list-style: none;
 }
@@ -27,7 +11,7 @@ div.avatar-box > img {
 }
 
 div.comment-box > h3 {
-    color: #fb9351;
+    color: #F2C483;
     text-transform: uppercase;
     font-size: 16px;
     margin: 0;
@@ -41,7 +25,7 @@ div.comment-box > h3 {
     border: 1px solid #ddd;
     border-left-width: 5px;
     border-radius: 3px;
-    border-left-color: #fb9351;
+    border-left-color: #F2C483;
 }
 
 .comment-date {
@@ -59,7 +43,7 @@ div.comment-box > p:nth-child(3) {
 }
 
 .hshtg {
-    background-color: #f0ad4e;
+    background-color: #F2C483;
     display: inline;
     padding: 3px;
     margin: 0px;
@@ -70,13 +54,41 @@ div.comment-box > p:nth-child(3) {
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    border: 1px solid #ccc;
+    border: 1px solid #eee;
     border-radius: .25em;
     box-sizing: border-box;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 div.comment-box > p:nth-child(4) {
-    font-size: 12px;
+    font-size: 10px;
     margin: 10px;
+}
+
+#comments_content > h4 {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 10px;
+}
+
+.comnum {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #777;
+  border-radius: 10px;
 }

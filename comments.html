@@ -5,7 +5,7 @@
         <title>Comments v0.1</title>
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="coms.css" />
+        <link rel="stylesheet" href="coms/coms.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -88,6 +88,22 @@
             $(document).ready(function(){
                 $('p').each(function() {
                     $(this).html(linkHashtags($(this).html()));
+                });
+            });
+        </script>
+        <script>
+        comnum = /\d+/g;
+
+            function linkComnum(text) {
+                return text.replace(
+                    comnum,
+                    '<span class="comnum">\d+</span>'
+                );
+            }
+
+            $(document).ready(function(){
+                $('#comments_content > h4').each(function() {
+                    $(this).html(linkComnum($(this).html()));
                 });
             });
         </script>
