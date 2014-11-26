@@ -1,14 +1,14 @@
 #the_lights{
-	              background-color:#000;
-	              height:100%;
-	              width:100%;
-	              position:fixed;
-	              top:0;
-	              left:0;
-	              display:none;
-               }
-               #standout{
-                    background-color:white;
-                    position:relative;
-                    z-index:1000;
-               }
+    background-color:#000;
+    height:100%;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    display:none;
+}
+.standout{
+    position:relative;
+    z-index:1000;
+    background-color:white; 
+}
