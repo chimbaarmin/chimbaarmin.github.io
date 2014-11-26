@@ -24,6 +24,11 @@ div.comment-box > h3 {
     border-left-color: #eea236;
 }
 
+#comments {
+margin: 0px;
+padding: 0;
+}
+
 .comment-date {
     font-size: 10px;
     margin:2px 0px 2px 0px;
@@ -104,6 +109,7 @@ div.comment-box > p:nth-child(4) {
 .prevnext_wrapper {
     display: block;
     text-align: center;
+    height: 34px;
 }
 
 .prevnext_label {
