@@ -8,7 +8,7 @@ function linkHashtags(text) {
 }
 
 $(document).ready(function(){
-    $('p').each(function() {
+    $('.comment-box > p').each(function() {
         $(this).html(linkHashtags($(this).html()));
     });
 });
@@ -18,5 +18,5 @@ $.fn.lastWord = function() {
       this.html(text.join(" ") + (text.length > 0 ? " <span class='comnum'>" + last + "</span>" : last));
 };
 $(document).ready(function(){
-    $("h4").lastWord();
+    $("#comments_content > h4").lastWord();
 });
