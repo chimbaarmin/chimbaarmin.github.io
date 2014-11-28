@@ -128,3 +128,12 @@ div.comment-box > p:nth-child(4) {
     width: 34px;
     display: inline-block;
 }
+
+@media screen and (max-width: 960px) {
+    #comments {
+        display:none;
+    }
+    .pagination_wrapper {
+        display: none;
+    }
+}
