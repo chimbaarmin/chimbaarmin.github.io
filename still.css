@@ -1,0 +1,62 @@
+form {
+display: block;
+margin-top: 0em;
+}
+h1 {
+display: block;
+font-size: 2em;
+-webkit-margin-before: 0.67em;
+-webkit-margin-after: 0.67em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}
+div {
+display: block;
+}
+element.style {
+text-align: center;
+}
+user agent stylesheeth6 {
+display: block;
+font-size: 0.67em;
+-webkit-margin-before: 2.33em;
+-webkit-margin-after: 2.33em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}
+.step1_vote_box {
+width: 300px;
+height: 70px;
+padding: 10px 0;
+margin: 0 auto;
+}
+element.style {
+text-align: center;
+}
+p {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+        .step1_vote_up {
+float: left;
+background-image: url('thumbs.png');
+background-size: 200% auto;
+background-position: 70px 0px;
+}
+        .step1_vote_up, .step1_vote_down {
+margin: 0px;
+padding: 0px;
+width: 68px;
+height: 68px;
+background: none;
+border: none;
+color: #fff;
+display: block;
+box-shadow: none;
+transition: none;
+text-transform: none;
