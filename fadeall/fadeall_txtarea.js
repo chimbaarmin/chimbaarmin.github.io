@@ -3,11 +3,11 @@ $(document).ready(function(){
     $(".theSelector").mouseenter(function () {
         $('.theSelector').not(this).css({"z-index":"0"});;
         document.getElementById("the_lights").style.display="block";
-        $("#the_lights").fadeTo("slow",0.8);
+        $("#the_lights").fadeTo("fast",0.8);
     });
     $(".theSelector").mouseleave(function () {
         document.getElementById("the_lights").style.display="block";
-        $("#the_lights").fadeTo("slow",0, function () {
+        $("#the_lights").fadeTo("fast",0, function () {
             $('.theSelector').not(this).css({"z-index":"1000"});
         });
                         
