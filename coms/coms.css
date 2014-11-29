@@ -93,7 +93,7 @@ div.comment-box > p:nth-child(4) {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
-    color: #fff;
+    color: #999;
     background-color: #ddd;
     border-color: #ccc;
     cursor: pointer;
