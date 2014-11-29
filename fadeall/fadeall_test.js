@@ -20,7 +20,7 @@ $(document).ready(function(){
     $( ".brightbox" ).css({"z-index":"1000"});
 });
 
-var the_lights = '<div id="the_lights"></div></div>';
+var the_lights = '';
 
 $(document).ready(function(){
     $('body').append(the_lights);
