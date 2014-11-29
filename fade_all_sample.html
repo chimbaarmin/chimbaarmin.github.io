@@ -3,233 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="still.css" />
+        <meta name="viewport" content="width=device-width">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        
+    <style type="text/css">
+            html {
+                /* In case of WP Admin's bar */
+                margin-top: 0 !important;
+            }
+
+            .outer {
+                display: table;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+
+            .middle {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .inner {
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+
+            .boxed #layout{
+                background:none;
+                /*max-width: 730px;*/
+            }
+
+            .error-box{
+                margin:10px 0;
+                color:#fb9351;
+                font-size:16px;
+            }
+
+            #gateway{
+                margin:0 auto;
+                border: 1px solid #CACACA;
+                padding: 20px;
+                border-radius: 5px;
+                background: #D7EDFD;
+                max-width: 690px;
+            }
+
+            /* BOF STEP_1 ============ */
+
+            /* >>> Substep1 <<< */
+            .step1_text_box{
+                padding: 10px 0;
+            }
+
+            .step1_text_box textarea{
+                width:100%; height:100px !important;
+
+            }
+            #step1_comment_text{background: #fff; }
+
+            .jqueryHashtags .highlighter{
+                pointer-events: none;
+                white-space: pre-wrap;
+                color:transparent;
+                overflow: hidden; 
+                position: absolute;
+                padding-left:7px;
+                padding-top:5px; 
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+                font-size:14px;
+                line-height:20px;
+            }
+
+            .jqueryHashtags .theSelector{
+                background-color: transparent; 
+                direction: ltr; 
+                font-size:14px;
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+                resize:none !important;
+                -webkit-transition: height 0.2s;
+                border: 1px solid #cccccc;
+                padding: 4px 6px;
+                vertical-align:middle;
+                min-height:48px !important;
+                line-height:20px !important;
+            }
+
+            .jqueryHashtags .hashtag{
+                /*background: #585a5e;
+                color:#fff;*/    
+                background: #6595bf;
+                opacity: 0.3;
+            }
+
+            .step1_call_type_box{
+                padding:10px 0;
+            }
+
+            .step1_call_type_item{
+                margin:0px; padding:10px;
+                background:none;
+                border:1px solid #fb9351;
+                border-left:none;
+                color:#000;
+                display: block;
+                float:left;
+                box-shadow:none;
+                transition:none;
+                text-transform: none;
+            }
+
+            .step1_call_type_item:first-child{
+                border-left:1px solid #fb9351;
+            }
+
+            .step1_call_type_item:hover,
+            .step1_call_type_item.active{
+                background: #fb9351;
+                box-shadow:none;
+                transition:none;
+                color: #fff;
+            }
+
+            .step1_vote_box{
+                width:300px; height: 70px;
+                padding: 10px 0;
+                margin:0 auto;
+            }
+            .step1_vote_up,
+            .step1_vote_down{
+                margin:0px; padding:0px;
+                width: 68px; height: 68px;
+                background:none;
+                border:none;
+                color:#fff;
+                display: block;
+                box-shadow:none;
+                transition:none;
+                text-transform: none;
+            }
+
+            .step1_vote_item.active,
+            .step1_vote_item:hover{
+                width: 70px; height: 70px;
+                -webkit-transition: width 0.1s; /* For Safari 3.1 to 6.0 */
+                transition: width 0.1s;     
+                box-shadow:none;
+                background-size: 200% auto !important;
+            }
+
+            .step1_vote_up{
+                float:left;
+                background-image: url('http://www.Nummer-Index.de/wp-content/themes/Truemag-child/images/thumbs.png');
+                background-size: 200% auto;
+                background-position: 70px 0px;  
+            }
+
+            .step1_vote_down{
+                float:right;
+                background-image: url('http://www.Nummer-Index.de/wp-content/themes/Truemag-child/images/thumbs.png');
+                background-size: 200% auto;
+                background-position: 0px 0px
+            }
+
+
+            /* EOF Substep1 */
+
+
+            /* >>> Substep2 <<< */
+
+            .step1_checkbox_subbox{
+                padding:5px 0;
+            }
+
+            .step1_category_box {
+                padding: 10px 0;
+            }
+
+            .step1_category_box_item{
+                width:200px;
+                padding:10px;
+                display:block;
+                float:left;
+            }
+
+            .step1_category_box_item .step1_radio_group input[type=radio]{
+                margin-right:5px;
+            }
+            
+            .step1_dd_tumbler{
+                display: inline-block;
+                font-weight: bold;
+                background: #fb9351;
+                color: #fff;
+                padding: 4px;
+                width: 100%;
+                text-align: center;
+            }
+            .step1_dd_tumbler .arrow{
+                width: 16px;
+                height: 16px;
+                margin-left: 10px;
+                margin-top: 3px;
+                display: inline-block;
+                vertical-align: middle;
+                float: right;
+                background: url('http://www.Nummer-Index.de/wp-content/themes/Truemag-child/images/br_down_icon.png') center right no-repeat;
+            }
+
+            .step1_dd_tumbler .arrow.opened{
+                background: url('http://www.Nummer-Index.de/wp-content/themes/Truemag-child/images/br_up_icon.png') center right no-repeat;
+            }
+            
+            #subscribe_comments{
+                width: 15px;
+                height: 15px;
+                vertical-align: middle;
+            }
+                        
+            .step1_subscr_details_wrapper{
+                background:#dfdfdf;
+                padding:4px 2px;
+            }
+            /* EOF Substep2 */
+
+            /* BOF HELPERS */
+            .red{
+                color:#a00;
+            }
+            .gateway_sbm_btn_wrapper{
+                text-align:center;
+            }
+            input[type=submit]:disabled{
+                background:#ccc;
+            }
+            
+            
+            /* EOF HELPERS */
+            /* EOF STEP_1 ============ */
+            
+            /* BOF STEP_2 ============ */
+            .step2_cpc_item{
+                padding:5px 0;
+                width:335px;
+                float:left;
+            }
+            .step2_cpc_item img{
+                width:75px !important;
+            }
+            
+            
+
+            .step2_content_wrapper{
+                border:1px solid #000;
+                background:#fff;
+                padding:5px
+            }
+            /* EOF STEP_2 ============ */
+        </style>
+        <style type="text/css">/* =Responsive Map fix
+-------------------------------------------------------------- */
+.pw_map_canvas img {
+	max-width: none;
+}</style>
+        <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style>
+<style>
+    h6 {
+        font-size: 1em;
+font-weight: bold;
+line-height: 1.6em;
+        color: #5b4141;
+font-style: normal;
+font-weight: normal;
+font-family: inherit;
+margin: 0 0 0 -0.05em;
+padding: 0.5em 0;
+        display: block;
+font-size: 0.67em;
+-webkit-margin-before: 2.33em;
+-webkit-margin-after: 2.33em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+    }    
+    div {
+    display:block;
+    }
+</style>
+    <script type="text/javascript" src="fadeall/fadeall_txtarea.js"></script>
 </head>
 <body>
     <form action="" method="post" id="gateway" class="step1">
     <h1>Helfen Sie mit!</h1>
-
-    
-    <input type="hidden" name="comment_post_ID" value="89427" id="comment_post_ID">
-    <input type="hidden" name="comment_date" value="2014-11-29 15:06:27" id="comment_date">                       
-    <input type="hidden" name="comment_meta[call_type]" value="">
-    <input type="hidden" name="comment_meta[vote_type]" value="">
-    <input type="hidden" name="comment_meta[text_formatted]">
-
     <div class="subtstep_1 substep">
-
-                    <h6 style="text-align: center;">Bewerten Sie die kurz die Nummer. Daumen hoch oder runter?</h6>
+            <h6 style="text-align: center;">Bewerten Sie die kurz die Nummer. Daumen hoch oder runter?</h6>
             <div class="step1_vote_box">
-                <button class="step1_vote_item step1_vote_up" value="vote_up"></button>
-                <button class="step1_vote_item step1_vote_down" value="vote_down"></button>
-                <div class="clear"></div>
+            <button class="step1_vote_item step1_vote_up" value="vote_up"></button>
+            <button class="step1_vote_item step1_vote_down" value="vote_down"></button>
+            <div class="clear"></div>
             </div>
-
             <p style="text-align:center;" class="step_1vote_result"></p>
-        
-
-        <div class="step1_category_box_wrapper">
-            <h6>Wie würden Sie diese Rufnummer kategorisieren?</h6>
-
-                                        <div class="step1_category_box_item term_7">
-                    <span class="step1_dd_tumbler">BETRUG<div class="arrow"></div></span><br>
-                    <div class="step1_group_wrapper" style="display:none;">
-                                                                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="gewinnspiele" value="329">
-                                    <span>Gewinnspiele</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="scam" value="1933">
-                                    <span>Scam</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="abo_kostenfalle" value="2838">
-                                    <span>Abo &amp; Kostenfalle</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="datendiebstahl_phishing" value="2839">
-                                    <span>Datendiebstahl / Phishing</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group sonstige">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="sonstige_betrug" value="2840">
-                                    <span>Sonstige</span>
-                                                                            <br>
-                                        <input type="text" name="comment_meta[complain_type_others_text]" style="display:none; padding:1px;">
-                                        
-                                </div>    
-                                                                        </div>
-                </div>
-                                            <div class="step1_category_box_item term_2832">
-                    <span class="step1_dd_tumbler">WERBUNG<div class="arrow"></div></span><br>
-                    <div class="step1_group_wrapper" style="display:none;">
-                                                                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="zeitschriften" value="787">
-                                    <span>Zeitschriften</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="versicherungen" value="1081">
-                                    <span>Versicherungen</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="telefon_internet" value="2833">
-                                    <span>Telefon &amp; Internet</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="strom_gas" value="2834">
-                                    <span>Strom &amp; Gas</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="finanzprodukte" value="2835">
-                                    <span>Finanzprodukte</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="spenden" value="2836">
-                                    <span>Spenden</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group sonstige">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="sonstige" value="2837">
-                                    <span>Sonstige</span>
-                                                                            <br>
-                                        <input type="text" name="comment_meta[complain_type_others_text]" style="display:none; padding:1px;">
-                                        
-                                </div>    
-                                                                        </div>
-                </div>
-                                            <div class="step1_category_box_item term_2841">
-                    <span class="step1_dd_tumbler">UMFRAGE<div class="arrow"></div></span><br>
-                    <div class="step1_group_wrapper" style="display:none;">
-                                                                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="marktforschung" value="259">
-                                    <span>Marktforschung</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="meinungsumfragen" value="2842">
-                                    <span>Meinungsumfragen</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group sonstige">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="sonstige_umfrage_2" value="2843">
-                                    <span>Sonstige</span>
-                                                                            <br>
-                                        <input type="text" name="comment_meta[complain_type_others_text]" style="display:none; padding:1px;">
-                                        
-                                </div>    
-                                                                        </div>
-                </div>
-                                    <div class="clear"></div>
-                                            <div class="step1_category_box_item term_2845">
-                    <span class="step1_dd_tumbler">SINNLOS<div class="arrow"></div></span><br>
-                    <div class="step1_group_wrapper" style="display:none;">
-                                                                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="scherzanruf" value="794">
-                                    <span>Scherzanruf</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="telefonstalking" value="2846">
-                                    <span>Telefonstalking</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group sonstige">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="sonstige_sinnlos" value="2847">
-                                    <span>Sonstige</span>
-                                                                            <br>
-                                        <input type="text" name="comment_meta[complain_type_others_text]" style="display:none; padding:1px;">
-                                        
-                                </div>    
-                                                                        </div>
-                </div>
-                                            <div class="step1_category_box_item term_2848">
-                    <span class="step1_dd_tumbler">NÜTZLICH<div class="arrow"></div></span><br>
-                    <div class="step1_group_wrapper" style="display:none;">
-                                                                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="automatisierte_dienste" value="2849">
-                                    <span>Automatisierte Dienste</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="termine_erinnerung" value="2850">
-                                    <span>Termine &amp; Erinnerung</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="verifikationsanrufe" value="2851">
-                                    <span>Verifikationsanrufe</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group sonstige">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="sonstige_nuetzlich" value="2852">
-                                    <span>Sonstige</span>
-                                                                            <br>
-                                        <input type="text" name="comment_meta[complain_type_others_text]" style="display:none; padding:1px;">
-                                        
-                                </div>    
-                                                                        </div>
-                </div>
-                                            <div class="step1_category_box_item term_2853">
-                    <span class="step1_dd_tumbler">EIGENE RUFNUMMER<div class="arrow"></div></span><br>
-                    <div class="step1_group_wrapper" style="display:none;">
-                                                                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="firmeneintrag_eigene_rufnummer" value="2854">
-                                    <span>Firmeneintrag</span>
-                                        
-                                </div>    
-                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="privatanschluss" value="2855">
-                                    <span>Privatanschluss</span>
-                                        
-                                </div>    
-                                                                        </div>
-                </div>
-                                    <div class="clear"></div>
-                                            <div class="step1_category_box_item term_2856">
-                    <span class="step1_dd_tumbler">UNBEKANNT<div class="arrow"></div></span><br>
-                    <div class="step1_group_wrapper" style="display:none;">
-                                                                              
-                                <div class="step1_radio_group ">
-                                    <input type="radio" name="comment_meta[complain_type_id]" data-tag="unbekannte_telefonnummer" value="1023">
-                                    <span>Unbekannte Telefonnummer</span>
-                                        
-                                </div>    
-                                                                        </div>
-                </div>
-                                        <div class="clear"></div>
-        </div><!-- .step1_category_box_wrapper -->
 
         <div class="step1_text_box">
 
@@ -260,186 +348,7 @@
         <input type="submit" value="Weiter" class="gateway_submit_button" disabled="">
     </div>
 
-    <script>
-        jQuery(document).ready(function($){
-            
-            function IsEmail(email) {
-                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                return regex.test(email);
-            }
-            
-            function checkSubmitActionAvailability(){
-                var comment_meta_call_type = $('input[name="comment_meta[call_type]"]').val();
-                var comment_meta_vote_type = $('input[name="comment_meta[vote_type]"]').val();
-                var comment_meta_comment_text = $('input[name="comment_meta[text_formatted]"]').val();
-
-                if(comment_meta_call_type.length > 0 && comment_meta_vote_type.length > 0 && comment_meta_comment_text.length > 0 ){
-
-                    // Check Email
-                    /* var comment_meta_subscr_email = $('input[name="comment_meta[subscr_email]"]');
-                    if(comment_meta_subscr_email.length > 0){
-                        var sSubscrEmail = comment_meta_subscr_email.val();
-                        if(sSubscrEmail.length > 0 && !IsEmail(sSubscrEmail)){
-                            comment_meta_subscr_email.css('border-color','#f00');
-                            $('.gateway_submit_button').attr('disabled', 'disabled');
-                            return false;    
-                        } else {
-                            comment_meta_subscr_email.css('border-color','#DDD');
-                        }
-                    }*/
-                    $('.gateway_submit_button').removeAttr('disabled');
-                    $('.subtstep_2').slideDown();
-
-                } else {
-                    $('.gateway_submit_button').attr('disabled', 'disabled');
-                }
-            }
-            
- 
-            /* BOF CALL TYPE  */
-            $('.step1_call_type_item').click(function(e){
-                e.preventDefault();
-                $(this).toggleClass('active').siblings().removeClass('active');
-                $('input[name="comment_meta[call_type]"]').val($(this).val()); 
-                $(this).addClass('active');
-                
-                var sTagSelected = $(this).data('tag');
-                $('#step1_comment_text').val(function( index, value ) {
-                    return value + " #"+sTagSelected;
-                }).trigger('change');
-                
-                if($(this).val() == 'own_number'){
-                    $('.step1_category_box_item:not(.term_2853)').hide();
-                } else{
-                    $('.step1_category_box_item').show();
-                }
-                checkSubmitActionAvailability();
-                return false;
-            });
-            
-            /* EOF CALL TYPE  */
-            
-            /* BOF VOTE TYPE */
-            $('.step1_vote_item').click(function(e){
-                e.preventDefault();
-                $(this).toggleClass('active').siblings().removeClass('active');
-                $('input[name="comment_meta[vote_type]"]').val($(this).val()); 
-                $(this).addClass('active');
-                
-                switch($(this).val()){
-                    case 'vote_up':
-                        $('.step_1vote_result').html("Sie haben den Anrufer mit der Nummer 0201201852678 positiv bewertet.");
-                        break;
-                    case 'vote_down':
-                        $('.step_1vote_result').html("Sie haben den Anrufer mit der Nummer 0201201852678 negativ bewertet.");
-                        break;
-                    }
-                
-                                                            
-                    checkSubmitActionAvailability();
-                    return false;
-                });
-                /* EOF VOTE TYPE */
-            
-                /* BOF CATEGORIES */
-                $('.step1_dd_tumbler').on('click',function(){
-                    $(this).find('.arrow').toggleClass("opened");
-                    $(this).parent('.step1_category_box_item').find('.step1_group_wrapper').slideToggle();
-                });
-
-                $('input[name="comment_meta[complain_type_id]"]').change(function(){
-                    
-                    var sTagSelected = $(this).data('tag');
-                    $('#step1_comment_text').val(function( index, value ) {
-                        return value + " #"+sTagSelected;
-                    }).trigger('change');
-                
-                    var parentGroupDOM = $(this).parent();
-                    if(parentGroupDOM.hasClass('sonstige')){
-                        $('input[name="comment_meta[complain_type_others_text]"]').val('').hide();
-                        parentGroupDOM.find('input[name="comment_meta[complain_type_others_text]"]').show();
-                    } else {
-                        $('input[name="comment_meta[complain_type_others_text]"]').val('').hide();
-                    }
-                });
-                /* EOF CATEGORIES */
-        
-                /* BOF TAGS */
-                var popularTags = ["unbekannten", "nummer kenn ich nicht", "keine erfahrung", "Gewinnspiele", "vermarkter hotline", "unseriöses", "Betrugsversuch", "datendiebstahl", "unbekanter anruf", "Gewinnspielen", "stalking", "unbekannter", "hotline", "phishing", "lästig", "unseriösen", "abofalle", "meinungsforschung", "inkasso", "unseriöse", "Spam", "abo", "unbekannte", "nervige", "test", "abzocke", "keinen", "spam", "kostenfalle", "spenden", "termine_erinnerung", "fax_erhalten", "seriöse", "verifikationsanrufe", "betrug", "automatisierte_dienste", "firmeneintrag_eigene_rufnummer", "Betrug", "telefonterror", "Telefonterror", "gefährlich", "gewinnspiel", "nervt", "Gewinnspiel", "nervig", "unseriös", "sonstige_nuetzlich", "eigene_nummer", "keiner", "Werbung", "scherzanruf", "finanzprodukte", "sonstige_umfrage_2", "meinungsumfragen", "keine", "marktforschung", "zeitschriften", "seriös", "privatanschluss", "scam", "versicherungen", "strom_gas", "belästigung", "werbung", "sms_erhalten", "telefon_internet", "sonstige_sinnlos", "sonstige", "sonstige_betrug", "datendiebstahl_phishing", "unbekannt", "telefonstalking", "gewinnspiele", "abo_kostenfalle", "unbekannte_telefonnummer", "anruf_erhalten"];
-            
-                $('#step1_comment_text').wrap('<div class="jqueryHashtags"><div class="highlighter"></div></div>').unwrap().before('<div class="highlighter"></div>').wrap('<div class="typehead"></div></div>');
-                $('#step1_comment_text').addClass("theSelector");
-                $('#step1_comment_text').autosize({append: "\n"});
-                $('#step1_comment_text').parent().prev().on('click', function() {
-                    $('#step1_comment_text').parent().find(".theSelector").focus();
-                });
-                
-                $('#step1_comment_text').on("keyup change", function() {
-                
-                    var str = strOriginal = $(this).val();
-                    //str = str.toLowerCase();
-        
-                    //str = str.replace(/\n/g, '<br>');
-                    if(!str.match(/(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?#([a-zA-Z0-9]+)/g)) {
-
-                        // Check for #tags
-                        if(!str.match(/#([a-zA-Z0-9]+)#/g)) {
-                            str = str.replace(/#([a-zA-Z0-9äöüßÄÖÜ_]+)/g,'<span class="hashtag">#$1</span>');
-                        } else {
-                            str = str.replace(/#([a-zA-Z0-9äöüßÄÖÜ]+)#([a-zA-Z0-9äöüßÄÖÜ_]+)/g,'<span class="hashtag">#$1</span>'); 
-                        }
-                        // Check for words
-                    
-                        //var aStrLowerCase = str.toLowerCase();
-                        var aStrLowerCase = str
-                        //var aStrOriginalLowerCase = strOriginal.toLowerCase();
-                        var aStrOriginalLowerCase = strOriginal;
-                        
-                        var aStr = aStrLowerCase.split(' ');
-                        var aStrOriginal = aStrOriginalLowerCase.split(' ');
-                    
-                    
-                        $.each(aStr,function(key, value){
-                            if(value.length > 0){
-                                if($.inArray(value, popularTags) > -1){
-                                    var regVar = new RegExp("(?:^|\\s)("+value+")","g");
-                                    str = str.replace( regVar ,' <span class="hashtag">#$1</span>');  
-                                    strOriginal = strOriginal.replace( regVar ,' #$1');  
-                                }
-                            }
-                        });
-                    } 
-
-                    $(this).parent().parent().find(".highlighter").html(str);
-                    $(this).val(strOriginal)
-                    $('input[name="comment_meta[text_formatted]"]').val(str);
-                    checkSubmitActionAvailability();
-                });
-                
-                $(".highlighter").on('click', function() {
-                    $('#step1_comment_text').focus();
-                });
-            
-                /* EOF TAGS */
-            });
-            
-            $.fn.selectRange = function(start, end) {
-                if(!end) end = start; 
-                return this.each(function() {
-                    if (this.setSelectionRange) {
-                        this.focus();
-                        this.setSelectionRange(start, end);
-                    } else if (this.createTextRange) {
-                        var range = this.createTextRange();
-                        range.collapse(true);
-                        range.moveEnd('character', end);
-                        range.moveStart('character', start);
-                        range.select();
-                    }
-                });
-            };
-    </script>
-
 </form>
+    <div id="the_lights"></div>
 </body>
 </html>
