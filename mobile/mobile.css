@@ -1,0 +1,47 @@
+.menu {
+    display:none
+}
+
+h1 {
+    color: #000;
+    font-size: 18px;
+}
+
+h2 {
+    color: #000;
+    font-size: 16px;
+}
+
+h3 {
+    color: #000;
+    font-size: 14px;
+}
+
+body {
+    font-size: 12px;
+    padding-bottom: 70px;
+}
+
+.hidden {
+    display:none;
+}
+
+.gads {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #000;
+    margin: auto;
+    background-image: url(../ad.png)
+}
+
+.separator {
+    height: 30px;
+}
+
+body > nav > div > button {
+    margin: 10px;
+}
+
+.container {
+    text-align: center;
+}

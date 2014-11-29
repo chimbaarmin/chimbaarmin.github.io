@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#the_lights").fadeTo(1,0);
-    $(".theSelector").mouseenter(function () {
+    $(".theSelector, .gateway_submit_button").mouseenter(function () {
         $('.theSelector').not(this).css({"z-index":"0"});;
         document.getElementById("the_lights").style.display="block";
         $("#the_lights").fadeTo("fast",0.8);
