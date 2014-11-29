@@ -1,18 +1,10 @@
-body {
-    background-color: #F7F5F5;
-}
-
-ol {
+div#comments_content > ol {
     list-style: none;
     margin-top: 0;
 }
 
-li {
+div#comments_content > ol > li {
     margin-top: 0;
-}
-
-div {
-    display: block;
 }
 
 div.avatar-box > img {
