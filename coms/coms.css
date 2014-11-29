@@ -7,6 +7,10 @@ li {
     margin-top: 0;
 }
 
+div {
+    display: block;
+}
+
 div.avatar-box > img {
     display: none;
 }
@@ -38,6 +42,11 @@ padding: 0;
     font-size: 10px;
     margin:2px 0px 2px 0px;
 }
+
+div.comment-box {
+    color: #777;
+}
+
 
 div.comment-box > p:nth-child(4) {
     margin-top: 20px;
@@ -87,6 +96,7 @@ div.comment-box > p:nth-child(4) {
     color: #fff;
     background-color: #ddd;
     border-color: #ccc;
+    cursor: pointer;
 }
 
 .comnum {
@@ -111,22 +121,25 @@ div.comment-box > p:nth-child(4) {
     cursor: pointer;
 }
 
-.prevnext_wrapper {
-    display: block;
-    text-align: center;
-    height: 34px;
+.previous {
+    background: url('../coms/arrow-96-32.png');
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
 }
 
-.prevnext_label {
-    margin: 5px;
-    display: inline-block;
-    vertical-align: top;
+.pagination_wrapper {
+    margin-top: 20px;
+}
+
+.prevnext_wrapper {
 }
 
 .prevnext_item_wrapper {
-    height: 34px;
-    width: 34px;
-    display: inline-block;
+}
+
+.prevnext_label {
+    display: none;
 }
 
 @media screen and (max-width: 960px) {

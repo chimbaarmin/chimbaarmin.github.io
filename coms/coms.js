@@ -21,7 +21,7 @@ $(document).ready(function(){
     $("#comments_content > h4").lastWord();
     $( "#comments_content > h4" ).click(function() {
         $( ".pagination_wrapper" ).toggle( "slow" );
-        $( "#comments" ).toggle( "fast" );
+        $( "#comments" ).toggle( "" );
     });
 });
 
