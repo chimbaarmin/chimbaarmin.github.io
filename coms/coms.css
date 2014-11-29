@@ -46,7 +46,7 @@ div.comment-box > h3 {
 }
 
 div.comment-box {
-    color: #777;
+    color: #777;   
 }
 
 
@@ -96,7 +96,7 @@ div.comment-box > p:nth-child(4) {
     border: 1px solid transparent;
     border-radius: 4px;
     color: #999;
-    background-color: #ddd;
+    background-color: #f5f5f5;
     border-color: #ccc;
     cursor: pointer;
 }
@@ -134,10 +134,8 @@ div.comment-box > p:nth-child(4) {
     margin-top: 20px;
 }
 
-.prevnext_wrapper {
-}
-
-.prevnext_item_wrapper {
+ol > li.comment:nth-child(odd) {
+    background-color: #f5f5f5;
 }
 
 .prevnext_label {
