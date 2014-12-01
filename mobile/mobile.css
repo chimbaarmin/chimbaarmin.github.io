@@ -24,8 +24,7 @@ html, body, .containter-fluid, .mob_site, .row, .col-md-6, .mobiletable {
 
 .navbar-default {
     background-color: #428bca;
-    height: 20%;
-    max-height: 50px;
+    height: 44px;
 }
 
 div.col-md-6 > nav > div {
@@ -42,7 +41,6 @@ div.col-md-6 > nav > div {
 }
 
 nav.navbar-default {
-    height: 20px;
     margin-bottom: 0px;
 }
 
