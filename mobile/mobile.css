@@ -1,4 +1,4 @@
-html, body, .containter-fluid, .mob_site, .row, .col-md-6, .mobiletable {
+html, body, .containter-fluid, .mob_site, .row, .col-md-6 {
     min-height: 100% !important;
     height: 100%;
     min-width: 100% !important;
@@ -24,6 +24,7 @@ html, body, .containter-fluid, .mob_site, .row, .col-md-6, .mobiletable {
 .navbar-default {
     background-color: #428bca;
     height: auto;
+    border: 0;
 }
 
 div.col-md-6 > nav > div {
@@ -33,7 +34,7 @@ div.col-md-6 > nav > div {
 }
 
 .navbar {
-
+    border: 0;
 }
 
 nav.navbar-default {
@@ -51,24 +52,58 @@ nav.navbar.navbar-default.navbar-fixed-top > div > div > strong {
     color: red;
 }
 
-.nidetop {
-    background-color: #428bca;
-    text-align: center;
-    vertical-align: middle;
-    width: 100%;
-    position: relative;
-	top: 50%;
-	transform: translateY(-50%)
+.input-group {
+    width:100%;
+}
+.input-group-btn {
+    width: 40px !important;
 }
 
 body {
-    padding-top: 43px;
+    padding-top: 41px;
     padding-bottom: 45px;
 }
 
 div.btn-group {
     margin: 5px 0;
 }
+
+/* mobile content */
+
+.mobilecontent {
+    height: 200px;
+}
+
+.mobilecontent > form {
+    margin: 15px;
+}
+
+.mobilecontent > p {
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 28px;
+}
+
+.mobilecontent > p > strong {
+    text-transform: uppercase;
+}
+
+.firstp {
+    background-color: green;
+}
+
+.secondp {
+    background-color: red;
+}
+
+.thirdp {
+    background-color: yellow;
+}
+
+/*  */
 
 @media screen and (max-width: 960px) {
     .mob_site {
