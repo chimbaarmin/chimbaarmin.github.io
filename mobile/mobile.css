@@ -110,16 +110,37 @@ div.btn-group {
     text-align: center;
 }
 
+.ni-search {
+    display: none;
+}
+
 .lia {
     background-color: #5697d0;
+     display: none;
+}
+
+.liaa {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    height: 70px;
+    text-align: center;
+    padding-top:150px;
 }
 
 .lib {
     background-color: #6aa3d5;
+     display: none;
 }
 
 .lic {
     background-color: #7eb0db;
+     display: none;
 }
 
 /*  */
