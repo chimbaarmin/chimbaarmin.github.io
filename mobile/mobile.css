@@ -5,6 +5,26 @@ html, body, .containter-fluid, .mob_site, .row, .col-md-6 {
     width: 100%;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    text-align: center;
+}
+li > a:link, li > a:hover, li > a:active, li > a:visited {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
 .row {
     margin: 0;
 }
@@ -53,6 +73,10 @@ nav.navbar.navbar-default.navbar-fixed-top > div > div > strong {
     color: red;
 }
 
+.not-loved {
+    color: black;
+}
+
 .input-group {
     width:100%;
 }
@@ -83,24 +107,17 @@ div.btn-group {
     padding: 15px;
     margin: 0;
     text-align: center;
-    color: #fff;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 28px;
 }
 
-.mobilecontent > p > strong {
-    text-transform: uppercase;
-}
-
-.firstp {
+.lia {
     background-color: #5697d0;
 }
 
-.secondp {
+.lib {
     background-color: #6aa3d5;
 }
 
-.thirdp {
+.lic {
     background-color: #7eb0db;
 }
 
