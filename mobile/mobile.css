@@ -31,7 +31,9 @@ div.col-md-6 > nav > div {
     text-align: center;
     vertical-align: middle;
     width: 100%;
-
+    position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .navbar {
@@ -44,7 +46,7 @@ nav.navbar-default {
 
 nav.navbar.navbar-default.navbar-fixed-top > div > div > strong {
     color: #fff;
-    font-size: 28px;
+    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
 }
 
