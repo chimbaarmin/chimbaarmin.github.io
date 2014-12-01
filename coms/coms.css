@@ -12,22 +12,22 @@ div.avatar-box > img {
 }
 
 div.comment-box > h3 {
-    color: #ccc;
+    color: #6075a6;;
     text-transform: uppercase;
     font-size: 16px;
     margin: 0;
     padding: 0;
     font-weight: 700;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #6075a6;;
 }
 
 .comment-box {
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #6075a6;;
     border-left-width: 5px;
     border-radius: 3px;
-    border-left-color: #ccc;
+    border-left-color: #6075a6;;
 }
 
 #comments {
@@ -42,7 +42,7 @@ div.comment-box > h3 {
 }
 
 div.comment-box {
-    color: #777;   
+    color: #333;   
 }
 
 
@@ -56,18 +56,18 @@ div.comment-box > p:nth-child(3) {
 }
 
 .hshtg {
-    background-color: #ddd;
+    background-color: #d0d6e4;
     display: inline;
     padding: 3px;
     margin: 0px;
     font-size: 10px;
     font-weight: 700;
     line-height: 2;
-    color: #aaa;
+    color: #555;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    border: 1px solid #ccc;
+    border: 1px solid #6075a6;;
     border-radius: .25em;
     box-sizing: border-box;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -91,9 +91,9 @@ div.comment-box > p:nth-child(4) {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
-    color: #999;
+    color: #333;
     background-color: #f3f3f3;
-    border-color: #ccc;
+    border-color: #6075a6;;
     cursor: pointer;
 }
 
@@ -108,7 +108,7 @@ div.comment-box > p:nth-child(4) {
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    background-color: #ccc;
+    background-color: #6075a6;;
     border-radius: 10px;
 }
 
@@ -117,17 +117,24 @@ div.comment-box > p:nth-child(4) {
     width: 32px;
     height: 32px;
     cursor: pointer;
+    margin-left: 50px;
 }
 
 .previous {
     background: url('../coms/arrow-96-32.png');
+    float:left;
     width: 32px;
     height: 32px;
     cursor: pointer;
 }
 
 .pagination_wrapper {
-    margin-top: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.prevnext_item_wrapper {
+    width: 50px;
 }
 
 ol > li.comment:nth-child(odd) {
@@ -142,11 +149,25 @@ ol > li.comment:nth-child(even) {
     display: none;
 }
 
-@media screen and (max-width: 960px) {
-    #comments {
-        display:none;
-    }
-    .pagination_wrapper {
-        display: none;
-    }
+button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #333;
+    background-color: #f3f3f3;
+    border-color: #6075a6;;
+    cursor: pointer;
+}
+
+.col-md-6 {
+    margin-top:30px;
 }

@@ -17,11 +17,5 @@ $.fn.lastWord = function() {
       var last = text.pop();
       this.html(text.join(" ") + (text.length > 0 ? " <span class='comnum'>" + last + "</span>" : last));
 };
-$(document).ready(function(){
-    $("#comments_content > h4").lastWord();
-    $( "#comments_content > h4" ).click(function() {
-        $( ".pagination_wrapper" ).toggle( "slow" );
-        $( "#comments" ).toggle( "" );
-    });
-});
+
 
