@@ -12,10 +12,16 @@ $(document).ready(function(){
         $(this).html(linkHashtags($(this).html()));
     });
 });
+
 $.fn.lastWord = function() {
       var text = this.text().trim().split(" ");
       var last = text.pop();
       this.html(text.join(" ") + (text.length > 0 ? " <span class='comnum'>" + last + "</span>" : last));
 };
 
+
+
+$(document).ready(function() {
+    $("div.pagination_wrapper").wrap('<div class="paginaton_frame"></div>');
+});
 

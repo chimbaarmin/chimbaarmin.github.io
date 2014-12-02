@@ -31,7 +31,7 @@ div.comment-box > h3 {
 }
 
 #comments {
-    margin: 0px;
+    margin: 0;
     padding: 0;
 }
 
@@ -63,7 +63,7 @@ div.comment-box > p:nth-child(3) {
     font-size: 10px;
     font-weight: 700;
     line-height: 2;
-    color: #555;
+    color: #6075a6;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
@@ -79,22 +79,13 @@ div.comment-box > p:nth-child(4) {
 }
 
 #comments_content > h4 {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.42857143;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+
+    border-color: #6075a6;
+    padding: 10px 0;
     text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    color: #333;
-    background-color: #f3f3f3;
-    border-color: #6075a6;;
-    cursor: pointer;
+    color: #6075a6;
 }
 
 .comnum {
@@ -128,6 +119,12 @@ div.comment-box > p:nth-child(4) {
     cursor: pointer;
 }
 
+.paginaton_frame {
+    width: 82px;
+    text-align: center;
+    margin: auto;
+}
+
 .pagination_wrapper {
     margin: 20px 0;
     text-align: center;
@@ -149,7 +146,11 @@ ol > li.comment:nth-child(even) {
     display: none;
 }
 
-button {
+.comment_button {
+    text-align: center;
+}
+
+div.col-md-6 > button, div.widgets > button {
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
@@ -162,11 +163,17 @@ button {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
-    color: #333;
+    color: #6075a6;
     background-color: #f3f3f3;
     border-color: #6075a6;;
     cursor: pointer;
 }
+
+div.col-md-6 > button:hover, div.widgets > button:hover {
+    background-color: #6075a6;
+    color: #fff;
+}
+
 
 .col-md-6 {
     margin-top:30px;
