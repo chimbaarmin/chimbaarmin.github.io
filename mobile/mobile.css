@@ -87,8 +87,6 @@ nav.navbar.navbar-default.navbar-fixed-top > div > div > strong {
 
 body {
     padding-top: 41px;
-    padding-bottom: 45px;
-
 }
 
 div.btn-group {
@@ -175,6 +173,42 @@ div.comment-box > p:nth-child(4) {
 
 ol#comments > li {
     display:none;
+}
+
+.comment {
+    position: relative;
+	background-color: #fff;
+	border: 8px solid #428bca;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	-webkit-box-shadow: 2px 2px 4px #888;
+	-moz-box-shadow: 2px 2px 4px #888;
+	box-shadow: 2px 2px 4px #888;
+    margin: 0 20px 50px 20px;
+}
+
+.comment:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 30px;
+	top: 100%;
+	border: 25px solid;
+	border-color: #428bca transparent transparent #428bca;
+}
+
+
+.comment:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 38px;
+	top: 100%;
+	border: 15px solid;
+	border-color: #fff transparent transparent #fff;
 }
 
 /*  */
