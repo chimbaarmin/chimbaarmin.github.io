@@ -69,6 +69,7 @@ p.step_1vote_result {
 .step1_group_wrapper {
     padding: 0;
     margin: 0 0 1px 0;
+    text-align: center;
 }
 
 .btn {
@@ -79,8 +80,8 @@ p.step_1vote_result {
 div.spandiv {
     width: 100%;
     text-align: center;
-    background-color: #6075a6;
-    color: #fff;
+    background-color: #e6e6e6;
+    color: #000;
     margin-top: 1px;
     padding: 5px;
     cursor: pointer;
@@ -116,10 +117,6 @@ div.gateway_sbm_btn_wrapper {
     text-align: center;
 }
 
-.hiddenhidden {
-    display: none;
-}
-
 /* ribbon */
 
 .ribbon_frame {
@@ -141,4 +138,45 @@ div.gateway_sbm_btn_wrapper {
     left: -25px;
     border: 15px solid;
 	border-color: #428bca #428bca transparent transparent ;
+}
+
+/* form2 */
+
+.ribbon_frame_middle {
+    background-color: #6075a6;
+    color: #f5f5f5;
+    width:100%;
+    text-align: center;
+}
+
+.ribbon_frame_middle h1 {
+    font-size: 20px;
+}
+
+div.step1_input_box > input {
+    margin: 10px 0;
+}
+
+div.step1_checkbox_subbox {
+    width:100%;
+    text-align: center;
+    display: none;
+}
+
+#gateway > div.gateway_sbm_btn_wrapper > input {
+    margin-top: 15px;
+}
+
+.frame_menu {
+    display: none;
+}
+
+.frame_menu_title {
+    width: 100%;
+    text-align: center;
+    background-color: #6075a6;
+    color: #f5f5f5;
+    font-size: 20px;
+    padding: 5px 0;
+    cursor: pointer;
 }

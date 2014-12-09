@@ -12,12 +12,18 @@ $(document).ready(function(){
     $("span.step1_dd_tumbler").wrap('<div class="spandiv"></div>');
     $("textarea#step1_comment_text").addClass('form-control');
     $("input.gateway_submit_button").addClass('btn');
-    $("div.step1_group_wrapper").addClass('hiddenhidden');
+    $("div.step1_group_wrapper").css("display", "none");
     $( "div.step1_category_box_item" ).click(function() {
-        $("div.step1_group_wrapper").addClass('hiddenhidden');
-        $(this).children("div.step1_group_wrapper").removeClass('hiddenhidden');
+        $(this).children("div.step1_group_wrapper").toggle();
     });
-    $("#gateway > h1").wrap('<div class="ribbon_frame"></div>');
+    $("form.step1 > h1").wrap('<div class="ribbon_frame"></div>');
     $("h6").wrap('<div class="ribbon_frame_small"></div>');
+    $( "div.ribbon_frame" ).after( '<div class="triangle-1"></div>' );
+    $("form.step2 > h1").wrap('<div class="ribbon_frame_middle"></div>');
+    $("#gateway > div.subtstep_2.substep > div > div > input[type='text']").addClass("form-control");
+    $("div.step1_category_box_item").wrapAll('<div class="frame_menu"></div>');
+    $("div.frame_menu").before('<div class="frame_menu_title">Kategorien ▾</div>');
+    $( "div.frame_menu_title" ).click(function() {
+        $("div.frame_menu").toggle();
+    });
 });
-
