@@ -12,7 +12,7 @@ div.avatar-box > img {
 }
 
 div.comment-box > h3 {
-    color: #6075a6;;
+    color: #6075a6;
     text-transform: uppercase;
     font-size: 16px;
     margin: 0;
@@ -27,7 +27,7 @@ div.comment-box > h3 {
     border: 1px solid #6075a6;;
     border-left-width: 5px;
     border-radius: 3px;
-    border-left-color: #6075a6;;
+    border-left-color: #6075a6;
 }
 
 #comments {
