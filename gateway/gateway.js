@@ -17,5 +17,7 @@ $(document).ready(function(){
         $("div.step1_group_wrapper").addClass('hiddenhidden');
         $(this).children("div.step1_group_wrapper").removeClass('hiddenhidden');
     });
+    $("#gateway > h1").wrap('<div class="ribbon_frame"></div>');
+    $("h6").wrap('<div class="ribbon_frame_small"></div>');
 });
 

@@ -9,15 +9,13 @@ br {
 #gateway {
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #6075a6;
-    border-radius: 3px;
-    border-left-color: #6075a6;
+
 }
 
 #gateway h1 {
     margin: 0 0 20px 0;
-    padding: 0;
-    color: #6075a6;
+    padding: 10px;
+    color: #f5f5f5;
     text-align: center;
 }
 
@@ -30,8 +28,7 @@ div.step1_vote_box {
 }
 
 h6 {
-    font-size: 18px;
-    border-bottom: 1px solid #6075a6;
+    font-size: 16px;
     color: #6075a6;
 }
 
@@ -100,6 +97,8 @@ div.step1_call_type_box {
     margin: 25px 0;
 }
 
+
+
 div.step1_category_box_wrapper > h6 {
     margin-bottom: 25px;
 }
@@ -113,6 +112,23 @@ textarea#step1_comment_text {
     margin: 10px 0;
 }
 
+div.gateway_sbm_btn_wrapper {
+    text-align: center;
+}
+
 .hiddenhidden {
     display: none;
+}
+
+/* ribbon */
+
+.ribbon_frame {
+    width:100%;
+    position: relative;
+    left: -25px;
+    background-color: #6075a6;
+}
+
+.ribbon_frame_small {
+    text-align: center;
 }
