@@ -55,6 +55,11 @@ div.step1_vote_box > button:hover {
     
 }
 
+p.step_1vote_result {
+    text-align: center;
+    font-style: italic;
+}
+
 /* 
 #gateway > div.subtstep_1.substep > div.step1_category_box_wrapper, #gateway > div.subtstep_1.substep > div.step1_text_box, #gateway > div.gateway_sbm_btn_wrapper  {
     display: none;
@@ -100,10 +105,6 @@ div.step1_call_type_box {
 
 div.step1_category_box_wrapper > h6 {
     margin-bottom: 25px;
-}
-
-div.step1_category_box_item {
-    
 }
 
 textarea#step1_comment_text {
