@@ -179,4 +179,10 @@ div.step1_checkbox_subbox {
     font-size: 20px;
     padding: 5px 0;
     cursor: pointer;
+    border: 1px solid #b6b6b6;
+}
+
+.frame_menu_title:hover {
+    background-color: #eee;
+    color: #6075a6;
 }
