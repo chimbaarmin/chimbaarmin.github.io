@@ -80,11 +80,16 @@ p.step_1vote_result {
 div.spandiv {
     width: 100%;
     text-align: center;
-    background-color: #e6e6e6;
-    color: #000;
+    background-color: #eee;
+    color: #6075a6;
     margin-top: 1px;
     padding: 5px;
     cursor: pointer;
+}
+
+div.spandiv:hover {
+    background-color: #6075a6;
+    color: #eee;
 }
 
 div.step1_radio_group {

@@ -13,8 +13,8 @@ $(document).ready(function(){
     $("textarea#step1_comment_text").addClass('form-control');
     $("input.gateway_submit_button").addClass('btn');
     $("div.step1_group_wrapper").css("display", "none");
-    $( "div.step1_category_box_item" ).click(function() {
-        $(this).children("div.step1_group_wrapper").toggle();
+    $( ".spandiv" ).click(function() {
+       $( this ).next().next().toggle();
     });
     $("form.step1 > h1").wrap('<div class="ribbon_frame"></div>');
     $("h6").wrap('<div class="ribbon_frame_small"></div>');
@@ -27,3 +27,4 @@ $(document).ready(function(){
         $("div.frame_menu").toggle();
     });
 });
+
