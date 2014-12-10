@@ -23,7 +23,7 @@ $(document).ready(function(){
     $("form.step2 > h1").wrap('<div class="ribbon_frame_middle"></div>');
     $("#gateway > div.subtstep_2.substep > div > div > input[type='text']").addClass("form-control");
     $("div.step1_category_box_item").wrapAll('<div class="frame_menu"></div>');
-    $("div.frame_menu").before('<div class="frame_menu_title">Kategorien ▾</div>');
+    $("div.frame_menu").before('<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span><div class="frame_menu_title">Kategorien ▾</div>');
     $( "div.frame_menu_title" ).click(function() {
         $("div.frame_menu").toggle();
     });
