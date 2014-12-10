@@ -7,8 +7,8 @@ $(document).ready(function(){
     $("div, h1, h2, h3, h4, h5, h6, p").removeAttr("style");
     $("div.step1_subscr_details_wrapper > input").removeAttr("style");
     $("step1_vote_box").wrap('<div class="centereddiv"></div>');
-    $("button.step1_call_type_item").addClass('btn btn-default btn-sm');
-    $("div.step1_call_type_wrapper").addClass('btn-group');
+    $("button.step1_call_type_item").addClass('btn btn-default');
+    $("div.step1_call_type_wrapper").addClass('btn-group-xs');
     $("div.step1_radio_group").addClass('input-group');
     $("span.step1_dd_tumbler").wrap('<div class="spandiv"></div>');
     $("textarea#step1_comment_text").addClass('form-control');
