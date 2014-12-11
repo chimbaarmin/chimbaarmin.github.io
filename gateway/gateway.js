@@ -24,8 +24,11 @@ $(document).ready(function(){
     $("#gateway > div.subtstep_2.substep > div > div > input[type='text']").addClass("form-control");
     $("div.step1_category_box_item").wrapAll('<div class="frame_menu"></div>');
     $("div.frame_menu").before('<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span><div class="frame_menu_title">Kategorien ▾</div>');
-    $( "div.frame_menu_title" ).click(function() {
-        $("div.frame_menu").toggle();
+    $( "div.frame_menu_title" ).hover(function() {
+        $("div.frame_menu").show();
     });
+    $(".step3 > h1").wrap('<div class="ribbon_frame_middle"></div>');
+    $("#gateway > div.gateway_sbm_btn_wrapper > button").addClass('btn');
+    $("#gateway > div.step2_content_wrapper > div.step2_cpc_item").addClass('col-md-6');
 });
 

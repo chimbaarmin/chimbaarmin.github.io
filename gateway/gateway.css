@@ -163,7 +163,11 @@ div.step1_input_box > input {
 div.step1_checkbox_subbox {
     width:100%;
     text-align: center;
-    display: none;
+}
+
+#gateway > div.subtstep_2.substep > div > div > div.step1_checkbox_subbox > label {
+    text-decoration: none;
+    font-weight: 300;
 }
 
 #gateway > div.gateway_sbm_btn_wrapper > input {
@@ -183,14 +187,14 @@ div.step1_checkbox_subbox {
     padding: 5px 0;
     cursor: pointer;
     border: 1px solid #b6b6b6;
-    margin-top: -50px;
+    margin-top: -30px;
     
 }
 
 #gateway > div.subtstep_1.substep > div.step1_category_box_wrapper > span {
     font-size: 50px;
     position: relative;
-    top: 0;
+    top: 20px;
     left: 15px;
     color: #f3f3f3;
     /* Safari */
@@ -201,4 +205,47 @@ div.step1_checkbox_subbox {
     -ms-transform: rotate(-45deg);
     /* Opera */
     -o-transform: rotate(-45deg);
+}
+
+/* step 3 */
+
+.step3 p {
+    font-size: 16px;
+    color: #6075a6;
+    padding: 10px;
+}
+
+#gateway.step3 > div.step2_content_wrapper {
+    height: 100%;
+    text-align: center;
+}
+
+#gateway.step3 > div.step2_content_wrapper > div > div.ribbon_frame_small {
+    margin: 0;
+}
+
+#gateway.step3 > div.step2_content_wrapper > div > div.ribbon_frame_small > h6 {
+    line-height: 95px;
+    margin: 0;
+    font-size: 12px;
+}
+
+.step2_cpc_item img {
+    width: 75px !important;
+    height: 75px !important;
+    float: left;
+    border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+    border: 5px solid #6075a6;
+    margin: 10px;
+}
+
+.step2_cpc_item img:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+
+#gateway > div.gateway_sbm_btn_wrapper > button {
+    margin-top: 25px;
 }
