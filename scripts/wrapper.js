@@ -1,4 +1,4 @@
-/* Nummer-Index.De Unwrapper v1.0 */
+/* Nummer-Index.De Wrapper v1.0 */
 
 $(document).ready(function(){
     $("div.outer").wrap('<div class="col-md-6"></div>');
