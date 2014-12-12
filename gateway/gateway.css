@@ -249,3 +249,8 @@ div.step1_checkbox_subbox {
 #gateway > div.gateway_sbm_btn_wrapper > button {
     margin-top: 25px;
 }
+
+body > div > div > div.col-md-6 > textarea {
+    display: none;
+    width: 0 !important;
+}
