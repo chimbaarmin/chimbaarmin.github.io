@@ -13,15 +13,21 @@ $(document).ready(function(){
     $("div.t_upper_body_right_btn_container > button").addClass("btn btn-default");
     $("#telefonnummer_wrapper > div.t_upper_body > div.t_upper_body_item.t_upper_body_highglight > span > strong").wrap('<div class="aus_strong_div"></div>');
     $("#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1), #telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2), #telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(3)").wrapAll('<div class="wrapper_small"></div>');
-    $("#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > ul").addClass("list-group");
-    $("#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > ul > li").addClass("list-group-item");
+    $("#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > ul, #sidebar_phoneprofile > div:nth-child(3) > ul").addClass("list-group");
+    $("#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > ul > li, #sidebar_phoneprofile > div:nth-child(3) > ul > li").addClass("list-group-item");
     $("#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div").wrap('<li class="list-group-item"></li>');
     $("#subscription_box > div.subscription_box_initial > input:nth-child(7)").addClass("btn btn-default");
     $("input.subscription_box_email").addClass("form-control");
     $("#subscription_box > div.subscription_box_initial > span:nth-child(1)").prepend('<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> ');
     $("#comment_text").addClass("form-control");
     $("#comment_form_onpage > div.initial_view > div.sbm_btn_wrapper > input").addClass("btn btn-default");
+    $("#sidebar_phoneprofile > div:nth-child(3) > h3").append(" ▼");
+    $("#text-65 > div.textwidget > li").wrapAll("<ul></ul>");
+    $("#text-52 > div.textwidget > a > img").wrap('<div class="img_wrap"></div>');
+    $("#text-65 > div.textwidget > a").wrap('<div class="link_wrap"></div>');
 });
+
+
 
 
 
