@@ -19,6 +19,8 @@ $(document).ready(function(){
     $("#subscription_box > div.subscription_box_initial > input:nth-child(7)").addClass("btn btn-default");
     $("input.subscription_box_email").addClass("form-control");
     $("#subscription_box > div.subscription_box_initial > span:nth-child(1)").prepend('<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> ');
+    $("#comment_text").addClass("form-control");
+    $("#comment_form_onpage > div.initial_view > div.sbm_btn_wrapper > input").addClass("btn btn-default");
 });
 
 

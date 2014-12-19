@@ -451,6 +451,55 @@ div.wrapper_small > div > div:nth-child(even) {
     color: red;
 }
 
+#comment_form_onpage {
+    border: 1px solid #6075a6;
+    background-color: #fff;
+    color: #6075a6;
+    padding: 0px;
+}
+
+#comment_form_onpage {
+    clear: both;
+}
+
+/* Minimizer for comment box */
+
+#comment_form_onpage > div.initial_view > h4, #comment_form_onpage > div.initial_view > h6, #comment_form_onpage > div.initial_view > div.vote_box, #comment_form_onpage > div.initial_view > p, #comment_form_onpage > div.initial_view > div.category_box_wrapper, #comment_form_onpage > div.initial_view > div.text_box > div.call_type_box, #comment_form_onpage > div.initial_view > div.text_box > h6, #comment_form_onpage > div.processing_view {
+    display: none;
+}
+
+/* Minimizer end */
+
+#comment_form_onpage > h3 {
+    margin:0;
+    padding: 10px;
+    background-color: #6075a6;
+    color: #f3f3f3;
+    font-size: 16px;
+}
+
+#comment_form_onpage > div.initial_view > div.text_box {
+    margin: 10px;
+}
+
+#comment_form_onpage > div.initial_view > div.text_box > em {
+    font-size: 12px;
+}
+
+#comment_text {
+    margin-top: 10px;
+}
+
+#comment_form_onpage > div.initial_view > div.sbm_btn_wrapper {
+    text-align: center;
+}
+
+#comment_form_onpage > div.status_view > h3 {
+    text-align: center;
+    font-size: 16px;
+    margin: 20px;
+}
+
 #footer, #telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(5), #sidebar_phoneprofile > div:nth-child(3), #sidebar_phoneprofile > div.header-phone-formats-widget, #comment_area_phoneprofile > div:nth-child(2) {
     display: none;
 }
