@@ -1,0 +1,457 @@
+body {
+    background-color: #f3f3f3;
+}
+
+#telefonnummer_wrapper > div.t_breadcrumb_zone {
+    background-color: #6075a6;
+    padding: 10px;
+    color: #f3f3f3;
+}
+
+#telefonnummer_wrapper > div.t_breadcrumb_zone > div.t_breadcrumb_zone_breadcrumbs {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+#telefonnummer_wrapper > div.t_breadcrumb_zone > div.t_breadcrumb_zone_breadcrumbs > a, #telefonnummer_wrapper > div.t_breadcrumb_zone > div.t_breadcrumb_zone_breadcrumbs > span > a {
+    color: #f3f3f3;
+}
+
+#telefonnummer_wrapper > div.t_breadcrumb_zone > div.t_breadcrumb_zone_breadcrumbs > a:hover, #telefonnummer_wrapper > div.t_breadcrumb_zone > div.t_breadcrumb_zone_breadcrumbs > span > a:hover {
+    text-decoration: none;
+}
+
+#telefonnummer_wrapper > div.t_breadcrumb_zone > div.t_breadcrumb_zone_comments {
+    display: none;
+}
+
+h1.h1_profile {
+    background-color: #6075a6;
+    color: #f3f3f3;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px 10px 10px;
+    font-size: 30px;
+}
+
+#telefonnummer-page-ad-h1, #text-142 {
+    display: none;
+}
+
+div.t_upper_body {
+    position: relative;
+    display: block;
+    padding: 0;
+    margin: 15px;
+    background-color: #fff;
+    border: 1px solid #6075a6;
+}
+
+#telefonnummer_wrapper > div.t_upper_body > div.t_upper_body_item.t_upper_body_highglight > h2 {
+    background-color: #6075a6;
+    color: #f3f3f3;
+    font-size: 18px;
+    text-align: right;
+    padding: 10px;
+    margin: 0;
+}
+
+#telefonnummer_wrapper > div.t_upper_body > div.t_upper_body_item.t_upper_body_highglight > h2 > a {
+    color: #f3f3f3;
+}
+
+.info_sign_div {
+    text-align: center;
+}
+
+#telefonnummer_wrapper > div.t_upper_body > div.t_upper_body_item.t_upper_body_highglight > span > span {
+    font-size: 50px;
+    color: #6075a6;
+    float: left;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+#telefonnummer_wrapper > div.t_upper_body > div.t_upper_body_item.t_upper_body_highglight > span > br {
+    clear: both;
+}
+
+#telefonnummer_wrapper > div.t_upper_body > div.t_upper_body_item.t_upper_body_highglight > div.t_upper_body_right_subitem.t_upper_body_right_subitem_vote > div {
+    text-align: center;
+}
+
+.btn_vote_up_110, .btn_vote_down_110 {
+    border: 0;
+    background-color: #ffffff;
+    color: #6075a6;
+    font-size: 50px;
+    height: 53px;
+    margin-top: 20px;
+}
+
+#telefonnummer_wrapper > div.t_upper_body > div.t_upper_body_item.t_upper_body_highglight > div.t_upper_body_right_subitem.t_upper_body_right_subitem_vote > div > span:nth-child(2), #telefonnummer_wrapper > div.t_upper_body > div.t_upper_body_item.t_upper_body_highglight > div.t_upper_body_right_subitem.t_upper_body_right_subitem_vote > div > span:nth-child(4) {
+    display: none;
+}
+
+.btn-default {
+    margin: 15px 0;
+    background-color: #f3f3f3 !important;
+}
+
+.btn-default:hover {
+    background-color: #6075a6 !important;
+    color: #f3f3f3;
+}
+
+.aus_strong_div {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#telefonnummer_wrapper > div.t_upper_body > div.t_upper_body_item.t_upper_body_highglight > span > div > strong {
+    font-weight: 300;
+}
+
+div.t_upper_body_right_subitem.t_upper_body_right_subitem_stats {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 300;  
+    margin-left: 15px;
+}
+
+#telefonnummer_wrapper > div.t_upper_body > div.t_upper_body_item.t_upper_body_highglight > div.t_upper_body_right_btn_container {
+    text-align: center;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(1) > div:nth-child(2) {
+    border: 1px solid #6075a6;
+    border-bottom: 0;
+    background-color: #ffffff;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(1) > div.t_middle_body_topchart_item.caption > div > h3 {
+    background-color: #6075a6;
+    color: #f3f3f3;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+    margin: 0;
+    font-weight: 500;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) {
+    border: 1px solid #6075a6;
+    border-top: 0;
+    background-color: #ffffff;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div {
+    text-transform: none;
+    margin: 0;
+    color: #6075a6;
+    padding: 10px;
+    font-size: 12px;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div > h3 {
+    font-size: 16px;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+span.green {
+    color: green;
+    padding-right: 10px;
+}
+
+span.red {
+    color: red;
+    padding-left: 10px;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(1) > div:nth-child(3) {
+    
+}
+
+div.wrapper_small {
+    display: inline-block;
+}
+
+div.clear {
+    padding: 0 !important;
+}
+
+div.wrapper_small > div > div:nth-child(odd) {
+    padding: 5px 15px;
+    color: #f3f3f3;
+    background-color: #6075a6;
+}
+
+div.wrapper_small > div > div:nth-child(even) {
+    text-align: right;
+    border-top: 0;
+    margin-bottom: 15px;
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    background-color: #f3f3f3;
+    border: 1px solid #6075a6;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div.t_middle_body_topchart_item.regular > div {
+    display: none;
+}
+
+#pw_map_548ebc3568c2b {
+    border: 1px solid #6075a6;
+    margin: 15px 0;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) {
+    text-align: center;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(2) > div.t_middle_body_topchart_item.caption > div:nth-child(1) > h3 {
+    display: inline-block;
+    float: left;
+    width: 49%;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    font-size: 14px;
+    background-color: #6075a6;
+    padding: 5px;
+    color: #f3f3f3;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(2) > div.t_middle_body_topchart_item.caption > div:nth-child(2) > h3 {
+    display: inline-block;
+    float:right;
+    width: 49%;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    font-size: 14px;
+    background-color: #6075a6;
+    padding: 5px;
+    color: #f3f3f3;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > ul {
+    clear: both;
+    float: left;
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    width: 49%;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+    float: right;
+    display: inline-block;
+    width: 49%;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div.t_middle_body_subscribtion_box {
+    clear: both;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div > ul > li:last-child {
+    display: none;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div.t_middle_body_subscribtion_box > div.t_middle_body_subscribtion_box_subscription {
+    border: 1px solid #6075a6;
+    text-align: center;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+.subscription_box_caption {
+    display: inline-block;   
+}
+
+#subscription_box > div.subscription_box_initial > span:nth-child(1) {
+    padding: 5px;
+    color: #f3f3f3;
+    background-color: #6075a6;
+    width: 100%;
+    font-size: 25px;
+}
+
+#subscription_box > div.subscription_box_initial > span:nth-child(3) {
+    margin: 10px 0;
+    color: #6075a6;
+    font-size: 20px;
+}
+
+#subscription_box > div.subscription_box_initial > br:nth-child(6) {
+    display: none;
+}
+
+#subscription_box > div.subscription_box_loading {
+    display: none;
+}
+
+#subscription_box > div.subscription_box_status {
+    display: none;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div.t_middle_body_category_box > h2 {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #6075a6;
+    color: #f3f3f3;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div.t_middle_body_category_box > h2 > a {
+    color: #f3f3f3;
+    padding: 2px 7px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div.t_middle_body_category_box > h2 > a:hover {
+    text-decoration: none;
+}
+
+#comment_area_phoneprofile > div.t_comment_richsnippets {
+    clear: both;
+    margin: 20px 10px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #6075a6;
+    text-align: center;
+    color: #6075a6;
+    font-weight: 700;
+}
+
+#sidebar_phoneprofile {
+    text-align: center;
+}
+
+#sidebar_phoneprofile > div.widget_threat_meter > p {
+    color: #6075a6;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(6) > div.t_middle_body_topchart_item.caption {
+    background-color: #6075a6;
+    text-align: center;
+    color: #f3f3f3;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(6) > div.t_middle_body_topchart_item.caption > div > h3 {
+    background-color: #6075a6;
+    color: #f3f3f3;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+    margin: 0;
+    font-weight: 500;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(6) > div:nth-child(2) > div:nth-child(1), #telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(6) > div:nth-child(3) > div:nth-child(1) {
+    background-color: #fff;
+    border: 1px solid #6075a6;
+    margin: -1px 0 0 0;
+    padding: 10px;
+    width: 25%;
+    float: left;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(6) > div:nth-child(2) > div:nth-child(2), #telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(6) > div:nth-child(3) > div:nth-child(2) {
+    background-color: #fff;
+    border: 1px solid #6075a6;
+    border-left: 0;
+    margin: -1px 0 0 0;
+    padding: 10px;
+    float: right;
+    width: 75%;
+}
+
+#telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(6) > div:nth-child(3), #telefonnummer_wrapper > div.t_comments_body {
+    clear: both;
+}
+
+#telefonnummer_wrapper > div.t_comments_body {
+    padding: 20px 0;
+}
+
+#comment_area_phoneprofile > h4 {
+    border: 1px solid #6075a6;
+    border-left: 0;
+    border-right: 0;
+    padding: 10px 0;
+    text-align: center;
+    color: #6075a6;
+    margin: 0;
+}
+
+#comment_area_phoneprofile > div.t_comments_body_vote_item.vote_up {
+    background-color: #ffffff;
+    color: green;
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #6075a6;
+    width: 50%;
+    text-align: center;
+    font-weight: 700;
+    float: left;
+    margin: 20px 0;
+}
+
+#comment_area_phoneprofile > div.t_comments_body_vote_item.vote_down {
+    background-color: #ffffff;
+    color: red;
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #6075a6;
+    border-left: 0;
+    width: 50%;
+    text-align: center;
+    font-weight: 700;
+    float: right;
+    margin: 20px 0;
+}
+
+#comment_area_phoneprofile > div.t_comments_body_vote_item.vote_up > a {
+    text-decoration: none;
+    color: green;
+}
+
+#comment_area_phoneprofile > div.t_comments_body_vote_item.vote_down > a {
+    text-decoration: none;
+    color: red;
+}
+
+#footer, #telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(5), #sidebar_phoneprofile > div:nth-child(3), #sidebar_phoneprofile > div.header-phone-formats-widget, #comment_area_phoneprofile > div:nth-child(2) {
+    display: none;
+}
+
