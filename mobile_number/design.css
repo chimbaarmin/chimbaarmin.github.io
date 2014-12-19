@@ -5,3 +5,8 @@
 .initial_view {
     display: block !important;
 }
+
+a[href^=tel] {
+    color:inherit;
+    text-decoration:none;
+}
