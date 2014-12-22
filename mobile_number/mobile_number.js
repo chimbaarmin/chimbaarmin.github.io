@@ -18,7 +18,7 @@ $(document).ready(function(){
     $("#subscription_box > div.subscription_box_initial > span:nth-child(1)").glyphit("phone-alt", "pre");
     $("#comment_text").btstrp("text-area");
     $("#comment_form_onpage > div.initial_view > div.sbm_btn_wrapper > input").btstrp("button");
-    $("#sidebar_phoneprofile > div:nth-child(3) > h3").btstrp("caret");
+    $("#sidebar_phoneprofile > div:nth-child(3) > h3, div.widget > h5").btstrp("caret");
     $("#text-65 > div.textwidget > li").wrapAll("<ul></ul>");
     $("#text-52 > div.textwidget > a > img").wrap('<div class="img_wrap"></div>');
     $("#text-65 > div.textwidget > a").wrap('<div class="link_wrap"></div>');
