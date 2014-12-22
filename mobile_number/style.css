@@ -579,6 +579,7 @@ div.widget > h5 {
     margin: 0;
     padding: 10px;
     border-bottom: 1px solid #f3f3f3;
+    cursor: pointer;
 }
 
 div.widget > div.textwidget > ul {
