@@ -384,6 +384,7 @@ div.wrapper_small > div > div:nth-child(even) {
     padding: 10px;
     width: 20%;
     float: left;
+    height: 62px;
 }
 
 #telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(6) > div:nth-child(2) > div:nth-child(2), #telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(6) > div:nth-child(3) > div:nth-child(2) {
@@ -394,6 +395,7 @@ div.wrapper_small > div > div:nth-child(even) {
     padding: 10px;
     float: right;
     width: 80%;
+    height: 62px;
 }
 
 #telefonnummer_wrapper > div.t_middle_body > div > div:nth-child(6) > div:nth-child(3), #telefonnummer_wrapper > div.t_comments_body {
@@ -544,6 +546,7 @@ div.wrapper_small > div > div:nth-child(even) {
 
 #sidebar_phoneprofile > div.header-phone-formats-widget {
     width: 100%;
+    margin-top: 20px;
 }
 
 #sidebar_phoneprofile > div.header-phone-formats-widget > ul {
@@ -575,6 +578,7 @@ div.widget > h5 {
     color: #f3f3f3;
     margin: 0;
     padding: 10px;
+    border-bottom: 1px solid #f3f3f3;
 }
 
 div.widget > div.textwidget > ul {
@@ -589,7 +593,7 @@ div.widget > div.textwidget > ul {
 }
 
 #text-52 > div.textwidget > a > div > img {
-    margin: 0 15px 15px 15px;
+    margin: 15px;
     padding: 5px;
     background-color: #ffffff;
     border: 1px solid #ccc;
@@ -625,4 +629,8 @@ div.link_wrap {
 a[href^=tel] {
     color:inherit;
     text-decoration:none;
+}
+
+#text-52 > div.textwidget > ul {
+    margin-bottom: 0;
 }

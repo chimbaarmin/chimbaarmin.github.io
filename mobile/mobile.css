@@ -211,6 +211,10 @@ ol#comments > li {
 	border-color: #fff transparent transparent #fff;
 }
 
+#widget {
+    margin-bottom: 20px;
+}
+
 /*  */
 
 @media screen and (max-width: 960px) {
