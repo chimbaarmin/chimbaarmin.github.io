@@ -1,0 +1,95 @@
+body {
+    background-color: #f3f3f3;
+}
+
+.limg {
+    width: 25%;
+    float: left;
+    margin: 20px 5% 20px 0;
+}
+
+.limg > img {
+    width: 100%;
+}
+
+.header_middle {
+    width: 45%;
+    float: left;
+    text-overflow: hidden;
+    border: 1px solid #6075a6;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.header_right {
+    width: 20%;
+    min-height: 150px;
+    float: right;
+    border: 1px solid #6075a6;
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 15px;
+}
+
+.main_content {
+    clear: both;
+}
+
+.left_main_content {
+    float: left;
+    width: 30%;
+    min-height: 300px;
+    margin: 0px 5% 20px 0;
+    border: 1px solid #6075a6;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.sign_up_form {
+    margin: 0 0 20px 0;
+}
+
+.right_main_content {
+    float: right;
+    width: 65%;
+    margin: 0px 0 20px 0;
+    border: 1px solid #6075a6;
+    background-color: #fff;
+    padding: 10px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.footer {
+    clear: both;
+    border: 1px solid #6075a6;
+    background-color: #fff;
+}
+
+.footer > p {
+    margin: 10px;
+    font-size: 12px;
+}
+
+.header_middle > h1 {
+    font-size: 30px;
+    color: #6075a6;
+    margin: 0;
+    padding: 10px;
+}
+
+.header_middle > h2 {
+    font-size: 20px;
+    color: #6075a6;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.top_comment {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.adsense_area > img {
+    width: 80%;
+}
