@@ -14,3 +14,13 @@ ul.header-layout-2 a {
     text-decoration: none;
     color: #fff;
 }
+
+.panel-heading a, .panel-heading a:hover, .panel-heading a:visited, .panel-heading a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav {
+    text-align: center;
+    margin: 20px;
+}
