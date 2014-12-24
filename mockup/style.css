@@ -5,12 +5,18 @@ body {
 .limg {
     width: 25%;
     float: left;
-    margin: 20px 5% 20px 0;
+    margin: 20px 2.5%;
 }
 
 .limg > img {
     width: 100%;
 }
+
+.header {
+    background-color: #fff;
+    height: 100%;
+}
+
 
 .header_middle {
     width: 45%;
@@ -22,12 +28,10 @@ body {
 }
 
 .header_right {
-    width: 20%;
+    width: 25%;
     min-height: 150px;
     float: right;
-    border: 1px solid #6075a6;
-    background-color: #fff;
-    margin: 20px 0;
+    margin: 10px 0;
     padding: 15px;
 }
 
@@ -38,8 +42,8 @@ body {
 .left_main_content {
     float: left;
     width: 30%;
-    min-height: 300px;
-    margin: 0px 5% 20px 0;
+    max-height: 600px;
+    margin: 0 0 20px 0;
     border: 1px solid #6075a6;
     background-color: #fff;
     padding: 10px;
@@ -51,20 +55,19 @@ body {
 
 .right_main_content {
     float: right;
-    width: 65%;
-    margin: 0px 0 20px 0;
-    border: 1px solid #6075a6;
-    background-color: #fff;
-    padding: 10px;
-    max-height: 500px;
+    width: 70%;
+    margin: 0;
+    margin-bottom: 20px;
+    background-color: #f3f3f3;
+    padding: 0 20px;
+    height: 700px;
     overflow: auto;
 }
 
 .footer {
-    clear: both;
     border: 1px solid #6075a6;
     background-color: #fff;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .footer > p {
@@ -88,9 +91,61 @@ body {
 
 .top_comment {
     padding: 10px;
+    margin: 10px;
     font-size: 15px;
+}
+
+.top_comment > blockquote {
+    font-size: 15px;
+    border-left-color: #6075a6;
+}
+
+.large_quotes {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0;
+    left: 90%;
+    background-color: #252525;
 }
 
 .adsense_area > img {
     width: 80%;
+}
+
+.total_views, .total_comments {
+    margin: 0px;
+    padding: 5px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #6075a6;
+    text-align: center;
+}
+
+.total_comments {
+    margin-top: 20px;
+}
+
+strong {
+    color: #6075a6;
+}
+
+.adspace {
+    clear: both;
+    width: 100%;
+    height: 150px;
+    border: 1px solid #6075a6;
+    margin-bottom: 20px;
+}
+
+.adspace img {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.comment-box {
+    background-color: #fff;
 }

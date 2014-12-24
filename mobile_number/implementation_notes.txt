@@ -1,0 +1,35 @@
+﻿Mobile number profile - Implementation notes
+
+1. List of files in ZIP archive:
+	a. mobile_number.css - dev css file (for development)
+	b. mobile_number.min.css - minified css file (for on-site usage)
+	c. mobile_number.js - dev js file
+	d. mobile_number.min.js - minified js file
+	e. ni_plugins.js - dev js file
+	f. ni_plugins.min.js - minified js file
+
+2. List of requirements:
+	a. mobile_number.min.css requires bootstrap.min.css (https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css)
+	b. mobile_number.min.js requires bootstrap.min.js (https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js)
+	c. bootstrap.min.js requires jquery.min.js (https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js)
+	4. include modernizr (https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js)
+
+3. Other/previous scripts used on the page:
+	a. css for comments
+	b. js for comments
+
+4. Workflow:
+	NOTE: a, b and c work only if bootstrap is installed
+	a. Unwrap div.layout from all other divs
+	b. Wrap div.layout in div.col-md-6 
+	c. Add div.col-md-3 before div.col-md-6 and another div.col-md-3 after div.col-md-6
+	d. Add css links:
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    		<link rel="stylesheet" href="location-of/mobile_number.min.css" />
+    		<link rel="stylesheet" href="location-of/coms.css" />
+	e. Add scripts (NOTE: ORDER IS VERY IMPORTANT):
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    		<script type="text/javascript" src="location-of/ni_plugins.min.js"></script>
+    		<script type="text/javascript" src="location-of/mobile_number.min.js"></script>
