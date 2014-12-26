@@ -2,150 +2,107 @@ body {
     background-color: #f3f3f3;
 }
 
-.limg {
-    width: 25%;
-    float: left;
-    margin: 20px 2.5%;
-}
-
-.limg > img {
-    width: 100%;
-}
-
-.header {
+div.header {
     background-color: #fff;
-    height: 100%;
-}
-
-
-.header_middle {
-    width: 45%;
-    float: left;
-    text-overflow: hidden;
-    border: 1px solid #6075a6;
-    background-color: #fff;
+    padding: 0;
     margin: 20px 0;
-}
-
-.header_right {
-    width: 25%;
-    min-height: 150px;
-    float: right;
-    margin: 10px 0;
-    padding: 15px;
-}
-
-.main_content {
-    clear: both;
-}
-
-.left_main_content {
-    float: left;
-    width: 30%;
-    max-height: 600px;
-    margin: 0 0 20px 0;
     border: 1px solid #6075a6;
-    background-color: #fff;
-    padding: 10px;
-}
-
-.sign_up_form {
-    margin: 0 0 20px 0;
-}
-
-.right_main_content {
-    float: right;
-    width: 70%;
-    margin: 0;
-    margin-bottom: 20px;
-    background-color: #f3f3f3;
-    padding: 0 20px;
-    height: 700px;
+    -moz-border-radius: 25px 25px 0 0;
+    -webkit-border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0 0;
+    -khtml-border-radius: 25px 25px 0 0;
     overflow: auto;
 }
 
-.footer {
-    border: 1px solid #6075a6;
-    background-color: #fff;
-    margin: 20px 0;
-}
-
-.footer > p {
-    margin: 10px;
-    font-size: 12px;
-}
-
-.header_middle > h1 {
-    font-size: 30px;
-    color: #6075a6;
-    margin: 0;
+div.header > div.htitle > h1 {
+    background-color: #6075a6;
+    color: #f3f3f3;
     padding: 10px;
-}
-
-.header_middle > h2 {
-    font-size: 20px;
-    color: #6075a6;
     margin: 0;
-    padding: 0 10px;
+    font-size: 25px;
+    text-align: center;
+    -moz-border-radius: 25px 25px 0 0;
+    -webkit-border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0 0;
+    -khtml-border-radius: 25px 25px 0 0;
 }
 
-.top_comment {
-    padding: 10px;
+div.header > div.larea {
+    width: 28.83506343713956%;
+    margin: 1.153402537485582%;
+    padding: 0;
+    float: left;
+}
+
+div.header > div.larea > img {
+    border: 0;
+    width: 100%;
+}
+
+div.header > div.larea > div.stats {
+
+}
+
+div.header > div.larea > div.stats > ul {
     margin: 10px;
-    font-size: 15px;
 }
 
-.top_comment > blockquote {
-    font-size: 15px;
-    border-left-color: #6075a6;
-}
-
-.large_quotes {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    top: 0;
-    left: 90%;
-    background-color: #252525;
-}
-
-.adsense_area > img {
-    width: 80%;
-}
-
-.total_views, .total_comments {
-    margin: 0px;
-    padding: 5px;
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #6075a6;
+div.header > div.larea > div.stats > ul > li.statsA, div.header > div.larea > div.stats > ul > li.statsC {
+    background-color: #6075a6;
+    color: #f3f3f3;
     text-align: center;
 }
 
-.total_comments {
-    margin-top: 20px;
+div.header > div.rarea {
+    width: 66.55132641291811%;
+    float: right;
+    margin: 2.306805074971165% 2.306805074971165% 0 0;
 }
 
-strong {
-    color: #6075a6;
+div.header > div.rarea > ul > li.telefonA {
+    background-color: #6075a6;
+    color: #f3f3f3;
 }
 
-.adspace {
-    clear: both;
-    width: 100%;
-    height: 150px;
-    border: 1px solid #6075a6;
+div.header > div.rarea > ul > li.telefonA > a {
+    text-decoration: none;
+    color: #f3f3f3;
+}
+
+div.header > div.rarea > ul > li.telefonF {
+    background-color: #6075a6;
+    color: #f3f3f3;
+}
+
+div.header > div.rarea > div.feedback {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.adspace img {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+div.header > div.rarea > div.feedback > div > button {
+    background-color: #6075a6;
 }
 
-.comment-box {
-    background-color: #fff;
+div.gmap {
+    clear: both;
+    border-top: 1px solid #6075a6;
+    width: 100%;
+}
+
+div.gmap > img {
+    width: 100%;
+}
+
+div.adspace {
+    border: 1px solid #6075a6;
+}
+
+div.adspace > img {
+    width: 100%;
+}
+
+div.content {
+    margin: 20px 0;
+    border: 1px solid #6075a6;
+    height: 50px;
 }
