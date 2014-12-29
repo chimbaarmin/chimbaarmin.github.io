@@ -101,10 +101,10 @@
             $(this).addClass("list-group");
             break;
         case 'li':
-            $(this).addClass("list-group-item");
+            $(this).addClass("lgi_lgi");
             break;
         default:
-            alert('Please define element for btstrp function. Thank you.');
+            $(this).addClass("test");
             break;
             }
     }

@@ -2,29 +2,30 @@ body {
     background-color: #f3f3f3;
 }
 
-div.header {
-    background-color: #fff;
-    padding: 0;
-    margin: 20px 0;
-    border: 1px solid #6075a6;
-    -moz-border-radius: 25px 25px 0 0;
-    -webkit-border-radius: 25px 25px 0 0;
-    border-radius: 25px 25px 0 0;
-    -khtml-border-radius: 25px 25px 0 0;
-    overflow: auto;
+li {
+    padding: 5px 10px !important;
 }
 
-div.header > div.htitle > h1 {
+div.htitle > h1 {
     background-color: #6075a6;
     color: #f3f3f3;
     padding: 10px;
-    margin: 0;
+    margin: 20px 0 0 0;
     font-size: 25px;
     text-align: center;
     -moz-border-radius: 25px 25px 0 0;
     -webkit-border-radius: 25px 25px 0 0;
     border-radius: 25px 25px 0 0;
     -khtml-border-radius: 25px 25px 0 0;
+}
+
+div.header {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #cccccc;
+    overflow: auto;
+    margin-bottom: 20px;
 }
 
 div.header > div.larea {
@@ -47,7 +48,11 @@ div.header > div.larea > div.stats > ul {
     margin: 10px;
 }
 
-div.header > div.larea > div.stats > ul > li.statsA, div.header > div.larea > div.stats > ul > li.statsC {
+div.header > div.larea > div.stats > ul > li {
+    padding: 5px;
+}
+
+div.header > div.larea > div.stats > ul > li.statsA, div.header > div.larea > div.stats > ul > li.statsC, div.header > div.larea > div.stats > ul > li.statsE {
     background-color: #6075a6;
     color: #f3f3f3;
     text-align: center;
@@ -79,13 +84,20 @@ div.header > div.rarea > div.feedback {
     margin-bottom: 20px;
 }
 
-div.header > div.rarea > div.feedback > div > button {
+button.btn-primary {
     background-color: #6075a6;
+    border: 1px solid #cccccc;
+}
+
+button.btn-primary:hover {
+    background-color: #f3f3f3;
+    color: #6075a6;
+    border: 1px solid #cccccc;
 }
 
 div.gmap {
     clear: both;
-    border-top: 1px solid #6075a6;
+    border-top: 1px solid #cccccc;
     width: 100%;
 }
 
@@ -94,7 +106,7 @@ div.gmap > img {
 }
 
 div.adspace {
-    border: 1px solid #6075a6;
+    border: 1px solid #cccccc;
 }
 
 div.adspace > img {
@@ -103,6 +115,128 @@ div.adspace > img {
 
 div.content {
     margin: 20px 0;
-    border: 1px solid #6075a6;
-    height: 50px;
+    overflow: auto;
 }
+
+div.content > div.larea {
+    width: 25%;
+    float: left;
+}
+
+div.content > div.larea > div.tags > ul {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+div.content > div.larea > div.tags > ul > li.title {
+    color: #f3f3f3;
+    background-color: #6075a6;
+    border: 1px solid #cccccc;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -khtml-border-radius: 0;
+}
+
+div.content > div.larea > div.adspace_side {
+    margin: 9.2165%;
+    width: 81.5668%;
+}
+
+div.content > div.larea > div.adspace_side > img {
+    width: 100%;
+}
+
+div.content > div.marea {
+    float: right;
+    width: 72.6643598615917%;
+    margin: 0;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+div.content > div.marea > div.comments {
+    width: 100%;
+}
+
+div.footer {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #cccccc;
+}
+
+div.area {
+
+}
+
+div.area > h6 {
+    background-color: #6075a6;
+    color: #f3f3f3;
+    padding: 17px;
+    margin: 0 0 20px 0;
+    font-size: 12px;
+    text-align: center;
+    -moz-border-radius: 0 0 25px 25px;
+    -webkit-border-radius: 0 0 25px 25px;
+    border-radius: 0 0 25px 25px;
+    -khtml-border-radius: 0 0 25px 25px;
+
+}
+
+
+/* Comments reskinning */
+
+#comments_content > h4 {
+    padding: 10px;
+    margin: 0;
+    background-color: #6075a6;
+    color: #f3f3f3 !important;
+}
+
+#comments_content > div.pagination_wrapper {
+    text-align: center;
+}
+
+#comments_content > div.pagination_wrapper > div.prevnext_wrapper > div.prevnext_item_wrapper > div.previous {
+    width: 50%;
+    float: left;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#comments_content > div.pagination_wrapper > div.prevnext_wrapper > div.prevnext_item_wrapper > div.next {
+    width: 50%;
+    float: right;
+    padding: 10px;
+    font-size: 20px;
+}
+
+ol#comments {
+    clear: both;
+    list-style: none;
+    padding: 0;
+    margin: 0 10px;
+}
+
+h4.vote_down {
+    color: #d9534f;
+    font-size: 16px;
+    margin: 10px 0 0 0;
+    padding: 5px 0px;
+    border-bottom: 1px solid #cccccc;
+}
+
+h4.vote_up {
+    color: #5cb85c;
+    font-size: 16px;
+    margin: 10px 0 0 0;
+    padding: 5px 0px;
+    border-bottom: 1px solid #cccccc;
+}
+
+div.comment-box > div.comment-date {
+    text-align: right;
+    font-size: 12px;
+}
+
