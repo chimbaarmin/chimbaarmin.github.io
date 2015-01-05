@@ -1,0 +1,45 @@
+.head {
+    height: 100px;
+}
+
+table.cwkanban {
+    margin-top: 20px;
+}
+
+table.ctkanban {
+    margin-top: 20px;
+}
+
+th {
+    background-color: #337ab7;
+    color: #fff;
+    border: 1px solid #666 !important;
+    text-align: center;
+}
+
+td {
+    border: 1px solid #666;
+    border-top: 0;
+}
+
+td.backlog {
+    background-color: #d9534f;
+}
+
+td.in_progress {
+    background-color: #5bc0de;
+}
+
+td.forwarded {
+    background-color: #f0ad4e;
+}
+
+td.completed {
+    background-color: #5cb85c;
+}
+
+th.taskname {
+    border: 0 !important;
+    background-color: #ffffff;
+    color: #000000;
+}

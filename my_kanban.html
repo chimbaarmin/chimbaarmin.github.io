@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Kanban</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="kanban/kanban.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="head"></div>
+        <h3>ChimbaWeb Front End Development Kanban</h3>
+        <table class="table table-condensed cwkanban">
+            <thead>
+                <tr>
+                    <th>Backlog</th>
+                    <th>In progress</th>
+                    <th>Forwarded</th>
+                    <th>Completed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="backlog">
+                        Popular numbers page
+                    </td>
+                    <td class="in_progress">
+                        Desktop number page<br />
+                    </td>
+                    <td class="forwarded">
+                        Mobile number page<br />
+                    </td>
+                    <td class="completed">
+                        Mobile navigation<br />
+                        FadeAll <br />
+                        Gateway <br />
+                        Comments <br />
+                    </td>
+                </tr>
+            </tbody>
+    </table>
+        
+        <h3>Current Task Kanban</h3>
+        <table class="table table-condensed ctkanban">
+            <thead>
+                <tr>
+                    <th class="taskname" colspan="4">Task: Desktop number page</th>
+                </tr>
+                <tr>
+                    <th>To do</th>
+                    <th>Coding</th>
+                    <th>Testing</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="todo">
+                        jQuery
+                    </td>
+                    <td class="coding">
+                        HTML mockup <br />
+                        Mockup implementation <br />
+                        CSS <br />
+                    </td>
+                    <td class="testing">
+                        
+                    </td>
+                    <td class="done">
+                        
+                    </td>
+                </tr>
+            </tbody>
+    </table>
+    </div>
+    <div class="col-md-2"></div>
+</body>
+</html>
