@@ -41,6 +41,10 @@ h1.h1_profile {
     width: 25%;
 }
     
+body > div.col-md-8 > div.new_header > div.widget_threat_meter > img {
+    width: 100% !important;
+}
+    
 div.widget_threat_meter > div {
     width: 100%;
     margin: 20px 0;
