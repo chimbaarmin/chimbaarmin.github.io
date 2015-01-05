@@ -98,6 +98,7 @@ div.dnp_new_code_info {
     padding: 20px 20px 0 0;
     width: 100%;
     margin: 0;
+    overflow: auto;
 }
     
 div.dnp_new_code_info > div {
@@ -131,7 +132,7 @@ div.dnp_new_code_info > div > div {
 }
 
 div.t_middle_body_topchart_item.regular.new_number_info {
-    border: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
 }
     
 div.dnp_new_buttons {
