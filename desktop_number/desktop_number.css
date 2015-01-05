@@ -8,6 +8,10 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     
 /* Bootstrap grid end */
     
+div.clear {
+    display: none;
+}
+    
 div.t_middle_body_topchart_item.caption {
     border: 0;
 }
@@ -102,19 +106,17 @@ div.dnp_new_code_info {
 }
     
 div.dnp_new_code_info > div {
-    position: relative;
-    display: block;
     padding: 0;
     background-color: #fff;
     border: 1px solid #ccc;
     border-bottom: 0;
     color: inherit;
     line-height: 1.42857143;
+    overflow: auto;
+    
 }
     
 div.dnp_new_code_info > div:hover {
-    position: relative;
-    display: block;
     padding: 0;
     background-color: #fff;
     border: 1px solid #ccc;
