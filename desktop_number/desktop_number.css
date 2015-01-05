@@ -8,7 +8,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     
 /* Bootstrap grid end */
     
-div.t_middle_body_topchart.telefonnummer_info > div.t_middle_body_topchart_item.caption {
+div.t_middle_body_topchart_item.caption {
     border: 0;
 }
     
@@ -26,7 +26,7 @@ h1.h1_profile {
     -khtml-border-radius: 25px 25px 0 0;
 }
     
-.new_header {
+.dnp_new_header {
     background-color: #ffffff;
     overflow: auto;
     margin: 0;
@@ -35,24 +35,22 @@ h1.h1_profile {
     
 .widget_threat_meter {
     float: left;
-    margin: 20px;
-    padding: 0;
+    margin: 0;
+    padding: 2.3%;
     border: 0;
-    width: 25%;
+    width: 27.7%;
 }
     
-body > div.col-md-8 > div.new_header > div.widget_threat_meter > img {
+div.widget_threat_meter > img {
     width: 100% !important;
 }
     
-div.widget_threat_meter > div {
+div.dnp_header_stats {
     width: 100%;
     margin: 20px 0;
     padding: 0 !important;
     font-size: 16px !important;
 }
-    
-
     
 div.t_middle_body_topchart.telefonnummer_info {
     float: right;
@@ -62,12 +60,12 @@ div.t_middle_body_topchart.telefonnummer_info {
     margin: 10px 0;
 }
     
-div.t_middle_body_topchart.telefonnummer_info > div.t_middle_body_topchart_item.caption {
+div.t_middle_body_topchart_item.caption {
     border: 0;
     padding: 0;
 }
     
-div.t_middle_body_topchart.telefonnummer_info > div.t_middle_body_topchart_item.caption > div > h3 {
+h3#dnp_top_header {
     margin: 0;
     background-color: #fff;
     color: #6075a6;
@@ -75,7 +73,7 @@ div.t_middle_body_topchart.telefonnummer_info > div.t_middle_body_topchart_item.
     font-size: 20px;
 }
     
-div.t_middle_body_topchart.telefonnummer_info > div:nth-child(2) > div:nth-child(1) > div {
+div.dnp_top_item_description {
     padding: 0;
     margin: 0;
     border: 0;
@@ -83,39 +81,42 @@ div.t_middle_body_topchart.telefonnummer_info > div:nth-child(2) > div:nth-child
     font-size: 12px;
 }
     
-div.t_middle_body_topchart.telefonnummer_info > div:nth-child(2) > div:nth-child(1) > div:hover {
+div.dnp_top_item_description:hover {
     background-color: #fff;
     color: #6075a6;
 }
     
-div.t_middle_body_topchart.telefonnummer_info > div:nth-child(2) > div:nth-child(1) > div > h3 {
+h3#dnp_top_description {
     color: #6075a6;
 }
 
-div.t_middle_body_topchart.telefonnummer_info > div:nth-child(2) > div:nth-child(1) > div > h3:hover {
+h3#dnp_top_description:hover {
     color: #6075a6;
 }
     
-div.new_code_info {
+div.dnp_new_code_info {
     padding: 20px 20px 0 0;
     width: 100%;
     margin: 0;
 }
     
-div.new_code_info > div {
+div.dnp_new_code_info > div {
     position: relative;
     display: block;
-    padding: 0;
+    padding: 5px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-bottom: 0;
     color: inherit;
+    line-height: 1.42857143;
+    width: 100%;
+    float: left;
 }
     
-div.new_code_info > div:hover {
+div.dnp_new_code_info > div:hover {
     position: relative;
     display: block;
-    padding: 0;
+    padding: 5px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-bottom: 0;
@@ -129,16 +130,16 @@ div.new_code_info > div > div {
     
 }
 
-div.t_middle_body_topchart.telefonnummer_info > div:nth-child(3) > div > div.t_middle_body_topchart_item.regular.new_number_info {
+div.t_middle_body_topchart_item.regular.new_number_info {
     border: 1px solid #cccccc;
 }
     
-div.new_header > div.new_buttons {
+div.dnp_new_buttons {
     clear: both;
     text-align: center;
 }
     
-div.new_header > div >button {
+div.dnp_new_buttons > button {
     margin: 0 10px 20px 0;
     padding: 10px;
     color: #ffffff;
@@ -146,70 +147,58 @@ div.new_header > div >button {
     border: 1px solid #cccccc;
 }
 
-div.new_ad_space_one {
+div.dnp_new_ad_space_one {
     height: 150px;
     border: 1px solid #cccccc;
     border-top: 0;    
 }
     
-div.new_content_space {
+div.dnp_new_content_space {
 }
     
-div.content_space_map {
+div.dnp_content_space_map {
     height: 250px;
     border: 1px solid #cccccc;
     margin: 20px 0;
 }
     
-div.content_space_left {
+div.dnp_content_space_left {
     width: 30%;
     float: left;
     border: 1px solid #cccccc;
     background-color: #ffffff;
 }
     
-div.content_space_left > div {
+div.dnp_content_space_left > div {
     padding: 0;
 }
     
-body > div.col-md-8 > div.new_content_space > div.content_space_left > div > div.t_middle_body_topchart_item.caption > div:nth-child(2) {
-    display: none;
-}
-    
-body > div.col-md-8 > div.new_content_space > div.content_space_left > div > div.t_middle_body_topchart_item.caption > div:nth-child(1) {
-    width: 100%;
-}
-
-body > div.col-md-8 > div.new_content_space > div.content_space_left > div > div.t_middle_body_topchart_item.caption > div:nth-child(1) > h3 {
-    padding: 10px;
-    text-align: center;
-    background-color: #6075a6;
-    margin: 0;
-}
-    
-div.content_space_left > div > div.t_middle_body_topchart_item.caption {
-    padding: 0;
-}
-    
-div.content_space_right {
+div.dnp_content_space_right {
     float: right;
     width: 65%;
 }
+    
+/* Comments plugin override */
 
 #comments_content > h4 {
     background-color: #6075a6;
     color: #f3f3f3;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     -moz-border-radius: 25px 25px 0 0;
     -webkit-border-radius: 25px 25px 0 0;
     border-radius: 25px 25px 0 0;
     -khtml-border-radius: 25px 25px 0 0;
 }
 
-div.comment-holder.comment-top-level > div.comment-box {
+div.comment-box {
     margin: 15px !important;
 }
 
+/* Comment box disabled for now */
+
+div.dnp_comment_box_space {
+    display: none;
+}
 
 
