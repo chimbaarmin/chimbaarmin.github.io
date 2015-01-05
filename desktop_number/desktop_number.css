@@ -103,30 +103,30 @@ div.dnp_new_code_info {
 div.dnp_new_code_info > div {
     position: relative;
     display: block;
-    padding: 5px;
+    padding: 0;
     background-color: #fff;
     border: 1px solid #ccc;
     border-bottom: 0;
     color: inherit;
     line-height: 1.42857143;
-    width: 100%;
-    float: left;
 }
     
 div.dnp_new_code_info > div:hover {
     position: relative;
     display: block;
-    padding: 5px;
+    padding: 0;
     background-color: #fff;
     border: 1px solid #ccc;
     border-bottom: 0;
     color: inherit;
 }
     
-div.new_code_info > div > div {
+div.dnp_new_code_info > div > div {
     padding: 10px;
     margin:0;
     border: 0;
+    width: 50%;
+    float: left;
     
 }
 
