@@ -28,6 +28,7 @@ div.prevnext_wrapper {
     float: left;
     width: 50%;
     font-size: 25px;
+    display: none;
 }
 
 div.previous {
@@ -100,11 +101,12 @@ div.new_reply_button {
 }
 
 span.hshtg {
-    padding: 3px; 
-    background-color: #6075a6;
-    color: #fff;
+    padding: 5px; 
+    background-color: #fff;
     border: 1px solid #cccccc;
     font-size: 10px;
+    text-transform: uppercase;
+    margin-right: 15px;
 }
 
 div.new_comment_rating {
