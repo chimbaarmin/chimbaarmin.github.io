@@ -7,6 +7,8 @@
         <title>Comments</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="coms/coms_new.css" />
+        <link rel="stylesheet" href="img/bootstrap-social.css" />
+        <link rel='stylesheet' id='font-awesome-css'  href='http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css' type='text/css' media='screen' />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -66,10 +68,23 @@
                             <!-- start of new_comment_rating -->
                             <div class="new_comment_rating">
                                   <div class="new_rating_buttons">
-                                     Please rate this comment: 
-                                     <button class="comment_vote_up"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
-                                     <button class="comment_vote_down"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                                     Positive: 0 Negative: 0
+                                    <div class="positive_votes">
+                                     <span class="up_votes">250</span><button class="comment_vote_up"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+                                     </div>
+                                     <div class="negative_votes">
+                                     <span class="down_votes">0</span><button class="comment_vote_down"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                                    </div> 
+                                  </div>
+                                  <div class="new_social_icons">
+                                      <a class="btn btn-social-icon btn-twitter">
+                                        <i class="fa fa-twitter"></i>
+                                      </a>
+                                      <a class="btn btn-social-icon btn-facebook">
+                                        <i class="fa fa-facebook"></i>
+                                      </a>
+                                      <a class="btn btn-social-icon btn-google-plus">
+                                        <i class="fa fa-google-plus"></i>
+                                      </a>
                                   </div>
                             </div>
                             <!-- end of new_comment_rating -->
