@@ -1,3 +1,7 @@
+body {
+    background-color: #f3f3f3;
+}
+
 div.new_comment_header {
     background-color: #6075a6;
     height: 62px;
@@ -71,6 +75,7 @@ div.new_comment_content {
     padding: 10px;
     margin-top: 10px;
     border: 1px solid #cccccc;
+    background-color: #ffffff;
 }
 
 div.new_reply_button {
@@ -93,7 +98,8 @@ div.new_comment_rating {
     padding: 0;
     margin: 10px;
     padding: 10px;
-        border: 1px solid #cccccc;
+    border: 1px solid #cccccc;
+        background-color: #ffffff;
 }
 
 ul.ratings {
