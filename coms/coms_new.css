@@ -116,7 +116,7 @@ button.comment_vote_up {
     padding: 0;
     color: green;
     border: 0;
-    background-color: #9CBA7F;
+    background-color: #fff;
     font-size: 15px;
     margin: 15px 0 15px 15px;
 }
@@ -126,22 +126,20 @@ button.comment_vote_down {
     padding: 0;
     color: red;
     border: 0;
-    background-color: #EEB4B4;
+    background-color: #fff;
     font-size: 15px;
     margin: 15px 0 15px 15px;
 }
 
 div.positive_votes {
-    width: 100px;
+    width: 120px;
     float: left;
-    background-color: #9CBA7F;
     border-right: 1px solid #ccc;
 }
 
 div.negative_votes {
-    width: 100px;
+    width: 120px;
     float: left;
-    background-color: #EEB4B4;
     border-right: 1px solid #ccc;
 }
 
@@ -151,4 +149,9 @@ div.new_clear {
 
 button.btn-primary {
     background-color: #6075a6;
+}
+
+div.new_social_icons {
+    float: right;
+    padding: 9px 10px 8px 010px;
 }
