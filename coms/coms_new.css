@@ -1,0 +1,83 @@
+div.new_comment_header {
+    background-color: #6075a6;
+    height: 62px;
+    color: #fff;
+    overflow: auto;
+}
+
+div.new_comment_header > h4 {
+    float: left;
+    padding: 10px;
+    font-size: 20px;
+}
+
+div.new_sort_selector {
+    float: right;
+    padding: 21px;
+}
+
+div.new_sort_selector > select { 
+    color: #000000;
+}
+
+div.previous, div.next {
+    height: 25px;
+    width: 25px;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+li {
+    border: 1px solid #cccccc;
+    margin: 20px;
+    padding: 0;
+}
+
+div.avatar-box {
+    display: none;
+}
+
+h3.comment-author.vote_down {
+    color: green;
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+div.comment-date {
+    font-size: 10px;
+    text-align: right;
+    padding: 5px;
+}
+
+div.new_comment_content {
+    width: 75%;
+    float: left;
+    padding: 10px;
+}
+
+div.new_comment_rating {
+    width: 25%;
+    float: right;
+    text-align: center;
+}
+
+button.comment_vote_up {
+    margin: 0 15px;
+}
+
+button.comment_vote_down {
+    margin: 0 15px;
+}
+
+div.new_comment_reply_button {
+    clear: both;
+    text-align: center;
+    padding: 10px;
+}
