@@ -135,3 +135,26 @@ div.new_clear {
 button.btn-primary {
     background-color: #6075a6;
 }
+
+/* Reply comment - li.comment_reply */
+
+div.comment-box-reply > h3 {
+    text-align: right;
+}
+
+div.comment-box-reply > div.comment-date {
+    text-align: left;
+}
+
+div.comment-box-reply > div.new_comment_content {
+    float: right; 
+    text-align: right;
+}
+
+div.comment-box-reply > div.new_comment_content > div.new_reply_button {
+    text-align: left;
+}
+
+div.comment-box-reply > div.new_comment_rating {
+    float: left;
+}
