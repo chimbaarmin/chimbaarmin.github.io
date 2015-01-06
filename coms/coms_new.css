@@ -79,7 +79,7 @@ div.new_comment_content {
 div.new_reply_button {
     float: right;
     text-align: center;
-    margin: 10px 0;
+    margin: 8px 0;
     width: 20%;
 }
 
@@ -96,7 +96,7 @@ div.new_comment_rating {
     width: 80%;
     text-align: center;
     margin: 0;
-    
+    border-right: 1px solid #cccccc;
 }
 
 ul.ratings {
