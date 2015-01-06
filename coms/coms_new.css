@@ -32,8 +32,8 @@ ol {
     border: 0;
 }
 
-li {
-    border: 1px solid #cccccc;
+ol > li {
+
     border-left-width: 5px;
     margin: 20px;
     padding: 0;
@@ -69,6 +69,13 @@ div.new_comment_content {
     width: 75%;
     float: left;
     padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #cccccc;
+}
+
+div.new_reply_button {
+    text-align: right;
+    margin: 15px;
 }
 
 span.hshtg {
@@ -76,35 +83,53 @@ span.hshtg {
     background-color: #6075a6;
     color: #fff;
     border: 1px solid #cccccc;
+    font-size: 10px;
 }
 
 div.new_comment_rating {
-    width: 25%;
+    width: 20%;
     float: right;
     text-align: center;
-    padding: 20px 0;
+    padding: 0;
+    margin: 10px;
+    padding: 10px;
+        border: 1px solid #cccccc;
+}
+
+ul.ratings {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.ratings > li {
+    margin: 0;
+    padding: 5px;
+    display: inline;
 }
 
 button.comment_vote_up {
-    margin: 10px;
-    height: 50px;
-    width: 50px;
-    background-color: green;
-    color: #fff;
+    margin: 0;
+    padding: 0;
+    color: green;
+    border: 0;
+    background-color: #fff;
+    font-size: 35px;
+    margin-left: 15px;
 }
 
 button.comment_vote_down {
     margin: 10px;
     height: 50px;
     width: 50px;
-    background-color: red;
-    color: #fff;
+    color: red;
+    border: 0;
+    background-color: #fff;
+    font-size: 35px;
 }
 
-div.new_comment_reply_button {
+div.new_clear {
     clear: both;
-    text-align: center;
-    padding: 10px;
 }
 
 button.btn-primary {
