@@ -283,4 +283,12 @@ div.dnp_comment_box_space {
     display: none;
 }
 
-
+/* adspace mockup */
+    
+div.adspace0 {
+    clear: both;
+    height: 150px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 20px 0;
+}
