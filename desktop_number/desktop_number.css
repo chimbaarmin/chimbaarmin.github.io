@@ -258,9 +258,94 @@ a.ltr, ul.dnp_tags_list > li > a {
 
 }
     
+form#subscription_box {
+    margin: 20px 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background-color: #6075a6;
+    color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+span.subscription_box_caption {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+div.subscription_box_initial {
+    width: 100%;
+    height: 100%;
+}
+    
+input.subscription_box_email {
+    width: 75%;
+    padding: 5px;
+    margin: 10px !important;
+}
+
+input.btn_btn {
+    background-color: #f3f3f3;
+    color: #6075a6;
+    border: 1px solid #ccc;
+    margin: 10px 10px 0 10px;
+    padding: 5px;
+}
+    
 div.dnp_content_space_right {
     float: right;
     width: 65%;
+}
+    
+div.dnp_footer {
+
+}
+    
+ul.menu-2 {
+    text-align: center;
+    background-color: #6075a6;
+    margin-bottom: 20px;
+    -moz-border-radius: 25px 25px 0 0;
+    -webkit-border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0 0;
+    -khtml-border-radius: 25px 25px 0 0;
+}
+    
+ul.menu-2 > li > a {
+    color: #ffffff !important;
+} 
+
+ul.menu-2 > li > a:hover {
+    text-decoration: none;
+} 
+    
+ul.menu-2 > li {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+ul.menu-2 > li:last-child {
+    width: 100%;
+}
+    
+span.glyphicon-search {
+    color: #f3f3f3;
+}
+    
+ul.sub-menu {
+    display: none;
+}
+    
+/* Tags chart plugin override */
+    
+div.dnp_tags_chart {
+    clear: both;
+    overflow: auto;
+    border: 1px solid #ccc;
+    margin: 20px 0;
 }
     
 /* Comments plugin override */
