@@ -257,14 +257,20 @@ div.dnp_content_space_right {
 /* Comments plugin override */
 
 #comments_content > h4 {
+    box-sizing: border-box;
+    color: #f3f3f3;;
+    text-align: center;
+    width: 100%;
     background-color: #6075a6;
-    color: #f3f3f3;
-    font-size: 18px;
-    font-weight: 500;
+    border: 0;
     -moz-border-radius: 25px 25px 0 0;
     -webkit-border-radius: 25px 25px 0 0;
     border-radius: 25px 25px 0 0;
     -khtml-border-radius: 25px 25px 0 0;
+    font: normal normal 500 normal 18px/25.7142868041992px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
 }
 
 div.comment-box {
