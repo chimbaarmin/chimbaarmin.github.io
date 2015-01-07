@@ -203,7 +203,8 @@ div.dnp_new_buttons > button {
 div.dnp_new_ad_space_one {
     height: 150px;
     border: 1px solid #cccccc;
-    border-top: 0;    
+    border-top: 0; 
+    text-align: center;
 }
     
 div.dnp_new_content_space {
