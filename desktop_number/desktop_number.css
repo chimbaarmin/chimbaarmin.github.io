@@ -8,10 +8,6 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     
 /* Bootstrap grid end */
     
-div.clear {
-    display: none;
-}
-    
 div.t_middle_body_topchart_item.caption {
     border: 0;
 }
@@ -129,8 +125,11 @@ div.dnp_new_code_info > div > div {
     margin:0;
     border: 0;
     width: 50%;
-    float: left;
+    float: left;    
+}
     
+div.dnp_new_code_info > div > div.clear {
+    display: none;
 }
 
 div.t_middle_body_topchart_item.regular.new_number_info {
@@ -168,12 +167,35 @@ div.dnp_content_space_map {
 div.dnp_content_space_left {
     width: 30%;
     float: left;
-    border: 1px solid #cccccc;
-    background-color: #ffffff;
 }
     
-div.dnp_content_space_left > div {
-    padding: 0;
+div.dnp_tags_area > h3 {
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    background-color: #6075a6;
+    color: #f3f3f3;
+    -moz-border-radius: 25px 25px 0 0;
+    -webkit-border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0 0;
+    -khtml-border-radius: 25px 25px 0 0;
+}
+    
+ul.dnp_tags_list {
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+    
+ul.dnp_tags_list > li {
+    width: 100%;
+    padding: 5px;
+}
+    
+a.ltr, ul.dnp_tags_list > li > a {
+    color: #6075a6 !important;
+    font-size: 14px;
+
 }
     
 div.dnp_content_space_right {
