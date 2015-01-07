@@ -47,6 +47,11 @@ h1.h1_profile {
     width: 27.7%;
 }
     
+p.meter_alert {
+    text-align: center;
+    font-size: 12px;
+}
+    
 div.widget_threat_meter > img {
     width: 100% !important;
 }
