@@ -303,6 +303,7 @@ div.dnp_footer {
 }
     
 ul.menu-2 {
+    position: static;
     text-align: center;
     background-color: #6075a6;
     margin-bottom: 20px;
@@ -338,6 +339,44 @@ span.glyphicon-search {
 ul.sub-menu {
     display: none;
 }
+    
+h5 {
+    text-align: center;
+    padding: 5px;
+    background-color: #6075a6;
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+}
+    
+div.textwidget > ul {
+    position: static;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    overflow: visible;
+    margin-bottom: 20px;
+}
+
+div.textwidget > ul > li > a {
+    color: #6075a6 !important;
+}
+    
+img.aligncenter.size-full {
+    width: 50%;
+    margin: 0 20px 20px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+    
+a.index_link {
+    color: #6075a6 !important;
+}
+    
+div.textwidget > ul > li > a:hover {
+    text-decoration: none;
+}
+
     
 /* Tags chart plugin override */
     
