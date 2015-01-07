@@ -55,6 +55,7 @@ div.dnp_vote_box {
     width: 100%;
     margin: 20px 0;
     color: #000;
+    text-align: center;
 }
     
 h6.vote_box_alert {
@@ -66,6 +67,14 @@ button.vote_item.vote_up, button.vote_item.vote_down {
     margin: 10px;
     border: 0;
     background-color: #ffffff;
+}
+
+button.vote_item.vote_up {
+    color: green;
+}
+    
+button.vote_item.vote_down {
+    color: red;
 }
     
 span.glyphicon.glyphicon-thumbs-up, span.glyphicon.glyphicon-thumbs-down {
