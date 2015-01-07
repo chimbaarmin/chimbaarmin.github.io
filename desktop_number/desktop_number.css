@@ -69,7 +69,7 @@ h6.vote_box_alert {
 }
     
 button.vote_item.vote_up, button.vote_item.vote_down {
-    margin: 10px;
+    margin: 20px 10px 0 10px;
     border: 0;
     background-color: #ffffff;
 }
@@ -84,17 +84,21 @@ button.vote_item.vote_down {
     
 span.glyphicon.glyphicon-thumbs-up, span.glyphicon.glyphicon-thumbs-down {
     font-size: 50px;
+    margin: 0;
 }
     
 p.vote_result {
     color: #333333;
+    text-align: center;
 }
     
 div.dnp_header_stats {
     width: 100%;
-    margin: 0 0 20px 0;
+    margin: 0;
     padding: 0 !important;
     font-size: 16px !important;
+    text-align: center;
+    font-size: 14px !important;
 }
     
 div.t_middle_body_topchart.telefonnummer_info {
