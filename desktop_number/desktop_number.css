@@ -183,6 +183,7 @@ div.dnp_new_code_info > div > div.clear {
 
 div.t_middle_body_topchart_item.regular.new_number_info {
     border-bottom: 1px solid #cccccc;
+    text-align: center;
 }
     
 div.dnp_new_buttons {
@@ -211,10 +212,17 @@ div.dnp_new_content_space {
 }
     
 div.dnp_content_space_map {
-    height: 250px;
     border: 1px solid #cccccc;
     margin: 20px 0;
 }
+
+/* mockup remove later */
+    
+div.dnp_content_space_map > img {
+    width: 100%;
+}
+
+/* mockup end */
     
 div.dnp_content_space_left {
     width: 30%;
