@@ -131,8 +131,8 @@ ul.ratings > li {
 
 button.comment_vote_up {
     margin: 0;
-    padding: 0;
-    color: green;
+    padding: 5px;
+    color: #6075a6;
     border: 0;
     background-color: #fff;
     font-size: 15px;
@@ -141,8 +141,8 @@ button.comment_vote_up {
 
 button.comment_vote_down {
     margin: 0;
-    padding: 0;
-    color: red;
+    padding: 5px;
+    color: #6075a6;
     border: 0;
     background-color: #fff;
     font-size: 15px;
@@ -152,15 +152,20 @@ button.comment_vote_down {
 div.positive_votes {
     width: 80px;
     float: left;
-    margin: 15px;
+    margin: 10px;
     border: 1px solid #cccccc;
 }
 
 div.negative_votes {
     width: 80px;
     float: left;
-    margin: 15px;
+    margin: 10px;
     border: 1px solid #cccccc;
+}
+
+span.up_votes {
+    background-color: red; 
+    min-width: 35px;
 }
 
 div.new_clear {
