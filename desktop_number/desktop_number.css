@@ -340,76 +340,75 @@ div.dnp_content_space_right {
     width: 65%;
 }
     
-.dnp_footer {
-    overflow: auto;
-
-}   
-    
-ul.menu-2 {
+div.dnp_new_footer_top {
+    height: 43px;
     background-color: #6075a6;
-    padding: 10px;
-    -moz-border-radius: 25px 25px 0 0;
+        -moz-border-radius: 25px 25px 0 0;
     -webkit-border-radius: 25px 25px 0 0;
     border-radius: 25px 25px 0 0;
     -khtml-border-radius: 25px 25px 0 0;
-    margin-bottom: 20px;
 }
     
-ul.menu-2 > li {
-    display: inline-block;
-    margin: 0 10px;
-}
     
-ul.menu-2 > li:last-child {
-    display: none;
-} 
+/* footer */
     
-ul.menu-2 > li > a {
-    color: #fff !important;
-}
-    
-ul.menu-2 > li > a:hover {
-    text-decoration: none;
-}
+.dnp_footer {
+    overflow: auto;
+    border: 1px solid #cccccc;
 
-.sub-menu {
+}  
+    
+div#footer-holder {
+    width: 100%;
+    padding: 0  !important;
+    margin: 0  !important;
+}
+    
+ul.menu-2, img.wp-image-83085 {
     display: none;
 }
     
 div.sidebar-footer {
+    width: 25% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     float: left;
-    width: 25%;
-    padding: 0 20px;
+}
+    
+div.sidebar-footer > div {
+    margin: 0 !important;
+    padding: 0 20px !important;
+    width: 100%;
 }
     
 h5 {
-    margin: 0;
-    padding: 5px;
-    background-color: #6075a6;
-    color: #fff;
-    text-align: center;
+    width: 100%;
+    color: #ffffff !important;
+    background-color: #6075a6 !important;
+    margin: 0 0 20px 0 !important;
+    font-size: 12px;
+    padding: 10px  !important;
+    min-height: 55px;
 }
-
+    
 div.textwidget > ul {
-    min-height: 350px;
-    padding: 20px;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 210px;
+    
 }
     
 div.textwidget > ul > li {
-    margin: 0 0 10px 0;
-}
-
-div.textwidget > ul > li > a {
-    color: #6075a6 !important;
+    margin: 0;
+    padding: 5px;
 }
     
-div.textwidget {
-    display: inline-block;
+div.textwidget > ul > li > a {
+    color: #6075a6 !important;
+    font-size: 12px;
 }
-
-img.wp-image-83085 {
-    display: none;
-}
+    
+/* end footer */
     
 div.dnp_new_footer_bottom {
     height: 42px;
