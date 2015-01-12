@@ -354,6 +354,7 @@ div.dnp_new_footer_top {
     -webkit-border-radius: 25px 25px 0 0;
     border-radius: 25px 25px 0 0;
     -khtml-border-radius: 25px 25px 0 0;
+    margin-bottom: 
 }
     
     
@@ -362,7 +363,8 @@ div.dnp_new_footer_top {
 .dnp_footer {
     overflow: auto;
     border: 1px solid #cccccc;
-
+    background-color: #ffffff;
+    padding: 0 0 20px 0;
 }  
     
 div#footer-holder {
@@ -401,13 +403,17 @@ h5 {
     
 div.textwidget > ul {
     margin: 0 !important;
-    padding: 0 0 20px 0 !important;
-    min-height: 300px;
+    padding: 0 !important;
 }
     
 div.textwidget > ul > li {
     margin: 0;
     padding: 5px;
+}
+    
+div.widget.widget_text {
+    margin: 0 !important;
+    padding: 0 !important;
 }
     
 div.textwidget > ul > li > a {
@@ -458,8 +464,43 @@ div.dnp_tags_chart {
 }
 
 div.comment-box {
-    margin: 15px !important;
+    margin: 0 !important;
+    border: 1px solid #cccccc !important;
+    line-height: 1.4 !important;
 }
+    
+h4.comment-author {
+    font-size: 14px !important;
+    border-bottom: 1px solid #cccccc !important;
+    margin: 0px !important;
+}
+    
+div.comment-box > p {
+    margin: 20px;
+}
+    
+span.hashtag {
+    padding: 2px 5px !important;
+    border: 1px solid #cccccc !important;
+    background-color: #fff !important;
+}
+    
+p.comment-annotation {
+    overflow-wrap: break-word;
+    text-align: left;
+    word-wrap: break-word;
+    margin: 15px 0px 0px;
+    font-size: 10px;
+}
+
+
+}
+    
+li.comment {
+    border: 0 !important;
+}
+    
+/* end of coms override */
 
 /* Comment box disabled for now */
 
