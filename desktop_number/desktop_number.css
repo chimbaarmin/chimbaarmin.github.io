@@ -467,6 +467,7 @@ div.comment-box {
     margin: 0 !important;
     border: 1px solid #cccccc !important;
     line-height: 1.4 !important;
+    padding: 10px;
 }
     
 h4.comment-author {
