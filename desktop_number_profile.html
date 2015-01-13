@@ -27,6 +27,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
         <!--[if IE 8 ]><div id="ie8-detect"></div><![endif]-->
         <!--[if IE 9 ]><div id="ie9-detect"></div><![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     </head>
     <body class="single single-telefonnummer postid-19091 single-format-standard custom-background font-st chrome wpb-js-composer js-comp-ver-4.3.4 vc_responsive">
         <div class="col-md-2"></div>
@@ -867,7 +868,7 @@
         </div>
         <div class="col-md-3"> 
         <!-- start of dnp_profile_menu -->
-            <div class="dnp_profile_menu">
+            <div class="dnp_profile_menu" id="getFixed">
                <a href="/"><img src="img/ni_logo_small.png"></a>
                 <h3>Basic Info</h3>
                 <!-- start of div.dnp_new_code_info.right_menu -->
@@ -924,7 +925,7 @@
                         <div class="clear"></div>  
                         </div>
                     <p style="text-align:center;" class="vote_result"></p>
-                    <button class="sm_comment">Comment</button> <button class="sm_comment">More comments</button>
+                    <button class="sm_comment">Leave feedback</button> <button class="sm_comment">More comments</button>
                 </div>
             <!-- end of dnp_vote_box.right_menu -->
                <!-- start of dnp_new_social_ribbon.right_menu -->
@@ -940,6 +941,26 @@
             </div>
         <!-- end of dnp_profile_menu -->
         </div>
+        <script>
+
+        jQuery(function($) {
+          function fixDiv() {
+            var $cache = $('#getFixed');
+            if ($(window).scrollTop() > 500)
+              $cache.css({
+                'position': 'fixed',
+                  'top': '-500px'
+              });
+            else
+              $cache.css({
+                'position': 'relative',
+                'top': 'auto'
+              });
+          }
+          $(window).scroll(fixDiv);
+          fixDiv();
+        });
+        </script>
     </body>
 </html>
 

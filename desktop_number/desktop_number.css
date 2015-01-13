@@ -579,9 +579,10 @@ div.adspace0 img, div.adspace00 img {
 }
 
 /* fast reply area */
-    
+
 div.dnp_profile_menu {
-    position: fixed;
+    position: static;
+    top: 0px;
     width: 300px;
     text-align: center;
     background-color: #ffffff;
@@ -639,16 +640,16 @@ div.dnp_vote_box.right_menu {
     border: 1px solid #cccccc;
 }
     
-div.dnp_new_social_ribbon.right:menu {
+div.dnp_new_social_ribbon.right_menu {
     text-align: center;
 }
     
-div.dnp_profile_menu button {
+div.dnp_profile_menu button.sm_comment {
     background-color: #6075a6;
     color: #ffffff;
     padding: 5px;
     margin: 10px 5px 0 5px;
-    width: 75px;
+    width: 100px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
