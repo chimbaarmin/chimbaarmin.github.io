@@ -558,7 +558,7 @@ div.adspace0 {
     width: 100%;
     border: 1px solid #ccc;
     text-align: center;
-    margin: 20px 0;
+    margin: 20px 0 !important;
 }
     
 div.adspace0 > img {
