@@ -618,7 +618,7 @@ div#hastagChart div {
     
 /* Responsive layout for <960px */
     
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1000px) {
     body {
         display: none;
     }
