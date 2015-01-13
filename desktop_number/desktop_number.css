@@ -50,9 +50,9 @@ div.t_middle_body_topchart_item_half.dnp_empty {
 .widget_threat_meter {
     float: left;
     margin: 0;
-    padding: 2.3%;
+    padding: 2.3% 2.3% 0 2.3%;
     border: 0;
-    width: 27.7%;
+    width: 37.7%;
 }
     
 p.meter_alert {
@@ -68,20 +68,20 @@ div.widget_threat_meter > img {
     
 div.dnp_header_stats {
     width: 100%;
-    margin: 20px 0;
+    margin: 10px 0 10px 0;
     padding: 0 !important;
     font-size: 16px !important;
-    text-align: left;
+    text-align: center;
     font-size: 12px !important;
     letter-spacing: normal !important;
 }
     
 div.t_middle_body_topchart.telefonnummer_info {
     float: right;
-    width: 70%;
+    width: 62%;
     border: 0;
     padding: 0;
-    margin: 10px 0;
+    margin: 20px 0 0 0;
 }
     
 div.t_middle_body_topchart_item.caption {
@@ -101,7 +101,7 @@ h3#dnp_top_header {
 }
     
 div.dnp_top_item_description {
-    padding: 0 15px;
+    padding: 0 35px;
     border: 0;
     color: #6075a6;
     font-size: 12px;
@@ -158,6 +158,11 @@ div.dnp_new_code_info > div > div {
     float: left;    
 }
     
+div.dnp_new_code_info > div > div:nth-child(odd) {
+    background-color: #8D9EC6;
+    color: #ffffff;
+}
+    
 div.dnp_new_code_info > div > div.clear {
     display: none;
 }
@@ -166,6 +171,8 @@ div.t_middle_body_topchart_item.regular.new_number_info {
     border-bottom: 1px solid #cccccc;
     text-align: center;
     line-height: 1.3;
+    background-color: #8D9EC6 !important;
+    color: #fff;
 }
 
 div.dnp_new_ad_space_one {
