@@ -85,7 +85,7 @@ div.t_middle_body_topchart.telefonnummer_info {
 }
     
 div.t_middle_body_topchart_item.caption {
-    margin: 10px 20px 20px 10px;
+    margin: 10px 20px 10px 10px;
     border-bottom: 1px solid #cccccc;
     padding: 0;
 }
@@ -106,6 +106,7 @@ div.dnp_top_item_description {
     color: #6075a6;
     font-size: 12px;
     letter-spacing: normal;
+    text-align: right;
 }
     
 div.dnp_top_item_description:hover {
@@ -116,6 +117,7 @@ div.dnp_top_item_description:hover {
 h3#dnp_top_description {
     color: #6075a6;
     letter-spacing: normal;
+    display: none;
 }
 
 h3#dnp_top_description:hover {
