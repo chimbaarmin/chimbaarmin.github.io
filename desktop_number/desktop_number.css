@@ -624,7 +624,7 @@ div.dnp_fast_reply div.dnp_small_ad_space {
     
 div.dnp_tags_chart {
     clear: both;
-    margin: 20px 0;
+    margin: 20px 0 20px 0 !important;
     width: 100%;
 }
     
