@@ -498,7 +498,7 @@ div.dnp_tags_chart {
 }
     
 /* Comments plugin override */
-
+    
 #comments_content > h4 {
     box-sizing: border-box;
     color: #f3f3f3;;
@@ -521,6 +521,7 @@ div.comment-box {
     margin: 0 !important;
     border: 1px solid #cccccc !important;
     line-height: 1.4 !important;
+    display: none;                                /* remove this line */
 }
     
 h4.comment-author {
