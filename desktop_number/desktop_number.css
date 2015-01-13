@@ -463,6 +463,20 @@ i.fa {
     line-height: 1;
     vertical-align: middle;
 }
+    
+button.vote_item {
+    border: 0;
+}
+    
+span.fa.fa-thumbs-o-up {
+    border: 0;
+    color: green;
+}
+    
+span.fa.fa-thumbs-o-down {
+    border: 0;
+    color: red;
+}
 
 i.fa-facebook-square {
     color: #6075a6;
