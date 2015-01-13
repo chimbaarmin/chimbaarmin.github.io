@@ -623,9 +623,11 @@
         jQuery(function($) {
           function fixDiv() {
             var $cache = $('#getFixed');
-            if ($(window).scrollTop() > 350)
+            var elemheight = document.getElementById('getFixed').offsetHeight;
+            var diffheight = elemheight - window.innerHeight + 40;
+            if ($(window).scrollTop() >  diffheight)
               $cache.css({
-                'top': '-350px',
+                'top': '-' + diffheight +'px',
                 'position': 'fixed'
               });
             else
