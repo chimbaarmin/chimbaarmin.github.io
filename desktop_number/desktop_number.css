@@ -488,15 +488,6 @@ div.dnp_new_footer_bottom {
     margin-bottom: 20px;
 }
     
-/* Tags chart plugin override */
-    
-div.dnp_tags_chart {
-    clear: both;
-    overflow: auto;
-    border: 1px solid #ccc;
-    margin: 20px 0;
-}
-    
 /* Comments plugin override */
     
 #comments_content > h4 {
@@ -627,6 +618,53 @@ div.dnp_fast_reply div.dnp_small_ad_space {
     margin-top: 20px;
     text-align: center;
     background-color: #EEB4B4;
+}
+    
+/* Tags chart plugin override */
+    
+div.dnp_tags_chart {
+    clear: both;
+    margin: 20px 0;
+    width: 100%;
+    background-color: #ffffff;
+}
+    
+div.t_middle_body_topchart_item.t_middle_body_topchart_item_nohover {
+    width: 100%;
+    padding: 0 !important;
+}
+    
+div.t_middle_body_topchart_item_two_third {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #cccccc;
+}
+    
+div#chart_div {
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+    
+div#chart_div div {
+    width: 100% !important;
+}
+    
+div.t_middle_body_topchart_item_third {
+    width: 50% !important;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-left: 0;
+}
+    
+div#hastagChart {
+    width: 100% !important;
+}
+    
+div#hastagChart div {
+    width: 100% !important;
 }
     
 /* Responsive layout for <960px */
