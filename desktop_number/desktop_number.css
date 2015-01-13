@@ -626,7 +626,6 @@ div.dnp_tags_chart {
     clear: both;
     margin: 20px 0;
     width: 100%;
-    background-color: #ffffff;
 }
     
 div.t_middle_body_topchart_item.t_middle_body_topchart_item_nohover {
@@ -635,9 +634,10 @@ div.t_middle_body_topchart_item.t_middle_body_topchart_item_nohover {
 }
     
 div.t_middle_body_topchart_item_two_third {
-    width: 50%;
+    width: 49%;
     padding: 20px;
     border: 1px solid #cccccc;
+    background-color: #fff;
 }
     
 div#chart_div {
@@ -657,6 +657,7 @@ div.t_middle_body_topchart_item_third {
     padding: 20px;
     border: 1px solid #cccccc;
     border-left: 0;
+    background-color: #fff;
 }
     
 div#hastagChart {
