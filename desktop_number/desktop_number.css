@@ -634,6 +634,10 @@ div.dnp_tags_chart {
     margin: 20px 0 20px 0 !important;
     width: 100%;
     overflow: auto;
+    -moz-border-radius: 25px 25px 0 0;
+    -webkit-border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0 0;
+    -khtml-border-radius: 25px 25px 0 0;
 }
     
 div.t_middle_body_topchart_item.t_middle_body_topchart_item_nohover {
@@ -643,18 +647,31 @@ div.t_middle_body_topchart_item.t_middle_body_topchart_item_nohover {
     
 div.t_middle_body_topchart_item_two_third {
     width: 50%;
-    padding: 20px;
+    padding: 0;
     border: 1px solid #cccccc;
     background-color: #fff;
     float: left;
 }
     
+div.t_middle_body_topchart_item_two_third h3 {
+    padding: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #6075a6;
+        -moz-border-radius: 25px 0 0 0;
+    -webkit-border-radius: 25px 0 0 0;
+    border-radius: 25px 0 0 0;
+    -khtml-border-radius: 25px 0 0 0;
+    
+}
+    
 div#chart_div {
-    width: 100%;
+    width: 90% !important;
     text-align: center;
     background-color: #ffffff;
     overflow-x: auto;
     overflow-y: hidden;
+    margin: 20px;
 }
     
 div#chart_div div {
@@ -663,15 +680,33 @@ div#chart_div div {
     
 div.t_middle_body_topchart_item_third {
     width: 50% !important;
-    padding: 20px;
     border: 1px solid #cccccc;
     border-left: 0;
     background-color: #fff;
     float: right;
 }
+
+div.t_middle_body_topchart_item_third h3 {
+    padding: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #6075a6;
+    -moz-border-radius: 0 25px 0 0;
+    -webkit-border-radius: 0 25px 0 0;
+    border-radius: 0 25px 0 0;
+    -khtml-border-radius: 0 25px 0 0;
+}
+    
+div.t_middle_body_topchart_item_third h3:hover, div.t_middle_body_topchart_item_two_third h3:hover {
+    background-color: #6075a6 !important;
+    color: #ffffff !important;
+}
     
 div#hastagChart {
-    width: 100% !important;
+    width: 90% !important;
+    margin: 20px;
+        overflow-x: auto;
+    overflow-y: hidden;
 }
     
 div#hastagChart div {
