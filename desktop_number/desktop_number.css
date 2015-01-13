@@ -580,7 +580,10 @@ div.dnp_fast_reply {
     text-align: center;
     background-color: #ffffff;
     margin: 20px 20px 0 0;
-
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    -khtml-border-radius: 25px;
     border: 1px solid #cccccc;
 }
     
@@ -625,6 +628,10 @@ div.dnp_fast_reply div.dnp_small_ad_space {
     margin-top: 20px;
     text-align: center;
     background-color: #EEB4B4;
+    -moz-border-radius: 0 0 25px 25px;
+    -webkit-border-radius: 0 0 25px 25px;
+    border-radius: 0 0 25px 25px;
+    -khtml-border-radius: 0 0 25px 25px;
 }
     
 /* Tags chart plugin override */
