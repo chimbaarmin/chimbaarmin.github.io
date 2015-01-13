@@ -75,6 +75,7 @@ h1.h1_profile {
     overflow: auto;
     margin: 0;
     border: 1px solid #ccc;
+    border-top: 0;
     line-height: 1.3;
 }
     
@@ -568,15 +569,20 @@ div.adspace0 {
     margin: 20px 0 !important;
 }
     
-div.adspace0 > img {
+div.adspace00 {
+    border: 1px solid #cccccc;
+    border-top: 0;
+}
+    
+div.adspace0 img, div.adspace00 img {
     width: 100%;
 }
 
 /* fast reply area */
     
-div.dnp_fast_reply {
+div.dnp_profile_menu {
     position: fixed;
-    width: 200px;
+    width: 300px;
     text-align: center;
     background-color: #ffffff;
     margin: 20px 20px 0 0;
@@ -585,14 +591,59 @@ div.dnp_fast_reply {
     border-radius: 25px;
     -khtml-border-radius: 25px;
     border: 1px solid #cccccc;
+    padding: 0 20px;
 }
     
-div.dnp_fast_reply img {
+div.dnp_profile_menu img {
     padding: 20px;
     margin-top: 10px;
 }
     
-div.dnp_fast_reply button {
+div.dnp_profile_menu h3 {
+    font-size: 16px;
+    background-color: #6075a6;
+    color: #ffffff;
+    padding: 5px;
+    margin: 20px 0 0 0;
+}
+    
+div.dnp_new_code_info.right_menu {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #cccccc;;
+}
+    
+div.dnp_new_code_info.right_menu div {
+    border: 0;
+    text-align: left;
+    font-size: 14px;
+    padding: 0;
+}
+    
+div.dnp_new_code_info.right_menu > div {
+    margin: 10px;
+}
+    
+div.dnp_new_code_info.right_menu div.new_number_info {
+    display: none;
+}
+    
+div.clear.right_menu {
+    clear: both;
+}
+    
+    
+div.dnp_vote_box.right_menu {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+    
+div.dnp_new_social_ribbon.right:menu {
+    text-align: center;
+}
+    
+div.dnp_profile_menu button {
     background-color: #6075a6;
     color: #ffffff;
     padding: 5px;
@@ -605,33 +656,13 @@ div.dnp_fast_reply button {
     border: 1px solid #cccccc;
 }
 
-div.dnp_fast_reply button.sm_rate {
-    background-color: #f0ad4e;
-}
-    
-div.dnp_fast_reply button.sm_comment {
-    background-color: #d9534f;
-}
-    
-div.dnp_fast_reply h3 {
-    font-size: 16px;
-    background-color: #6075a6;
-    color: #ffffff;
-    padding: 5px;
-    margin: 10px 0;
-}
-
-div.dnp_fast_reply div.dnp_small_ad_space {
+div.dnp_profile_menu div.dnp_small_ad_space {
     clear: both;
     height: 250px;
     border-top: 1px solid #ccc;
     margin-top: 20px;
     text-align: center;
     background-color: #EEB4B4;
-    -moz-border-radius: 0 0 25px 25px;
-    -webkit-border-radius: 0 0 25px 25px;
-    border-radius: 0 0 25px 25px;
-    -khtml-border-radius: 0 0 25px 25px;
 }
     
 /* Tags chart plugin override */
