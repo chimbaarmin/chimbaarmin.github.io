@@ -626,6 +626,7 @@ div.dnp_tags_chart {
     clear: both;
     margin: 20px 0 20px 0 !important;
     width: 100%;
+    overflow: auto;
 }
     
 div.t_middle_body_topchart_item.t_middle_body_topchart_item_nohover {
