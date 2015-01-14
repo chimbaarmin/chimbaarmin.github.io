@@ -189,41 +189,51 @@ div.t_middle_body_topchart_item.regular.new_number_info {
 div.dnp_responsive_area {
     background-color: #ffffff;
     display: none;
-}
-
-div.dnp_vote_box.responsive_area {
-    border: 1px solid #ccc;
+    overflow: auto;
+    border: 1px solid #cccccc;
     border-top: 0;
-    border-bottom: 0;
 }
 
-div.dnp_responsive_area h3 {
-    font-size: 16px;
+div.dnp_vote_box {
+    width: 50%;
+    float: left;
     text-align: center;
+    padding: 20px;
+    border-right: 1px solid #cccccc;
+}
+    
+div.dnp_vote_box h3 {
     padding: 5px;
     background-color: #6075a6;
     color: #ffffff;
+    font-size: 16px;
 }
     
-div.dnp_responsive_area div {
+div.dnp_vote_box h6 {
+    margin: 20px;
+    padding: 0;
+    text-align: left;
+}
+    
+div.dnp_vote_box button {
+    margin: 0 10px;;
+    padding: 0;
+}
+   
+div.dnp_vote_box p.vote_result {
+    font-size: 12px;
+    padding-top: 20px;
+}
+    
+div.dnp_responsive_area div.dnp_comment_box {
+    width: 50%;
+    float: left;
     text-align: center;
 }
     
-div.dnp_responsive_area h6 {
-    padding: 20px 0 0 0;
-    font-size: 14px;
-}
-    
-div.dnp_responsive_area button.vote_item {
-    background-color: #fff;
-    margin: 20px;
-    border: 0;
-    padding: 0;
-}
-    
-div.dnp_responsive_area div.dnp_social_ribbon {
-    border: 1px solid #ccc;
-    border-top: 0; 
+div.dnp_social_ribbon.responsive_area {
+    width: 50%;
+    float: right;
 }
     
 /* */
