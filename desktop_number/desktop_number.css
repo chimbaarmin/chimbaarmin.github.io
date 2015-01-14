@@ -292,7 +292,8 @@ div.textwidget > ul {
     margin: 0 !important;
     padding: 0 !important;
     height: 200px;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
     
 div.textwidget > ul > li {
