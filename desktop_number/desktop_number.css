@@ -303,6 +303,7 @@ div.textwidget > ul > li {
 div.widget.widget_text {
     margin: 0 !important;
     padding: 0 !important;
+    height: 280px;
 }
     
 div.textwidget > ul > li > a {
