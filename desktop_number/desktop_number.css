@@ -291,6 +291,8 @@ h5 {
 div.textwidget > ul {
     margin: 0 !important;
     padding: 0 !important;
+    height: 200px;
+    overflow: auto;
 }
     
 div.textwidget > ul > li {
