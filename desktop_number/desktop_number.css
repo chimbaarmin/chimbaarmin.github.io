@@ -436,12 +436,12 @@ div.prevnext_item_wrapper {
 }
     
 div.next {
-    background: url('/img/next.png');
+    background: url('//img/next.png');
     background-size: 32px 32px;
 }
     
 div.previous {
-    background: url('/img/prev.png');
+    background: url('//img/prev.png');
 }
 
 h4.vote_down {
@@ -758,7 +758,7 @@ div#hastagChart div {
     width: 100% !important;
 }
     
-/* Responsive layout for <992px */
+/* Responsive layout */
     
 @media screen and (max-width: 992px) {
     div.dnp_profile_menu {
