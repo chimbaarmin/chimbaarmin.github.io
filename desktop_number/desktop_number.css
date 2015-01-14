@@ -568,6 +568,20 @@ div.dnp_vote_box.right_menu {
     border: 1px solid #cccccc;
 }
     
+div.dnp_comment_box {
+    margin: 20px 0;
+}
+    
+button.dnp_leave_feedback {
+    background-color: #6075a6;
+    color: #ffffff;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -khtml-border-radius: 4px;
+    padding: 10px;
+}
+    
 div.dnp_new_social_ribbon.right_menu {
     text-align: center;
     border: 1px solid #cccccc;
@@ -636,6 +650,7 @@ div.dnp_search_box input {
     border-radius: 4px;
     -khtml-border-radius: 4px;
     padding: 5px;
+    border: 1px solid #cccccc;
 }
 
 div.dnp_profile_menu div.dnp_small_ad_space {
