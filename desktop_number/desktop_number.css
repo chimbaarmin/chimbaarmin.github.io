@@ -674,10 +674,10 @@ div#hastagChart div {
     width: 100% !important;
 }
     
-/* Responsive layout for <960px */
+/* Responsive layout for <992px */
     
-@media screen and (max-width: 1000px) {
-    body {
+@media screen and (max-width: 992px) {
+    div.dnp_profile_menu {
         display: none;
     }
 
