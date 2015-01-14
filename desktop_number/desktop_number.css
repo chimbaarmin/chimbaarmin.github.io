@@ -673,13 +673,12 @@ div.dnp_search_box input {
 }
 
 div.dnp_profile_menu div.dnp_small_ad_space {
+    width: 100%;
     clear: both;
-    height: 250px;
-    border-top: 1px solid #ccc;
     margin-top: 20px;
     text-align: center;
-    background-color: #EEB4B4;
     margin: 20px 0;
+    height: 100%;
 }
     
 /* Tags chart plugin override */
