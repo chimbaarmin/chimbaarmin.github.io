@@ -13,6 +13,15 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     
 /* Bootstrap grid end */
     
+div.dnp_top_banner_menu {
+    height: 100px;
+    width: 100%;
+    background-image: url('/img/top_logo.png');
+    margin-top: 20px;
+}  
+    
+    
+    
 h1.dnp_new_number_profile {
     text-align: center;
     margin: 20px 0 0 0;
@@ -404,12 +413,7 @@ div.dnp_profile_menu {
     border-radius: 25px;
     -khtml-border-radius: 25px;
     border: 1px solid #cccccc;
-    padding: 0 20px;
-}
-    
-div.dnp_profile_menu img {
-    padding: 20px;
-    margin-top: 10px;
+    padding: 10px 20px;
 }
     
 div.dnp_profile_menu h3 {
@@ -562,18 +566,15 @@ div.t_middle_body_topchart_item_two_third {
     border: 1px solid #cccccc;
     background-color: #fff;
     float: left;
+    -moz-border-radius: 25px 0 0 25px;
+    -webkit-border-radius: 25px 0 0 25px;
+    border-radius: 25px 0 0 25px;
+    -khtml-border-radius: 25px 0 0 25px;
 }
     
 div.t_middle_body_topchart_item_two_third h3 {
     padding: 10px;
-    font-size: 14px;
-    color: #ffffff;
-    background-color: #6075a6;
-        -moz-border-radius: 25px 0 0 0;
-    -webkit-border-radius: 25px 0 0 0;
-    border-radius: 25px 0 0 0;
-    -khtml-border-radius: 25px 0 0 0;
-    
+    font-size: 14px;    
 }
     
 div#chart_div {
@@ -595,28 +596,21 @@ div.t_middle_body_topchart_item_third {
     border-left: 0;
     background-color: #fff;
     float: right;
+    -moz-border-radius: 0 25px 25px 0;
+    -webkit-border-radius: 0 25px 25px 0;
+    border-radius: 0 25px 25px 0;
+    -khtml-border-radius: 0 25px 25px 0;
 }
 
 div.t_middle_body_topchart_item_third h3 {
     padding: 10px;
     font-size: 14px;
-    color: #ffffff;
-    background-color: #6075a6;
-    -moz-border-radius: 0 25px 0 0;
-    -webkit-border-radius: 0 25px 0 0;
-    border-radius: 0 25px 0 0;
-    -khtml-border-radius: 0 25px 0 0;
-}
-    
-div.t_middle_body_topchart_item_third h3:hover, div.t_middle_body_topchart_item_two_third h3:hover {
-    background-color: #6075a6 !important;
-    color: #ffffff !important;
 }
     
 div#hastagChart {
     width: 90% !important;
     margin: 20px;
-        overflow-x: auto;
+    overflow-x: auto;
     overflow-y: hidden;
 }
     
