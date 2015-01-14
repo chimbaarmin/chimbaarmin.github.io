@@ -417,6 +417,7 @@ p.comment-annotation {
     
 li.comment {
     border: 0 !important;
+    margin-bottom: 25px;
 }
     
 /* end of coms override */
