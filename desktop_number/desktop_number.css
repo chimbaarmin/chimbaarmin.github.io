@@ -527,10 +527,12 @@ div.dnp_tags_area div.t_middle_body_tags {
 div.dnp_tags_area div.t_middle_body_tags ul {
     overflow: auto;
     margin: 0;
+    list-style-type: none;
 }
     
 div.dnp_tags_area div.t_middle_body_tags ul li {
     display: inline;
+    float: left;
     padding: 0;
     margin: 5px;
     color: #6075a6 !important;
