@@ -1,0 +1,29 @@
+body {
+    padding-top: 40px;
+}
+
+div.gateway_sample {
+    border: 1px solid #aaa;
+    padding: 20px:
+}
+
+h3 {
+    margin: 0 20px;
+}
+
+input.suggested_tags {
+    margin: 20px;
+    width: 50%;
+    padding: 5px;
+}
+
+textarea.comment_area {
+    margin: 20px;
+    height: 100px;
+    width: 80%;
+    padding: 5px;
+}
+
+button.submit_button {
+    margin: 0 0 20px 20px;
+}
