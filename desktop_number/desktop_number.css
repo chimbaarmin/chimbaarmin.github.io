@@ -458,6 +458,10 @@ div.comment-box {
     line-height: 1.4 !important;
     padding: 0 !important;
     overflow: auto !important;
+    -moz-border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    border-radius: 10px !important;
+    -khtml-border-radius: 10px !important;
 }
     
 h4.comment-author {
