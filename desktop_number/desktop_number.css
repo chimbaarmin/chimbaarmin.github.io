@@ -469,6 +469,7 @@ h4.comment-author {
     border-bottom: 1px solid #cccccc !important;
     margin: 0px !important;
     padding: 10px;
+    text-align: center;
 }
     
 div.comment-date {
@@ -504,6 +505,7 @@ div.dnp_reply_button {
     padding: 10px;
     width: 50%;
     float: left;
+    text-align: center;
 }
     
 button.dnp_reply_button {
@@ -518,7 +520,6 @@ button.dnp_reply_button {
     font-size: 14px;
     line-height: 1.3;
     width: 100px;
-    margin-left: 30px;
 }
     
 div.dnp_comment_social_ribbon {
@@ -526,6 +527,7 @@ div.dnp_comment_social_ribbon {
     float: right;
     text-align: right;
     padding: 10px;
+    text-align: center;
 }
     
 div.dnp_comment_social_ribbon i {
