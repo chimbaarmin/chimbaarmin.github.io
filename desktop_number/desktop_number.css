@@ -530,6 +530,7 @@ div.dnp_tags_area div.t_middle_body_tags ul {
 }
     
 div.dnp_tags_area div.t_middle_body_tags ul li {
+    display: inline;
     padding: 0;
     margin: 5px;
     color: #6075a6 !important;
