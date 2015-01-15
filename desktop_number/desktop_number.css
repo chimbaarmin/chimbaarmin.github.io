@@ -484,11 +484,11 @@ div.dnp_comment_hashtags {
 }
     
 span.hashtag {
-    padding: 5px !important;
+    padding: 5px 10px !important;
     font-size: 12px !important;
-    border: 1px solid #cccccc !important;
-    background-color: #fff !important;
-    color: #999 !important;
+    border: 1px solid #999999 !important;
+    background-color: #8D9EC6 !important;
+    color: #ffffff !important;
 }
     
 div.dnp_comment_text {
