@@ -360,6 +360,7 @@ div.dnp_comment_footer {
 }
     
 div.dnp_new_footer_top {
+    clear: both;
     height: 43px;
     background-color: #6075a6;
     -moz-border-radius: 25px 25px 0 0;
@@ -372,6 +373,7 @@ div.dnp_new_footer_top {
 /* footer */
     
 .dnp_footer {
+    clear: both;
     overflow: auto;
     border: 1px solid #cccccc;
     background-color: #ffffff;
@@ -609,6 +611,7 @@ div.dnp_comment_box_space {
 /* Tags area */
     
 div.dnp_tags_area h3 {
+    clear: both;
     font-size: 14px;
     text-align: center;
     padding: 10px;
@@ -880,82 +883,13 @@ div.dnp_profile_menu div.dnp_small_ad_space {
     margin: 20px 0;
     height: 100%;
 }
-    
-/* Tags chart plugin override */
-    
-div.dnp_tags_chart {
-    clear: both;
-    margin: 20px 0 20px 0 !important;
-    width: 100%;
-    overflow: auto;
-    -moz-border-radius: 25px 25px 0 0;
-    -webkit-border-radius: 25px 25px 0 0;
-    border-radius: 25px 25px 0 0;
-    -khtml-border-radius: 25px 25px 0 0;
-}
-    
-div.t_middle_body_topchart_item.t_middle_body_topchart_item_nohover {
-    width: 100%;
-    padding: 0 !important;
-}
-    
-div.t_middle_body_topchart_item_two_third {
-    width: 50%;
-    padding: 0;
-    border: 1px solid #cccccc;
-    background-color: #fff;
-    float: left;
-    -moz-border-radius: 25px 0 0 25px;
-    -webkit-border-radius: 25px 0 0 25px;
-    border-radius: 25px 0 0 25px;
-    -khtml-border-radius: 25px 0 0 25px;
-}
-    
-div.t_middle_body_topchart_item_two_third h3 {
-    padding: 10px;
-    font-size: 14px;    
-}
-    
-div#chart_div {
-    width: 90% !important;
-    text-align: center;
-    background-color: #ffffff;
-    overflow: auto;
-    overflow-y: hidden;
-    margin: 20px;
-}
-    
-div#chart_div div {
-    width: 100% !important;
-}
-    
-div.t_middle_body_topchart_item_third {
-    width: 50% !important;
-    border: 1px solid #cccccc;
-    border-left: 0;
-    background-color: #fff;
-    float: right;
-    -moz-border-radius: 0 25px 25px 0;
-    -webkit-border-radius: 0 25px 25px 0;
-    border-radius: 0 25px 25px 0;
-    -khtml-border-radius: 0 25px 25px 0;
-}
 
-div.t_middle_body_topchart_item_third h3 {
-    padding: 10px;
-    font-size: 14px;
-}
+/* */
     
-div#hastagChart {
-    width: 90% !important;
-    margin: 20px;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-    
-div#hastagChart div {
-    width: 100% !important;
-}
+    div.dnp_tags_chart img { 
+        margin: 20px 0;
+        border: 1px solid #ccc;
+    }
     
 /* Responsive layout */
     
@@ -963,18 +897,16 @@ div#hastagChart div {
     div.dnp_profile_menu {
         display: none;
     }
-    div.dnp_responsive_area {
-        display: block;
-    }
 
 }
     
-@media screen and (min-width: 992px) {
-    div.dnp_profile_menu {
-        display: block;
+/* Typography */
+    
+    h1, h2, h3, h4, h5 ,h6 {
+        font-family: 'Alegreya', serif !important;
+        letter-spacing: normal !important;
     }
-    div.dnp_responsive_area {
-        display: none;
+    
+    body, button {
+        font-family: 'Roboto', sans-serif !important;
     }
-
-}
