@@ -21,6 +21,10 @@
             <div class="col-md-6">
                 <div class="gateway_wrapper">
                     <h1>Help us!</h1>
+                    <div class="progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                          </div>
+                    </div>
                     <div class="gateway_step1">
                         <h2>Step 1</h2>
                         <h3>Please rate this number. Positive or negative?</h3>
@@ -80,9 +84,11 @@
     <script>
         $( "button" ).click(function() {
           $( "div.gateway_step2" ).css("display", "block");
+            $( "div.progress-bar" ).css("width", "33%");
         });
         $( "button.submit_comment" ).click(function() {
           $( "div.gateway_step3" ).css("display", "block");
+            $( "div.progress-bar" ).css("width", "66%");
         });
 </script>
 </body>
