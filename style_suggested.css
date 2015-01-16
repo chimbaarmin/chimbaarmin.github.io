@@ -19,6 +19,14 @@ div.gateway_step1 {
     
 }
 
+div.gateway_step2 {
+    display: none;
+}
+
+div.gateway_step3 {
+    display: none;
+}
+
 h1 {
     margin: 0;
     padding: 10px;

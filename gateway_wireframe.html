@@ -34,7 +34,7 @@
                             <button class="submit_comment">Submit</button>
                         </div>
                     </div>
-                    <div class="gateway_step1">
+                    <div class="gateway_step3">
                         <h2>Step 3</h2>
                         <h3>Please provide additional information concerning this number.</h3>
                         <div class="gateway_info_box">
@@ -74,5 +74,13 @@
             <div class="col-md-3"></div>
         </div>
     </div>
+    <script>
+        $( "button" ).click(function() {
+          $( "div.gateway_step2" ).css("display", "block");
+        });
+        $( "button.submit_comment" ).click(function() {
+          $( "div.gateway_step3" ).css("display", "block");
+        });
+</script>
 </body>
 </html>
