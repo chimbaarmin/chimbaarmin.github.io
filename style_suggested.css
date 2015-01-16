@@ -75,7 +75,7 @@ div.info_box_own_private {
     padding-left: 50px;
 }
 
-div.info_box_own, div.info_box_company, div_info_box_did {
+div.info_box_own, div.info_box_company, div_info_box_did, div.info_box_accepted, div.info_box_commercial, div.info_box_rejected {
     padding-left: 50px;
 }
 
@@ -101,12 +101,14 @@ div.left_sidebar {
     left: 5%;
     top: 100px;
     padding: 20px 30px 20px 20px;
+    text-align: center;
 }
 
 div.left_sidebar h2 {
     padding: 40px 0;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    font-size: 25px;
 }
 
 div.left_sidebar img {
@@ -117,6 +119,11 @@ div.left_sidebar h3 {
     margin: 0;
 }
 
+div.left_sidebar p.text_top {
+    text-align: left;
+    margin: 20px 0;
+}
+
 p.text_bottom {
     font-size: 20px;
 }
@@ -124,6 +131,6 @@ p.text_bottom {
 
 /* CSS for cond logic */
 
-div.info_box_own_private, div.info_box_own, div.info_box_company, div.gateway_step2positive, div.gateway_step2negative, div.gateway_step3 {
+div.info_box_own_private, div.info_box_own, div.info_box_company, div.gateway_step2positive, div.gateway_step3, div.info_box_commercial, div.info_box_rejected, div.info_box_accepted, div.gateway_step2negative {
     display: none;
 }

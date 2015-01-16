@@ -81,7 +81,41 @@
                         <h2>2</h2>
                         <h3>Please provide additional information concerning this number.</h3>
                         <div class="gateway_info_box">
-                            <p>Logic not good</p>
+                            <p>This call was</p>
+                            <form>
+                                <input class="accepted" type="radio" name="call" value="accepted"> Accepted
+                                <br>
+                                <div class="info_box_accepted">
+                                    <form>
+                                    <input class="commercial" type="radio" name="call_accepted" value="commercial"> Commercial
+                                    <br>
+                                    <div class="info_box_commercial">
+                                        <form>
+                                            Company name: <input type="text">
+                                            <br>
+                                            Rate your experience: 
+                                            <select>
+                                                <option disabled selected></option>
+                                                <option>Scammy</option>
+                                                <option>Unfriendly</option>
+                                                <option>Annoying</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                    <input class="private" type="radio" name="call_accepted" value="private"> Private
+                                    <br>
+                                    <input class="unknown" type="radio" name="call_accepted" value="unknown"> Unknown
+                                    </form>
+                                </div>
+                                <input class="rejected" type="radio" name="call" value="rejected"> Rejected
+                                <div class="info_box_rejected">
+                                    <form>
+                                        Time of the call: <input type="text">
+                                        <br>
+                                        Number of calls: <input type="text">
+                                    </form>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <div class="gateway_step3">
@@ -120,10 +154,26 @@
         });
         
         $( "button.vote_up" ).click(function() {
-          $( "div.gateway_step2positive" ).css("display", "block");
+            $( "div.gateway_step2positive" ).css("display", "block");
+            $( "div.gateway_step2negative" ).css("display", "none");
         });
         
-
+        $( "input.commercial" ).click(function() {
+          $( "div.info_box_commercial" ).css("display", "block");
+        });
+        
+        $( "input.rejected" ).click(function() {
+          $( "div.info_box_rejected" ).css("display", "block");
+        });
+        
+        $( "input.accepted" ).click(function() {
+          $( "div.info_box_accepted" ).css("display", "block");
+        });
+        
+        $( "button.vote_down" ).click(function() {
+            $( "div.gateway_step2negative" ).css("display", "block");
+            $( "div.gateway_step2positive" ).css("display", "none");
+        });
     </script>
 </body>
 </html>
