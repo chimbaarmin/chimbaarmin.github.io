@@ -80,7 +80,7 @@ textarea.comment_box {
     width: 100%;
 }
 
-button.submit_comment {
+button.submit_comment, button.submit_info {
     padding: 10px;
     background-color: #000;
     color: #fff;
