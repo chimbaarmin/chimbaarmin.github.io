@@ -773,7 +773,8 @@ div.dnp_vote_box.right_menu h6 {
     
 div.dnp_comment_box {
     clear: both;
-    margin: 5px 0 0 0;
+    margin: 5px 0;
+    display: none;
 }
     
 button.dnp_leave_feedback {
