@@ -29,6 +29,20 @@ h1.dnp_new_number_profile {
     letter-spacing: normal;
 }
     
+div.dnp_flag_area {
+    float: right;
+    -moz-border-radius: 0 25px 0 0;
+    -webkit-border-radius: 0 25px 0 0;
+    border-radius: 0 25px 0 0;
+    -khtml-border-radius: 0 25px 0 0;
+    overflow: hidden;
+    margin-top: -42px;
+}
+
+div.dnp_flag_area img {
+    height: 42px;
+}
+    
 .dnp_new_header {
     background-color: #ffffff;
     overflow: auto;
@@ -662,7 +676,7 @@ div.adspace0 {
 }
     
 div.adspace00 {
-    border: 1px solid #cccccc;
+    clear: both;
     border-top: 0;
 }
     
