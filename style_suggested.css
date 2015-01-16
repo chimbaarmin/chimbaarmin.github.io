@@ -64,11 +64,19 @@ button {
     background-color: #ffffff;
     border: 0;
     padding: 0;
-    margin: 0 20px;;
+    margin: 0 20px 20px 20px;
 }
 
-div.info_box_1, div.info_box_2 {
-    margin: 30px;
+div.gateway_info_box {
+    padding: 0 20px 20px 20px;
+}
+
+div.info_box_own_private {
+    padding-left: 50px;
+}
+
+div.info_box_own, div.info_box_company, div_info_box_did {
+    padding-left: 50px;
 }
 
 div.gateway_comment_box {
@@ -111,4 +119,11 @@ div.left_sidebar h3 {
 
 p.text_bottom {
     font-size: 20px;
+}
+
+
+/* CSS for cond logic */
+
+div.info_box_own_private, div.info_box_own, div.info_box_company, div.gateway_step2positive, div.gateway_step2negative, div.gateway_step3 {
+    display: none;
 }

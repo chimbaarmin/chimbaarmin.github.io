@@ -39,43 +39,49 @@
                             <button class="vote_item vote_down" value="vote_down"><span class="fa fa-thumbs-o-down fa-4x"></span></button>
                         </div>
                     </div>
-                    <div class="gateway_step2">
+                    <div class="gateway_step2positive">
                         <h2>2</h2>
                         <h3>Please provide additional information concerning this number.</h3>
                         <div class="gateway_info_box">
-                            <div class="info_box_1">
-                               I recieved
-                               <select class="call_type">
-                                    <option disabled selected></option>
-                                    <option>a call</option>
-                                    <option>an SMS</option>
-                                    <option>a fax</option>
-                               </select>
-                               from 
-                               <select class="call_owner">
-                                    <option disabled selected></option>
-                                    <option>a private number</option>
-                                    <option>a company number</option>
-                                    <option>an unknown number</option>
-                               </select>
-                               , today at
-                                <select class="call_time">
-                                    <option disabled selected></option>
-                                    <option>00 AM</option>
-                                    <option>01 AM</option>
-                                    <option>02 AM</option>
-                               </select>.
-                            </div>
-                            <div class="info_box_2">
-                                This number is used for
-                                <select class="call_service">
-                                    <option disabled selected></option>
-                                    <option>advertising</option>
-                                    <option>spammin</option>
-                                    <option>harrasing</option>
-                                    <option>unknown activity</option>.
-                               </select>
-                            </div>
+                            <p>This number is:</p>
+                            <form>
+                                <input class="my" type="radio" name="owner" value="my"> My own
+                                <br>
+                                <div class="info_box_own">
+                                    <form>
+                                        <input  class="my_private" type="radio" name="owner_my" value="private"> I am a private person
+                                        <br> 
+                                        <div class="info_box_own_private">
+                                            <select>
+                                                <option disabled selected></option>
+                                                <option>Mobile number</option>
+                                                <option>Landline</option>
+                                            </select>
+                                        </div>
+                                        <input  class="my_organization" type="radio" name="owner_my" value="organization"> I am an organization
+                                    </form>
+                                </div>
+                                <input  class="private" type="radio" name="owner" value="private"> Private number of a known person
+                                <br>
+                                <input class="company" type="radio" name="owner" value="company"> Company phone number
+                                <br>
+                                <div class="info_box_company">
+                                    <form>
+                                        <input class="company_positive_online" type="radio" name="owner_company" value="positive_online"> Positive experience on the phone
+                                        <br> 
+                                        <input class="company_positive_offline" type="radio" name="owner_company" value="positive_offline"> Positive experience offline
+                                        <br>
+                                        <input class="company_positive_useful" type="radio" name="owner_company" value="useful"> Useful service
+                                    </form>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="gateway_step2negative">
+                        <h2>2</h2>
+                        <h3>Please provide additional information concerning this number.</h3>
+                        <div class="gateway_info_box">
+                            <p>Logic not good</p>
                         </div>
                     </div>
                     <div class="gateway_step3">
@@ -100,6 +106,24 @@
           $( "div.gateway_step3" ).css("display", "block");
             $( "div.progress-bar" ).css("width", "66%");
         }); 
+        
+        $( "input.my_private" ).click(function() {
+          $( "div.info_box_own_private" ).css("display", "block");
+        });
+        
+        $( "input.my" ).click(function() {
+          $( "div.info_box_own" ).css("display", "block");
+        });
+        
+        $( "input.company" ).click(function() {
+          $( "div.info_box_company" ).css("display", "block");
+        });
+        
+        $( "button.vote_up" ).click(function() {
+          $( "div.gateway_step2positive" ).css("display", "block");
+        });
+        
+
     </script>
 </body>
 </html>
