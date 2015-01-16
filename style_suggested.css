@@ -2,21 +2,17 @@
 
 body {
     background-color: #f3f3f5;
+    background-image: url(img/background_full.jpg);
 }
 
 div.gateway_wrapper {
     margin-top: 50px;
     border: 1px solid #ccc;
-    -moz-border-radius: 25px 25px 0 0;
-    -webkit-border-radius: 25px 25px 0 0;
-    border-radius: 25px 25px 0 0;
-    -khtml-border-radius: 25px 25px 0 0;
-    overflow: hidden;
     background-color: #ffffff;
 }
 
-div.progress {
-    margin: 0 !important;
+div.custom_progress {
+    margin: 20px 0 !important;
     background-color: #ccc;
 }
 
@@ -25,14 +21,14 @@ div.gateway_step1 {
 }
 
 div.gateway_step2 {
-    display: none;
+
 }
 
 div.gateway_step3 {
-    display: none;
+
 }
 
-h1 {
+div.gateway_wrapper h1 {
     margin: 0;
     padding: 10px;
     font-size: 20px;
@@ -41,19 +37,23 @@ h1 {
     color: #fff;
 }
 
-h2 {
-    margin:  0 0 20px 0;
-    padding: 10px;
+div.gateway_wrapper h2 {
     font-size: 20px;
     text-align: center;
     background-color: #000;
     color: #fff;
+    width: 50px;
+    line-height: 50px;
+    position: relative;
+    left: -25px;
+    z-index: 100 !important;
 }
 
-h3 {
+div.gateway_wrapper h3 {
     margin: 0;
     padding: 10px;
     font-size: 16px;
+    margin: -55px 0 20px 25px;
 }
 
 div.gateway_rate_box {
@@ -64,15 +64,15 @@ button {
     background-color: #ffffff;
     border: 0;
     padding: 0;
-    margin: 10px;
+    margin: 0 20px;;
 }
 
 div.info_box_1, div.info_box_2 {
-    margin: 0 20px 20px 20px;
+    margin: 30px;
 }
 
 div.gateway_comment_box {
-    margin: 20px;
+    margin: 30px;
     text-align: center;
 }
 
@@ -84,4 +84,14 @@ button.submit_comment, button.submit_info {
     padding: 10px;
     background-color: #000;
     color: #fff;
+    margin: 20px 0 0 0;
+}
+
+div.left_sidebar {
+    position: fixed;
+    width: 21%;
+    left: 5%;
+    top: 100px;
+    background-color: #fff;
+    padding: 20px 30px 20px 20px;
 }
