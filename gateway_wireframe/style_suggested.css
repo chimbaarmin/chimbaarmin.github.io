@@ -1,0 +1,136 @@
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+
+body {
+    background-color: #f3f3f5;
+    background-image: url(img/background_full.jpg);
+}
+
+div.gateway_wrapper {
+    margin-top: 50px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+}
+
+div.custom_progress {
+    margin: 20px 0 !important;
+    background-color: #ccc;
+}
+
+div.gateway_step1 {
+    
+}
+
+div.gateway_step2 {
+
+}
+
+div.gateway_step3 {
+
+}
+
+div.gateway_wrapper h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+div.gateway_wrapper h2 {
+    font-size: 20px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    width: 50px;
+    line-height: 50px;
+    position: relative;
+    left: -25px;
+    z-index: 100 !important;
+}
+
+div.gateway_wrapper h3 {
+    margin: 0;
+    padding: 10px;
+    font-size: 16px;
+    margin: -55px 0 20px 25px;
+}
+
+div.gateway_rate_box {
+    text-align: center;
+}
+
+button {
+    background-color: #ffffff;
+    border: 0;
+    padding: 0;
+    margin: 0 20px 20px 20px;
+}
+
+div.gateway_info_box {
+    padding: 0 20px 20px 20px;
+}
+
+div.info_box_own_private {
+    padding-left: 50px;
+}
+
+div.positive_info_box_own, div.positive_info_box_company, div.positive_info_box_own_private, div.info_box_accepted, div.info_box_commercial, div.info_box_rejected {
+    padding-left: 50px;
+}
+
+div.gateway_comment_box {
+    margin: 30px;
+    text-align: center;
+}
+
+textarea.comment_box {
+    width: 100%;
+}
+
+button.submit_comment, button.submit_info {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    margin: 20px 0 0 0;
+}
+
+div.left_sidebar {
+    position: fixed;
+    width: 21%;
+    left: 5%;
+    top: 100px;
+    padding: 20px 30px 20px 20px;
+    text-align: center;
+}
+
+div.left_sidebar h2 {
+    padding: 40px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    font-size: 25px;
+}
+
+div.left_sidebar img {
+    margin: 25px 0;
+}
+
+div.left_sidebar h3 {
+    margin: 0;
+}
+
+div.left_sidebar p.text_top {
+    text-align: left;
+    margin: 20px 0;
+}
+
+p.text_bottom {
+    font-size: 20px;
+}
+
+
+/* CSS for cond logic */
+
+div.positive_info_box_own_private, div.positive_info_box_own, div.positive_info_box_company, div.gateway_step2positive, div.gateway_step3, div.negative_info_box_commercial, div.negative_info_box_rejected, div.negative_info_box_accepted, div.gateway_step2negative {
+    display: none;
+}
