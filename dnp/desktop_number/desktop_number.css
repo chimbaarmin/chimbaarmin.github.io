@@ -910,6 +910,7 @@ div.dnp_profile_menu div.dnp_small_ad_space {
     div.dnp_tags_chart img { 
         margin: 20px 0;
         border: 1px solid #ccc;
+        width: 100%;
     }
     
 /* Responsive layout */
