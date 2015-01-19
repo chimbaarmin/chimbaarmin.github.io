@@ -74,11 +74,30 @@
                             </form>
                             <p>Please provide informations related to this call:</p>
                             <form action="">
-                                <label for="selectDate">Date of the call:</label>
-                                <input type="date" class="selectDate">
+                                <label for="selectDay">Day of the call:</label>
+                                <select name="" id="selectDay" class="selectDay">
+                                    <option value="" selected disabled></option>
+                                    <option value="">Today</option>
+                                    <option value="">Yesterday</option>
+                                    <option value="">Two days ago</option>
+                                    <option value="">Last week</option>
+                                    <option value="">Two weeks ago</option>
+                                    <option value="">In the past month</option>
+                                    <option value="">Repeated calls</option>
+                                </select>
                                 <br>
-                                <label for="selectTime" class="selectTime">Time of the call:</label>
-                                <input type="time">
+                                <label for="selectTime">Time of the call:</label>
+                                <select name="" id="selectTime" class="selectTime">
+                                    <option value="" selected disabled></option>
+                                    <option value="">Early morning</option>
+                                    <option value="">Morning</option>
+                                    <option value="">Afternoon</option>
+                                    <option value="">Early evening</option>
+                                    <option value="">Evening</option>
+                                    <option value="">Night</option>
+                                    <option value="">Late night</option>
+                                    <option value="">Differs</option>
+                                </select>
                             </form>
                         </div>
                     </div>
@@ -120,17 +139,37 @@
                             </form>
                             <p>Please provide informations related to this call:</p>
                             <form action="">
-                                <label for="selectDate">Date of the call:</label>
-                                <input type="date" class="selectDate">
+                                <label for="selectDay">Day of the call:</label>
+                                <select name="" id="selectDay" class="selectDay">
+                                    <option value="" selected disabled></option>
+                                    <option value="">Today</option>
+                                    <option value="">Yesterday</option>
+                                    <option value="">Two days ago</option>
+                                    <option value="">Last week</option>
+                                    <option value="">Two weeks ago</option>
+                                    <option value="">In the past month</option>
+                                    <option value="">Repeated calls</option>
+                                </select>
                                 <br>
                                 <label for="selectTime">Time of the call:</label>
-                                <input type="time" class="selectTime">
+                                <select name="" id="selectTime" class="selectTime">
+                                    <option value="" selected disabled></option>
+                                    <option value="">Early morning</option>
+                                    <option value="">Morning</option>
+                                    <option value="">Afternoon</option>
+                                    <option value="">Early evening</option>
+                                    <option value="">Evening</option>
+                                    <option value="">Night</option>
+                                    <option value="">Late night</option>
+                                    <option value="">Differs</option>
+                                </select>
                                 <br>
                                 <label for="selectAnswer">Answered:</label>
                                 <select name="" id="" class="selectAnswer">
                                     <option value="" selected disabled></option>
-                                    <option value="">Yes</option>
-                                    <option value="">No</option>
+                                    <option value="">Yes, call received</option>
+                                    <option value="">No, call rejected</option>
+                                    <option value="">No, call missed</option>
                                 </select>
                             </form>
                         </div>
