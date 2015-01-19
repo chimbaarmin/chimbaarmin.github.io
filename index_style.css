@@ -1,0 +1,72 @@
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300");
+@import url("//fonts.googleapis.com/css?family=Oswald");
+@import url("//fonts.googleapis.com/css?family=Droid+Sans");
+
+body { 
+    padding-top: 50px;
+    font-family: 'Oswald', sans-serif; 
+}
+
+html { 
+}
+
+div.top_hero {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(index_stuff/hero_background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-bottom: 1px solid #080808;
+}
+
+p.quote {
+    font-size: 35px;
+    color: #aaa;
+    font-family: 'Open Sans', sans-serif; 
+    width: 60%;
+    margin: 100px 20% 0 20%;
+}
+
+p.author {
+    font-size: 25px;
+    color: #aaa;
+    font-family: 'Open Sans', sans-serif; 
+    width: 40%;
+    margin: 0 30% 90px 30%;
+    text-align: right;
+}
+
+p {
+    font-size: 16px;
+    margin: 20px 0;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+div.icons {
+    text-align: center;
+    margin: 20px 0; 
+}
+
+div.icon {
+    width: 30%;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+}
+
+div.icon i {
+    text-shadow: 4px 4px #ccc;    
+}
+
+div.bottom_footer {
+    background-color: #222;
+    height: 50px;
+    margin: 0;
+    border-top: 1px solid #080808;
+}

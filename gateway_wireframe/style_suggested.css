@@ -16,16 +16,12 @@ div.custom_progress {
     background-color: #ccc;
 }
 
-div.gateway_step1 {
-    
+.progress {
+    border-radius: 0 !important;
 }
 
-div.gateway_step2 {
-
-}
-
-div.gateway_step3 {
-
+.progress-bar {
+    background-color: #000 !important;
 }
 
 div.gateway_wrapper h1 {
@@ -71,14 +67,6 @@ div.gateway_info_box {
     padding: 0 20px 20px 20px;
 }
 
-div.info_box_own_private {
-    padding-left: 50px;
-}
-
-div.positive_info_box_own, div.positive_info_box_company, div.positive_info_box_own_private, div.info_box_accepted, div.info_box_commercial, div.info_box_rejected {
-    padding-left: 50px;
-}
-
 div.gateway_comment_box {
     margin: 30px;
     text-align: center;
@@ -88,7 +76,7 @@ textarea.comment_box {
     width: 100%;
 }
 
-button.submit_comment, button.submit_info {
+button.submit_comment {
     padding: 10px;
     background-color: #000;
     color: #fff;
@@ -96,12 +84,10 @@ button.submit_comment, button.submit_info {
 }
 
 div.left_sidebar {
-    position: fixed;
-    width: 21%;
-    left: 5%;
-    top: 100px;
+    width: 300px;
     padding: 20px 30px 20px 20px;
     text-align: center;
+    margin-top: 100px;
 }
 
 div.left_sidebar h2 {
@@ -128,9 +114,26 @@ p.text_bottom {
     font-size: 20px;
 }
 
+/* */
 
-/* CSS for cond logic */
+label {
+    width: 150px;
+    font-weight: 300;
+}
 
-div.positive_info_box_own_private, div.positive_info_box_own, div.positive_info_box_company, div.gateway_step2positive, div.gateway_step3, div.negative_info_box_commercial, div.negative_info_box_rejected, div.negative_info_box_accepted, div.gateway_step2negative {
+select {
+    width: 200px;
+    border: 1px solid #ccc;
+}
+
+input {
+    line-height: normal !important;
+    border: 1px solid #ccc !important;
+    width: 200px;
+}
+
+/* */
+
+div.gateway_step2positive, div.gateway_step2negative, div.gateway_step3 {
     display: none;
 }

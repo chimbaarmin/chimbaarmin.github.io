@@ -41,80 +41,97 @@
                     </div>
                     <div class="gateway_step2positive">
                         <h2>2</h2>
-                        <h3>Please provide additional information concerning this number.</h3>
+                        <h3>Please provide additional information concerning this number and call.</h3>
                         <div class="gateway_info_box">
-                            <p>This number is:</p>
-                            <form>
-                                <input class="my" type="radio" name="owner" value="my"> My own
+                            <p>Please provide informations related to this number:</p>
+                            <form action="">
+                                <label for="selectOwner">Number owner: </label>
+                                <select name="" id="selectOwner" class="selectOwner">
+                                    <option value="" selected disabled></option>
+                                    <option value="">Private line</option>
+                                    <option value="">Company line</option>
+                                    <option value="">Unknown</option>
+                                </select>
                                 <br>
-                                <div class="positive_info_box_own">
-                                    <form>
-                                        <input  class="my_private" type="radio" name="owner_my" value="private"> I am a private person 
-                                        <div class="positive_info_box_own_private">
-                                            This line is: 
-                                            <select>
-                                                <option disabled selected></option>
-                                                <option>Mobile number</option>
-                                                <option>Landline</option>
-                                            </select>
-                                        </div>
-                                        <br>
-                                        <input  class="my_organization" type="radio" name="owner_my" value="organization"> I am an organization
-                                    </form>
-                                </div>
-                                <input  class="private" type="radio" name="owner" value="private"> Private number of a known person
+                                <label for="selectType">Line type: </label>
+                                <select name="" id="selectType" class="selectType">
+                                    <option value="" selected disabled></option>
+                                    <option value="">Landline</option>
+                                    <option value="">Mobile line</option>
+                                    <option value="">Unknown</option>
+                                </select>
                                 <br>
-                                <input class="company" type="radio" name="owner" value="company"> Company phone number
-                                <div class="positive_info_box_company">
-                                    <form>
-                                        <input class="company_positive_online" type="radio" name="owner_company" value="positive_online"> Positive experience on the phone
-                                        <br> 
-                                        <input class="company_positive_offline" type="radio" name="owner_company" value="positive_offline"> Positive experience offline
-                                        <br>
-                                        <input class="company_positive_useful" type="radio" name="owner_company" value="useful"> Useful service
-                                    </form>
-                                </div>
+                                <label for="selectCategory">Category: </label>
+                                <select name="" id="selectCategory" class="selectCategory">
+                                    <option value="" selected disabled></option>
+                                    <option value="">Service</option>
+                                    <option value="">Information</option>
+                                    <option value="">Sales</option>
+                                    <option value="">Government</option>
+                                    <option value="">Other</option>
+                                    <option value="">Unknown</option>                                        
+                                </select>
+                            </form>
+                            <p>Please provide informations related to this call:</p>
+                            <form action="">
+                                <label for="selectDate">Date of the call:</label>
+                                <input type="date" class="selectDate">
+                                <br>
+                                <label for="selectTime" class="selectTime">Time of the call:</label>
+                                <input type="time">
                             </form>
                         </div>
                     </div>
                     <div class="gateway_step2negative">
                         <h2>2</h2>
-                        <h3>Please provide additional information concerning this number.</h3>
+                        <h3>Please provide additional information concerning this number and call.</h3>
                         <div class="gateway_info_box">
-                            <p>This call was</p>
-                            <form>
-                                <input class="accepted" type="radio" name="call" value="accepted"> Accepted
+                            <p>Please provide informations related to this number:</p>
+                            <form action="">
+                                <label for="selectOwner">Number owner: </label>
+                                <select name="" id="selectOwner" class="selectOwner">
+                                    <option value="" selected disabled></option>
+                                    <option value="">Private line</option>
+                                    <option value="">Company line</option>
+                                    <option value="">Unknown</option>
+                                </select>
                                 <br>
-                                <div class="negative_info_box_accepted">
-                                    <form>
-                                    <input class="commercial" type="radio" name="call_accepted" value="commercial"> Commercial
-                                    <br>
-                                    <div class="negative_info_box_commercial">
-                                        <form>
-                                            Company name: <input type="text">
-                                            <br>
-                                            Rate your experience: 
-                                            <select>
-                                                <option disabled selected></option>
-                                                <option>Scammy</option>
-                                                <option>Unfriendly</option>
-                                                <option>Annoying</option>
-                                            </select>
-                                        </form>
-                                    </div>
-                                    <input class="private" type="radio" name="call_accepted" value="private"> Private
-                                    <br>
-                                    <input class="unknown" type="radio" name="call_accepted" value="unknown"> Unknown
-                                    </form>
-                                </div>
-                                <input class="rejected" type="radio" name="call" value="rejected"> Rejected
-                                <div class="negative_info_box_rejected">
-                                    <form>
-                                        Time of the call: <input type="text">
-                                        <br>
-                                        Number of calls: <input type="text">
-                                    </form>
-                                </div>
+                                <label for="selectType">Line type: </label>
+                                <select name="" id="selectOwner" class="selectType">
+                                    <option value="" selected disabled></option>
+                                    <option value="">Landline</option>
+                                    <option value="">Mobile line</option>
+                                    <option value="">Unknown</option>
+                                </select>
+                                <br>
+                                <label for="selectCategory">Category: </label>
+                                <select name="" id="selectCategory" class="selectCategory">
+                                    <option value="" selected disabled></option>
+                                    <option value="">Service</option>
+                                    <option value="">Information</option>
+                                    <option value="">Sales</option>
+                                    <option value="">Government</option>
+                                    <option value="">Harrasing</option>
+                                    <option value="">Spam</option>
+                                    <option value="">Data Theft</option>
+                                    <option value="">Other</option>
+                                    <option value="">Unknown</option>                                        
+                                </select>
+                            </form>
+                            <p>Please provide informations related to this call:</p>
+                            <form action="">
+                                <label for="selectDate">Date of the call:</label>
+                                <input type="date" class="selectDate">
+                                <br>
+                                <label for="selectTime">Time of the call:</label>
+                                <input type="time" class="selectTime">
+                                <br>
+                                <label for="selectAnswer">Answered:</label>
+                                <select name="" id="" class="selectAnswer">
+                                    <option value="" selected disabled></option>
+                                    <option value="">Yes</option>
+                                    <option value="">No</option>
+                                </select>
                             </form>
                         </div>
                     </div>
@@ -132,48 +149,33 @@
         </div>
     </div>
     <script>
-        $( "button" ).click(function() {
-          $( "div.gateway_step2" ).css("display", "block");
-            $( "div.progress-bar" ).css("width", "33%");
-        });
-        $( "button.submit_comment" ).click(function() {
-          $( "div.gateway_step3" ).css("display", "block");
-            $( "div.progress-bar" ).css("width", "66%");
-        }); 
-        
-        $( "input.my_private" ).click(function() {
-            $(this).next("div").css("display", "block");
-        });
-        
-        $( "input.my" ).click(function() {
-          $( "div.positive_info_box_own" ).css("display", "block");
-        });
-        
-        $( "input.company" ).click(function() {
-            $(this).next("div").css("display", "block");
-        });
         
         $( "button.vote_up" ).click(function() {
             $( "div.gateway_step2positive" ).css("display", "block");
             $( "div.gateway_step2negative" ).css("display", "none");
-        });
-        
-        $( "input.commercial" ).click(function() {
-          $( "div.info_box_commercial" ).css("display", "block");
-        });
-        
-        $( "input.rejected" ).click(function() {
-          $( "div.info_box_rejected" ).css("display", "block");
-        });
-        
-        $( "input.accepted" ).click(function() {
-          $( "div.info_box_accepted" ).css("display", "block");
+            $( "div.progress-bar" ).css("width", "33%");
         });
         
         $( "button.vote_down" ).click(function() {
             $( "div.gateway_step2negative" ).css("display", "block");
             $( "div.gateway_step2positive" ).css("display", "none");
+            $( "div.progress-bar" ).css("width", "33%");
         });
+        
+        var $ipositive = 0;
+                
+        $( ".selectOwner, .selectType, .selectCategory" ).change(function() {
+            $ipositive++;
+            if ($ipositive == 3) {
+                $( "div.gateway_step3" ).css("display", "block");
+                $( "div.progress-bar" ).css("width", "66%");
+            }
+        });
+        
+        $( "button.submit_comment" ).click(function() {
+            $( "div.progress-bar" ).css("width", "100%");
+        });
+                
     </script>
 </body>
 </html>
