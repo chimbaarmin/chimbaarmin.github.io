@@ -119,6 +119,7 @@ p.text_bottom {
 label {
     width: 150px;
     font-weight: 300;
+    margin-left: 30px;
 }
 
 select {
