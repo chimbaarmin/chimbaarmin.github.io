@@ -196,7 +196,7 @@
             $( "div.gateway_step2positive" ).css("display", "block");
             $( "div.gateway_step2negative, div.gateway_step3" ).css("display", "none");
             $( "div.progress-bar" ).css("width", "33%");
-            $(".selectOwner, .selectType, .selectCategory").val("");
+            $(".selectOwner, .selectType, .selectCategory, .selectDay, .selectTime, .selectAnswer").val("");
         });
         
         $( "button.vote_down" ).click(function() {
@@ -204,7 +204,7 @@
             $( "div.gateway_step2negative" ).css("display", "block");
             $( "div.gateway_step2positive, div.gateway_step3" ).css("display", "none");
             $( "div.progress-bar" ).css("width", "33%");
-            $(".selectOwner, .selectType, .selectCategory").val("");
+            $(".selectOwner, .selectType, .selectCategory, .selectDay, .selectTime, .selectAnswer").val("");
         });
                     
         $( ".selectOwner, .selectType, .selectCategory" ).change(function() {
