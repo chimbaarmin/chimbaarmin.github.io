@@ -2,7 +2,7 @@
 
 body {
     background-color: #f3f3f5;
-    background-image: url(img/background_full.jpg);
+    background-image: url(../images/background_full.jpg);
 }
 
 div.gateway_wrapper {
