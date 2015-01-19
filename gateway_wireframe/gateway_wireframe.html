@@ -150,20 +150,24 @@
     </div>
     <script>
         
+        var $ipositive = 0;
+        
         $( "button.vote_up" ).click(function() {
+            $ipositive = 0;
             $( "div.gateway_step2positive" ).css("display", "block");
-            $( "div.gateway_step2negative" ).css("display", "none");
+            $( "div.gateway_step2negative, div.gateway_step3" ).css("display", "none");
             $( "div.progress-bar" ).css("width", "33%");
+            $(".selectOwner, .selectType, .selectCategory").val("");
         });
         
         $( "button.vote_down" ).click(function() {
+            $ipositive = 0;
             $( "div.gateway_step2negative" ).css("display", "block");
-            $( "div.gateway_step2positive" ).css("display", "none");
+            $( "div.gateway_step2positive, div.gateway_step3" ).css("display", "none");
             $( "div.progress-bar" ).css("width", "33%");
+            $(".selectOwner, .selectType, .selectCategory").val("");
         });
-        
-        var $ipositive = 0;
-                
+                    
         $( ".selectOwner, .selectType, .selectCategory" ).change(function() {
             $ipositive++;
             if ($ipositive == 3) {
