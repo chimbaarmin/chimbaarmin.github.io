@@ -158,12 +158,12 @@ div.dnp_vote_box.main span:before {
     background-color: #ffffff;
 }
     
-div.dnp_vote_box.main span.fa.fa-thumbs-o-up {
+div.dnp_vote_box.main span.fa.fa-thumbs-up {
     border: 0;
     color: green;
 }
     
-div.dnp_vote_box.main span.fa.fa-thumbs-o-down {
+div.dnp_vote_box.main span.fa.fa-thumbs-down {
     border: 0;
     color: red;
 }
