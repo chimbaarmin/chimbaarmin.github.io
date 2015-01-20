@@ -13,6 +13,8 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     
 /* Bootstrap grid end */   
     
+/* Main part - Number info area start */
+    
 h1.dnp_new_number_profile {
     text-align: left;
     margin: 20px 0 0 0;
@@ -43,7 +45,7 @@ div.dnp_flag_area img {
     height: 42px;
 }
     
-.dnp_new_header {
+div.dnp_new_header {
     background-color: #ffffff;
     overflow: auto;
     margin: 0;
@@ -57,7 +59,7 @@ div.t_middle_body_topchart_item_half {
     width: 100%;
 }
     
-div.t_middle_body_topchart_item_half.dnp_empty {
+.dnp_empty {
     display: none;
 }
     
@@ -132,6 +134,10 @@ div.dnp_vote_box.main button.vote_item {
     
 div.dnp_vote_box.main div.dnp_comment_box {
     margin: 0;
+}
+    
+h6.vote_box_alert {
+    color: #333 !important;
 }
     
 button.dnp_leave_feedback {
@@ -233,7 +239,6 @@ h3#dnp_top_header {
     border-bottom: 0;
     font-size: 16px;
     font-weight: 300 !important;
-    padding: 5px;
     -moz-border-radius: 25px 25px 0 0;
     -webkit-border-radius: 25px 25px 0 0;
     border-radius: 25px 25px 0 0;
@@ -287,9 +292,6 @@ div.dnp_box_ad_space {
     overflow: auto;
     text-align: center;
 }
-    
-div.dnp_box_ad_space img {
-}
 
 div.t_middle_body_topchart_item.regular.new_number_info {
     border-bottom: 1px solid #cccccc;
@@ -297,7 +299,7 @@ div.t_middle_body_topchart_item.regular.new_number_info {
     line-height: 1.3;
     background-color: #ffffff !important;
     -moz-border-radius: 0 0 25px 25px;
-    -webkit-border-radius 0 0 25px 25px;
+    -webkit-border-radius: 0 0 25px 25px;
     border-radius: 0 0 25px 25px;
     -khtml-border-radius: 0 0 25px 25px;
     overflow: auto;
@@ -321,17 +323,6 @@ div.t_middle_body_topchart_item_half.num_info_right, div.t_middle_body_topchart_
     background-color: #ffffff !important;
     color: #444 !important;
 }
-
-div.dnp_new_ad_space_one {
-    border: 1px solid #cccccc;
-    border-top: 0; 
-    text-align: center;
-    display: none;
-}
-    
-div.dnp_new_ad_space_one > img {
-    width: 100%;
-}
     
 div.dnp_content_space_map {
     border: 1px solid #cccccc;
@@ -351,13 +342,17 @@ div.dnp_new_header_bottom {
     margin-bottom: 20px;
 }
 
-/* mockup remove later */
+/* MOCKUP start */
     
 div.dnp_content_space_map > img {
     width: 100%;
 }
 
-/* mockup end */
+/* MOCKUP end */
+    
+/* Main part - Number info area end*/
+    
+/* Main part - Comments area  start */
     
 div.dnp_content_space_comments {
     width: 100%;
@@ -370,106 +365,6 @@ div.dnp_comment_footer {
     -moz-border-radius: 0 0 25px 25px;
     -webkit-border-radius: 0 0 25px 25px;
     border-radius: 0 0 25px 25px;
-    -khtml-border-radius: 0 0 25px 25px;
-}
-    
-div.dnp_new_footer_top {
-    clear: both;
-    height: 43px;
-    background-color: #6075a6;
-    -moz-border-radius: 25px 25px 0 0;
-    -webkit-border-radius: 25px 25px 0 0;
-    border-radius: 25px 25px 0 0;
-    -khtml-border-radius: 25px 25px 0 0;
-}
-    
-    
-/* footer */
-    
-.dnp_footer {
-    clear: both;
-    overflow: auto;
-    border: 1px solid #cccccc;
-    background-color: #ffffff;
-    padding: 20px 20px 0 0 !important;
-}  
-    
-div#footer-holder {
-    width: 100%;
-    padding: 0  !important;
-    margin: 0  !important;
-}
-    
-div#menu-2, img.wp-image-83085 {
-    display: none;
-}
-    
-div.sidebar-footer {
-    width: 25% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    float: left;
-}
-    
-div.sidebar-footer > div {
-    margin: 0 !important;
-    padding: 0 0 0 20px; !important;
-    width: 100%;
-}
-    
-h5 {
-    width: 100%;
-    color: #ffffff !important;
-    background-color: #6075a6 !important;
-    margin: 0 !important;
-    font-size: 12px;
-    padding: 5px  !important;
-    text-transform: none;
-    text-align: center;
-}
-    
-div.textwidget > ul {
-    margin: 0 !important;
-    padding: 0 !important;
-    height: 100px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    border: 1px solid #cccccc;
-    border-top: 0;
-}
-    
-div.textwidget > ul > li {
-    margin: 0;
-    padding: 2px;
-}
-    
-div.widget.widget_text {
-    margin: 0 0 20px 0 !important;
-    padding: 0 !important;
-}
-    
-div.textwidget > ul > li > a {
-    color: #6075a6 !important;
-    font-size: 12px;
-}
-    
-/* end footer */
-    
-div.dnp_new_footer_bottom {
-    text-align: center;
-    
-}
-    
-div.dnp_new_footer_bottom h6 {
-    font-size: 12px;
-    line-height: 32px;
-    color: #ffffff;
-    padding: 5px;
-    background-color: #6075a6;
-    margin-bottom: 20px;
-    -moz-border-radius: 0 0 25px 25px;
-    -webkit-border-radius: 0 0  25px 25px;
-    border-radius: 0 0 25px 25px ;
     -khtml-border-radius: 0 0 25px 25px;
 }
     
@@ -615,14 +510,10 @@ div.dnp_comment_social_ribbon i {
 }
     
 /* end of coms override */
-
-/* Comment box disabled for now */
-
-div.dnp_comment_box_space {
-    display: none;
-}
     
-/* Tags area */
+/* Main part - Comments area  end */
+    
+/* Main part - Tags area start */
     
 div.dnp_tags_area h3 {
     clear: both;
@@ -666,26 +557,117 @@ div.dnp_tags_area div.t_middle_body_tags ul li a {
     font-size: 12px;
 }
     
-/* adspace mockup */
+/* MOCKUP start */
     
-div.adspace0 {
-    clear: both;
-    width: 100%;
+div.dnp_tags_chart img { 
+    margin: 20px 0;
     border: 1px solid #ccc;
-    text-align: center;
-    margin: 20px 0 !important;
+    width: 100%;
 }
     
-div.adspace00 {
+/* MOCKUP end */
+    
+/* Main part - Tags area end */    
+    
+/* Main part - Footer area start */
+    
+div.dnp_new_footer_top {
     clear: both;
+    height: 43px;
+    background-color: #6075a6;
+    -moz-border-radius: 25px 25px 0 0;
+    -webkit-border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0 0;
+    -khtml-border-radius: 25px 25px 0 0;
+}
+    
+.dnp_footer {
+    clear: both;
+    overflow: auto;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    padding: 20px 20px 0 0 !important;
+}  
+    
+div#footer-holder {
+    width: 100%;
+    padding: 0  !important;
+    margin: 0  !important;
+}
+    
+div#menu-2, img.wp-image-83085 {
+    display: none;
+}
+    
+div.sidebar-footer {
+    width: 25% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: left;
+}
+    
+div.sidebar-footer > div {
+    margin: 0 !important;
+    padding: 0 0 0 20px !important;
+    width: 100%;
+}
+    
+h5 {
+    width: 100%;
+    color: #ffffff !important;
+    background-color: #6075a6 !important;
+    margin: 0 !important;
+    font-size: 12px;
+    padding: 5px  !important;
+    text-transform: none;
+    text-align: center;
+}
+    
+div.textwidget > ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #cccccc;
     border-top: 0;
 }
     
-div.adspace0 img, div.adspace00 img {
-    width: 100%;
+div.textwidget > ul > li {
+    margin: 0;
+    padding: 2px;
 }
+    
+div.widget.widget_text {
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+}
+    
+div.textwidget > ul > li > a {
+    color: #6075a6 !important;
+    font-size: 12px;
+}
+    
+div.dnp_new_footer_bottom {
+    text-align: center;   
+}
+    
+div.dnp_new_footer_bottom h6 {
+    font-size: 12px;
+    line-height: 32px;
+    color: #ffffff;
+    padding: 5px;
+    background-color: #6075a6;
+    margin-bottom: 20px;
+    -moz-border-radius: 0 0 25px 25px;
+    -webkit-border-radius: 0 0  25px 25px;
+    border-radius: 0 0 25px 25px ;
+    -khtml-border-radius: 0 0 25px 25px;
+}
+    
+/* Main part - Footer area end */
 
-/* fast reply area */
+/* Right area */
 
 div.dnp_profile_menu {
     position: static;
@@ -887,7 +869,7 @@ div.dnp_search_box button.search {
     padding: 6px;
     border: 1px solid #ccc;
     background-color: #6075a6;
-    color: #fff;
+    color: #fff !important;
     -moz-border-radius: 0 4px 4px 0;
     -webkit-border-radius: 0 4px 4px 0;
     border-radius: 0 4px 4px 0;
@@ -905,13 +887,28 @@ div.dnp_profile_menu div.dnp_small_ad_space {
     height: 100%;
 }
 
-/* */
+/* Right area */
     
-    div.dnp_tags_chart img { 
-        margin: 20px 0;
-        border: 1px solid #ccc;
-        width: 100%;
-    }
+/* Adspace MOCKUP start*/
+    
+div.adspace0 {
+    clear: both;
+    width: 100%;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 20px 0 !important;
+}
+    
+div.adspace00 {
+    clear: both;
+    border-top: 0;
+}
+    
+div.adspace0 img, div.adspace00 img {
+    width: 100%;
+}
+    
+/* Adspace MOCKUP end*/
     
 /* Responsive layout */
     
@@ -919,7 +916,6 @@ div.dnp_profile_menu div.dnp_small_ad_space {
     div.dnp_profile_menu {
         display: none;
     }
-
 }
     
 /* Typography */
@@ -931,4 +927,5 @@ div.dnp_profile_menu div.dnp_small_ad_space {
     
     body, button {
         font-family: 'Roboto', sans-serif !important;
+        color: #333 !important;
     }
