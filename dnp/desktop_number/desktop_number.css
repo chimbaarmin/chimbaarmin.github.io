@@ -786,6 +786,7 @@ div.adspace0 img, div.adspace00 img {
     h1, h2, h3, h4, h5 ,h6 {
         font-family: 'Alegreya', serif !important;
         letter-spacing: normal !important;
+        margin: 0;
     }
     
     body, button {
