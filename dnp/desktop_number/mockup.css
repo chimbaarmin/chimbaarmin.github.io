@@ -1,5 +1,36 @@
 /* Comments area MOCKUP start */
 
+div.comments_navigation {
+    width: 100%;
+    font-size: 25px;
+    overflow: auto;
+}
+
+div.comments_navigation span {
+}
+
+div.comments_navigation span:before {
+    background: none;
+}
+
+div.comments_previous {
+    width: 50%;
+    float: left;
+    text-align: right;
+    padding: 10px 20px;
+    color: #6075a6;
+    line-height: 1;
+}
+
+div.comments_next {
+    width: 50%;
+    float: right;
+    text-align: left;
+    padding: 10px 20px;
+    color: #6075a6;
+    line-height: 1;
+}
+
 li.comment {
     background-color: #ffffff;
     border: 1px solid #cccccc;

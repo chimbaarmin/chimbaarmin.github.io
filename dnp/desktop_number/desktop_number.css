@@ -357,7 +357,7 @@ div.dnp_content_space_comments {
 div.dnp_comment_header {
     height: 43px;
     background-color: #6075a6;
-    margin: 20px 0;
+    margin: 0;
     -moz-border-radius: 25px 25px 0 0;
     -webkit-border-radius: 25px 25px 0 0;
     border-radius: 25px 25px 0 0;
@@ -367,7 +367,7 @@ div.dnp_comment_header {
 div.dnp_comment_footer {
     height: 43px;
     background-color: #6075a6;
-    margin: 20px 0 0 0;
+    margin: 0;
     -moz-border-radius: 0 0 25px 25px;
     -webkit-border-radius: 0 0 25px 25px;
     border-radius: 0 0 25px 25px;
