@@ -6,35 +6,32 @@ body {
 
 /* Menu mockup */
 
-nav.navbar {
-    background-color: #6075a6 !important;
+.navbar {
+    background-color: #6075a6;
     border-bottom: 1px solid #ccc;
 }
 
-a.navbar-brand {
+.navbar-brand {
     color: #fff !important;
 }
 
-ul.nav li a {
+.navbar a {
     color: #fff !important;
 }
 
 /* Comments area MOCKUP start */
 
-div.comments_navigation {
+.comments_navigation {
     width: 100%;
     font-size: 25px;
     overflow: auto;
 }
 
-div.comments_navigation span {
-}
-
-div.comments_navigation span:before {
+.comments_navigation span:before {
     background: none;
 }
 
-div.comments_previous {
+.comments_previous {
     width: 50%;
     float: left;
     text-align: right;
@@ -43,7 +40,7 @@ div.comments_previous {
     line-height: 1;
 }
 
-div.comments_next {
+.comments_next {
     width: 50%;
     float: right;
     text-align: left;
@@ -52,7 +49,7 @@ div.comments_next {
     line-height: 1;
 }
 
-li.comment {
+.comment {
     background-color: #ffffff;
     border: 1px solid #cccccc;
     -moz-border-radius: 0 10px 10px 10px;
@@ -61,12 +58,12 @@ li.comment {
     -khtml-border-radius: 0 10px 10px 10px;
 }
 
-div.comment_info {
+.comment_info {
     border-bottom: 1px solid #cccccc;
     overflow: auto;
 }
 
-div.comment_title {
+.comment_title {
     width: 80%;
     float: left;
     padding: 10px 20px;
@@ -75,7 +72,7 @@ div.comment_title {
     border-right: 1px solid #cccccc;
 }
 
-div.comment_tags {
+.comment_tags {
     width: 20%;
     float: right;
     font-size: 18px;
@@ -84,13 +81,13 @@ div.comment_tags {
     text-align: center;
 }
 
-div.comment_content {
+.comment_content {
     clear: both;
     overflow: auto;
     border-bottom: 1px solid #ccc;
 }
 
-div.comment_text {
+.comment_text {
     width: 80%;
     padding: 20px;
     float: left;
@@ -99,7 +96,7 @@ div.comment_text {
     overflow-y: scroll;
 }
 
-div.comment_hashtags {
+.comment_hashtags {
     width: 20%;
     float: right;
     padding: 10px;
@@ -107,7 +104,7 @@ div.comment_hashtags {
     height: 200px;
 }
 
-div.hashtag_span {
+.hashtag_span {
     margin: 10px 0;
     border: 1px solid #ccc;
     display: block;
@@ -122,18 +119,18 @@ div.hashtag_span {
     max-height: 34px;
 }
 
-div.hashtag_span span {
+.hashtag_span span {
     padding: 10px;
     border-right: 1px solid #ccc;
     margin-right: 10px;
 }
 
-div.comment_ribbon {
+.comment_ribbon {
     clear: both;
     overflow: auto;
 }
 
-div.data_ribbon {
+.data_ribbon {
     width: 70%;
     float: left;
     margin: 20px 10px;
@@ -141,37 +138,37 @@ div.data_ribbon {
     line-height: 1.3;
 }
 
-div.positive_votes, div.negative_votes, div.calendar_date, div.replies {
+.positive_votes, .negative_votes, .calendar_date, .replies {
     display: inline;
     border: 1px solid #ccc;
     padding: 10px;
     background-color: #f3f3f3;
 }
 
-div.positive_votes:hover, div.negative_votes:hover, div.calendar_date:hover, div.replies:hover {
+.positive_votes:hover, .negative_votes:hover, .calendar_date:hover, .replies:hover {
     background-color: #fff;
     cursor: pointer;
 }
 
-div.positive_votes {
+.positive_votes {
     -moz-border-radius: 10px 0 0 10px;
     -webkit-border-radius: 10px 0 0 10px;
     border-radius: 10px 0 0 10px;
     -khtml-border-radius: 10px 0 0 10px;
 }
 
-div.negative_votes, div.calendar_date, div.replies {
+.negative_votes, .calendar_date, .replies {
     border-left: 0;
 }
 
-div.replies {
+.replies {
     -moz-border-radius: 0 10px 10px 0;
     -webkit-border-radius: 0 10px 10px 0;
     border-radius: 0 10px 10px 0;
     -khtml-border-radius: 0 10px 10px 0;
 }
 
-div.reply_ribbon {
+.reply_ribbon {
     width: 20%; 
     float: right;
     text-align: right;
@@ -180,7 +177,7 @@ div.reply_ribbon {
     background: none;
 }
 
-div.reply_ribbon button {
+.reply_ribbon button {
     padding: 10px;
     width: 100px;
     color: #ffffff !important;
