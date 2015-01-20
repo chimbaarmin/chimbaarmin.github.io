@@ -792,3 +792,7 @@ div.adspace0 img, div.adspace00 img {
         font-family: 'Roboto', sans-serif !important;
         color: #333 !important;
     }
+    
+    span:before {
+        background: none !important;
+    }
