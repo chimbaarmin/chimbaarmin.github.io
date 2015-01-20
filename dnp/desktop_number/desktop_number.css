@@ -669,12 +669,12 @@ span:before {
     background-color: #ffffff;
 }
     
-span.fa.fa-thumbs-o-up {
+span.fa.fa-thumbs-up {
     border: 0;
     color: green;
 }
     
-span.fa.fa-thumbs-o-down {
+span.fa.fa-thumbs-down {
     border: 0;
     color: red;
 }
