@@ -71,6 +71,7 @@ div.positive_votes, div.negative_votes, div.calendar_date, div.replies {
     display: inline;
     border: 1px solid #ccc;
     padding: 10px;
+    background-color: #f3f3f3;
 }
 
 div.positive_votes {
