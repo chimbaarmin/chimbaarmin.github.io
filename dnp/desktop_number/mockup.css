@@ -1,3 +1,25 @@
+@import url("//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css");
+@import url("//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js");
+
+body {
+    padding-top: 50px;
+}
+
+/* Menu mockup */
+
+nav.navbar {
+    background-color: #6075a6 !important;
+    border-bottom: 1px solid #ccc;
+}
+
+a.navbar-brand {
+    color: #fff !important;
+}
+
+ul.nav li a {
+    color: #fff !important;
+}
+
 /* Comments area MOCKUP start */
 
 div.comments_navigation {
