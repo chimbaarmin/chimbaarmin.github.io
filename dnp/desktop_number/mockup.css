@@ -156,6 +156,7 @@ div.reply_ribbon {
     text-align: right;
     padding: 10px;
     text-align: center;
+    background: none;
 }
 
 div.reply_ribbon button {
