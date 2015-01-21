@@ -1,72 +1,95 @@
-@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300");
-@import url("//fonts.googleapis.com/css?family=Oswald");
-@import url("//fonts.googleapis.com/css?family=Droid+Sans");
+/*
+Style v1.0 for www.armin.ba
+Author: Armin Methadžević
+Modification date: 21. 01. 2015.
+*/
 
-body { 
-    padding-top: 50px;
-    font-family: 'Oswald', sans-serif; 
+/* =Base */
+
+body {
+	font: 18px/1.3 arial, sans-serif;
 }
 
-html { 
+a {
+	color: lightblue;
 }
 
-div.top_hero {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url(index_stuff/hero_background.jpg) no-repeat center center fixed; 
+a:hover {
+	color: lightblue;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* =Layout */
+
+/* =Module */
+
+.top_nav {
+	background: #666;
+	border-bottom: 1px solid #333;
+	color: #eeeeee;
+	font: 20px arial, sans-serif;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+}
+
+.top_nav li {
+	display: inline-block;
+	margin: 0 15px;
+	padding: 0 25px;
+	text-shadow: 0 0 3px #000000;
+}
+
+.top_nav a {
+	color: #ffffff;
+}
+
+.top_hero {
+	background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(index_stuff/hero_background.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-bottom: 1px solid #080808;
+	border-bottom: 1px solid #333;
+	padding: 100px 0;
+	text-align: center;
 }
 
-p.quote {
-    font-size: 35px;
-    color: #aaa;
-    font-family: 'Open Sans', sans-serif; 
-    width: 60%;
-    margin: 100px 20% 0 20%;
+.top_hero_ul ul {
+	height: 50px;
+	overflow: hidden;
 }
 
-p.author {
-    font-size: 25px;
-    color: #aaa;
-    font-family: 'Open Sans', sans-serif; 
-    width: 40%;
-    margin: 0 30% 90px 30%;
-    text-align: right;
+.top_hero li {
+	color: transparent;
+	font: 45px/50px arial, sans-serif;
+	text-shadow: 0px 0px 3px rgba(245,245,245,0.9);
 }
 
-p {
-    font-size: 16px;
-    margin: 20px 0;
-    font-family: 'Droid Sans', sans-serif;
+.top_hero_item1 {
+	-webkit-animation: topHeroAnimation 8s infinite;
 }
 
-div.icons {
-    text-align: center;
-    margin: 20px 0; 
+/* =Animations */
+
+@keyframes topHeroAnimation {
+    0%   {margin-top: 0;}
+    25%  {margin-top: -50px;}
+	50%  {margin-top: -100px;}
+    75%  {margin-top: -50px;}
+	100%  {margin-top: 0;}
 }
 
-div.icon {
-    width: 30%;
-    display: inline-block;
-    font-size: 20px;
-    text-align: center;
-}
-
-div.icon i {
-    text-shadow: 4px 4px #ccc;    
-}
-
-div.bottom_footer {
-    background-color: #222;
-    height: 50px;
-    margin: 0;
-    border-top: 1px solid #080808;
+@-webkit-keyframes topHeroAnimation {
+    0%   {margin-top: 0;}
+    25%  {margin-top: -50px;}
+	50%  {margin-top: -100px;}
+    75%  {margin-top: -50px;}
+	100%  {margin-top: 0;}
 }
