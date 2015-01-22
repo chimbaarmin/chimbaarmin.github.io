@@ -138,6 +138,7 @@ select {
 	height: 40px;
 	margin: 0; 
 	overflow: hidden;
+	resize: none;
 	width: 100%;
 }
 
@@ -199,6 +200,12 @@ select {
 
 .gateway_step2positive, .gateway_step2negative, .gateway_step3 {
     display: none;
+}
+
+.fa-check {
+	display: none;
+	color: #5cb85c;
+	margin: 0 10px;
 }
 
 /* =Responsive */

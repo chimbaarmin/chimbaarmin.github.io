@@ -51,7 +51,7 @@
                                     <option value="private">Private line</option>
                                     <option value="copmany">Company line</option>
                                     <option value="unknown">Unknown</option>
-                                </select>
+                                </select><span class="fa fa-check"></span>
                                 <br>
                                 <label for="selectTypePositive">Line type: </label>
                                 <select name="" id="selectTypePositive" class="selectTypePositive border_one">
@@ -59,7 +59,7 @@
                                     <option value="landline">Landline</option>
                                     <option value="mobile">Mobile line</option>
                                     <option value="unknown">Unknown</option>
-                                </select>
+                                </select><span class="fa fa-check"></span>
                                 <br>
                                 <label for="selectCategory">Category: </label>
                                 <select name="" id="selectCategoryPositive" class="selectCategoryPositive border_one">
@@ -70,7 +70,7 @@
                                     <option value="government">Government</option>
                                     <option value="other">Other</option>
                                     <option value="unknown">Unknown</option>                                        
-                                </select>
+                                </select><span class="fa fa-check"></span>
                             </form>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                                     <option value="private">Private line</option>
                                     <option value="company">Company line</option>
                                     <option value="unknown">Unknown</option>
-                                </select>
+                                </select><span class="fa fa-check"></span>
                                 <br>
                                 <label for="selectTypeNegative">Line type: </label>
                                 <select name="" id="selectTypeNegative" class="selectTypeNegative border_one">
@@ -94,7 +94,7 @@
                                     <option value="landline">Landline</option>
                                     <option value="mobile">Mobile line</option>
                                     <option value="unknown">Unknown</option>
-                                </select>
+                                </select><span class="fa fa-check"></span>
                                 <br>
                                 <label for="selectCategoryNegative">Category: </label>
                                 <select name="" id="selectCategoryNegative" class="selectCategoryNegative border_one">
@@ -108,7 +108,7 @@
                                     <option value="datatheft">Data Theft</option>
                                     <option value="other">Other</option>
                                     <option value="unknown">Unknown</option>                                        
-                                </select>
+                                </select><span class="fa fa-check"></span>
                             </form>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
         $( "button.vote_up" ).click(function() {
             $ipositive = 0;
             $( "div.gateway_step2positive" ).css("display", "block");
-            $( "div.gateway_step2negative, div.gateway_step3" ).css("display", "none");
+            $( "div.gateway_step2negative, div.gateway_step3, .fa-check" ).css("display", "none");
 			$( ".fa-thumbs-up" ).css("color", "#5cb85c");
 			$( ".fa-thumbs-down" ).css("color", "#000000");
             $( "div.progress-bar" ).css("width", "33%");
@@ -147,7 +147,7 @@
         $( "button.vote_down" ).click(function() {
             $ipositive = 0;
             $( "div.gateway_step2negative" ).css("display", "block");
-            $( "div.gateway_step2positive, div.gateway_step3" ).css("display", "none");
+            $( "div.gateway_step2positive, div.gateway_step3, .fa-check" ).css("display", "none");
 			$( ".fa-thumbs-down" ).css("color", "#d9534f");
 			$( ".fa-thumbs-up" ).css("color", "#000000");
             $( "div.progress-bar" ).css("width", "33%");
@@ -163,6 +163,7 @@
 					var $hashtag3 = $("select.selectCategoryPositive").val();
 					var $hashtags = "#" + $hashtag1 + " #" + $hashtag2 + " #" + $hashtag3;
 					$("textarea.hashtag_box").val($hashtags);
+					$(".fa-check").css("display", "inline");
                     $("div.gateway_step3").css("display", "block");
 					$( "div.progress-bar" ).css("width", "66%");
                 }
@@ -181,6 +182,7 @@
 					var $hashtag3 = $("select.selectCategoryNegative").val();
 					var $hashtags = "#" + $hashtag1 + " #" + $hashtag2 + " #" + $hashtag3;
 					$("textarea.hashtag_box").val($hashtags);
+					$(".fa-check").css("display", "inline");
                     $("div.gateway_step3").css("display", "block");
 					$( "div.progress-bar" ).css("width", "66%");
                 }
