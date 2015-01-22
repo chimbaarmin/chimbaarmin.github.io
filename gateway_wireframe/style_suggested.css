@@ -79,6 +79,10 @@ select {
 	padding: 10px;
 }
 
+.no_margin {
+	margin: 0;
+}
+
 /* =Modules =gateway_wrapper */
 
 
