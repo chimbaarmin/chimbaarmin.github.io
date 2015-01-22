@@ -216,3 +216,30 @@ select {
 
 /* =Responsive */
 
+@media screen and (max-width: 992px) {
+    .left_sidebar {
+		margin: 0;
+        position: static;
+		width: 100%;
+    }
+	
+	.left_sidebar_h2 {
+		margin: 0;
+		padding: 0;
+	}
+	
+	.left_sidebar_logo {
+		width: 50%;
+		float: left;
+	}
+	
+	.left_sidebar_text {
+		float: right;
+		width: 50%;
+	}
+	
+	.gateway_wrapper {
+		clear: both;
+		margin: 20px 30px;
+	}
+}
