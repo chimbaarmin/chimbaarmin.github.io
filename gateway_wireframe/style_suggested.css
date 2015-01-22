@@ -103,11 +103,15 @@ select {
     text-align: center;
 }
 
-.fa-thumbs-up {
+.fa-thumbs-up, .fa-thumbs-down {
+	transition-duration: 1s;
+}
+
+.fa-thumbs-up:hover {
 	color: #5cb85c;
 }
 
-.fa-thumbs-down {
+.fa-thumbs-down:hover {
 	color: #d9534f;
 }
 
