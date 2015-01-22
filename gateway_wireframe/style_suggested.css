@@ -99,11 +99,11 @@ select {
 }
 
 .fa-thumbs-up {
-	color: green;
+	color: #5cb85c;
 }
 
 .fa-thumbs-down {
-	color: red;
+	color: #d9534f;
 }
 
 .gateway_info_box {
