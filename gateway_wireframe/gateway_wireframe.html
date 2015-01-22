@@ -138,6 +138,8 @@
             $ipositive = 0;
             $( "div.gateway_step2positive" ).css("display", "block");
             $( "div.gateway_step2negative, div.gateway_step3" ).css("display", "none");
+			$( ".fa-thumbs-up" ).css("color", "#5cb85c");
+			$( ".fa-thumbs-down" ).css("color", "#000000");
             $( "div.progress-bar" ).css("width", "33%");
             $(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectDayPositive, .selectTimePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .hashtag_box").val(null);
         });
@@ -146,6 +148,8 @@
             $ipositive = 0;
             $( "div.gateway_step2negative" ).css("display", "block");
             $( "div.gateway_step2positive, div.gateway_step3" ).css("display", "none");
+			$( ".fa-thumbs-down" ).css("color", "#d9534f");
+			$( ".fa-thumbs-up" ).css("color", "#000000");
             $( "div.progress-bar" ).css("width", "33%");
             $(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectDayPositive, .selectTimePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .hashtag_box").val(null);
         });
