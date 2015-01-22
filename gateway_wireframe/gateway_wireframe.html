@@ -51,7 +51,7 @@
                                     <option value="private">Private line</option>
                                     <option value="copmany">Company line</option>
                                     <option value="unknown">Unknown</option>
-                                </select><span class="fa fa-check"></span><span class="fa fa-times"></span>
+                                </select><span class="fa fa-check selectOwnerPositive"></span><span class="fa fa-times selectOwnerPositive"></span>
                                 <br>
                                 <label for="selectTypePositive">Line type: </label>
                                 <select name="" id="selectTypePositive" class="selectTypePositive border_one">
@@ -59,7 +59,7 @@
                                     <option value="landline">Landline</option>
                                     <option value="mobile">Mobile line</option>
                                     <option value="unknown">Unknown</option>
-                                </select><span class="fa fa-check"></span><span class="fa fa-times"></span>
+                                </select><span class="fa fa-check selectTypePositive"></span><span class="fa fa-times selectTypePositive"></span>
                                 <br>
                                 <label for="selectCategory">Category: </label>
                                 <select name="" id="selectCategoryPositive" class="selectCategoryPositive border_one">
@@ -70,7 +70,7 @@
                                     <option value="government">Government</option>
                                     <option value="other">Other</option>
                                     <option value="unknown">Unknown</option>                                        
-                                </select><span class="fa fa-check"></span><span class="fa fa-times"></span>
+                                </select><span class="fa fa-check selectCategoryPositive"></span><span class="fa fa-times selectCategoryPositive"></span>
                             </form>
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                                     <option value="private">Private line</option>
                                     <option value="company">Company line</option>
                                     <option value="unknown">Unknown</option>
-                                </select><span class="fa fa-check"></span><span class="fa fa-times"></span>
+                                </select><span class="fa fa-check selectOwnerNegative"></span><span class="fa fa-times selectOwnerNegative"></span>
                                 <br>
                                 <label for="selectTypeNegative">Line type: </label>
                                 <select name="" id="selectTypeNegative" class="selectTypeNegative border_one">
@@ -94,7 +94,7 @@
                                     <option value="landline">Landline</option>
                                     <option value="mobile">Mobile line</option>
                                     <option value="unknown">Unknown</option>
-                                </select><span class="fa fa-check"></span><span class="fa fa-times"></span>
+                                </select><span class="fa fa-check selectTypeNegative"></span><span class="fa fa-times selectTypeNegative"></span>
                                 <br>
                                 <label for="selectCategoryNegative">Category: </label>
                                 <select name="" id="selectCategoryNegative" class="selectCategoryNegative border_one">
@@ -108,7 +108,7 @@
                                     <option value="datatheft">Data Theft</option>
                                     <option value="other">Other</option>
                                     <option value="unknown">Unknown</option>                                        
-                                </select><span class="fa fa-check"></span><span class="fa fa-times"></span>
+                                </select><span class="fa fa-check selectCategoryNegative"></span><span class="fa fa-times selectCategoryNegative"></span>
                             </form>
                         </div>
                     </div>
@@ -155,6 +155,40 @@
             $( "div.progress-bar" ).css("width", "33%");
             $(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectDayPositive, .selectTimePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .hashtag_box").val(null);
         });
+		
+		/* validator */
+		
+		$(".selectOwnerPositive").change(function() {
+			$(".fa-check.selectOwnerPositive").css("display", "inline");
+			$(".fa-times.selectOwnerPositive").css("display", "none");
+		});
+		
+		$(".selectTypePositive").change(function() {
+			$(".fa-check.selectTypePositive").css("display", "inline");
+			$(".fa-times.selectTypePositive").css("display", "none");
+		});
+		
+		$(".selectCategoryPositive").change(function() {
+			$(".fa-check.selectCategoryPositive").css("display", "inline");
+			$(".fa-times.selectCategoryPositive").css("display", "none");
+		});
+		
+		$(".selectOwnerNegative").change(function() {
+			$(".fa-check.selectOwnerNegative").css("display", "inline");
+			$(".fa-times.selectOwnerNegative").css("display", "none");
+		});
+		
+		$(".selectTypeNegative").change(function() {
+			$(".fa-check.selectTypeNegative").css("display", "inline");
+			$(".fa-times.selectTypeNegative").css("display", "none");
+		});
+		
+		$(".selectCategoryNegative").change(function() {
+			$(".fa-check.selectCategorNegative").css("display", "inline");
+			$(".fa-times.selectCategoryNegative").css("display", "none");
+		});
+		
+		/* end validator */
                     
         $( ".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive" ).change(function() {
             $ipositive++;
