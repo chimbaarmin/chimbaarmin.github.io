@@ -119,8 +119,10 @@ select {
 }
 
 .hashtag_box {
-	border-radius: 4px;
-	margin: 0 0 20px 0; 
+	background: none;
+	border: none;
+	height: 40px;
+	margin: 0; 
 	overflow: hidden;
 	width: 100%;
 }
@@ -181,3 +183,6 @@ select {
 .gateway_step2positive, .gateway_step2negative, .gateway_step3 {
     display: none;
 }
+
+/* =Responsive */
+
