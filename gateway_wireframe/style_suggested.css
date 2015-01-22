@@ -109,15 +109,8 @@ select {
 }
 
 .fa-thumbs-up, .fa-thumbs-down {
+	-webkit-transition-duration: 1s;
 	transition-duration: 1s;
-}
-
-.fa-thumbs-up:hover {
-	color: #5cb85c;
-}
-
-.fa-thumbs-down:hover {
-	color: #d9534f;
 }
 
 .gateway_info_box {
@@ -196,7 +189,15 @@ select {
     font-size: 20px;
 }
 
-/* =Animations */
+/* =Other */
+
+.fa-thumbs-up:hover {
+	color: #5cb85c;
+}
+
+.fa-thumbs-down:hover {
+	color: #d9534f;
+}
 
 .gateway_step2positive, .gateway_step2negative, .gateway_step3 {
     display: none;
