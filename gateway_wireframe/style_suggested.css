@@ -164,11 +164,11 @@ select {
 }
 
 .left_sidebar img {
-    margin: 25px 0;
+    margin: 20px 0;
 }
 
 .left_sidebar .text_top {
-    margin: 20px 0;
+    margin: 0 0 20px 0;
     text-align: left;
 }
 
