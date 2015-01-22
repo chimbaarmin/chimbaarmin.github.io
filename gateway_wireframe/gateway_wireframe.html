@@ -16,10 +16,10 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="left_sidebar">
-                    <h2>Number-Index.com Gateway</h2>
+                    <h2 class="left_sidebar_h2">Number-Index.com Gateway</h2>
                     <div class="left_sidebar_content">
                         <img src="../images/sample_img.png">
-                        <h3>Why vote?</h3>
+                        <h3 class="left_sidebar_h3">Why vote?</h3>
                         <p class="text_top">Help build up the largest user-generated voting platform for phone numbers. Your voice counts and helps other users identify the trustworthiness of any phone number worldwide.</p>
                         <p class="text_bottom">mail@number-index.com</p>
                     </div>
@@ -35,8 +35,8 @@
                         <h2>1</h2>
                         <h3>Please rate this number. Positive or negative?</h3>
                         <div class="gateway_rate_box">
-                            <button class="vote_item vote_up" value="vote_up"><span class="fa fa-thumbs-o-up fa-4x"></span></button>
-                            <button class="vote_item vote_down" value="vote_down"><span class="fa fa-thumbs-o-down fa-4x"></span></button>
+                            <button class="vote_item vote_up" value="vote_up"><span class="fa fa-thumbs-up fa-4x"></span></button>
+                            <button class="vote_item vote_down" value="vote_down"><span class="fa fa-thumbs-down fa-4x"></span></button>
                         </div>
                     </div>
                     <div class="gateway_step2positive">
@@ -46,7 +46,7 @@
                             <p>Please provide informations related to this number:</p>
                             <form action="">
                                 <label for="selectOwnerPositive">Number owner: </label>
-                                <select name="" id="selectOwnerPositive" class="selectOwnerPositive">
+                                <select name="" id="selectOwnerPositive" class="selectOwnerPositive border_one">
                                     <option value="none" selected disabled></option>
                                     <option value="private">Private line</option>
                                     <option value="copmany">Company line</option>
@@ -54,7 +54,7 @@
                                 </select>
                                 <br>
                                 <label for="selectTypePositive">Line type: </label>
-                                <select name="" id="selectTypePositive" class="selectTypePositive">
+                                <select name="" id="selectTypePositive" class="selectTypePositive border_one">
                                     <option value="none" selected disabled></option>
                                     <option value="landline">Landline</option>
                                     <option value="mobile">Mobile line</option>
@@ -62,7 +62,7 @@
                                 </select>
                                 <br>
                                 <label for="selectCategory">Category: </label>
-                                <select name="" id="selectCategoryPositive" class="selectCategoryPositive">
+                                <select name="" id="selectCategoryPositive" class="selectCategoryPositive border_one">
                                     <option value="none" selected disabled></option>
                                     <option value="service">Service</option>
                                     <option value="information">Information</option>
@@ -70,33 +70,6 @@
                                     <option value="government">Government</option>
                                     <option value="other">Other</option>
                                     <option value="unknown">Unknown</option>                                        
-                                </select>
-                            </form>
-                            <p>Please provide informations related to this call:</p>
-                            <form action="">
-                                <label for="selectDayPositive">Day of the call:</label>
-                                <select name="" id="selectDayPositive" class="selectDayPositive">
-                                    <option value="none" selected disabled></option>
-                                    <option value="today">Today</option>
-                                    <option value="yesterday">Yesterday</option>
-                                    <option value="twodays">Two days ago</option>
-                                    <option value="lastweek">Last week</option>
-                                    <option value="twoweeks">Two weeks ago</option>
-                                    <option value="pastmonth">In the past month</option>
-                                    <option value="repeated">Repeated calls</option>
-                                </select>
-                                <br>
-                                <label for="selectTimePositive">Time of the call:</label>
-                                <select name="" id="selectTimePositive" class="selectTimePositive">
-                                    <option value="none" selected disabled></option>
-                                    <option value="earlymorning">Early morning</option>
-                                    <option value="morning">Morning</option>
-                                    <option value="afternoon">Afternoon</option>
-                                    <option value="earlyevening">Early evening</option>
-                                    <option value="evening">Evening</option>
-                                    <option value="night">Night</option>
-                                    <option value="latenight">Late night</option>
-                                    <option value="differs">Differs</option>
                                 </select>
                             </form>
                         </div>
@@ -108,7 +81,7 @@
                             <p>Please provide informations related to this number:</p>
                             <form action="">
                                 <label for="selectOwnerNegative">Number owner: </label>
-                                <select name="" id="selectOwnerNegative" class="selectOwnerNegative">
+                                <select name="" id="selectOwnerNegative" class="selectOwnerNegative border_one">
                                     <option value="none" selected disabled></option>
                                     <option value="private">Private line</option>
                                     <option value="company">Company line</option>
@@ -116,7 +89,7 @@
                                 </select>
                                 <br>
                                 <label for="selectTypeNegative">Line type: </label>
-                                <select name="" id="selectTypeNegative" class="selectTypeNegative">
+                                <select name="" id="selectTypeNegative" class="selectTypeNegative border_one">
                                     <option value="none" selected disabled></option>
                                     <option value="landline">Landline</option>
                                     <option value="mobile">Mobile line</option>
@@ -137,48 +110,18 @@
                                     <option value="unknown">Unknown</option>                                        
                                 </select>
                             </form>
-                            <p>Please provide informations related to this call:</p>
-                            <form action="">
-                                <label for="selectDayNegative">Day of the call:</label>
-                                <select name="" id="selectDayNegative" class="selectDayNegative">
-                                    <option value="none" selected disabled></option>
-                                    <option value="today">Today</option>
-                                    <option value="yesterday">Yesterday</option>
-                                    <option value="twodays">Two days ago</option>
-                                    <option value="lastweek">Last week</option>
-                                    <option value="twoweeks">Two weeks ago</option>
-                                    <option value="pastmonth">In the past month</option>
-                                    <option value="repeated">Repeated calls</option>
-                                </select>
-                                <br>
-                                <label for="selectTimeNegative">Time of the call:</label>
-                                <select name="" id="selectTimeNegative" class="selectTimeNegative">
-                                    <option value="none" selected disabled></option>
-                                    <option value="earlymorning">Early morning</option>
-                                    <option value="morning">Morning</option>
-                                    <option value="afternoon">Afternoon</option>
-                                    <option value="earlyevening">Early evening</option>
-                                    <option value="evening">Evening</option>
-                                    <option value="night">Night</option>
-                                    <option value="latenight">Late night</option>
-                                    <option value="differs">Differs</option>
-                                </select>
-                                <br>
-                                <label for="selectAnswerNegative">Answered:</label>
-                                <select name="" id="selectAnswerNegative" class="selectAnswerNegative">
-                                    <option value="none" selected disabled></option>
-                                    <option value="yes">Yes, call received</option>
-                                    <option value="norejected">No, call rejected</option>
-                                    <option value="nomissed">No, call missed</option>
-                                </select>
-                            </form>
                         </div>
                     </div>
                     <div class="gateway_step3">
                         <h2>3</h2>
                         <h3>Please write a comment about this number</h3>
+                        <div class="gateway_hashtag_box">
+                        	<p>Selected hashtags:</p>
+                        	<textarea class="hashtag_box padding_one" disabled></textarea>
+                        </div>
                         <div class="gateway_comment_box">
-                            <textarea class="comment_box"></textarea>
+                            <p>Please write your comment:</p>
+                            <textarea class="comment_box padding_one"></textarea>
                             <button class="submit_comment">Submit</button>
                         </div>
                     </div>
@@ -196,7 +139,7 @@
             $( "div.gateway_step2positive" ).css("display", "block");
             $( "div.gateway_step2negative, div.gateway_step3" ).css("display", "none");
             $( "div.progress-bar" ).css("width", "33%");
-            $(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectDayPositive, .selectTimePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectDayNegative, .selectTimeNegative, .selectAnswerNegative").val(null);
+            $(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectDayPositive, .selectTimePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .hashtag_box").val(null);
         });
         
         $( "button.vote_down" ).click(function() {
@@ -204,14 +147,20 @@
             $( "div.gateway_step2negative" ).css("display", "block");
             $( "div.gateway_step2positive, div.gateway_step3" ).css("display", "none");
             $( "div.progress-bar" ).css("width", "33%");
-            $(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectDayPositive, .selectTimePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectDayNegative, .selectTimeNegative, .selectAnswerNegative").val(null);
+            $(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectDayPositive, .selectTimePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .hashtag_box").val(null);
         });
                     
         $( ".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive" ).change(function() {
             $ipositive++;
             if ($ipositive > 2) {
                 if ( $("select.selectOwnerPositive").val() != null && $("select.selectTypePositive").val() != null && $("select.selectCategoryPositive").val() != null) {
+					var $hashtag1 = $("select.selectOwnerPositive").val();
+					var $hashtag2 = $("select.selectTypePositive").val();
+					var $hashtag3 = $("select.selectCategoryPositive").val();
+					var $hashtags = "#" + $hashtag1 + " #" + $hashtag2 + " #" + $hashtag3;
+					$("textarea.hashtag_box").val($hashtags);
                     $("div.gateway_step3").css("display", "block");
+					$( "div.progress-bar" ).css("width", "66%");
                 }
                 else {
 
@@ -219,11 +168,17 @@
             }
         });
         
-                $( ".selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative" ).change(function() {
+        $( ".selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative" ).change(function() {
             $ipositive++;
             if ($ipositive > 2) {
                 if ( $("select.selectOwnerNegative").val() != null && $("select.selectTypeNegative").val() != null && $("select.selectCategoryNegative").val() != null) {
+					var $hashtag1 = $("select.selectOwnerNegative").val();
+					var $hashtag2 = $("select.selectTypeNegative").val();
+					var $hashtag3 = $("select.selectCategoryNegative").val();
+					var $hashtags = "#" + $hashtag1 + " #" + $hashtag2 + " #" + $hashtag3;
+					$("textarea.hashtag_box").val($hashtags);
                     $("div.gateway_step3").css("display", "block");
+					$( "div.progress-bar" ).css("width", "66%");
                 }
                 else {
 

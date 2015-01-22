@@ -1,140 +1,182 @@
+/*
+NI Team Gateway Design
+Date: 22. 01. 2015.
+Author: Armin
+Version: 0.1
+*/
+
+/* =Imports */
+
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+
+/* =Base */
 
 body {
     background-color: #f3f3f5;
     background-image: url(../images/background_full.jpg);
 }
 
-div.gateway_wrapper {
-    margin-top: 50px;
-    border: 1px solid #ccc;
-    background-color: #ffffff;
-}
-
-div.custom_progress {
-    margin: 20px 0 !important;
-    background-color: #ccc;
-}
-
-.progress {
-    border-radius: 0 !important;
-}
-
-.progress-bar {
-    background-color: #000 !important;
-}
-
-div.gateway_wrapper h1 {
+h1 {
+	background-color: #000;
+    color: #fff;
+	font-size: 20px;
     margin: 0;
     padding: 10px;
-    font-size: 20px;
     text-align: center;
-    background-color: #000;
-    color: #fff;
 }
 
-div.gateway_wrapper h2 {
+h2 {
+	background-color: #000;
+	color: #fff;
     font-size: 20px;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    width: 50px;
-    line-height: 50px;
-    position: relative;
     left: -25px;
-    z-index: 100 !important;
+	line-height: 50px;
+	position: relative;
+	text-align: center;
+	width: 50px;
 }
 
-div.gateway_wrapper h3 {
-    margin: 0;
-    padding: 10px;
-    font-size: 16px;
+h3 {
+	font-size: 16px;
+	line-height: 50px;
     margin: -55px 0 20px 25px;
-}
-
-div.gateway_rate_box {
-    text-align: center;
+    padding: 10px;
 }
 
 button {
     background-color: #ffffff;
     border: 0;
-    padding: 0;
     margin: 0 20px 20px 20px;
+    padding: 0;
 }
-
-div.gateway_info_box {
-    padding: 0 20px 20px 20px;
-}
-
-div.gateway_comment_box {
-    margin: 30px;
-    text-align: center;
-}
-
-textarea.comment_box {
-    width: 100%;
-}
-
-button.submit_comment {
-    padding: 10px;
-    background-color: #000;
-    color: #fff;
-    margin: 20px 0 0 0;
-}
-
-div.left_sidebar {
-    width: 300px;
-    padding: 20px 30px 20px 20px;
-    text-align: center;
-    margin-top: 100px;
-}
-
-div.left_sidebar h2 {
-    padding: 40px 0;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    font-size: 25px;
-}
-
-div.left_sidebar img {
-    margin: 25px 0;
-}
-
-div.left_sidebar h3 {
-    margin: 0;
-}
-
-div.left_sidebar p.text_top {
-    text-align: left;
-    margin: 20px 0;
-}
-
-p.text_bottom {
-    font-size: 20px;
-}
-
-/* */
 
 label {
-    width: 150px;
     font-weight: 300;
     margin-left: 30px;
+    width: 150px;
 }
 
 select {
     width: 200px;
+}
+
+/* =Layout */
+
+.gateway_wrapper {
+	background-color: #ffffff;
     border: 1px solid #ccc;
+	margin-bottom: 20px;
+	margin-top: 50px;
 }
 
-input {
-    line-height: normal !important;
-    border: 1px solid #ccc !important;
-    width: 200px;
+.border_one {
+	border: 1px solid #ccc;
 }
 
-/* */
+.padding_one {
+	padding: 10px;
+}
 
-div.gateway_step2positive, div.gateway_step2negative, div.gateway_step3 {
+/* =Modules =gateway_wrapper */
+
+
+.custom_progress {
+    background-color: #ccc;
+	margin: 20px 0;
+}
+
+.progress {
+    border-radius: 0;
+}
+
+.progress-bar {
+    background-color: #d9534f;
+}
+
+.gateway_rate_box {
+    text-align: center;
+}
+
+.fa-thumbs-up {
+	color: green;
+}
+
+.fa-thumbs-down {
+	color: red;
+}
+
+.gateway_info_box {
+    padding: 0 20px 20px 20px;
+}
+
+.gateway_hashtag_box {
+	margin: 0 20px;
+}
+
+.gateway_comment_box {
+    margin: 0 20px 20px 20px;
+}
+
+.hashtag_box {
+	border-radius: 4px;
+	margin: 0 0 20px 0; 
+	overflow: hidden;
+	width: 100%;
+}
+
+.comment_box {
+	border-radius: 4px;
+	height: 200px;
+    width: 100%;
+}
+
+.submit_comment {
+    background-color: #000;
+    color: #fff;
+    margin: 20px 0 0 0;
+	padding: 4px;
+}
+
+.left_sidebar {
+    margin-top: 100px;
+    padding: 20px 30px 20px 20px;
+	text-align: center;
+	width: 300px;
+}
+
+/* =Modules =left_sidebar */
+
+.left_sidebar_h2 {
+	background: none;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	color: #333;
+	font-size: 25px;
+	left: 0;
+	padding: 40px 0;
+	position: static;
+	width: auto;
+}
+
+.left_sidebar_h3 {
+    margin: 0;
+}
+
+.left_sidebar img {
+    margin: 25px 0;
+}
+
+.left_sidebar .text_top {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.text_bottom {
+    font-size: 20px;
+}
+
+/* =Animations */
+
+.gateway_step2positive, .gateway_step2negative, .gateway_step3 {
     display: none;
 }
