@@ -21,8 +21,14 @@
 		</div><!-- /panel -->
 		
 		<div data-role="header" style="overflow:hidden;">
+			<div data-role="navbar" data-iconpos="left">
+				<ul>
+					<li><a href="#" data-icon="arrow-l" data-theme="b">Back</a></li>
+					<li><a href="index.html" data-icon="home" data-theme="b">Home</a></li>
+					<li><a href="#" data-icon="arrow-r" data-theme="b">Next</a></li>
+				</ul>
+			</div><!-- /navbar -->
 			<h1>Home</h1>
-			<a href="#home_page_panel" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars">Menu</a>
 		</div><!-- /header -->
 		
 		<div role="main" class="ui-content">
@@ -35,9 +41,19 @@
 			Please select one of the options:
 			</p>
 			<a href="#search_page" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-carat-r" data-transition="flip">Search</a>
-			<a href="#latest_search_page" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-carat-r" data-transition="flip">Latest Search</a>
+			<a href="#latest_search_page" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-carat-r" data-transition="flip">Latest results</a>
 		</div><!-- /content -->
 		
+		<div data-role="footer" style="overflow:hidden;" class="fixed_bottom">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" class="ui-btn-b ui-btn-icon-left ui-icon-home">Home</a></li>
+					<li><a href="#" class="ui-btn-b ui-btn-icon-left ui-icon-search">Search</a></li>
+					<li><a href="#" class="ui-btn-b ui-btn-icon-left ui-icon-phone">Results</a></li>
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+
 	</div>
 	<!-- End of the first page -->
 	
@@ -64,5 +80,6 @@
 		</div><!-- /content -->
 	</div>
 	<!-- End of the third page -->
+	
 </body>
 </html>

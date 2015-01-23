@@ -10,6 +10,14 @@ body {
 	text-align: center;
 }
 
+/* =Layout */
+
+.fixed_bottom {
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+}
+
 /* =reskinning */
 
 .ui-header .ui-title {
