@@ -111,7 +111,7 @@ var nistats = {"postid":"90408","ajaxurl":"http:\/\/number-index.com\/wp-admin\/
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
    </head>
-<body>
+<body class="body_gateway">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
@@ -136,37 +136,37 @@ var nistats = {"postid":"90408","ajaxurl":"http:\/\/number-index.com\/wp-admin\/
                           </div>
                     </div>
                     <div class="gateway_step1">
-                        <h2>1</h2>
-                        <h3>Please rate this number. Positive or negative?</h3>
+                        <h2 class="gateway_step_h2">1</h2>
+                        <h3 class="gateway_step_h3">Please rate this number. Positive or negative?</h3>
                         <div class="gateway_rate_box">
-                            <button class="vote_item vote_up" value="vote_up"><span class="fa fa-thumbs-up fa-4x"></span></button>
-                            <button class="vote_item vote_down" value="vote_down"><span class="fa fa-thumbs-down fa-4x"></span></button>
+                            <button class="gateway_button vote_item vote_up" value="vote_up"><span class="fa fa-thumbs-up fa-4x"></span></button>
+                            <button class="gateway_button vote_item vote_down" value="vote_down"><span class="fa fa-thumbs-down fa-4x"></span></button>
                         </div>
                     </div>
                     <div class="gateway_step2positive">
-                        <h2>2</h2>
-                        <h3>Please provide additional information concerning this number.</h3>
+                        <h2 class="gateway_step_h2">2</h2>
+                        <h3 class="gateway_step_h3">Please provide additional information concerning this number.</h3>
                         <div class="gateway_info_box">
                             <p>Please provide informations related to this number:</p>
                             <form action="">
-                                <label for="selectOwnerPositive" class="selectOwnerPositive">Number owner: </label>
-                                <select name="" id="selectOwnerPositive" class="selectOwnerPositive border_one">
+                                <label for="selectOwnerPositive" class="selectOwnerPositive gateway_label">Number owner: </label>
+                                <select name="" id="selectOwnerPositive" class="selectOwnerPositive border_one gateway_select">
                                     <option value="none" selected disabled></option>
                                     <option value="private">Private line</option>
                                     <option value="copmany">Company line</option>
                                     <option value="unknown">Unknown</option>
                                 </select><span class="fa fa-check OwnerPositive"></span>
                                 <br>
-                                <label for="selectTypePositive" class="selectTypePositive">Line type: </label>
-                                <select name="" id="selectTypePositive" class="selectTypePositive border_one">
+                                <label for="selectTypePositive" class="selectTypePositive gateway_label">Line type: </label>
+                                <select name="" id="selectTypePositive" class="selectTypePositive border_one gateway_select">
                                     <option value="none" selected disabled></option>
                                     <option value="landline">Landline</option>
                                     <option value="mobile">Mobile line</option>
                                     <option value="unknown">Unknown</option>
                                 </select><span class="fa fa-check TypePositive"></span>
                                 <br>
-                                <label for="selectCategoryPositive" class="selectCategoryPositive">Category: </label>
-                                <select name="" id="selectCategoryPositive" class="selectCategoryPositive border_one">
+                                <label for="selectCategoryPositive" class="selectCategoryPositive gateway_label">Category: </label>
+                                <select name="" id="selectCategoryPositive" class="selectCategoryPositive border_one gateway_select">
                                     <option value="none" selected disabled></option>
                                     <option value="service">Service</option>
                                     <option value="information">Information</option>
@@ -179,29 +179,29 @@ var nistats = {"postid":"90408","ajaxurl":"http:\/\/number-index.com\/wp-admin\/
                         </div>
                     </div>
                     <div class="gateway_step2negative">
-                        <h2>2</h2>
-                        <h3>Please provide additional information concerning this number.</h3>
+                        <h2 class="gateway_step_h2">2</h2>
+                        <h3 class="gateway_step_h3">Please provide additional information concerning this number.</h3>
                         <div class="gateway_info_box">
                             <p>Please provide informations related to this number:</p>
                             <form action="">
-                                <label for="selectOwnerNegative" class="selectOwnerNegative">Number owner: </label>
-                                <select name="" id="selectOwnerNegative" class="selectOwnerNegative border_one">
+                                <label for="selectOwnerNegative" class="selectOwnerNegative gateway_label">Number owner: </label>
+                                <select name="" id="selectOwnerNegative" class="selectOwnerNegative border_one gateway_select">
                                     <option value="none" selected disabled></option>
                                     <option value="private">Private line</option>
                                     <option value="company">Company line</option>
                                     <option value="unknown">Unknown</option>
                                 </select><span class="fa fa-check OwnerNegative"></span>
                                 <br>
-                                <label for="selectTypeNegative" class="selectTypeNegative">Line type: </label>
-                                <select name="" id="selectTypeNegative" class="selectTypeNegative border_one">
+                                <label for="selectTypeNegative" class="selectTypeNegative gateway_label">Line type: </label>
+                                <select name="" id="selectTypeNegative" class="selectTypeNegative border_one gateway_select">
                                     <option value="none" selected disabled></option>
                                     <option value="landline">Landline</option>
                                     <option value="mobile">Mobile line</option>
                                     <option value="unknown">Unknown</option>
                                 </select><span class="fa fa-check TypeNegative"></span>
                                 <br>
-                                <label for="selectCategoryNegative" class="selectCategoryNegative">Category: </label>
-                                <select name="" id="selectCategoryNegative" class="selectCategoryNegative border_one">
+                                <label for="selectCategoryNegative" class="selectCategoryNegative gateway_label">Category: </label>
+                                <select name="" id="selectCategoryNegative" class="selectCategoryNegative border_one gateway_select">
                                     <option value="none" selected disabled></option>
                                     <option value="service">Service</option>
                                     <option value="information">Information</option>
@@ -217,8 +217,8 @@ var nistats = {"postid":"90408","ajaxurl":"http:\/\/number-index.com\/wp-admin\/
                         </div>
                     </div>
                     <div class="gateway_step3">
-                        <h2>3</h2>
-                        <h3>Please write a comment about this number</h3>
+                        <h2 class="gateway_step_h2">3</h2>
+                        <h3 class="gateway_step_h3">Please write a comment about this number</h3>
                         <div class="gateway_hashtag_box">
                         	<p class="no_margin">Selected hashtags:</p>
                         	<textarea class="hashtag_box padding_one" disabled></textarea>
