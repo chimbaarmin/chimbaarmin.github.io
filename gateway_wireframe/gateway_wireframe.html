@@ -49,23 +49,23 @@
                         <div class="gateway_info_box">
                             <p>Please provide informations related to this number:</p>
                             <form action="">
-                                <label for="selectOwnerPositive">Number owner: </label>
+                                <label for="selectOwnerPositive" class="selectOwnerPositive">Number owner: </label>
                                 <select name="" id="selectOwnerPositive" class="selectOwnerPositive border_one">
                                     <option value="none" selected disabled></option>
                                     <option value="private">Private line</option>
                                     <option value="copmany">Company line</option>
                                     <option value="unknown">Unknown</option>
-                                </select><span class="fa fa-check selectOwnerPositive"></span><span class="fa fa-times selectOwnerPositive"></span>
+                                </select><span class="fa fa-check OwnerPositive"></span>
                                 <br>
-                                <label for="selectTypePositive">Line type: </label>
+                                <label for="selectTypePositive" class="selectTypePositive">Line type: </label>
                                 <select name="" id="selectTypePositive" class="selectTypePositive border_one">
                                     <option value="none" selected disabled></option>
                                     <option value="landline">Landline</option>
                                     <option value="mobile">Mobile line</option>
                                     <option value="unknown">Unknown</option>
-                                </select><span class="fa fa-check selectTypePositive"></span><span class="fa fa-times selectTypePositive"></span>
+                                </select><span class="fa fa-check TypePositive"></span>
                                 <br>
-                                <label for="selectCategory">Category: </label>
+                                <label for="selectCategoryPositive" class="selectCategoryPositive">Category: </label>
                                 <select name="" id="selectCategoryPositive" class="selectCategoryPositive border_one">
                                     <option value="none" selected disabled></option>
                                     <option value="service">Service</option>
@@ -74,7 +74,7 @@
                                     <option value="government">Government</option>
                                     <option value="other">Other</option>
                                     <option value="unknown">Unknown</option>                                        
-                                </select><span class="fa fa-check selectCategoryPositive"></span><span class="fa fa-times selectCategoryPositive"></span>
+                                </select><span class="fa fa-check CategoryPositive"></span>
                             </form>
                         </div>
                     </div>
@@ -84,23 +84,23 @@
                         <div class="gateway_info_box">
                             <p>Please provide informations related to this number:</p>
                             <form action="">
-                                <label for="selectOwnerNegative">Number owner: </label>
+                                <label for="selectOwnerNegative" class="selectOwnerNegative">Number owner: </label>
                                 <select name="" id="selectOwnerNegative" class="selectOwnerNegative border_one">
                                     <option value="none" selected disabled></option>
                                     <option value="private">Private line</option>
                                     <option value="company">Company line</option>
                                     <option value="unknown">Unknown</option>
-                                </select><span class="fa fa-check selectOwnerNegative"></span><span class="fa fa-times selectOwnerNegative"></span>
+                                </select><span class="fa fa-check OwnerNegative"></span>
                                 <br>
-                                <label for="selectTypeNegative">Line type: </label>
+                                <label for="selectTypeNegative" class="selectTypeNegative">Line type: </label>
                                 <select name="" id="selectTypeNegative" class="selectTypeNegative border_one">
                                     <option value="none" selected disabled></option>
                                     <option value="landline">Landline</option>
                                     <option value="mobile">Mobile line</option>
                                     <option value="unknown">Unknown</option>
-                                </select><span class="fa fa-check selectTypeNegative"></span><span class="fa fa-times selectTypeNegative"></span>
+                                </select><span class="fa fa-check TypeNegative"></span>
                                 <br>
-                                <label for="selectCategoryNegative">Category: </label>
+                                <label for="selectCategoryNegative" class="selectCategoryNegative">Category: </label>
                                 <select name="" id="selectCategoryNegative" class="selectCategoryNegative border_one">
                                     <option value="none" selected disabled></option>
                                     <option value="service">Service</option>
@@ -112,7 +112,7 @@
                                     <option value="datatheft">Data Theft</option>
                                     <option value="other">Other</option>
                                     <option value="unknown">Unknown</option>                                        
-                                </select><span class="fa fa-check selectCategoryNegative"></span><span class="fa fa-times selectCategoryNegative"></span>
+                                </select><span class="fa fa-check CategoryNegative"></span>
                             </form>
                         </div>
                     </div>
@@ -141,8 +141,7 @@
         $( "button.vote_up" ).click(function() {
             $ipositive = 0;
             $( "div.gateway_step2positive" ).css("display", "block");
-			$( ".fa-times" ).css("display", "inline");
-            $( "div.gateway_step2negative, div.gateway_step3, .fa-check" ).css("display", "none");
+            $( "div.gateway_step2negative, .selectTypePositive, .selectCategoryPositive, div.gateway_step3, .fa-check" ).css("display", "none");
 			$( ".fa-thumbs-up" ).css("color", "#5cb85c");
 			$( ".fa-thumbs-down" ).css("color", "#000000");
             $( "div.progress-bar" ).css("width", "33%");
@@ -152,8 +151,7 @@
         $( "button.vote_down" ).click(function() {
             $ipositive = 0;
             $( "div.gateway_step2negative" ).css("display", "block");
-			$( ".fa-times" ).css("display", "inline");
-            $( "div.gateway_step2positive, div.gateway_step3, .fa-check" ).css("display", "none");
+            $( "div.gateway_step2positive, div.gateway_step3, .selectTypeNegative, .selectCategoryNegative, .fa-check" ).css("display", "none");
 			$( ".fa-thumbs-down" ).css("color", "#d9534f");
 			$( ".fa-thumbs-up" ).css("color", "#000000");
             $( "div.progress-bar" ).css("width", "33%");
@@ -163,33 +161,31 @@
 		/* validator */
 		
 		$(".selectOwnerPositive").change(function() {
-			$(".fa-check.selectOwnerPositive").css("display", "inline");
-			$(".fa-times.selectOwnerPositive").css("display", "none");
+			$(".selectTypePositive").css("display", "inline-block");
+			$(".fa-check.OwnerPositive").css("display", "inline");
 		});
 		
 		$(".selectTypePositive").change(function() {
-			$(".fa-check.selectTypePositive").css("display", "inline");
-			$(".fa-times.selectTypePositive").css("display", "none");
+			$(".selectCategoryPositive").css("display", "inline-block");
+			$(".fa-check.TypePositive").css("display", "inline");
 		});
 		
 		$(".selectCategoryPositive").change(function() {
-			$(".fa-check.selectCategoryPositive").css("display", "inline");
-			$(".fa-times.selectCategoryPositive").css("display", "none");
+			$(".fa-check.CategoryPositive").css("display", "inline");
 		});
 		
 		$(".selectOwnerNegative").change(function() {
-			$(".fa-check.selectOwnerNegative").css("display", "inline");
-			$(".fa-times.selectOwnerNegative").css("display", "none");
+			$(".selectTypeNegative").css("display", "inline-block");
+			$(".fa-check.OwnerNegative").css("display", "inline");
 		});
 		
 		$(".selectTypeNegative").change(function() {
-			$(".fa-check.selectTypeNegative").css("display", "inline");
-			$(".fa-times.selectTypeNegative").css("display", "none");
+			$(".selectCategoryNegative").css("display", "inline-block");
+			$(".fa-check.TypeNegative").css("display", "inline");
 		});
 		
 		$(".selectCategoryNegative").change(function() {
-			$(".fa-check.selectCategorNegative").css("display", "inline");
-			$(".fa-times.selectCategoryNegative").css("display", "none");
+			$(".fa-check.CategorNegative").css("display", "inline");
 		});
 		
 		/* end validator */
@@ -204,7 +200,6 @@
 					var $hashtags = "#" + $hashtag1 + " #" + $hashtag2 + " #" + $hashtag3;
 					$("textarea.hashtag_box").val($hashtags);
 					$(".fa-check").css("display", "inline");
-					$(".fa-times").css("display", "none");
                     $("div.gateway_step3").css("display", "block");
 					$( "div.progress-bar" ).css("width", "66%");
                 }
@@ -224,7 +219,6 @@
 					var $hashtags = "#" + $hashtag1 + " #" + $hashtag2 + " #" + $hashtag3;
 					$("textarea.hashtag_box").val($hashtags);
 					$(".fa-check").css("display", "inline");
-					$(".fa-times").css("display", "none");
                     $("div.gateway_step3").css("display", "block");
 					$( "div.progress-bar" ).css("width", "66%");
                 }

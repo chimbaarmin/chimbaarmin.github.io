@@ -199,18 +199,13 @@ select {
 	color: #d9534f;
 }
 
-.gateway_step2positive, .gateway_step2negative, .gateway_step3 {
+.gateway_step2positive, .selectTypePositive, .selectCategoryPositive, .gateway_step2negative, .selectTypeNegative, .selectCategoryNegative, .gateway_step3 {
     display: none;
 }
 
 .fa-check {
 	display: none;
 	color: #5cb85c;
-	margin: 0 10px;
-}
-
-.fa-times {
-	color: #d9534f;
 	margin: 0 10px;
 }
 
