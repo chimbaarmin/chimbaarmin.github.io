@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mobile App Demo v0.1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="mobile_app.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+	<!-- Start of the first page -->
+	<div data-role="page" id="home_page">
+		
+		<div data-role="panel" id="home_page_panel">
+			<p>This is just a test paragraphy in my panel.</p>
+			<a href="#home_page" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete" data-rel="close">Close</a>
+		</div><!-- /panel -->
+		
+		<div data-role="header" style="overflow:hidden;">
+			<h1>Number-Index.com</h1>
+			<a href="#home_page_panel" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars">Menu</a>
+		</div><!-- /header -->
+		
+		<div role="main" class="ui-content">
+			<div class="ni-logo">
+				<img src="../images/ni_logo_small.png" alt="Number-Index.com Logo" class="ni-logo-img">
+			</div>
+			<p>This is just a test paragraph in the first page.</p>
+			<a href="#search_page" class="ui-btn ui-shadow ui-corner-all" data-transition="flip">Search</a>
+			<a href="#latest_search_page" class="ui-btn ui-shadow ui-corner-all" data-transition="flip">Latest Search</a>
+		</div><!-- /content -->
+		
+	</div>
+	<!-- End of the first page -->
+	
+	<!-- Start of the second page -->
+	<div data-role="page" id="search_page">
+		<div role="main" class="ui-content">
+			<div class="ni-logo">
+				<img src="../images/ni_logo_small.png" alt="Number-Index.com Logo" class="ni-logo-img">
+			</div>
+			<p>Search page.</p>
+			<a href="#home_page" class="ui-btn ui-shadow ui-corner-all" data-transition="flip">Home page</a>
+		</div><!-- /content -->
+	</div>
+	<!-- End of the second page -->
+	
+	<!-- Start of the third page -->
+	<div data-role="page" id="latest_search_page">
+		<div role="main" class="ui-content">
+			<div class="ni-logo">
+				<img src="../images/ni_logo_small.png" alt="Number-Index.com Logo" class="ni-logo-img">
+			</div>
+			<p>Latest search page.</p>
+			<a href="#home_page" class="ui-btn ui-shadow ui-corner-all" data-transition="flip">Home page</a>
+		</div><!-- /content -->
+	</div>
+	<!-- End of the third page -->
+</body>
+</html>
