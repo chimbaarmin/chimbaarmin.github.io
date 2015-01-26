@@ -13,7 +13,7 @@
 <body>
 
 	<!-- Start of the first page -->
-	<div data-role="page" id="home_page">
+	<div data-role="page" id="home_page" data-next="search_page" data-prev="none">
 		
 		<div data-role="panel" id="left_panel">
 			<div class="ni_logo_only">
@@ -82,7 +82,7 @@
 	<!-- End of the first page -->
 	
 	<!-- Start of the second page -->
-	<div data-role="page" id="search_page">
+	<div data-role="page" id="search_page" data-next="search_history_page" data-prev="home_page">
 		<div role="main" class="ui-content">
 			<div class="ni-logo">
 				<img src="../images/ni_logo_small.png" alt="Number-Index.com Logo" class="ni-logo-img">
@@ -95,7 +95,7 @@
 	<!-- End of the second page -->
 	
 	<!-- Start of the third page -->
-	<div data-role="page" id="search_history_page">
+	<div data-role="page" id="search_history_page" data-next="none" data-prev="search_page">
 		<div role="main" class="ui-content">
 			<div class="ni-logo">
 				<img src="../images/ni_logo_small.png" alt="Number-Index.com Logo" class="ni-logo-img">
@@ -112,13 +112,25 @@
 		$( document ).on( "swiperight", rightHandler );
 				
 		function rightHandler( event ){
-			$(".gooptions").click();
+			var prev = $( ".ui-page-active" ).jqmData( "prev" );
+			if ( prev == "none") {
+				$( ".gooptions" ).click();
+			}
+			else {
+				$( "body" ).pagecontainer("change", "#" + prev);
+			}
 		}
 		
 		$( document ).on( "swipeleft", leftHandler );
 		
 		function leftHandler( event ){
-			$("body").pagecontainer("change", "#search_page");
+			var next = $( ".ui-page-active" ).jqmData( "next" );
+			if ( next == "none") {
+			
+			}
+			else {
+				$( "body" ).pagecontainer("change", "#" + next);
+			}
 		}
 		
 	</script>
