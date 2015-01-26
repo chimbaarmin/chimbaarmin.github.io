@@ -36,7 +36,7 @@
 		
 		<div data-role="header" style="overflow:hidden;">
 			<h1>NUMBER-INDEX.COM</h1>
-			<a href="#left_panel" class="ui-btn ui-btn-icon-left ui-icon-gear">Options</a>
+			<a href="#left_panel" class="ui-btn ui-btn-icon-left ui-icon-gear gooptions">Options</a>
 			<div data-role="navbar" data-iconpos="right">
 				<ul>
 					<li><a href="#home_page" data-icon="home" data-theme="a">Home</a></li>
@@ -88,6 +88,7 @@
 				<img src="../images/ni_logo_small.png" alt="Number-Index.com Logo" class="ni-logo-img">
 			</div>
 			<p>Search page.</p>
+			<a href="#search_history_page" class="ui-btn  ui-corner-all" data-transition="flip">Search history</a>
 			<a href="#home_page" class="ui-btn  ui-corner-all" data-transition="flip">Home page</a>
 		</div><!-- /content -->
 	</div>
@@ -104,6 +105,22 @@
 		</div><!-- /content -->
 	</div>
 	<!-- End of the third page -->
-
+	
+	<!-- Swipe navigation -->
+	<script>
+		
+		$( document ).on( "swiperight", rightHandler );
+				
+		function rightHandler( event ){
+			$(".gooptions").click();
+		}
+		
+		$( document ).on( "swipeleft", leftHandler );
+		
+		function leftHandler( event ){
+			$("body").pagecontainer("change", "#search_page");
+		}
+		
+	</script>
 </body>
 </html>
