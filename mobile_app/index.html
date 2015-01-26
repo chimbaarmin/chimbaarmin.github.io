@@ -13,41 +13,16 @@
 <body>
 
 	<!-- Start of the first page -->
-	<div data-role="page" id="home_page" data-next="search_page" data-prev="none">
-		
-		<div data-role="panel" id="left_panel">
-			<div class="ni_logo_only">
-				<img src="../images/ni_logo_small_only.png" alt="">
-			</div>
-			<a href="#home_page" class="ui-btn ui-btn-icon-left ui-icon-home">Home</a>
-			<a href="#search_page" class="ui-btn ui-btn-icon-left ui-icon-search">Search</a>
-			<a href="#search_history_page" class="ui-btn ui-btn-icon-left ui-icon-search">Search History</a>
-			<div class="left_panel_adspace">
-				<img src="../images/fakeads/half_banner.png" alt="">
-			</div>
-			<a href="#" class="ui-btn ui-btn-icon-left ui-icon-forbidden">Remove Cookies</a>
-			<a href="#" class="ui-btn ui-btn-icon-left ui-icon-eye">Switch Theme</a>
-			<div class="left_panel_adspace">
-				<img src="../images/fakeads/half_banner.png" alt="">
-			</div>
-			<input type="search" name="password" id="search" value="" placeholder="Lookup number">
-			<a href="#home_page" class="ui-btn ui-btn-icon-left ui-icon-delete" data-rel="close">Close</a>
-		</div><!-- /panel -->
+	<div data-role="page" id="home_page" data-next="search_page" data-prev="options_page">
 		
 		<div data-role="header" style="overflow:hidden;">
-			<h1>NUMBER-INDEX.COM</h1>
-			<a href="#left_panel" class="ui-btn ui-btn-icon-left ui-icon-gear gooptions">Options</a>
-			<div data-role="navbar" data-iconpos="right">
-				<ul>
-					<li><a href="#home_page" data-icon="home" data-theme="a">Home</a></li>
-					<li><a href="#search_page" data-icon="search" data-theme="a">Search</a></li>
-				</ul>
-			</div><!-- /navbar -->
+			<h1>number-index.com</h1>
+			<a href="#options_page" class="ui-btn ui-btn-icon-left ui-icon-gear" data-transition="flip">Options</a>
 		</div><!-- /header -->
 		
 		<div role="main" class="ui-content">
-			<div class="ni-logo">
-				<img src="../images/ni_logo_small.png" alt="Number-Index.com Logo" class="ni-logo-img">
+			<div class="ni_logo_only">
+				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="ni-logo-img">
 			</div>
 			<p>Welcome to number-index.com, reverse lookup system for phone numbers in the North American Numbering Plan (NANP).
 			<div class="right_main_adspace">
@@ -57,9 +32,9 @@
 			</p>
 			<a href="#search_page" class="ui-btn ui-btn-a  ui-corner-all ui-btn-icon-right ui-icon-carat-r" data-transition="flip">Search</a>
 			<a href="#search_history_page" class="ui-btn ui-btn-a  ui-corner-all ui-btn-icon-right ui-icon-carat-r" data-transition="flip">Search History</a>
+			<a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all  ui-btn-icon-right ui-icon-info">Our cookies policy</a>
 			
 			<!-- Cookies popup -->
-			<a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all  ui-btn-icon-right ui-icon-info">Our cookies policy</a>
 			<div data-role="popup" id="popupDialog" data-dismissible="false" style="max-width:400px;">
 				<div data-role="header" data-theme="a">
 				<h1>Cookies policy</h1>
@@ -75,8 +50,7 @@
 			
 		</div><!-- /content -->
 		
-		<div data-role="footer" style="overflow:hidden;" class="fixed_bottom">
-			
+		<div data-role="footer" style="overflow:hidden;" class="fixed_bottom">	
 		</div><!-- /footer -->
 	</div>
 	<!-- End of the first page -->
@@ -106,6 +80,25 @@
 	</div>
 	<!-- End of the third page -->
 	
+	<!-- Options page -->
+	<div data-role="page" id="options_page" data-next="home_page" data-prev="none">
+	
+		<div data-role="header" style="overflow:hidden;">
+			<h1>Options</h1>
+		</div><!-- /header -->
+		
+		<div role="main" class="ui-content">
+			<a href="#" class="ui-btn ui-btn-icon-left ui-icon-forbidden" >Delete Cookies</a>
+			<a href="#search_history_page" class="ui-btn ui-btn-icon-left ui-icon-search" data-transition="flip">Search History</a>
+			<a href="#" class="ui-btn ui-btn-icon-left ui-icon-eye">Switch Theme</a>
+			<div class="left_panel_adspace">
+				<img src="../images/fakeads/half_banner.png" alt="">
+			</div>
+			<a href="#home_page" class="ui-btn ui-btn-icon-left ui-icon-delete" data-transition="flip">Home page</a>
+		</div><!-- /content -->
+	</div>
+	<!-- End options page -->
+	
 	<!-- Swipe navigation -->
 	<script>
 		
@@ -114,7 +107,7 @@
 		function rightHandler( event ){
 			var prev = $( ".ui-page-active" ).jqmData( "prev" );
 			if ( prev == "none") {
-				$( ".gooptions" ).click();
+			/* */
 			}
 			else {
 				$( "body" ).pagecontainer("change", "#" + prev);
@@ -126,7 +119,7 @@
 		function leftHandler( event ){
 			var next = $( ".ui-page-active" ).jqmData( "next" );
 			if ( next == "none") {
-			
+			/* */
 			}
 			else {
 				$( "body" ).pagecontainer("change", "#" + next);
