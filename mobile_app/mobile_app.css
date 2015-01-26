@@ -4,9 +4,31 @@ body {
 	font: 16px/1.3 'Open Sans', sans-serif;
 }
 
+hr {
+	border: 0;
+	border-top: 1px solid #eee;
+	display: block; 
+	height: 1px;
+    margin: 1em 0; padding: 0;
+}
+
 /* =Modules */
 
+.ni_logo_only {
+	text-align: center;
+}
+
+.left_panel_adspace {
+	text-align: center;
+}
+
 .ni-logo {
+	text-align: center;
+}
+
+.right_main_adspace {
+	margin: 20px 0;
+	padding: 0;
 	text-align: center;
 }
 
