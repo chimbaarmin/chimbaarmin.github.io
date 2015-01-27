@@ -158,7 +158,7 @@
                         <h2 class="gateway_step_h2">3</h2>
                         <h3 class="gateway_step_h3">Please write a comment about this number</h3>
                         <div class="gateway_hashtag_box">
-                        	<p class="no_margin">Selected hashtags:</p>
+                        	<p class="no_margin">Summary:</p>
                         	<textarea class="hashtag_box padding_one" disabled></textarea>
                         </div>
                         <div class="gateway_comment_box">
@@ -268,7 +268,7 @@
 					var $hashtag3 = jQuery("select.selectCategoryPositive").val();
 					var $hashtag4 = jQuery("select.selectExperiencePositive").val();
 					var $hashtag5 = jQuery("select.selectTimesPositive").val();
-					var $hashtags = "#" + $votetype + " #" + $hashtag1 + " #" + $hashtag2 + " #" + $hashtag3 + " #" + $hashtag4 + " #" + $hashtag5;
+					var $hashtags = "This call is generally rated as #" + $votetype + ". This number is owned by #" + $hashtag1 + " and line type is #" + $hashtag2 + ". Call is cagegorized as #" + $hashtag3 + " and experience as #" + $hashtag4 + ". Call is received #" + $hashtag5 + ".";
 					jQuery("textarea.hashtag_box").val($hashtags);
 					jQuery(".fa-check").css("display", "inline");
                     jQuery("div.gateway_step3").css("display", "block");
@@ -289,7 +289,7 @@
 					var $hashtag3 = jQuery("select.selectCategoryNegative").val();
 					var $hashtag4 = jQuery("select.selectExperienceNegative").val();
 					var $hashtag5 = jQuery("select.selectTimesNegative").val();
-					var $hashtags = "#" + $votetype + " #" + $hashtag1 + " #" + $hashtag2 + " #" + $hashtag3 + " #" + $hashtag4 + " #" + $hashtag5;
+					var $hashtags = "This call is generally rated as #" + $votetype + ". This number is owned by #" + $hashtag1 + " and line type is #" + $hashtag2 + ". Call is cagegorized as #" + $hashtag3 + " and experience as #" + $hashtag4 + ". Call is received #" + $hashtag5 + ".";
 					jQuery("textarea.hashtag_box").val($hashtags);
 					jQuery(".fa-check").css("display", "inline");
                     jQuery("div.gateway_step3").css("display", "block");
