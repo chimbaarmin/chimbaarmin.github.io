@@ -34,7 +34,7 @@
 			</p>
 			<a href="#search_page" class="ui-btn ui-btn-a  ui-corner-all ui-btn-icon-right ui-icon-carat-r" data-transition="flip">Search</a>
 			<a href="#search_history_page" class="ui-btn ui-btn-a  ui-corner-all ui-btn-icon-right ui-icon-carat-r display_history" data-transition="flip">Search History</a>
-			<a href="#cookie_dialog" class="ui-btn ui-btn-a ui-corner-all">Our cookie policy</a>	
+			<a href="#cookie_dialog" class="ui-btn ui-btn-a ui-corner-all ui-btn-icon-right ui-icon-info">Our cookie policy</a>	
 		</div><!-- /content -->
 		
 		<div data-role="footer" style="overflow:hidden;" class="fixed_bottom">	
@@ -122,31 +122,26 @@
 	<!-- Swipe navigation -->
 	<script>
 		
-		jQuery( document ).on( "swiperight", rightHandler );
+		jQuery( document ).on( "swiperight", ".ui-page", rightHandler );
 				
 		function rightHandler( event ){
 			var prev = jQuery( ".ui-page-active" ).jqmData( "prev" );
-			if ( prev == "none") {
-			/* */
-			}
-			else {
+			if ( prev && ( event.target === $( this )[ 0 ] ) ) {
 				jQuery( "body" ).pagecontainer( "change", "#" + prev, { transition: "flip", reverse: true } );
 			}
 		}
 		
-		jQuery( document ).on( "swipeleft", leftHandler );
+		jQuery( document ).on( "swipeleft", ".ui-page", leftHandler );
 		
 		function leftHandler( event ){
 			var next = jQuery( ".ui-page-active" ).jqmData( "next" );
-			if ( next == "none") {
-			/* */
-			}
-			else {
+			if ( next && ( event.target === $( this )[ 0 ] ) ) {
 				jQuery( "body" ).pagecontainer( "change", "#" + next, { transition: "flip" } );
 			}
 		}
 		
 	</script>
+	
 	<!-- Cookies -->
 	<script>
 		
