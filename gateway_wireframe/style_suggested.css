@@ -211,7 +211,7 @@ button:hover {
 	color: #d9534f;
 }
 
-.gateway_step2positive, .selectTypePositive, .selectCategoryPositive, .gateway_step2negative, .selectTypeNegative, .selectCategoryNegative, .gateway_step3 {
+.gateway_step2positive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .gateway_step2negative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .gateway_step3 {
     display: none;
 }
 
