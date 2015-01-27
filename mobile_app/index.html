@@ -122,27 +122,27 @@
 	<!-- Swipe navigation -->
 	<script>
 		
-		$( document ).on( "swiperight", rightHandler );
+		jQuery( document ).on( "swiperight", rightHandler );
 				
 		function rightHandler( event ){
-			var prev = $( ".ui-page-active" ).jqmData( "prev" );
+			var prev = jQuery( ".ui-page-active" ).jqmData( "prev" );
 			if ( prev == "none") {
 			/* */
 			}
 			else {
-				$( "body" ).pagecontainer( "change", "#" + prev, { transition: "flip", reverse: true } );
+				jQuery( "body" ).pagecontainer( "change", "#" + prev, { transition: "flip", reverse: true } );
 			}
 		}
 		
-		$( document ).on( "swipeleft", leftHandler );
+		jQuery( document ).on( "swipeleft", leftHandler );
 		
 		function leftHandler( event ){
-			var next = $( ".ui-page-active" ).jqmData( "next" );
+			var next = jQuery( ".ui-page-active" ).jqmData( "next" );
 			if ( next == "none") {
 			/* */
 			}
 			else {
-				$( "body" ).pagecontainer( "change", "#" + next, { transition: "flip" } );
+				jQuery( "body" ).pagecontainer( "change", "#" + next, { transition: "flip" } );
 			}
 		}
 		
@@ -150,62 +150,62 @@
 	<!-- Cookies -->
 	<script>
 		
-		$(document).ready(function(){     
-			var $uservisit = $.cookie('visit');
+		jQuery(document).ready(function(){     
+			var $uservisit = jQuery.cookie('visit');
 			if ( $uservisit != "true" ) {
-				$.cookie( 'visit', 'true', { expires: 365, path: '/' } );
-				$( "body" ).pagecontainer( "change", "#cookie_dialog" );
+				jQuery.cookie( 'visit', 'true', { expires: 365, path: '/' } );
+				jQuery( "body" ).pagecontainer( "change", "#cookie_dialog" );
 			}
 			else {
 			}
     	});	
 		
-		$( ".deleteCookies ").click(function() {
-			$.removeCookie('visit', { path: '/' });
-			$.removeCookie('first', { path: '/' });
-			$.removeCookie('second', { path: '/' });
-			$.removeCookie('third', { path: '/' });
-			$.removeCookie('fourth', { path: '/' });
-			$.removeCookie('fifth', { path: '/' });
+		jQuery( ".deleteCookies ").click(function() {
+			jQuery.removeCookie('visit', { path: '/' });
+			jQuery.removeCookie('first', { path: '/' });
+			jQuery.removeCookie('second', { path: '/' });
+			jQuery.removeCookie('third', { path: '/' });
+			jQuery.removeCookie('fourth', { path: '/' });
+			jQuery.removeCookie('fifth', { path: '/' });
 		});
 		
-		$( ".search_form" ).submit(function( event ) {
-			var $firstcookie = $.cookie('first');
-			var $formvalue = $( "#search_box" ).val();
+		jQuery( ".search_form" ).submit(function( event ) {
+			var $firstcookie = jQuery.cookie('first');
+			var $formvalue = jQuery( "#search_box" ).val();
 			if ( $formvalue != "" ) {
 				if (typeof $firstcookie === 'undefined') {
-					$.cookie('first', $formvalue, { expires: 365, path: '/' } );
+					jQuery.cookie('first', $formvalue, { expires: 365, path: '/' } );
 				}
 				else {
-					var $secondcookie = $.cookie('second');
+					var $secondcookie = jQuery.cookie('second');
 					if (typeof $secondcookie === 'undefined') {
-						$.cookie('second', $formvalue, { expires: 365, path: '/' } );
+						jQuery.cookie('second', $formvalue, { expires: 365, path: '/' } );
 					}
 					else {
-						var $thirdcookie = $.cookie('third');
+						var $thirdcookie = jQuery.cookie('third');
 						if (typeof $thirdcookie === 'undefined') {
-							$.cookie('third', $formvalue, { expires: 365, path: '/' } );
+							jQuery.cookie('third', $formvalue, { expires: 365, path: '/' } );
 						}
 						else {
-							var $fourthcookie = $.cookie('fourth');
+							var $fourthcookie = jQuery.cookie('fourth');
 							if (typeof $fourthcookie === 'undefined') {
-								$.cookie('fourth', $formvalue, { expires: 365, path: '/' } );
+								jQuery.cookie('fourth', $formvalue, { expires: 365, path: '/' } );
 							}
 							else {
-								var $fifthcookie = $.cookie('fifth');
+								var $fifthcookie = jQuery.cookie('fifth');
 								if (typeof $fifthcookie === 'undefined') {
-									$.cookie('fifth', $formvalue, { expires: 365, path: '/' } );
+									jQuery.cookie('fifth', $formvalue, { expires: 365, path: '/' } );
 								}
 								else {
-									var $movesecond = $.cookie('second');
-									var $movethird = $.cookie('third');
-									var $movefourth = $.cookie('fourth');
-									var $movefifth = $.cookie('fifth');
-									$.cookie('first', $movesecond, { expires: 365, path: '/' } );
-									$.cookie('second', $movethird, { expires: 365, path: '/' } );
-									$.cookie('third', $movefourth, { expires: 365, path: '/' } );
-									$.cookie('fourth', $movefifth, { expires: 365, path: '/' } );
-									$.cookie('fifth', $formvalue, { expires: 365, path: '/' } );
+									var $movesecond = jQuery.cookie('second');
+									var $movethird = jQuery.cookie('third');
+									var $movefourth = jQuery.cookie('fourth');
+									var $movefifth = jQuery.cookie('fifth');
+									jQuery.cookie('first', $movesecond, { expires: 365, path: '/' } );
+									jQuery.cookie('second', $movethird, { expires: 365, path: '/' } );
+									jQuery.cookie('third', $movefourth, { expires: 365, path: '/' } );
+									jQuery.cookie('fourth', $movefifth, { expires: 365, path: '/' } );
+									jQuery.cookie('fifth', $formvalue, { expires: 365, path: '/' } );
 								}
 							}
 						}
@@ -217,13 +217,13 @@
 			}
 		});
 		
-		$( ".display_history" ).click(function() { 
-			$( ".firstcookie, .secondcookie, .thirdcookie, .fourthcookie, .fifthcookie" ).empty();
-			$( ".firstcookie" ).append ( $.cookie('first') );
-			$( ".secondcookie" ).append ( $.cookie('second') );
-			$( ".thirdcookie" ).append ( $.cookie('third') );
-			$( ".fourthcookie" ).append ( $.cookie('fourth') );
-			$( ".fifthcookie" ).append ( $.cookie('fifth') );
+		jQuery( ".display_history" ).click(function() { 
+			jQuery( ".firstcookie, .secondcookie, .thirdcookie, .fourthcookie, .fifthcookie" ).empty();
+			jQuery( ".firstcookie" ).append ( jQuery.cookie('first') );
+			jQuery( ".secondcookie" ).append ( jQuery.cookie('second') );
+			jQuery( ".thirdcookie" ).append ( jQuery.cookie('third') );
+			jQuery( ".fourthcookie" ).append ( jQuery.cookie('fourth') );
+			jQuery( ".fifthcookie" ).append ( jQuery.cookie('fifth') );
 		});
 		
 	</script>
