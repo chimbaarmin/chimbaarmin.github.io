@@ -81,6 +81,17 @@
                                     <option value="pleasant">Pleasant</option>
                                     <option value="usefull">Usefull</option>                                      
                                 </select><span class="fa fa-check ExperiencePositive"></span>
+                                <br>
+                                <label for="selectTimesPositive" class="selectTimesPositive gateway_label">Times called: </label>
+                                <select name="" id="selectTimesPositive" class="selectTimesPositive border_one gateway_select">
+                                    <option value="none" selected disabled></option>
+                                    <option value="once">Once</option>
+                                    <option value="twice">Twice</option>
+                                    <option value="three">Three times</option> 
+                                    <option value="four">Four times</option> 
+                                    <option value="five">Five times</option> 
+                                    <option value="fiveplus">More than five</option>                                       
+                                </select><span class="fa fa-check TimesPositive"></span>
                             </form>
                         </div>
                     </div>
@@ -129,6 +140,17 @@
                                     <option value="vulgar">Vulgar</option>  
                                     <option value="threatening">Threatening</option>                             
                                 </select><span class="fa fa-check ExperienceNegative"></span>
+                                <br>
+                                <label for="selectTimesNegative" class="selectTimesNegative gateway_label">Times called: </label>
+                                <select name="" id="selectTimesNegative" class="selectTimesNegative border_one gateway_select">
+                                    <option value="none" selected disabled></option>
+                                    <option value="once">Once</option>
+                                    <option value="twice">Twice</option>
+                                    <option value="three">Three times</option> 
+                                    <option value="four">Four times</option> 
+                                    <option value="five">Five times</option> 
+                                    <option value="fiveplus">More than five</option>                                       
+                                </select><span class="fa fa-check TimesNegative"></span>
                             </form>
                         </div>
                     </div>
@@ -153,25 +175,28 @@
     <script>
         
         var $ipositive = 0;
+		var $votetype;
         
         jQuery( "button.vote_up" ).click(function() {
             $ipositive = 0;
+			$votetype = "positive";
             jQuery( "div.gateway_step2positive" ).css("display", "block");
-            jQuery( "div.gateway_step2negative, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, div.gateway_step3, .fa-check" ).css("display", "none");
+            jQuery( "div.gateway_step2negative, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, div.gateway_step3, .fa-check" ).css("display", "none");
 			jQuery( ".fa-thumbs-up" ).css("color", "#5cb85c");
 			jQuery( ".fa-thumbs-down" ).css("color", "#000000");
             jQuery( "div.progress-bar" ).css("width", "33%");
-            jQuery(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .hashtag_box").val(null);
+            jQuery(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .hashtag_box").val(null);
         });
         
         jQuery( "button.vote_down" ).click(function() {
             $ipositive = 0;
+			$votetype = "negative";
             jQuery( "div.gateway_step2negative" ).css("display", "block");
-            jQuery( "div.gateway_step2positive, div.gateway_step3, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .fa-check" ).css("display", "none");
+            jQuery( "div.gateway_step2positive, div.gateway_step3, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .selectTimesNegative, .fa-check" ).css("display", "none");
 			jQuery( ".fa-thumbs-down" ).css("color", "#d9534f");
 			jQuery( ".fa-thumbs-up" ).css("color", "#000000");
             jQuery( "div.progress-bar" ).css("width", "33%");
-            jQuery(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .hashtag_box").val(null);
+            jQuery(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive,  .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .selectTimesNegative, .hashtag_box").val(null);
         });
 		
 		/* validator */
@@ -185,17 +210,23 @@
 		jQuery(".selectTypePositive").change(function() {
 			jQuery(".selectCategoryPositive").css("display", "inline-block");
 			jQuery(".fa-check.TypePositive").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "50%");
+			jQuery( "div.progress-bar" ).css("width", "47%");
 		});
 		
 		jQuery(".selectCategoryPositive").change(function() {
 			jQuery(".selectExperiencePositive").css("display", "inline-block");
 			jQuery(".fa-check.CategoryPositive").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "60%");
+			jQuery( "div.progress-bar" ).css("width", "54%");
 		});
 		
 		jQuery(".selectExperiencePositive").change(function() {
+			jQuery(".selectTimesPositive").css("display", "inline-block");
 			jQuery(".fa-check.ExperiencePositive").css("display", "inline");
+			jQuery( "div.progress-bar" ).css("width", "61%");
+		});
+		
+		jQuery(".selectTimesPositive").change(function() {
+			jQuery(".fa-check.TimesPositive").css("display", "inline");
 		});
 		
 		jQuery(".selectOwnerNegative").change(function() {
@@ -207,30 +238,37 @@
 		jQuery(".selectTypeNegative").change(function() {
 			jQuery(".selectCategoryNegative").css("display", "inline-block");
 			jQuery(".fa-check.TypeNegative").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "50%");
+			jQuery( "div.progress-bar" ).css("width", "47%");
 		});
 		
 		jQuery(".selectCategoryNegative").change(function() {
 			jQuery(".selectExperienceNegative").css("display", "inline-block");
 			jQuery(".fa-check.CategoryNegative").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "60%");
+			jQuery( "div.progress-bar" ).css("width", "54%");
 		});
 		
 		jQuery(".selectExperienceNegative").change(function() {
+			jQuery(".selectTimesNegative").css("display", "inline-block");
 			jQuery(".fa-check.ExperienceNegative").css("display", "inline");
+			jQuery( "div.progress-bar" ).css("width", "61%");
+		});
+		
+		jQuery(".selectTimesNegative").change(function() {
+			jQuery(".fa-check.TimesNegative").css("display", "inline");
 		});
 		
 		/* end validator */
                     
-        jQuery( ".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive" ).change(function() {
+        jQuery( ".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive" ).change(function() {
             $ipositive++;
-            if ($ipositive > 3) {
-                if ( jQuery("select.selectOwnerPositive").val() != null && jQuery("select.selectTypePositive").val() != null && jQuery("select.selectCategoryPositive").val() && jQuery("select.selectExperiencePositive").val() != null) {
+            if ($ipositive > 4) {
+                if ( jQuery("select.selectOwnerPositive").val() != null && jQuery("select.selectTypePositive").val() != null && jQuery("select.selectCategoryPositive").val() && jQuery("select.selectExperiencePositive").val() && jQuery("select.selectTimesPositive").val() != null) {
 					var $hashtag1 = jQuery("select.selectOwnerPositive").val();
 					var $hashtag2 = jQuery("select.selectTypePositive").val();
 					var $hashtag3 = jQuery("select.selectCategoryPositive").val();
 					var $hashtag4 = jQuery("select.selectExperiencePositive").val();
-					var $hashtags = "#" + $hashtag1 + " #" + $hashtag2 + " #" + $hashtag3 + " #" + $hashtag4;
+					var $hashtag5 = jQuery("select.selectTimesPositive").val();
+					var $hashtags = "#" + $votetype + " #" + $hashtag1 + " #" + $hashtag2 + " #" + $hashtag3 + " #" + $hashtag4 + " #" + $hashtag5;
 					jQuery("textarea.hashtag_box").val($hashtags);
 					jQuery(".fa-check").css("display", "inline");
                     jQuery("div.gateway_step3").css("display", "block");
@@ -242,15 +280,16 @@
             }
         });
         
-        jQuery( ".selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative" ).change(function() {
+        jQuery( ".selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .selectTimesNegative" ).change(function() {
             $ipositive++;
-            if ($ipositive > 3) {
-                if ( jQuery("select.selectOwnerNegative").val() != null && jQuery("select.selectTypeNegative").val() != null && jQuery("select.selectCategoryNegative").val() && jQuery("select.selectExperienceNegative").val() != null) {
+            if ($ipositive > 4) {
+                if ( jQuery("select.selectOwnerNegative").val() != null && jQuery("select.selectTypeNegative").val() != null && jQuery("select.selectCategoryNegative").val() && jQuery("select.selectExperienceNegative").val() && jQuery("select.selectTimesNegative").val() != null) {
 					var $hashtag1 = jQuery("select.selectOwnerNegative").val();
 					var $hashtag2 = jQuery("select.selectTypeNegative").val();
 					var $hashtag3 = jQuery("select.selectCategoryNegative").val();
 					var $hashtag4 = jQuery("select.selectExperienceNegative").val();
-					var $hashtags = "#" + $hashtag1 + " #" + $hashtag2 + " #" + $hashtag3 + " #" + $hashtag4;
+					var $hashtag5 = jQuery("select.selectTimesNegative").val();
+					var $hashtags = "#" + $votetype + " #" + $hashtag1 + " #" + $hashtag2 + " #" + $hashtag3 + " #" + $hashtag4 + " #" + $hashtag5;
 					jQuery("textarea.hashtag_box").val($hashtags);
 					jQuery(".fa-check").css("display", "inline");
                     jQuery("div.gateway_step3").css("display", "block");
