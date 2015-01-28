@@ -12,7 +12,7 @@
 	<script src="../plugins/jquery.cookie.js"></script>
 </head>
 <body>
-
+	
 	<!-- Start of the first page -->
 	<div data-role="page" id="home_page" data-next="search_page" data-prev="options_page" class="custom_page_background">
 		
@@ -28,20 +28,39 @@
 				
 		<div role="main" class="ui-content">
 			<div class="mnp_logo">
-				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="mnp_logo_img">
+				<img src="../images/ni_logo_small.png" alt="Number-Index.com Logo" class="mnp_logo_img">
 			</div>
-			
-			<p>Welcome to number-index.com, reverse lookup system for phone numbers in the North American Numbering Plan (NANP).</p>
-				<div class="mnp_main_adspace">
-					<img src="../images/fakeads/half_banner.png" alt="">
+						
+			<div class="mnp_buttons_box">
+				<div class="mnp_button">
+					<a href="#search_page" data-transition="flip" class="mnp_buttons_box_button">
+					<span class="fa fa-search fa-3x"></span> 
+					<br>
+					Search
+					</a>
 				</div>
-			<p>Please select one of the options:</p>
-			
-			<div class="mnp_button_area">
-				<a href="#search_page" data-transition="flip" class="mnp_button_area_button">Search</a>
-				<a href="#search_history_page" data-transition="flip" class="mnp_button_area_button">Search History</a>
-				<a href="#cookie_dialog" data-transition="flip" class="mnp_button_area_button">Our cookie policy</a>
-			</div>	
+				<div class="mnp_button">
+					<a href="#search_history_page" data-transition="flip" class="mnp_buttons_box_button">
+					<span class="fa fa-history fa-3x"></span> 
+					<br>
+					Search History
+					</a>
+				</div>
+				<div class="mnp_button">
+					<a href="#cookie_dialog" data-transition="flip" class="mnp_buttons_box_button">
+					<span class="fa fa-info fa-3x"></span> 
+					<br>
+					Our Cookie Policy
+					</a>
+				</div>
+				<div class="mnp_button">
+					<a href="#" data-transition="flip" class="mnp_buttons_box_button">
+					<span class="fa fa-desktop fa-3x"></span> 
+					<br>
+					Desktop Page
+					</a>
+				</div>
+			</div>
 			
 		</div><!-- /content -->
 		
@@ -184,6 +203,24 @@
 		
 	</div>
 	<!-- End cookie dialog -->
+	
+	<!-- Start of the zero page -->
+	<div data-role="page" id="welcome_page" data-next="search_page" data-prev="options_page" class="greeting_background">
+		
+		<div role="main" class="ui-content">
+			<div class="mnp_logo">
+				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="mnp_logo_img">
+			</div>
+			<div class="mnp_greeting">
+				<h2 class="mnp_greeting_h2">number-index.com</h2>
+				<h3 class="mnp_greeting_h3">Advanced reverse number lookup tool for NANP numbers.</h3>
+				<a href="" class="mnp_greeting_a">Enter</a>
+			</div>			
+		</div><!-- /content -->		
+		
+	</div>
+	<!-- End of the zero page -->
+	
 	
 	<!-- Swipe navigation -->
 	<script>
