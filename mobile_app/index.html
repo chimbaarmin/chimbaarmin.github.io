@@ -17,27 +17,35 @@
 	<div data-role="page" id="home_page" data-next="search_page" data-prev="options_page" class="custom_page_background">
 		
 		
-		<div data-role="header" style="overflow:hidden;">
-			<h1>number-index.com</h1>
-			<a href="#options_page" class="ui-btn" data-transition="flip">Options</a>
-		</div><!-- /header -->
-		
+		<div class="mnp_header">
+			<div class="mnp_header_button_div">
+				<a href="#options_page" class="mnp_header_button" data-transition="flip"><span class="fa fa-gears"></span> Options</a>
+			</div>
+			<div class="mnp_header_h1_div">
+				<h1 class="mnp_header_h1">Home</h1>
+			</div>	
+			<div class="clear"></div>
+		</div>
+				
 		<div role="main" class="ui-content">
-			<div class="ni_logo_only">
-				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="ni-logo-img">
+			<div class="mnp_logo">
+				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="mnp_logo_img">
 			</div>
 			<p>Welcome to number-index.com, reverse lookup system for phone numbers in the North American Numbering Plan (NANP).</p>
-				<div class="right_main_adspace">
+				<div class="mnp_main_adspace">
 					<img src="../images/fakeads/half_banner.png" alt="">
 				</div>
 			<p>Please select one of the options:</p>
-			<a href="#search_page" class="ui-btn" data-transition="flip">Search</a>
-			<a href="#search_history_page" class="ui-btn display_history" data-transition="flip">Search History</a>
-			<a href="#cookie_dialog" class="ui-btn">Our cookie policy</a>	
+			<div class="mnp_button_area">
+				<a href="#search_page" data-transition="flip" class="mnp_button_area_button">Search</a>
+				<a href="#search_history_page" data-transition="flip" class="mnp_button_area_button">Search History</a>
+				<a href="#cookie_dialog" data-transition="flip" class="mnp_button_area_button">Our cookie policy</a>
+			</div>	
 		</div><!-- /content -->
 		
-		<div data-role="footer" style="overflow:hidden;" class="fixed_bottom">	
-		</div><!-- /footer -->
+		<div class="mnp_footer">	
+			<p class="mnp_footer_p">Copyright &copy; 2015.</p>
+		</div>
 		
 		
 	</div>
@@ -46,15 +54,18 @@
 	<!-- Start of the second page -->
 	<div data-role="page" id="search_page" data-next="search_history_page" data-prev="home_page" class="custom_page_background">
 		<div role="main" class="ui-content">
-			<div class="ni_logo_only">
+			<div class="mnp_logo">
 				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="ni-logo-img">
-			</div>			
-			<form action="" class="search_form">
-				<input type="search" name="search_box" id="search_box" value="" placeholder="Lookup number...">
-				<input type="submit" value="Search" class="search_button">
-			</form>
-			<a href="#search_history_page" class="ui-btn display_history" data-transition="flip">Search history</a>
-			<a href="#home_page" class="ui-btn" data-transition="flip" data-direction="reverse">Home page</a>
+			</div>	
+			<div class="mnp_search_box">
+				<form action="/" method="get" class="mnp_search_box_form">
+            		<input name="s" type="text" value="" placeholder="Lookup number" class="mnp_search_box_input"><button class="search" class="mnp_search_box_button">Search</button>
+            	</form>
+			</div>		
+			<div class="mnp_button_area">
+				<a href="#search_history_page" data-transition="flip" class="mnp_button_area_button">Search History</a>
+				<a href="#home_page" data-transition="flip" data-direction="reverse" class="mnp_button_area_button">Home page</a>
+			</div>
 		</div><!-- /content -->
 	</div>
 	<!-- End of the second page -->
