@@ -215,11 +215,13 @@
 		jQuery(".selectOwnerPositive").change(function() {
 			if ( jQuery("select.selectOwnerPositive").val() == "private" ) {
 				jQuery(".selectPrivateLinePositive").css("display", "inline-block");
-				jQuery(".inputCompanyLinePositive, .CompanyLinePositive").css("display", "none");
+				jQuery(".selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .inputCompanyLinePositive, div.gateway_step3, .fa-check").css("display", "none");
+				jQuery(".selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectPrivateLinePositive, .inputCompanyLinePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .hashtag_box").val(null);
 				jQuery(".fa-check.OwnerPositive").css("display", "inline");
 			}
 			if ( jQuery("select.selectOwnerPositive").val() == "company" ) {
-				jQuery(".selectPrivateLinePositive, .PrivateLinePositive").css("display", "none");
+				jQuery(".selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectPrivateLinePositive, div.gateway_step3, .fa-check").css("display", "none");
+				jQuery(".selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectPrivateLinePositive, .inputCompanyLinePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .hashtag_box").val(null);
 				jQuery(".inputCompanyLinePositive").css("display", "inline-block");
 				jQuery(".fa-check.OwnerPositive").css("display", "inline");
 			}
