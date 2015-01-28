@@ -46,123 +46,76 @@
                         <h2 class="gateway_step_h2">2</h2>
                         <h3 class="gateway_step_h3">Please provide additional information concerning this number.</h3>
                         <div class="gateway_info_box">
-                            <p>Please provide informations related to this number:</p>
-                            <form action="">
-                                <label for="selectOwnerPositive" class="selectOwnerPositive gateway_label">Number owner: </label>
-                                <select name="" id="selectOwnerPositive" class="selectOwnerPositive border_one gateway_select">
-                                    <option value="none" selected disabled></option>
-                                    <option value="private">Private line</option>
-                                    <option value="company">Company line</option>
-                                    <option value="unknown">Unknown</option>
-                                </select><span class="fa fa-check OwnerPositive"></span>
-                                <br>
-                                	<label for="selectPrvateLinePositive" class="selectPrivateLinePositive gateway_label_second">Private line owner:</label>
-                                	<select name="" id="selectPrivateLinePositive" class="selectPrivateLinePositive border_one gateway_select">
-										<option value="none" selected disabled></option>
-										<option value="my_private_line">My private line</option>
-										<option value="friends_private_line">Friend's private line</option>
-										<option value="unknown">Unknown</option>
-                                	</select><span class="fa fa-check PrivateLinePositive"></span>
-                                <br>
-                               		<label class="inputCompanyLinePositive gateway_label_second">Company name: </label>
-                                	<input type="text" class="inputCompanyLinePositive gateway_text_input"><span class="fa fa-check CompanyLinePositive"></span>
-                                <br>
-                                <label for="selectTypePositive" class="selectTypePositive gateway_label">Line type: </label>
-                                <select name="" id="selectTypePositive" class="selectTypePositive border_one gateway_select">
-                                    <option value="none" selected disabled></option>
-                                    <option value="landline">Landline</option>
-                                    <option value="mobile">Mobile line</option>
-                                    <option value="unknown">Unknown</option>
-                                </select><span class="fa fa-check TypePositive"></span>
-                                <br>
-                                <label for="selectCategoryPositive" class="selectCategoryPositive gateway_label">Category: </label>
-                                <select name="" id="selectCategoryPositive" class="selectCategoryPositive border_one gateway_select">
-                                    <option value="none" selected disabled></option>
-                                    <option value="service">Service</option>
-                                    <option value="information">Information</option>
-                                    <option value="sales">Sales</option>
-                                    <option value="government">Government</option>
-                                    <option value="other">Other</option>
-                                    <option value="unknown">Unknown</option>                                        
-                                </select><span class="fa fa-check CategoryPositive"></span>
-                                <br>
-                                <label for="selectExperiencePositive" class="selectExperiencePositive gateway_label">Call experience: </label>
-                                <select name="" id="selectExperiencePositive" class="selectExperiencePositive border_one gateway_select">
-                                    <option value="none" selected disabled></option>
-                                    <option value="pleasant">Pleasant</option>
-                                    <option value="usefull">Usefull</option>                                      
-                                </select><span class="fa fa-check ExperiencePositive"></span>
-                                <br>
-                                <label for="selectTimesPositive" class="selectTimesPositive gateway_label">Times called: </label>
-                                <select name="" id="selectTimesPositive" class="selectTimesPositive border_one gateway_select">
-                                    <option value="none" selected disabled></option>
-                                    <option value="once">Once</option>
-                                    <option value="twice">Twice</option>
-                                    <option value="three_times">Three times</option> 
-                                    <option value="four_times">Four times</option> 
-                                    <option value="five_times">Five times</option> 
-                                    <option value="more_than_five_times">More than five</option>                                       
-                                </select><span class="fa fa-check TimesPositive"></span>
-                            </form>
+                        
+							<div class="selectOwner">
+								<div class="selectOwnerDiv">
+									<a href="" class="selectOwnerLink">This is my number. > A</a>
+								</div>
+								<div class="selectOwnerDiv">
+									<a href="" class="selectOwnerLink">This is my friend's number. > B</a>
+								</div>
+								<div class="selectOwnerDiv">
+									<a href="" class="selectOwnerLink">This is a company number. > C</a>
+								</div>
+								<div class="selectOwnerDiv">
+									<a href="" class="selectOwnerLink">This is unknown number. > D</a>
+								</div>
+							</div>
+						    
+							    <div class="selectMe">
+							    A
+							    	<div class="selectMeDiv">
+							    		<a href="" class="selectMeLink">I am a private person.</a>
+							    	</div>
+								    <div class="selectMeDiv">
+							    		<a href="" class="selectMeLink">I am a company.</a>
+							    	</div>
+							    </div>
+                       
+                       			<div class="selectFriend">
+                       			B
+                       				<div class="selectFriendDiv">
+                       					<a href="" class="selectFriendLink">This is friend's private number.</a>
+                       				</div>
+                       				<div class="selectFriendDiv">
+                       					<a href="" class="selectFriendLink">This is friend's company number.</a>
+                       				</div>
+                       				<div class="selectFriendDiv">
+                       					<a href="" class="selectFriendLink">I do not know.</a>
+                       				</div>
+                       			</div>
+                       			
+                       			<div class="selectCompany">
+                       			C
+                       				<div class="selectCompanyDiv">
+                       					<a href="" class="selectCopmanyLink">It was great talking to them.</a>
+                       				</div>
+                       				<div class="selectCompanyDiv">
+                       					<a href="" class="selectCompanyLink">Their phone service was great.</a>
+                       				</div>
+                       				<div class="selectCompanyDiv">
+                       					<a href="" class="selectCompanyLink">Their offline service was great.</a>
+                       				</div>                       				
+                       			</div>
+                       				
+                       				<div class="selectMeType">
+                       					<a href="" class="selectMeTypeLink">This is my mobile phone.</a>
+                       					<br>
+                       					<a href="" class="selectMeTypeLink">This is my landline.</a>
+                       				</div>
+                       				
+                       				<div class="selectFriendType">
+                       					<a href="" class="selectFriendTypeLink">This is his mobile phone.</a>
+                       					<br>
+                       					<a href="" class="selectFriendTypeLink">This is his landline phone.</a>
+                       				</div>
                         </div>
                     </div>
                     <div class="gateway_step2negative">
                         <h2 class="gateway_step_h2">2</h2>
                         <h3 class="gateway_step_h3">Please provide additional information concerning this number.</h3>
                         <div class="gateway_info_box">
-                            <p>Please provide informations related to this number:</p>
-                            <form action="">
-                                <label for="selectOwnerNegative" class="selectOwnerNegative gateway_label">Number owner: </label>
-                                <select name="" id="selectOwnerNegative" class="selectOwnerNegative border_one gateway_select">
-                                    <option value="none" selected disabled></option>
-                                    <option value="private">Private line</option>
-                                    <option value="company">Company line</option>
-                                    <option value="unknown">Unknown</option>
-                                </select><span class="fa fa-check OwnerNegative"></span>
-                                <br>
-                                <label for="selectTypeNegative" class="selectTypeNegative gateway_label">Line type: </label>
-                                <select name="" id="selectTypeNegative" class="selectTypeNegative border_one gateway_select">
-                                    <option value="none" selected disabled></option>
-                                    <option value="landline">Landline</option>
-                                    <option value="mobile">Mobile line</option>
-                                    <option value="unknown">Unknown</option>
-                                </select><span class="fa fa-check TypeNegative"></span>
-                                <br>
-                                <label for="selectCategoryNegative" class="selectCategoryNegative gateway_label">Category: </label>
-                                <select name="" id="selectCategoryNegative" class="selectCategoryNegative border_one gateway_select">
-                                    <option value="none" selected disabled></option>
-                                    <option value="service">Service</option>
-                                    <option value="information">Information</option>
-                                    <option value="sales">Sales</option>
-                                    <option value="government">Government</option>
-                                    <option value="harassing">Harrasing</option>
-                                    <option value="spam">Spam</option>
-                                    <option value="datatheft">Data Theft</option>
-                                    <option value="other">Other</option>
-                                    <option value="unknown">Unknown</option>                                        
-                                </select><span class="fa fa-check CategoryNegative"></span>
-                                <br>
-                                <label for="selectExperienceNegative" class="selectExperienceNegative gateway_label">Call experience: </label>
-                                <select name="" id="selectExperienceNegative" class="selectExperienceNegative border_one gateway_select">
-                                    <option value="none" selected disabled></option>
-                                    <option value="unpleasant">Unpleasant</option>     
-                                    <option value="annoying">Annoying</option>  
-                                    <option value="dangerous">Dangerous</option>      
-                                    <option value="vulgar">Vulgar</option>  
-                                    <option value="threatening">Threatening</option>                             
-                                </select><span class="fa fa-check ExperienceNegative"></span>
-                                <br>
-                                <label for="selectTimesNegative" class="selectTimesNegative gateway_label">Times called: </label>
-                                <select name="" id="selectTimesNegative" class="selectTimesNegative border_one gateway_select">
-                                    <option value="none" selected disabled></option>
-                                    <option value="once">Once</option>
-                                    <option value="twice">Twice</option>
-                                    <option value="three_times">Three times</option> 
-                                    <option value="four_times">Four times</option> 
-                                    <option value="five_times">Five times</option> 
-                                    <option value="more_than_five_times">More than five</option>                                       
-                                </select><span class="fa fa-check TimesNegative"></span>
-                            </form>
+
                         </div>
                     </div>
                     <div class="gateway_step3">
@@ -183,166 +136,5 @@
             <div class="col-md-3"></div>
         </div>
     </div>
-    <script>
-        
-        var $ipositive = 0;
-		var $votetype;
-        
-        jQuery( "button.vote_up" ).click(function() {
-            $ipositive = 0;
-			$votetype = "positive";
-            jQuery( "div.gateway_step2positive" ).css("display", "block");
-            jQuery( "div.gateway_step2negative, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectPrivateLinePositive, .inputCompanyLinePositive, div.gateway_step3, .fa-check" ).css("display", "none");
-			jQuery( ".fa-thumbs-up" ).css("color", "#5cb85c");
-			jQuery( ".fa-thumbs-down" ).css("color", "#000000");
-            jQuery( "div.progress-bar" ).css("width", "33%");
-            jQuery(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectPrivateLinePositive, .inputCompanyLinePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .hashtag_box").val(null);
-        });
-        
-        jQuery( "button.vote_down" ).click(function() {
-            $ipositive = 0;
-			$votetype = "negative";
-            jQuery( "div.gateway_step2negative" ).css("display", "block");
-            jQuery( "div.gateway_step2positive, div.gateway_step3, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .selectTimesNegative, .fa-check" ).css("display", "none");
-			jQuery( ".fa-thumbs-down" ).css("color", "#d9534f");
-			jQuery( ".fa-thumbs-up" ).css("color", "#000000");
-            jQuery( "div.progress-bar" ).css("width", "33%");
-            jQuery(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive,  .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .selectTimesNegative, .hashtag_box").val(null);
-        });
-		
-		/* validator */
-		
-		jQuery(".selectOwnerPositive").change(function() {
-			if ( jQuery("select.selectOwnerPositive").val() == "private" ) {
-				jQuery(".selectPrivateLinePositive").css("display", "inline-block");
-				jQuery(".selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .inputCompanyLinePositive, div.gateway_step3, .fa-check").css("display", "none");
-				jQuery(".selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectPrivateLinePositive, .inputCompanyLinePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .hashtag_box").val(null);
-				jQuery(".fa-check.OwnerPositive").css("display", "inline");
-			}
-			if ( jQuery("select.selectOwnerPositive").val() == "company" ) {
-				jQuery(".selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectPrivateLinePositive, div.gateway_step3, .fa-check").css("display", "none");
-				jQuery(".selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectPrivateLinePositive, .inputCompanyLinePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .hashtag_box").val(null);
-				jQuery(".inputCompanyLinePositive").css("display", "inline-block");
-				jQuery(".fa-check.OwnerPositive").css("display", "inline");
-			}
-			if ( jQuery("select.selectOwnerPositive").val() == "unknown" ) {
-				jQuery(".selectPrivateLinePositive, .inputCompanyLinePositive, .PrivateLinePositive, .CompanyLinePositive").css("display", "none");
-				jQuery(".selectTypePositive").css("display", "inline-block");
-				jQuery(".fa-check.OwnerPositive").css("display", "inline");
-				jQuery( "div.progress-bar" ).css("width", "40%");
-			}
-		});
-		
-		jQuery(".selectPrivateLinePositive").change(function() {
-			jQuery(".selectTypePositive").css("display", "inline-block");
-			jQuery(".fa-check.PrivateLinePositive").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "40%");
-		});
-		
-		jQuery(".inputCompanyLinePositive").keypress(function() {
-			jQuery(".selectTypePositive").css("display", "inline-block");
-			jQuery(".fa-check.CompanyLinePositive").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "40%");
-		});
-		
-		jQuery(".selectTypePositive").change(function() {
-			jQuery(".selectCategoryPositive").css("display", "inline-block");
-			jQuery(".fa-check.TypePositive").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "47%");
-		});
-		
-		jQuery(".selectCategoryPositive").change(function() {
-			jQuery(".selectExperiencePositive").css("display", "inline-block");
-			jQuery(".fa-check.CategoryPositive").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "54%");
-		});
-		
-		jQuery(".selectExperiencePositive").change(function() {
-			jQuery(".selectTimesPositive").css("display", "inline-block");
-			jQuery(".fa-check.ExperiencePositive").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "61%");
-		});
-		
-		jQuery(".selectTimesPositive").change(function() {
-			jQuery(".fa-check.TimesPositive").css("display", "inline");
-		});
-		
-		jQuery(".selectOwnerNegative").change(function() {
-			jQuery(".selectTypeNegative").css("display", "inline-block");
-			jQuery(".fa-check.OwnerNegative").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "40%");
-		});
-		
-		jQuery(".selectTypeNegative").change(function() {
-			jQuery(".selectCategoryNegative").css("display", "inline-block");
-			jQuery(".fa-check.TypeNegative").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "47%");
-		});
-		
-		jQuery(".selectCategoryNegative").change(function() {
-			jQuery(".selectExperienceNegative").css("display", "inline-block");
-			jQuery(".fa-check.CategoryNegative").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "54%");
-		});
-		
-		jQuery(".selectExperienceNegative").change(function() {
-			jQuery(".selectTimesNegative").css("display", "inline-block");
-			jQuery(".fa-check.ExperienceNegative").css("display", "inline");
-			jQuery( "div.progress-bar" ).css("width", "61%");
-		});
-		
-		jQuery(".selectTimesNegative").change(function() {
-			jQuery(".fa-check.TimesNegative").css("display", "inline");
-		});
-		
-		/* end validator */
-                    
-        jQuery( ".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive" ).change(function() {
-            $ipositive++;
-            if ($ipositive > 4) {
-                if ( jQuery("select.selectOwnerPositive").val() != null && jQuery("select.selectTypePositive").val() != null && jQuery("select.selectCategoryPositive").val() && jQuery("select.selectExperiencePositive").val() && jQuery("select.selectTimesPositive").val() != null) {
-					var $hashtag1 = jQuery("select.selectOwnerPositive").val();
-					var $hashtag2 = jQuery("select.selectTypePositive").val();
-					var $hashtag3 = jQuery("select.selectCategoryPositive").val();
-					var $hashtag4 = jQuery("select.selectExperiencePositive").val();
-					var $hashtag5 = jQuery("select.selectTimesPositive").val();
-					var $hashtags = "This call is generally rated as #" + $votetype + ". This number is owned by #" + $hashtag1 + " and line type is #" + $hashtag2 + ". Call is categorized as #" + $hashtag3 + " and experience as #" + $hashtag4 + ". Call is received #" + $hashtag5 + ".";
-					jQuery("textarea.hashtag_box").val($hashtags);
-					jQuery(".fa-check").css("display", "inline");
-                    jQuery("div.gateway_step3").css("display", "block");
-					jQuery( "div.progress-bar" ).css("width", "66%");
-                }
-                else {
-
-                }
-            }
-        });
-        
-        jQuery( ".selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .selectTimesNegative" ).change(function() {
-            $ipositive++;
-            if ($ipositive > 4) {
-                if ( jQuery("select.selectOwnerNegative").val() != null && jQuery("select.selectTypeNegative").val() != null && jQuery("select.selectCategoryNegative").val() && jQuery("select.selectExperienceNegative").val() && jQuery("select.selectTimesNegative").val() != null) {
-					var $hashtag1 = jQuery("select.selectOwnerNegative").val();
-					var $hashtag2 = jQuery("select.selectTypeNegative").val();
-					var $hashtag3 = jQuery("select.selectCategoryNegative").val();
-					var $hashtag4 = jQuery("select.selectExperienceNegative").val();
-					var $hashtag5 = jQuery("select.selectTimesNegative").val();
-					var $hashtags = "This call is generally rated as #" + $votetype + ". This number is owned by #" + $hashtag1 + " and line type is #" + $hashtag2 + ". Call is categorized as #" + $hashtag3 + " and experience as #" + $hashtag4 + ". Call is received #" + $hashtag5 + ".";
-					jQuery("textarea.hashtag_box").val($hashtags);
-					jQuery(".fa-check").css("display", "inline");
-                    jQuery("div.gateway_step3").css("display", "block");
-					jQuery( "div.progress-bar" ).css("width", "66%");
-                }
-                else {
-
-                }
-            }
-        });
-        
-        jQuery( "button.submit_comment" ).click(function() {
-            jQuery( "div.progress-bar" ).css("width", "100%");
-        });
-                
-    </script>
 </body>
 </html>
