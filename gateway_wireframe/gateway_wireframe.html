@@ -56,6 +56,17 @@
                                     <option value="unknown">Unknown</option>
                                 </select><span class="fa fa-check OwnerPositive"></span>
                                 <br>
+                                	<label for="selectPrvateLinePositive" class="selectPrivateLinePositive gateway_label_second">Private line owner:</label>
+                                	<select name="" id="selectPrivateLinePositive" class="selectPrivateLinePositive border_one gateway_select">
+										<option value="none" selected disabled></option>
+										<option value="my_private_line">My private line</option>
+										<option value="friends_private_line">Friend's private line</option>
+										<option value="unknown">Unknown</option>
+                                	</select><span class="fa fa-check PrivateLinePositive"></span>
+                                <br>
+                               		<label class="inputCompanyLinePositive gateway_label_second">Company name: </label>
+                                	<input type="text" class="inputCompanyLinePositive gateway_text_input"><span class="fa fa-check CompanyLinePositive"></span>
+                                <br>
                                 <label for="selectTypePositive" class="selectTypePositive gateway_label">Line type: </label>
                                 <select name="" id="selectTypePositive" class="selectTypePositive border_one gateway_select">
                                     <option value="none" selected disabled></option>
@@ -181,11 +192,11 @@
             $ipositive = 0;
 			$votetype = "positive";
             jQuery( "div.gateway_step2positive" ).css("display", "block");
-            jQuery( "div.gateway_step2negative, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, div.gateway_step3, .fa-check" ).css("display", "none");
+            jQuery( "div.gateway_step2negative, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectPrivateLinePositive, .inputCompanyLinePositive, div.gateway_step3, .fa-check" ).css("display", "none");
 			jQuery( ".fa-thumbs-up" ).css("color", "#5cb85c");
 			jQuery( ".fa-thumbs-down" ).css("color", "#000000");
             jQuery( "div.progress-bar" ).css("width", "33%");
-            jQuery(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .hashtag_box").val(null);
+            jQuery(".selectOwnerPositive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectPrivateLinePositive, .inputCompanyLinePositive, .selectOwnerNegative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .hashtag_box").val(null);
         });
         
         jQuery( "button.vote_down" ).click(function() {
@@ -202,8 +213,33 @@
 		/* validator */
 		
 		jQuery(".selectOwnerPositive").change(function() {
+			if ( jQuery("select.selectOwnerPositive").val() == "private" ) {
+				jQuery(".selectPrivateLinePositive").css("display", "inline-block");
+				jQuery(".inputCompanyLinePositive, .CompanyLinePositive").css("display", "none");
+				jQuery(".fa-check.OwnerPositive").css("display", "inline");
+			}
+			if ( jQuery("select.selectOwnerPositive").val() == "company" ) {
+				jQuery(".selectPrivateLinePositive, .PrivateLinePositive").css("display", "none");
+				jQuery(".inputCompanyLinePositive").css("display", "inline-block");
+				jQuery(".fa-check.OwnerPositive").css("display", "inline");
+			}
+			if ( jQuery("select.selectOwnerPositive").val() == "unknown" ) {
+				jQuery(".selectPrivateLinePositive, .inputCompanyLinePositive, .PrivateLinePositive, .CompanyLinePositive").css("display", "none");
+				jQuery(".selectTypePositive").css("display", "inline-block");
+				jQuery(".fa-check.OwnerPositive").css("display", "inline");
+				jQuery( "div.progress-bar" ).css("width", "40%");
+			}
+		});
+		
+		jQuery(".selectPrivateLinePositive").change(function() {
 			jQuery(".selectTypePositive").css("display", "inline-block");
-			jQuery(".fa-check.OwnerPositive").css("display", "inline");
+			jQuery(".fa-check.PrivateLinePositive").css("display", "inline");
+			jQuery( "div.progress-bar" ).css("width", "40%");
+		});
+		
+		jQuery(".inputCompanyLinePositive").keypress(function() {
+			jQuery(".selectTypePositive").css("display", "inline-block");
+			jQuery(".fa-check.CompanyLinePositive").css("display", "inline");
 			jQuery( "div.progress-bar" ).css("width", "40%");
 		});
 		

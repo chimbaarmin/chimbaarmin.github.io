@@ -62,9 +62,21 @@ br {
     width: 150px;
 }
 
+.gateway_label_second {
+    font-weight: 500;
+    margin-left: 60px;
+    width: 150px;
+}
+
 .gateway_select {
 	padding: 0;
     width: 200px;
+}
+
+.gateway_text_input {
+	padding: 0;
+	width: 200px;
+	border: 1px solid #ccc;
 }
 
 :focus  {
@@ -214,7 +226,7 @@ button:hover {
 	color: #d9534f;
 }
 
-.gateway_step2positive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .gateway_step2negative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .gateway_step3 {
+.gateway_step2positive, .selectTypePositive, .selectCategoryPositive, .selectExperiencePositive, .selectTimesPositive, .selectPrivateLinePositive, .inputCompanyLinePositive, .gateway_step2negative, .selectTypeNegative, .selectCategoryNegative, .selectExperienceNegative, .gateway_step3 {
     display: none;
 }
 
