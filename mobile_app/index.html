@@ -16,7 +16,6 @@
 	<!-- Start of the first page -->
 	<div data-role="page" id="home_page" data-next="search_page" data-prev="options_page" class="custom_page_background">
 		
-		
 		<div class="mnp_header">
 			<div class="mnp_header_button_div">
 				<a href="#options_page" class="mnp_header_button" data-transition="flip"><span class="fa fa-gears"></span> Options</a>
@@ -31,16 +30,19 @@
 			<div class="mnp_logo">
 				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="mnp_logo_img">
 			</div>
+			
 			<p>Welcome to number-index.com, reverse lookup system for phone numbers in the North American Numbering Plan (NANP).</p>
 				<div class="mnp_main_adspace">
 					<img src="../images/fakeads/half_banner.png" alt="">
 				</div>
 			<p>Please select one of the options:</p>
+			
 			<div class="mnp_button_area">
 				<a href="#search_page" data-transition="flip" class="mnp_button_area_button">Search</a>
 				<a href="#search_history_page" data-transition="flip" class="mnp_button_area_button">Search History</a>
 				<a href="#cookie_dialog" data-transition="flip" class="mnp_button_area_button">Our cookie policy</a>
 			</div>	
+			
 		</div><!-- /content -->
 		
 		<div class="mnp_footer">	
@@ -53,30 +55,44 @@
 	
 	<!-- Start of the second page -->
 	<div data-role="page" id="search_page" data-next="search_history_page" data-prev="home_page" class="custom_page_background">
+		
 		<div role="main" class="ui-content">
+		
 			<div class="mnp_logo">
-				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="ni-logo-img">
+				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="mnp_logo_img">
 			</div>	
+			
 			<div data-role="none" class="mnp_search_box">
 				<form data-role="none" action="/" method="get" class="mnp_search_box_form">
             		<input data-role="none" name="s" type="text" value="" placeholder="Lookup number" class="mnp_search_box_input"><button data-role="none" class="mnp_search_box_button">Search</button>
             	</form>
-			</div>		
+			</div>	
+				
 			<div class="mnp_button_area">
 				<a href="#search_history_page" data-transition="flip" class="mnp_button_area_button">Search History</a>
 				<a href="#home_page" data-transition="flip" data-direction="reverse" class="mnp_button_area_button">Home page</a>
 			</div>
+			
 		</div><!-- /content -->
+		
+		<div class="mnp_footer">	
+			<p class="mnp_footer_p">Copyright &copy; 2015.</p>
+		</div>
+		
 	</div>
 	<!-- End of the second page -->
 	
 	<!-- Start of the third page -->
 	<div data-role="page" id="search_history_page" data-next="none" data-prev="search_page" class="custom_page_background">
+	
 		<div role="main" class="ui-content">
-			<div class="ni_logo_only">
-				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="ni-logo-img">
+		
+			<div class="mnp_logo">
+				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="mnp_logo_img">
 			</div>
+			
 			<p>Search history page.</p>
+			
 			<div class="search_history">
 				<ul class="search_history">
 					<li class="firstcookie"></li>
@@ -86,47 +102,86 @@
 					<li class="fifthcookie"></li>
 				</ul>
 			</div>
-			<a href="#search_page" class="ui-btn" data-transition="flip" data-direction="reverse">Search</a>
-			<a href="#home_page" class="ui-btn" data-transition="flip" data-direction="reverse">Home page</a>
+			
+			<div class="mnp_button_area">
+				<a href="#search_page" data-transition="flip" data-direction="reverse" class="mnp_button_area_button">Search</a>
+				<a href="#home_page" data-transition="flip" data-direction="reverse" class="mnp_button_area_button">Home page</a>
+			</div>
+			
 		</div><!-- /content -->
+		
+		<div class="mnp_footer">	
+			<p class="mnp_footer_p">Copyright &copy; 2015.</p>
+		</div>
+		
 	</div>
 	<!-- End of the third page -->
 	
 	<!-- Options page -->
 	<div data-role="page" id="options_page" data-next="home_page" data-prev="none" class="custom_page_background">
 	
-		<div data-role="header" style="overflow:hidden;">
-			<h1>Options</h1>
-		</div><!-- /header -->
+		<div class="mnp_header">
+			<div class="mnp_header_h1_div">
+				<h1 class="mnp_header_h1">Options</h1>
+			</div>	
+			<div class="clear"></div>
+		</div>
 		
 		<div role="main" class="ui-content">
-			<a href="#" class="ui-btn deleteCookies" >Delete Cookies</a>
-			<a href="#search_history_page" class="ui-btn display_history" data-transition="flip">Search History</a>
-			<a href="#" class="ui-btn">Switch Theme</a>
-			<div class="left_panel_adspace">
-				<img src="../images/fakeads/half_banner.png" alt="">
+			
+			<div class="mnp_options_page_logo">
+				<span class="fa fa-gears fa-4x mnp_options_page_logo_span"></span>
 			</div>
-			<a href="#home_page" class="ui-btn" data-transition="flip" data-direction="reverse">Home page</a>
+		
+			<div class="mnp_options_page_buttons_div">
+				<a href="#" class="mnp_options_page_button deleteCookies" >Delete Cookies</a>
+				<a href="#search_history_page" class="mnp_options_page_button display_history" data-transition="flip">Search History</a>
+				<a href="#" class="mnp_options_page_button">Switch Theme</a>
+				<div class="mnp_options_page_adspace">
+					<img src="../images/fakeads/half_banner.png" alt="" class="mnp_options_page_adspace_img">
+				</div>
+				<a href="#home_page" class="mnp_options_page_button" data-transition="flip" data-direction="reverse">Home page</a>
+			</div>
+						
 		</div><!-- /content -->
+		
+		<div class="mnp_footer">	
+			<p class="mnp_footer_p">Copyright &copy; 2015.</p>
+		</div>
+		
 	</div>
 	<!-- End options page -->
 	
 	<!-- Cookie dialog -->
 	<div data-role="page" id="cookie_dialog" data-next="none" data-prev="none" class="custom_page_background">
 	
-		<div data-role="header" style="overflow:hidden;">
-			<h1>Our cookie policy</h1>
-		</div><!-- /header -->
+		<div class="mnp_header">
+			<div class="mnp_header_h1_div">
+				<h1 class="mnp_header_h1">Our cookie policy</h1>
+			</div>	
+			<div class="clear"></div>
+		</div>
 		
 		<div role="main" class="ui-content">
+		
 			<h2>This website uses cookies.</h2>
+			
 			<p>By continuing to browse this site you agree with our cookie policy.<br>
 			<br>
 			You can delete stored cookies anytime by clicking Options > Delete Cookies.
 			</p>
-			<a href="about:clear" class="ui-btn ui-btn-inline">Cancel</a>
-			<a href="#home_page" class="ui-btn ui-btn-inline ">OK</a>
+			
+			<div class="mnp_cookie_dialog_button_div">
+				<a href="about:clear" data-transition="flip" class="mnp_cookie_dialog_button">Cancel</a>
+				<a href="#home_page" data-transition="flip" data-direction="reverse" class="mnp_cookie_dialog_button">OK</a>
+			</div>
+			
 		</div><!-- /content -->
+		
+		<div class="mnp_footer">	
+			<p class="mnp_footer_p">Copyright &copy; 2015.</p>
+		</div>
+		
 	</div>
 	<!-- End cookie dialog -->
 	

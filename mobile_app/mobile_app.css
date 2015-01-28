@@ -141,6 +141,49 @@ ul {
 	width: 70px;
 }
 
+/* ==mnp_options_page_logo */
+
+.mnp_options_page_logo {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.mnp_options_page_logo_span {
+	color: #6075a6;
+}
+
+/* ==mnp_options_page_buttons_div */
+
+.mnp_options_page_button {
+	display: block;
+	padding: 5px;
+	text-align: center;
+}
+
+/* ==mnp_options_page_adspace */
+
+.mnp_options_page_adspace {
+	text-align: center;
+}
+
+.mnp_options_page_adspace_img {
+	padding: 0;
+	margin: 10px 0;
+}
+
+/* ==mnp_cookie_dialog_buttons_div */
+
+.mnp_cookie_dialog_button_div {
+	text-align: center;
+}
+
+.mnp_cookie_dialog_button {
+	display: inline-block;
+	padding: 5px;
+	text-align: center;
+	width: 70px;
+}
+
 /* =Layout */
 
 .fixed_bottom {
