@@ -144,6 +144,18 @@ button:hover {
     padding: 0 20px 20px 20px;
 }
 
+.more_info {
+	text-align: left !important;
+	clear: both;
+	width: 85% !important;
+	border: 0 !important;
+}
+
+.more_info_box {
+	border: 1px solid #333;
+	width: 100%;
+}
+
 .gateway_hashtag_box {
 	margin: 0 20px;
 }
@@ -410,6 +422,12 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	
 .selectAccepted, .selectRejected,
 .selectAcceptedPrivate, .selectAcceptedCompany, .selectAcceptedUnclear, .selectRejectedFirst, .selectRejectedBefore {
+	display: none;
+}
+	
+/* */
+	
+.more_info {
 	display: none;
 }
 	

@@ -85,6 +85,10 @@
                        				<div class="selectFriendDiv">
                        					<a  class="selectFriendLink linkFriendUnknown">I do not know.</a>
                        				</div>
+                       				<div class="selectFriendDiv more_info">
+										<p>Please tell us more about your friend:</p>
+						    			<textarea class="more_info_box padding_one border_one"></textarea>
+									</div>
                        			</div>
                        			
                        			<div class="selectCompany">
@@ -97,7 +101,11 @@
                        				</div>
                        				<div class="selectCompanyDiv">
                        					<a  class="selectCompanyLink linkCompanyUnknown">I do not know their name.</a>
-                       				</div>                      				
+                       				</div> 
+                       				<div class="selectCompanyDiv more_info">
+										<p>Do you have any additional informations about this company:</p>
+						    			<textarea class="more_info_box padding_one border_one"></textarea>
+									</div>                     				
                        			</div>
                        			
                        			<div class="selectUnknown">
@@ -112,7 +120,11 @@
                        				</div>
                        				<div class="selectUnknownDiv">
                        					<a  class="selectUnknownLink linkUnknownSeveral">Called several times.</a>
-                       				</div>                     				
+                       				</div>       
+                       				<div class="selectUnknownDiv more_info">
+						    			<p>Can you describe the calls:</p>
+						    			<textarea class="more_info_box padding_one border_one"></textarea>
+						    		</div>              				
                        			</div>
                        			
                        			
@@ -126,6 +138,10 @@
 										<div class="selectMePrivateDiv">
 											<a  class="selectMePrivateLink linkMePrivateLandline">This is a landline.</a>
 										</div>
+						    			<div class="selectMePrivateDiv more_info">
+						    				<p>Please tell as about yourself:</p>
+						    				<textarea class="more_info_box padding_one border_one"></textarea>
+						    			</div>
 							    	</div>
                       
                       				<div class="selectMeCompany">
@@ -135,6 +151,10 @@
 										<div class="selectMeCompanyDiv">
 											Company name: <input type="text" class="inputMeCompanyName">
                        						<a  class="selectMeCompanyLink linkMeCompanyName">Done</a>
+										</div>
+						    			<div class="selectMeCompanyDiv more_info">
+											<p>Please tell us more about your company:</p>
+						    				<textarea class="more_info_box padding_one border_one"></textarea>
 										</div>
 							    	</div>
                       
@@ -148,6 +168,10 @@
 										<div class="selectFriendPrivateDiv">
 											<a  class="selectFriendPrivateLink linkFriendPrivateLandline">This is a landline.</a>
 										</div>
+						    			<div class="selectFriendPrivateDiv more_info">
+											<p>Please tell us more about your friend:</p>
+						    				<textarea class="more_info_box padding_one border_one"></textarea>
+										</div>
 							    	</div>
                       
                       				<div class="selectFriendCompany">
@@ -157,6 +181,10 @@
 										<div class="selectFriendCompanyDiv">
 											Company name: <input type="text" class="inputFriendCompanyName">
                        						<a  class="selectFriendCompanyLink linkFriendCompanyName">Done</a>
+										</div>
+						    			<div class="selectFriendPrivateDiv more_info">
+											<p>Please tell us more about this company:</p>
+						    				<textarea class="more_info_box padding_one border_one"></textarea>
 										</div>
 							    	</div>
                        
@@ -307,14 +335,20 @@
 		jQuery( ".fa-thumbs-up" ).click(function() {
 			jQuery( ".gateway_step3, .gateway_step2negative, .selectMe, .selectFriend, .selectCompany, .selectUnknown, .selectMePrivate, .selectMeCompany, .selectFriendPrivate, .selectFriendCompany" ).css("display", "none");
 			jQuery( ".gateway_step2positive, .selectOwner" ).css("display", "block");
+			jQuery( ".more_info_box" ).val(null);
+			jQuery( ".more_info" ).css("display", "none");
 		});
 		
 		jQuery( ".fa-thumbs-down" ).click(function() {
 			jQuery( ".gateway_step3, .gateway_step2positive, .selectAccepted, .selectRejected, .selectAcceptedPrivate, .selectAcceptedCompany, .selectAcceptedUnclear, .selectRejectedFirst, .selectRejectedBefore" ).css("display", "none");
 			jQuery( ".gateway_step2negative, .selectCall" ).css("display", "block");
+			jQuery( ".more_info_box" ).val(null);
+			jQuery( ".more_info" ).css("display", "none");
 		});
 		
 		// Step 2
+		
+		// Variables
 		
 		var $summary;
 		var $companyname;
@@ -322,6 +356,7 @@
 		var $friendcompanyname;
 		var $namerejectedfirst;
 		var $namerejectedbefore;
+		var $moreinfo;
 		
 		// 1st level positive - selectOwner
 		
@@ -374,6 +409,8 @@
 			$summary = "This number is owned by my friend.";
             jQuery( ".selectOwner" ).css("display", "block");
 			jQuery( ".selectFriend" ).css("display", "none");
+			jQuery( ".more_info" ).css("display", "none");
+			jQuery( ".more_info_box" ).val(null);
         });
 		
 		jQuery( "a.linkFriendPrivate" ).click(function() {
@@ -392,6 +429,7 @@
 			$summary = "This number is owned by my friend. I do not know if it is a company or private number.";
             jQuery("textarea.hashtag_box").val($summary);
 			jQuery( ".gateway_step3" ).css("display", "block");
+			jQuery( ".more_info" ).css("display", "block");
         });
 		
 		// selectCompany
@@ -400,6 +438,8 @@
 			$summary = "This number is owned by a company.";
             jQuery( ".selectOwner" ).css("display", "block");
 			jQuery( ".selectCompany" ).css("display", "none");
+			jQuery( ".more_info" ).css("display", "none");
+			jQuery( ".more_info_box" ).val(null);
         });
 		
 		jQuery( "a.linkCompanyName" ).click(function() {
@@ -410,14 +450,16 @@
 			else {
 				$summary = "This number is owned by a company called " + $companyname + ".";
 				jQuery("textarea.hashtag_box").val($summary);
-				jQuery( ".gateway_step3" ).css("display", "block")				
+				jQuery( ".gateway_step3" ).css("display", "block");		
+				jQuery( ".more_info" ).css("display", "block");
 			}
         });
 		
 		jQuery( "a.linkCompanyUnknown" ).click(function() {
 			$summary = "This number is owned by a company. I do not know its name.";
 			jQuery("textarea.hashtag_box").val($summary);
-			jQuery( ".gateway_step3" ).css("display", "block")
+			jQuery( ".gateway_step3" ).css("display", "block");
+			jQuery( ".more_info" ).css("display", "block");
         });
 		
 		// selectUnknown
@@ -426,24 +468,29 @@
 			$summary = "I do not know who owns this number.";
             jQuery( ".selectOwner" ).css("display", "block");
 			jQuery( ".selectUnknown" ).css("display", "none");
+			jQuery( ".more_info" ).css("display", "none");
+			jQuery( ".more_info_box" ).val(null);
         });
 		
 		jQuery( "a.linkUnknownOnce" ).click(function() {
 			$summary = "I do not know who owns this number. I received one call.";
 			jQuery("textarea.hashtag_box").val($summary);
 			jQuery( ".gateway_step3" ).css("display", "block");
+			jQuery( ".more_info" ).css("display", "block");
         });
 		
 		jQuery( "a.linkUnknownTwice" ).click(function() {
 			$summary = "I do not know who owns this number. I received call two times.";
 			jQuery("textarea.hashtag_box").val($summary);
 			jQuery( ".gateway_step3" ).css("display", "block");
+			jQuery( ".more_info" ).css("display", "block");
         });
 		
 		jQuery( "a.linkUnknownSeveral" ).click(function() {
 			$summary = "I do not know who owns this number. I received call several times.";;
 			jQuery("textarea.hashtag_box").val($summary);
 			jQuery( ".gateway_step3" ).css("display", "block");
+			jQuery( ".more_info" ).css("display", "block");
         });
 		
 		/* 3rd level positive - selectMePrivate, selectMeCompany, selectFriendPrivate, selectFriendCompany, selectFriendUnkown, 
@@ -455,18 +502,22 @@
 			$summary = "This number is owned by me. It is my private number.";
             jQuery( ".selectMe" ).css("display", "block");
 			jQuery( ".selectMePrivate" ).css("display", "none");
+			jQuery( ".more_info" ).css("display", "none");
+			jQuery( ".more_info_box" ).val(null);
         });
 		
 		jQuery( "a.linkMePrivateMobile" ).click(function() {
 			$summary = "This number is owned by me. It is my private number on a mobile line.";
 			jQuery("textarea.hashtag_box").val($summary);
 			jQuery( ".gateway_step3" ).css("display", "block");
+			jQuery( ".more_info" ).css("display", "block");
         });
 		
 		jQuery( "a.linkMePrivateLandline" ).click(function() {
 			$summary = "This number is owned by me. It is my private number on a landline.";
 			jQuery("textarea.hashtag_box").val($summary);
 			jQuery( ".gateway_step3" ).css("display", "block");
+			jQuery( ".more_info" ).css("display", "block");
         });
 		
 		// selectMeCompany
@@ -475,6 +526,8 @@
 			$summary = "This number is owned by me. It is a company number.";
             jQuery( ".selectMe" ).css("display", "block");
 			jQuery( ".selectMeCompany" ).css("display", "none");
+			jQuery( ".more_info" ).css("display", "none");
+			jQuery( ".more_info_box" ).val(null);
         });
 		
 		jQuery( "a.linkMeCompanyName" ).click(function() {
@@ -486,6 +539,7 @@
 				$summary = "This number is owned by me. It is a number of company called " + $mycompanyname + ".";
 				jQuery("textarea.hashtag_box").val($summary);
 				jQuery( ".gateway_step3" ).css("display", "block");
+				jQuery( ".more_info" ).css("display", "block");
 			}
         });
 		
@@ -495,18 +549,22 @@
 			$summary = "This number is owned by my friend. It is a private number.";
             jQuery( ".selectFriend" ).css("display", "block");
 			jQuery( ".selectFriendPrivate" ).css("display", "none");
+			jQuery( ".more_info" ).css("display", "none");
+			jQuery( ".more_info_box" ).val(null);
         });
 		
 		jQuery( "a.linkFriendPrivateMobile" ).click(function() {
 			$summary = "This number is owned by my friend. It is a private mobile number.";
 			jQuery("textarea.hashtag_box").val($summary);
 			jQuery( ".gateway_step3" ).css("display", "block");
+			jQuery( ".more_info" ).css("display", "block");
         });
 		
 		jQuery( "a.linkFriendPrivateLandline" ).click(function() {
 			$summary = "This number is owned by my friend. It is a private number on a landline.";
 			jQuery("textarea.hashtag_box").val($summary);
 			jQuery( ".gateway_step3" ).css("display", "block");
+			jQuery( ".more_info" ).css("display", "block");
         });
 		
 		// selectFriendCompany
@@ -515,6 +573,8 @@
 			$summary = "This number is owned by my friend. It is a company number.";
             jQuery( ".selectFriend" ).css("display", "block");
 			jQuery( ".selectFriendCompany" ).css("display", "none");
+			jQuery( ".more_info" ).css("display", "none");
+			jQuery( ".more_info_box" ).val(null);
         });
 		
 		jQuery( "a.linkFriendCompanyName" ).click(function() {
@@ -526,6 +586,7 @@
 				$summary = "This number is owned by my friend. It is a number of company called " + $friendcompanyname + ".";
 				jQuery("textarea.hashtag_box").val($summary);
 				jQuery( ".gateway_step3" ).css("display", "block");
+				jQuery( ".more_info" ).css("display", "block");
 			}
         });
 		
@@ -733,8 +794,14 @@
 				jQuery("textarea.hashtag_box").val($summary);
 				jQuery( ".gateway_step3" ).css("display", "block");
 			}
-            
+           			
         });
+		
+		// more_info_box
+		
+		jQuery( ".more_info_box" ).change(function() {
+			jQuery("textarea.hashtag_box").val( $summary + " " + jQuery( this ).val() );
+		});
 		
 	</script>
 </body>
