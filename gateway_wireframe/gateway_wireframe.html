@@ -394,8 +394,8 @@
 		
 		jQuery( "a.linkFriendUnknown" ).click(function() {
 			$summary = "This number is owned by my friend. I do not know if it is a company or private number.";
-            jQuery( ".selectFriend" ).css("display", "none");
-			jQuery( ".selectFriendUnknown" ).css("display", "block");
+            jQuery("textarea.hashtag_box").val($summary);
+			jQuery( ".gateway_step3" ).css("display", "block");
         });
 		
 		// selectCompany
