@@ -414,13 +414,14 @@
 			else {
 				$summary = "This number is owned by a company called " + $companyname + ".";
 				jQuery("textarea.hashtag_box").val($summary);
-				
+				jQuery( ".gateway_step3" ).css("display", "block")				
 			}
         });
 		
 		jQuery( "a.linkCompanyUnknown" ).click(function() {
 			$summary = "This number is owned by a company. I do not know its name.";
 			jQuery("textarea.hashtag_box").val($summary);
+			jQuery( ".gateway_step3" ).css("display", "block")
         });
 		
 		// selectUnknown
