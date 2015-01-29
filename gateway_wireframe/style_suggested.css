@@ -337,6 +337,17 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	
 	
 /* New logic CSS */
+	
+/* Step 1 */
+	
+	
+/* Step 2 */
+	
+.gateway_step2positive, .gateway_step2negative {
+	display: none;
+}
+	
+/* Posiitve */
 
 .selectOwner, 
 .selectMe, .selectFriend, .selectCompany, .selectUnknown, 
@@ -366,5 +377,44 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	
 .selectMe, .selectFriend, .selectCompany, .selectUnknown,
 .selectMePrivate, .selectMeCompany, .selectFriendPrivate, .selectFriendCompany {
+	display: none;
+}
+	
+/* Negative */
+	
+.selectCall,
+.selectAccepted, .selectRejected,
+.selectAcceptedPrivate, .selectAcceptedCompany, .selectAcceptedUnclear, .selectRejectedFirst, .selectRejectedBefore {
+	margin: 20px 0;
+	overflow: auto;
+}
+	
+.selectCallDiv,
+.selectAcceptedDiv, .selectRejectedDiv,
+.selectAcceptedPrivateDiv, .selectAcceptedCompanyDiv, .selectAcceptedUnclearDiv, .selectRejectedFirstDiv, .selectRejectedBeforeDiv  {
+	float:left;
+	width: 40%;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+	border: 1px solid #333;
+}	
+	
+.selectCallLink,
+.selectAcceptedLink, .selectRejectedLink,
+.selectAcceptedPrivateLink, .selectAcceptedCompanyLink, .selectAcceptedUnclearLink, .selectRejectedFirstLink, .selectRejectedBeforeLink {
+	color: #333333;
+}
+	
+/* */
+	
+.selectAccepted, .selectRejected,
+.selectAcceptedPrivate, .selectAcceptedCompany, .selectAcceptedUnclear, .selectRejectedFirst, .selectRejectedBefore {
+	display: none;
+}
+	
+/* Step 3 */
+	
+.gateway_step3 {
 	display: none;
 }
