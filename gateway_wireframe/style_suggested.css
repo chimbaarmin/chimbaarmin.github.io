@@ -338,20 +338,33 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	
 /* New logic CSS */
 
-.selectOwner, .selectMe, .selectFriend, .selectCompany, .selectMeType, .selectFriendType {
+.selectOwner, 
+.selectMe, .selectFriend, .selectCompany, .selectUnknown, 
+.selectMePrivate, .selectMeCompany, .selectFriendPrivate, .selectFriendCompany {
 	margin: 20px 0;
 	overflow: auto;
 }
 	
-.selectOwnerDiv, .selectMeDiv, .selectFriendDiv, .selectCompanyDiv {
+.selectOwnerDiv, 
+.selectMeDiv, .selectFriendDiv, .selectCompanyDiv, .selectUnknownDiv, 
+.selectMePrivateDiv, .selectMeCompanyDiv, .selectFriendPrivateDiv, .selectFriendCompanyDiv {
 	float:left;
 	width: 40%;
 	padding: 10px;
 	margin: 10px;
 	text-align: center;
-	border: 1px solid #cccccc;
+	border: 1px solid #333;
 }
 	
-.selectOwnerLink {
+.selectOwnerLink, 
+.selectMeLink, .selectFriendLink, .selectCompanyLink, .selectUnknownLink,
+.selectMePrivateLink, .selectMeCompanyLink, .selectFriendPrivateLink, .selectFriendCompanyLink {
 	color: #333333;
+}
+	
+/* */
+	
+.selectMe, .selectFriend, .selectCompany, .selectUnknown,
+.selectMePrivate, .selectMeCompany, .selectFriendPrivate, .selectFriendCompany {
+	display: none;
 }
