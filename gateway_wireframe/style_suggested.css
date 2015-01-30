@@ -83,6 +83,10 @@ br {
 	outline: none;
 }
 
+input {
+	color: #333 !important;
+}
+
 
 /* =Layout */
 
@@ -146,6 +150,7 @@ button:hover {
 
 .more_info_box {
 	border: 1px solid #ccc;
+	color: #333;
 	width: 100%;
 }
 
