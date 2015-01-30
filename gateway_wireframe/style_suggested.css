@@ -141,14 +141,7 @@ button:hover {
 }
 
 .gateway_info_box {
-    padding: 0 20px 20px 20px;
-}
-
-.more_info {
-	text-align: left !important;
-	clear: both;
-	width: 85% !important;
-	border: 0 !important;
+    padding: 0 20px;
 }
 
 .more_info_box {
@@ -339,6 +332,18 @@ button:hover {
 		width: 150px;
 	}
 	
+	.selectOwnerDiv, 
+	.selectMeDiv, .selectFriendDiv, .selectCompanyDiv, .selectUnknownDiv, 
+	.selectMePrivateDiv, .selectMeCompanyDiv, .selectFriendPrivateDiv, .selectFriendCompanyDiv {
+		margin: 5px 0 !important;
+		width: 100% !important;
+	}
+	
+	.selectMeBack, .selectFriendBack, .selectCompanyBack, .selectUnknownBack, 
+	.selectMePrivateBack, .selectMeCompanyBack, .selectFriendPrivateBack, .selectFriendCompanyBack {
+		margin: 0 0 10px 0 !important;
+	}
+	
 }
 
 /* Bootstrap grid start */
@@ -371,18 +376,45 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .selectOwnerDiv, 
 .selectMeDiv, .selectFriendDiv, .selectCompanyDiv, .selectUnknownDiv, 
 .selectMePrivateDiv, .selectMeCompanyDiv, .selectFriendPrivateDiv, .selectFriendCompanyDiv {
+	background-color: #333;
+	color: #ffffff;
 	float:left;
-	width: 40%;
-	padding: 10px;
-	margin: 10px;
+	width: 45%;
+	padding: 10px 0;
+	margin: 10px 0 0 10px;
 	text-align: center;
-	border: 1px solid #333;
+}
+	
+.selectMeBack, .selectFriendBack, .selectCompanyBack, .selectUnknownBack, 
+.selectMePrivateBack, .selectMeCompanyBack, .selectFriendPrivateBack, .selectFriendCompanyBack {
+	background-color: #333333;
+	color: #fff;
+	cursor: pointer;
+	margin-left:10px;
+	padding: 5px 7px 5px 0;
+	text-align: center;
+	width: 100px;
+}
+	
+.selectMeBack:hover, .selectFriendBack:hover, .selectCompanyBack:hover, .selectUnknownBack:hover, 
+.selectMePrivateBack:hover, .selectMeCompanyBack:hover, .selectFriendPrivateBack:hover, .selectFriendCompanyBack:hover {
+	color: #fff;
+	text-decoration: none;
 }
 	
 .selectOwnerLink, 
 .selectMeLink, .selectFriendLink, .selectCompanyLink, .selectUnknownLink,
 .selectMePrivateLink, .selectMeCompanyLink, .selectFriendPrivateLink, .selectFriendCompanyLink {
-	color: #333333;
+	color: #fff;
+	cursor: pointer;
+	padding: 10px;
+}
+	
+.selectOwnerLink:hover, 
+.selectMeLink:hover, .selectFriendLink:hover, .selectCompanyLink:hover, .selectUnknownLink:hover,
+.selectMePrivateLink:hover, .selectMeCompanyLink:hover, .selectFriendPrivateLink:hover, .selectFriendCompanyLink:hover {
+	color: #fff;
+	text-decoration: none;
 }
 	
 /* */
@@ -404,18 +436,45 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .selectCallDiv,
 .selectAcceptedDiv, .selectRejectedDiv,
 .selectAcceptedPrivateDiv, .selectAcceptedCompanyDiv, .selectAcceptedUnclearDiv, .selectRejectedFirstDiv, .selectRejectedBeforeDiv  {
+	background-color: #333;
+	color: #ffffff;
 	float:left;
-	width: 40%;
-	padding: 10px;
-	margin: 10px;
+	width: 45%;
+	padding: 10px 0;
+	margin: 10px 0 0 10px;
 	text-align: center;
-	border: 1px solid #333;
 }	
+	
+.selectAcceptedBack, .selectRejectedBack,
+.selectAcceptedPrivateBack, .selectAcceptedCompanyBack, .selectAcceptedUnclearBack, .selectRejectedFirstBack, .selectRejectedBeforeBack {
+	background-color: #333333;
+	color: #fff;
+	cursor: pointer;
+	margin-left:10px;
+	padding: 5px 7px 5px 0;
+	text-align: center;
+	width: 100px;
+}
+	
+.selectAcceptedBack:hover, .selectRejectedBack:hover,
+.selectAcceptedPrivateBack:hover, .selectAcceptedCompanyBack:hover, .selectAcceptedUnclearBack:hover, .selectRejectedFirstBack:hover, .selectRejectedBeforeBack:hover {
+	color: #fff;
+	text-decoration: none;
+}
 	
 .selectCallLink,
 .selectAcceptedLink, .selectRejectedLink,
 .selectAcceptedPrivateLink, .selectAcceptedCompanyLink, .selectAcceptedUnclearLink, .selectRejectedFirstLink, .selectRejectedBeforeLink {
-	color: #333333;
+	cursor: pointer;
+	color: #ffffff;
+	padding: 10px;
+}
+	
+.selectCallLink:hover,
+.selectAcceptedLink:hover, .selectRejectedLink:hover,
+.selectAcceptedPrivateLink:hover, .selectAcceptedCompanyLink:hover, .selectAcceptedUnclearLink:hover, .selectRejectedFirstLink:hover, .selectRejectedBeforeLink:hover {
+	color: #fff;
+	text-decoration: none;
 }
 	
 /* */
@@ -428,6 +487,13 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 /* */
 	
 .more_info {
+	text-align: left !important;
+	clear: both;
+	padding: 0 0 0 10px !important;
+	width: 90% !important;
+	border: 0 !important;
+	background-color: #ffffff;
+	color: #333;
 	display: none;
 }
 	
