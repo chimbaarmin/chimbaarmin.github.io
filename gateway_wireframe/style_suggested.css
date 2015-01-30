@@ -165,9 +165,9 @@ button:hover {
 .hashtag_box {
 	background: none;
 	border: none;
-	height: 80px;
+	min-height: 40px;
 	margin: 0; 
-	overflow: hidden;
+	overflow: visible;
 	resize: none;
 	width: 100%;
 }
@@ -299,6 +299,7 @@ button:hover {
 	
 	.gateway_step_h3 {
 		font: 16px/1.3 'Alegreya', serif;
+		width: 70%;
 	}
 	
     .left_sidebar {
@@ -309,7 +310,12 @@ button:hover {
 	
 	.left_sidebar_h2 {
 		margin: 0;
-		padding: 0;
+		padding: 20px 0;
+	}
+	
+	.left_sidebar_h3 {
+		margin: 0;
+		padding: 20px 0;
 	}
 	
 	.left_sidebar_logo {
