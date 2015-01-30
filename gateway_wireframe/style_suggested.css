@@ -14,10 +14,10 @@ Version: 0.1
 
 .body_gateway {
     background: url(../gateway_wireframe/background_full_.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
+    background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+	-webkit-background-size: cover;
 	background-repeat: no-repeat;
 	font: 14px/1.3 'Roboto', sans-serif !important;
 	letter-spacing: normal !important;
@@ -74,9 +74,9 @@ br {
 }
 
 .gateway_text_input {
+	border: 1px solid #ccc;
 	padding: 0;
 	width: 200px;
-	border: 1px solid #ccc;
 }
 
 :focus  {
@@ -84,15 +84,16 @@ br {
 }
 
 .gateway_input {
+	border: 1px solid #ccc;
 	color: #333 !important;
-	width: 100%;
 	margin: 10px 0;
+	width: 100%;
 }
 
 .clear {
+	clear: both;
 	margin:0;
 	padding:0;
-	clear: both;
 }
 
 
@@ -173,8 +174,8 @@ button:hover {
 .hashtag_box {
 	background: none;
 	border: none;
+	margin: 0;
 	min-height: 40px;
-	margin: 0; 
 	overflow: visible;
 	resize: none;
 	width: 100%;
@@ -365,10 +366,10 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .selectAcceptedLink, .selectRejectedLink,
 .selectAcceptedPrivateLink, .selectAcceptedCompanyLink, .selectAcceptedUnclearLink, .selectRejectedFirstLink, .selectRejectedBeforeLink {
 	background-color: #333;
-	display: inline-block;
 	color: #fff;
-	float:left;
 	cursor: pointer;
+	display: inline-block;
+	float:left;
 	margin: 5px 10px;
 	padding: 10px;
 	width: 45%;
@@ -391,32 +392,32 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 /* */
 	
 .more_info {
-	text-align: left !important;
-	clear: both;
-	padding: 0 0 0 10px !important;
-	margin: 15px 0 0 0;
-	width: 90% !important;
-	border: 0 !important;
 	background-color: #ffffff;
+	border: 0 !important;
+	clear: both;
 	color: #333;
 	display: none;
+	margin: 15px 0 0 0;
+	padding: 0 0 0 10px !important;
+	text-align: left !important;
+	width: 90% !important;
 }
 	
 .name_input_div {
+	border: 1px solid #ccc;
 	float: left;
-	width: 45%;
-	text-align: left;
 	margin: 5px 10px 0 10px;
 	padding: 10px;
-	border: 1px solid #ccc;
+	text-align: left;
+	width: 45%;
 }
 	
 .name_input_button {
 	float: none;
-	width: 50%;
 	margin: 0;
 	padding: 5px;
 	text-align: center;
+	width: 50%;
 }
 	
 /* Step 3 */
@@ -538,8 +539,8 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	.selectMeLink, .selectFriendLink, .selectCompanyLink, .selectUnknownLink,
 	.selectMePrivateLink, .selectMeCompanyLink, .selectFriendPrivateLink, .selectFriendCompanyLink {
 		float: none;
-		width: 100%;
 		margin: 5px 0;
+		width: 100%;
 	}
 	
 	.selectMeBack, .selectFriendBack, .selectCompanyBack, .selectUnknownBack, 
@@ -551,8 +552,8 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	.selectAcceptedLink, .selectRejectedLink,
 	.selectAcceptedPrivateLink, .selectAcceptedCompanyLink, .selectAcceptedUnclearLink, .selectRejectedFirstLink, .selectRejectedBeforeLink {
 		float: none;
-		width: 100%;
 		margin: 5px 0;
+		width: 100%;
 	}
 	
 	.selectAcceptedBack, .selectRejectedBack,
