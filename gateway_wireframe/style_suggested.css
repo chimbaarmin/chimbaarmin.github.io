@@ -429,7 +429,12 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	
 	.left_sidebar_h2 {
 		margin: 0;
-		padding: 0;
+		padding: 20px 0;
+	}
+	
+	.left_sidebar_h3 {
+		margin: 0;
+		padding: 20px 0;
 	}
 	
 	.left_sidebar_logo {
@@ -458,7 +463,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 	
 	.body_gateway {
 		font: 14px/1.3 'Roboto', sans-serif;
