@@ -83,8 +83,10 @@ br {
 	outline: none;
 }
 
-input {
+.gateway_input {
 	color: #333 !important;
+	width: 100%;
+	margin: 10px 0;
 }
 
 .clear {
@@ -400,6 +402,23 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	display: none;
 }
 	
+.name_input_div {
+	float: left;
+	width: 45%;
+	text-align: left;
+	margin: 5px 10px 0 10px;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+	
+.name_input_button {
+	float: none;
+	width: 50%;
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+}
+	
 /* Step 3 */
 	
 .gateway_step3 {
@@ -539,6 +558,12 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	.selectAcceptedBack, .selectRejectedBack,
 	.selectAcceptedPrivateBack, .selectAcceptedCompanyBack, .selectAcceptedUnclearBack, .selectRejectedFirstBack, .selectRejectedBeforeBack {
 		margin: 0 0 5px 0;
+	}
+	
+	.name_input_div {
+		float: none;
+		margin: 5px 0 0 0;
+		width:100%;
 	}
 	
 }
