@@ -479,7 +479,7 @@ selectCompanyName, selectCompanyUnknown */
 	jQuery( "a.linkRejectedBeforeKnown" ).click(function() {
 		$namerejectedbefore = jQuery( "input.inputKnownCompanyNameRejectedBefore" ).val();
 		if ( $namerejectedbefore.length < 3 ) {
-			alert ( "Company name must contain at least three letters." );
+			alert ( "Caller name must contain at least three letters." );
 		}
 		else {
 			$summary = "I rejected the call. I received it before and the call was made by " + $namerejectedbefore + ".";
