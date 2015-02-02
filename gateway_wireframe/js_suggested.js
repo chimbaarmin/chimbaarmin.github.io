@@ -1,3 +1,9 @@
+// Tooltips
+
+$(function() {
+	$( ".fa, .selectOwner, .selectCall, .gateway_input, .more_info, .comment_box" ).tooltip();
+});
+
 // Step 1
 		
 	jQuery( ".fa-thumbs-up" ).click(function() {
