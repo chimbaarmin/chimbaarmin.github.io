@@ -293,7 +293,8 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	margin: 0;
 	text-align: center;
 }
-	
+
+.selectOwnerBack,
 .selectMeBack, .selectFriendBack, .selectCompanyBack, .selectUnknownBack, 
 .selectMePrivateBack, .selectMeCompanyBack, .selectFriendPrivateBack, .selectFriendCompanyBack {
 	background-color: #333333;
@@ -305,6 +306,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	width: 100px;
 }
 	
+.selectOwnerBack:hover,
 .selectMeBack:hover, .selectFriendBack:hover, .selectCompanyBack:hover, .selectUnknownBack:hover, 
 .selectMePrivateBack:hover, .selectMeCompanyBack:hover, .selectFriendPrivateBack:hover, .selectFriendCompanyBack:hover {
 	color: #fff;
@@ -354,6 +356,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	text-align: center;
 }	
 	
+.selectCallBack,
 .selectAcceptedBack, .selectRejectedBack,
 .selectAcceptedPrivateBack, .selectAcceptedCompanyBack, .selectAcceptedUnclearBack, .selectRejectedFirstBack, .selectRejectedBeforeBack {
 	background-color: #333333;
@@ -365,6 +368,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	width: 100px;
 }
 	
+.selectCallBack:hover,
 .selectAcceptedBack:hover, .selectRejectedBack:hover,
 .selectAcceptedPrivateBack:hover, .selectAcceptedCompanyBack:hover, .selectAcceptedUnclearBack:hover, .selectRejectedFirstBack:hover, .selectRejectedBeforeBack:hover {
 	color: #fff;
@@ -433,6 +437,22 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	
 .gateway_step3 {
 	display: none;
+}
+	
+.gateway_step3Back {
+	background-color: #333333;
+	color: #fff;
+	cursor: pointer;
+	display: none;
+	margin: 0 0 10px 20px;
+	padding: 5px 12px 5px 0;
+	text-align: center;
+	width: 100px;
+}
+	
+.gateway_step3Back:hover {
+	color: #fff;
+	text-decoration: none;
 }
 	
 /* ----- */

@@ -44,26 +44,30 @@ $(function() {
 	var $namerejectedfirst;
 	var $namerejectedbefore;
 	var $moreinfo;
+
+// 0 level positive - OwnerBack
+
+jQuery( "a.selectOwnerBack" ).click(function() {
+        jQuery( ".gateway_step1" ).css("display", "block");
+		jQuery( ".gateway_step2positive, .gateway_step3" ).css("display", "none");
+		jQuery( "textarea.hashtag_box, .more_info_box" ).val(null);
+ });
 		
 // 1st level positive - selectOwner
 	
 	jQuery( "a.linkMe" ).click(function() {
-		$summary = "This number is owned by #me.";
         jQuery( ".selectOwner" ).css("display", "none");
 		jQuery( ".selectMe" ).css("display", "block");
     });
 	jQuery( "a.linkFriend" ).click(function() {
-		$summary = "This number is owned by my #friend.";
         jQuery( ".selectOwner" ).css("display", "none");
 		jQuery( ".selectFriend" ).css("display", "block");
     });
 	jQuery( "a.linkCompany" ).click(function() {
-		$summary = "This number is owned by #company.";
         jQuery( ".selectOwner" ).css("display", "none");
 		jQuery( ".selectCompany" ).css("display", "block");
     });
 	jQuery( "a.linkUnknown" ).click(function() {
-		$summary = "This number is owned by #unknown.";
         jQuery( ".selectOwner" ).css("display", "none");
 		jQuery( ".selectUnknown" ).css("display", "block");
     });
@@ -73,19 +77,16 @@ $(function() {
 // selectMe
 	
 	jQuery( "a.selectMeBack" ).click(function() {
-		$summary = "This number is owned by #me.";
         jQuery( ".selectOwner" ).css("display", "block");
 		jQuery( ".selectMe" ).css("display", "none");
     });
 		
 	jQuery( "a.linkMePrivate" ).click(function() {
-		$summary = "This number is owned by #me. It is my #private_number.";
         jQuery( ".selectMe" ).css("display", "none");
 		jQuery( ".selectMePrivate" ).css("display", "block");
     });
 		
 	jQuery( "a.linkMeCompany" ).click(function() {
-		$summary = "This number is owned by #me. It is a #company_number.";
         jQuery( ".selectMe" ).css("display", "none");
 		jQuery( ".selectMeCompany" ).css("display", "block");
     });
@@ -93,7 +94,6 @@ $(function() {
 // selectFriend
 		
 	jQuery( "a.selectFriendBack" ).click(function() {
-		$summary = "This number is owned by my friend.";
         jQuery( ".selectOwner" ).css("display", "block");
 		jQuery( ".selectFriend" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
@@ -101,13 +101,11 @@ $(function() {
     });
 		
 	jQuery( "a.linkFriendPrivate" ).click(function() {
-		$summary = "This number is owned by my #friend. It is a #private_number.";
         jQuery( ".selectFriend" ).css("display", "none");
 		jQuery( ".selectFriendPrivate" ).css("display", "block");
     });
 		
 	jQuery( "a.linkFriendCompany" ).click(function() {
-		$summary = "This number is owned by my #friend. It is a #company_number.";
         jQuery( ".selectFriend" ).css("display", "none");
 		jQuery( ".selectFriendCompany" ).css("display", "block");
     });
@@ -115,6 +113,7 @@ $(function() {
 	jQuery( "a.linkFriendUnknown" ).click(function() {
 		$summary = "This number is owned by my #friend. I #do_not_know if it is a company or private number.";
         jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "block");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".gateway_step2positive" ).css("display", "none");
     });
@@ -122,7 +121,6 @@ $(function() {
 // selectCompany
 		
 	jQuery( "a.selectCompanyBack" ).click(function() {
-		$summary = "This number is owned by a #company.";
         jQuery( ".selectOwner" ).css("display", "block");
 		jQuery( ".selectCompany" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
@@ -137,6 +135,7 @@ $(function() {
 		else {
 			$summary = "This number is owned by a #company called #" + $companyname + ".";
 			jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+			jQuery( ".gateway_step3Back" ).css("display", "block");
 			jQuery( ".gateway_step3" ).css("display", "block");	
 			jQuery( ".gateway_step2positive" ).css("display", "none");
 		}
@@ -145,6 +144,7 @@ $(function() {
 	jQuery( "a.linkCompanyUnknown" ).click(function() {
 		$summary = "This number is owned by a #company. I #do_not_know its name.";
 		jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "block");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".gateway_step2positive" ).css("display", "none");
     });
@@ -152,7 +152,6 @@ $(function() {
 // selectUnknown
 		
 	jQuery( "a.selectUnknownBack" ).click(function() {
-		$summary = "This number is owned by #unknown.";
         jQuery( ".selectOwner" ).css("display", "block");
 		jQuery( ".selectUnknown" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
@@ -186,7 +185,6 @@ selectCompanyName, selectCompanyUnknown */
 // selectMePrivate
 		
 	jQuery( "a.selectMePrivateBack" ).click(function() {
-		$summary = "This number is owned by #me. It is my #private_number.";
         jQuery( ".selectMe" ).css("display", "block");
 		jQuery( ".selectMePrivate" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
@@ -196,6 +194,7 @@ selectCompanyName, selectCompanyUnknown */
 	jQuery( "a.linkMePrivateMobile" ).click(function() {
 		$summary = "This number is owned by #me. It is my #private_number on a #mobile_line.";
 		jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "block");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".gateway_step2positive" ).css("display", "none");
     });
@@ -203,6 +202,7 @@ selectCompanyName, selectCompanyUnknown */
 	jQuery( "a.linkMePrivateLandline" ).click(function() {
 		$summary = "This number is owned by #me. It is my #private_number on a #landline.";
 		jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "block");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".gateway_step2positive" ).css("display", "none");
     });
@@ -210,7 +210,6 @@ selectCompanyName, selectCompanyUnknown */
 // selectMeCompany
 		
 	jQuery( "a.selectMeCompanyBack" ).click(function() {
-		$summary = "This number is owned by #me. It is a #company_number.";
         jQuery( ".selectMe" ).css("display", "block");
 		jQuery( ".selectMeCompany" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
@@ -225,6 +224,7 @@ selectCompanyName, selectCompanyUnknown */
 		else {
 			$summary = "This number is owned by #me. It is a #company_number. Company name: #" + $mycompanyname + ".";
 			jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+			jQuery( ".gateway_step3Back" ).css("display", "block");
 			jQuery( ".gateway_step3" ).css("display", "block");
 			jQuery( ".gateway_step2positive" ).css("display", "none");
 		}
@@ -233,7 +233,6 @@ selectCompanyName, selectCompanyUnknown */
 // selectFriendPrivate
 		
 	jQuery( "a.selectFriendPrivateBack" ).click(function() {
-		$summary = "This number is owned by my #friend. It is a #private_number.";
         jQuery( ".selectFriend" ).css("display", "block");
 		jQuery( ".selectFriendPrivate" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
@@ -243,6 +242,7 @@ selectCompanyName, selectCompanyUnknown */
 	jQuery( "a.linkFriendPrivateMobile" ).click(function() {
 		$summary = "This number is owned by my #friend. It is a #private_number on a #mobile_line.";
 		jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "block");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".gateway_step2positive" ).css("display", "none");
     });
@@ -250,6 +250,7 @@ selectCompanyName, selectCompanyUnknown */
 	jQuery( "a.linkFriendPrivateLandline" ).click(function() {
 		$summary = "This number is owned by my #friend. It is a #private_number on a #landline.";
 		jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "block");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".gateway_step2positive" ).css("display", "none");
     });
@@ -257,7 +258,6 @@ selectCompanyName, selectCompanyUnknown */
 // selectFriendCompany
 		
 	jQuery( "a.selectFriendCompanyBack" ).click(function() {
-		$summary = "This number is owned by my #friend. It is a #company_number.";
         jQuery( ".selectFriend" ).css("display", "block");
 		jQuery( ".selectFriendCompany" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
@@ -272,21 +272,30 @@ selectCompanyName, selectCompanyUnknown */
 		else {
 			$summary = "This number is owned by my #friend. It is a #company_number. Company name: #" + $friendcompanyname + ".";
 			jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+			jQuery( ".gateway_step3Back" ).css("display", "block");
 			jQuery( ".gateway_step3" ).css("display", "block");
 			jQuery( ".gateway_step2positive" ).css("display", "none");
 		}
     });
+
+//
+
+// 0 level negative - CallBack
+
+jQuery( "a.selectCallBack" ).click(function() {
+        jQuery( ".gateway_step1" ).css("display", "block");
+		jQuery( ".gateway_step2negative, .gateway_step3" ).css("display", "none");
+		jQuery( "textarea.hashtag_box, .more_info_box" ).val(null);
+ });
 		
 // 1st level negative - selectCall
 	
 	jQuery( "a.linkAccepted" ).click(function() {
-		$summary = "I #accepted the call.";
         jQuery( ".selectCall" ).css("display", "none");
 		jQuery( ".selectAccepted" ).css("display", "block");
     });
 		
 	jQuery( "a.linkRejected" ).click(function() {
-		$summary = "I #rejected the call.";
         jQuery( ".selectCall" ).css("display", "none");
 		jQuery( ".selectRejected" ).css("display", "block");
     });
@@ -296,25 +305,21 @@ selectCompanyName, selectCompanyUnknown */
 // selectAccepted
 		
 	jQuery( "a.selectAcceptedBack" ).click(function() {
-		$summary = "I #accepted the call.";
         jQuery( ".selectCall" ).css("display", "block");
 		jQuery( ".selectAccepted" ).css("display", "none");
     });
 		
 	jQuery( "a.linkAcceptedPrivate" ).click(function() {
-		$summary = "I #accepted the call. It was a #private_call.";
         jQuery( ".selectAccepted" ).css("display", "none");
 		jQuery( ".selectAcceptedPrivate" ).css("display", "block");
     });
 		
 	jQuery( "a.linkAcceptedCompany" ).click(function() {
-		$summary = "I #accepted the call. It was a #company_call.";
         jQuery( ".selectAccepted" ).css("display", "none");
 		jQuery( ".selectAcceptedCompany" ).css("display", "block");
     });
 		
 	jQuery( "a.linkAcceptedUnclear" ).click(function() {
-		$summary = "I #accepted the call. Caller is #unknown.";
         jQuery( ".selectAccepted" ).css("display", "none");
 		jQuery( ".selectAcceptedUnclear" ).css("display", "block");
     });
@@ -322,19 +327,16 @@ selectCompanyName, selectCompanyUnknown */
 // selectRejected
 		
 	jQuery( "a.selectRejectedBack" ).click(function() {
-		$summary = "I #rejected the call.";
         jQuery( ".selectCall" ).css("display", "block");
 		jQuery( ".selectRejected" ).css("display", "none");
     });
 		
 	jQuery( "a.linkRejectedFirst" ).click(function() {
-		$summary = "I #rejected the call. I received it for the #first_time.";
         jQuery( ".selectRejected" ).css("display", "none");
 		jQuery( ".selectRejectedFirst" ).css("display", "block");
     });
 		
 	jQuery( "a.linkRejectedBefore" ).click(function() {
-		$summary = "I #rejected the call. I received it #before.";
         jQuery( ".selectRejected" ).css("display", "none");
 		jQuery( ".selectRejectedBefore" ).css("display", "block");
     });
@@ -344,7 +346,6 @@ selectCompanyName, selectCompanyUnknown */
 // selectAcceptedPrivate
 		
 	jQuery( "a.selectAcceptedPrivateBack" ).click(function() {
-		$summary = "I #accepted the call. It was a #private_call.";
         jQuery( ".selectAccepted" ).css("display", "block");
 		jQuery( ".selectAcceptedPrivate" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
@@ -382,7 +383,6 @@ selectCompanyName, selectCompanyUnknown */
 // selectAcceptedCompany
 		
 	jQuery( "a.selectAcceptedCompanyBack" ).click(function() {
-		$summary = "I #accepted the call. It was a #company_call.";
         jQuery( ".selectAccepted" ).css("display", "block");
 		jQuery( ".selectAcceptedCompany" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
@@ -420,7 +420,6 @@ selectCompanyName, selectCompanyUnknown */
 // selectAcceptedUnclear
 		
 	jQuery( "a.selectAcceptedUnclearBack" ).click(function() {
-		$summary = "I #accepted the call. Caller is #unknown.";
         jQuery( ".selectAccepted" ).css("display", "block");
 		jQuery( ".selectAcceptedUnclear" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
@@ -451,7 +450,6 @@ selectCompanyName, selectCompanyUnknown */
 // selectRejectedFirst
 		
 	jQuery( "a.selectRejectedFirstBack" ).click(function() {
-		$summary = "I #rejected the call. I received it for the #first_time.";
         jQuery( ".selectRejected" ).css("display", "block");
 		jQuery( ".selectRejectedFirst" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
@@ -473,6 +471,7 @@ selectCompanyName, selectCompanyUnknown */
 		else {
 			$summary = "I #rejected the call. I received it for the #first_time and the call was made by #" + $namerejectedfirst + ".";
 			jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+			jQuery( ".gateway_step3Back" ).css("display", "block");
 			jQuery( ".gateway_step3" ).css("display", "block");
 			jQuery( ".gateway_step2negative" ).css("display", "none");
 		}
@@ -481,7 +480,6 @@ selectCompanyName, selectCompanyUnknown */
 // selectRejectedBefore
 		
 	jQuery( "a.selectRejectedBeforeBack" ).click(function() {
-		$summary = "I #rejected the call. I received it #before.";
         jQuery( ".selectRejected" ).css("display", "block");
 		jQuery( ".selectRejectedBefore" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
@@ -503,6 +501,7 @@ selectCompanyName, selectCompanyUnknown */
 		else {
 			$summary = "I #rejected the call. I received it #before and the call was made by #" + $namerejectedbefore + ".";
 			jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+			jQuery( ".gateway_step3Back" ).css("display", "block");
 			jQuery( ".gateway_step3" ).css("display", "block");
 			jQuery( ".gateway_step2negative" ).css("display", "none");
 		}           			
@@ -513,3 +512,14 @@ selectCompanyName, selectCompanyUnknown */
 	jQuery( ".more_info_box" ).change(function() {
 		jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary + " " + jQuery( this ).val() );
 	});
+
+// step 3
+
+	jQuery( "a.gateway_step3Back" ).click(function() {
+        if ( $voteIt == "Generally, this number was rated #positive." ) {
+	   		alert ( "Test positive" );
+	    }
+		else {
+			alert ( "Test negative" );
+		}
+ 	});
