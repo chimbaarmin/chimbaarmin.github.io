@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="style_suggested.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script>
+	$(function() {
+		$( ".fa, .selectOwner, .selectCall, .gateway_input" ).tooltip();
+	});
+	</script>
 </head>
 <body class="body_gateway">
     <div class="container-fluid">
@@ -34,8 +40,8 @@
                         <h2 class="gateway_step_h2">1</h2>
                         <h3 class="gateway_step_h3">Please rate this number. Positive or negative?</h3>
                         <div class="gateway_rate_box">
-                            <button class="gateway_button vote_item vote_up" value="vote_up"><span class="fa fa-thumbs-up fa-4x"></span></button>
-                            <button class="gateway_button vote_item vote_down" value="vote_down"><span class="fa fa-thumbs-down fa-4x"></span></button>
+                            <button class="gateway_button vote_item vote_up" value="vote_up"><span class="fa fa-thumbs-up fa-4x" title="Thumbs up for positive vote."></span></button>
+                            <button class="gateway_button vote_item vote_down" value="vote_down"><span class="fa fa-thumbs-down fa-4x" title="Thumbs down for negative vote."></span></button>
                         </div>
                     </div>
                     <div class="gateway_step2positive">
@@ -44,7 +50,7 @@
                         <div class="gateway_info_box">
                         	
                         	
-                        	<div class="selectOwner">          	
+                        	<div class="selectOwner" title="Click on a box that describes your experience most adequately.">          	
 								<div class="selectOwnerDiv">
 									<a  class="selectOwnerLink linkMe">This is my number.</a>
 								</div>
@@ -104,7 +110,7 @@
                        				<div class="selectCompanyDiv name_input_div">
                        					Company name: 
                        					<br>
-                       					<input type="text" class="inputCompanyName gateway_input">
+                       					<input type="text" class="inputCompanyName gateway_input" title="This box must contain at least 3 letters.">
                        					<br>
                        					<a  class="selectCompanyLink linkCompanyName name_input_button">Done</a>
                        				</div>
@@ -160,7 +166,7 @@
 										<div class="selectMeCompanyDiv name_input_div">
 											Company name: 
                       						<br>
-                      						<input type="text" class="inputMeCompanyName gateway_input">
+                      						<input type="text" class="inputMeCompanyName gateway_input" title="This box must contain at least 3 letters.">
                        						<br>
                        						<a  class="selectMeCompanyLink linkMeCompanyName name_input_button">Done</a>
 										</div>
@@ -195,7 +201,7 @@
 										<div class="selectFriendCompanyDiv name_input_div">
 											Company name:
                       						<br>
-                      						<input type="text" class="inputFriendCompanyName gateway_input">
+                      						<input type="text" class="inputFriendCompanyName gateway_input" title="This box must contain at least 3 letters.">
                       						<br>
                        						<a  class="selectFriendCompanyLink linkFriendCompanyName name_input_button">Done</a>
 										</div>
@@ -213,7 +219,7 @@
                         <h3 class="gateway_step_h3">Please provide additional information concerning this number.</h3>
                         <div class="gateway_info_box">
 							
-							<div class="selectCall">          	
+							<div class="selectCall" title="Click on a box that describes your experience most adequately.">          	
 								<div class="selectCallDiv">
 									<a  class="selectCallLink linkAccepted">I accepted the call.</a>
 								</div>
@@ -328,7 +334,7 @@
 										<div class="selectRejectedFirstDiv name_input_div">
                        						Caller name:
                        						<br>
-                      						<input type="text" class="inputKnownCompanyNameRejectedFirst gateway_input">
+                      						<input type="text" class="inputKnownCompanyNameRejectedFirst gateway_input" title="This box must contain at least 3 letters.">
                       						<br>
                        						<a  class="selectRejectedFirstLink linkRejectedFirstKnown name_input_button">Done</a>
 										</div>
@@ -349,7 +355,7 @@
 										<div class="selectRejectedBeforeDiv name_input_div">
 											Caller name:
                       						<br>
-                      						<input type="text" class="inputKnownCompanyNameRejectedBefore gateway_input">
+                      						<input type="text" class="inputKnownCompanyNameRejectedBefore gateway_input" title="This box must contain at least 3 letters.">
                       						<br>
                        						<a  class="selectRejectedBeforeLink linkRejectedBeforeKnown name_input_button">Done</a>
 										</div>
