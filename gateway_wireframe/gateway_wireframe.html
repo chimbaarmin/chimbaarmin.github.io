@@ -12,7 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script>
 	$(function() {
-		$( ".fa, .selectOwner, .selectCall, .gateway_input" ).tooltip();
+		$( ".fa, .selectOwner, .selectCall, .gateway_input, .more_info, .comment_box" ).tooltip();
 	});
 	</script>
 </head>
@@ -94,7 +94,7 @@
                        					<a  class="selectFriendLink linkFriendUnknown">I do not know.</a>
                        				</div>
                        				<div class="clear"></div>
-                       				<div class="selectFriendDiv more_info">
+                       				<div class="selectFriendDiv more_info" title="This content is optional but highly appreciated.">
 										<p>Please tell us more about your friend:</p>
 						    			<textarea class="more_info_box padding_one border_one"></textarea>
 									</div>
@@ -110,12 +110,12 @@
                        				<div class="selectCompanyDiv name_input_div">
                        					Company name: 
                        					<br>
-                       					<input type="text" class="inputCompanyName gateway_input" title="This box must contain at least 3 letters.">
+                       					<input type="text" class="inputCompanyName gateway_input" title="This box must contain at least three letters.">
                        					<br>
                        					<a  class="selectCompanyLink linkCompanyName name_input_button">Done</a>
                        				</div>
                        				<div class="clear"></div>
-                       				<div class="selectCompanyDiv more_info">
+                       				<div class="selectCompanyDiv more_info" title="This content is optional but highly appreciated.">
 										<p>Do you have any additional informations about this company:</p>
 						    			<textarea class="more_info_box padding_one border_one"></textarea>
 									</div>                     				
@@ -135,7 +135,7 @@
                        					<a  class="selectUnknownLink linkUnknownSeveral">Called several times.</a>
                        				</div>
                        				<div class="clear"></div>       
-                       				<div class="selectUnknownDiv more_info">
+                       				<div class="selectUnknownDiv more_info" title="This content is optional but highly appreciated.">
 						    			<p>Can you describe the calls:</p>
 						    			<textarea class="more_info_box padding_one border_one"></textarea>
 						    		</div>              				
@@ -153,7 +153,7 @@
 											<a  class="selectMePrivateLink linkMePrivateLandline">This is a landline.</a>
 										</div>
 					    				<div class="clear"></div>
-						    			<div class="selectMePrivateDiv more_info">
+						    			<div class="selectMePrivateDiv more_info" title="This content is optional but highly appreciated.">
 						    				<p>Please tell as about yourself:</p>
 						    				<textarea class="more_info_box padding_one border_one"></textarea>
 						    			</div>
@@ -166,12 +166,12 @@
 										<div class="selectMeCompanyDiv name_input_div">
 											Company name: 
                       						<br>
-                      						<input type="text" class="inputMeCompanyName gateway_input" title="This box must contain at least 3 letters.">
+                      						<input type="text" class="inputMeCompanyName gateway_input" title="This box must contain at least three letters.">
                        						<br>
                        						<a  class="selectMeCompanyLink linkMeCompanyName name_input_button">Done</a>
 										</div>
 					    				<div class="clear"></div>
-						    			<div class="selectMeCompanyDiv more_info">
+						    			<div class="selectMeCompanyDiv more_info" title="This content is optional but highly appreciated.">
 											<p>Please tell us more about your company:</p>
 						    				<textarea class="more_info_box padding_one border_one"></textarea>
 										</div>
@@ -188,7 +188,7 @@
 											<a  class="selectFriendPrivateLink linkFriendPrivateLandline">This is a landline.</a>
 										</div>
 					    				<div class="clear"></div>
-						    			<div class="selectFriendPrivateDiv more_info">
+						    			<div class="selectFriendPrivateDiv more_info" title="This content is optional but highly appreciated.">
 											<p>Please tell us more about your friend:</p>
 						    				<textarea class="more_info_box padding_one border_one"></textarea>
 										</div>
@@ -201,12 +201,12 @@
 										<div class="selectFriendCompanyDiv name_input_div">
 											Company name:
                       						<br>
-                      						<input type="text" class="inputFriendCompanyName gateway_input" title="This box must contain at least 3 letters.">
+                      						<input type="text" class="inputFriendCompanyName gateway_input" title="This box must contain at least three letters.">
                       						<br>
                        						<a  class="selectFriendCompanyLink linkFriendCompanyName name_input_button">Done</a>
 										</div>
 					    				<div class="clear"></div>
-						    			<div class="selectFriendPrivateDiv more_info">
+						    			<div class="selectFriendPrivateDiv more_info" title="This content is optional but highly appreciated.">
 											<p>Please tell us more about this company:</p>
 						    				<textarea class="more_info_box padding_one border_one"></textarea>
 										</div>
@@ -275,7 +275,7 @@
 											<a  class="selectAcceptedPrivateLink linkAcceptedPrivateThreat">Threat call.</a>
 										</div>
 					    				<div class="clear"></div>
-						    			<div class="selectAcceptedPrivateDiv more_info">
+						    			<div class="selectAcceptedPrivateDiv more_info" title="This content is optional but highly appreciated.">
 											<p>Can you give us more detailed information about the call:</p>
 						    				<textarea class="more_info_box padding_one border_one"></textarea>
 										</div>
@@ -298,7 +298,7 @@
 											<a  class="selectAcceptedCompanyLink linkAcceptedCompanyTheft">Data theft.</a>
 										</div>
 					    				<div class="clear"></div>
-						    			<div class="selectAcceptedCompanyDiv more_info">
+						    			<div class="selectAcceptedCompanyDiv more_info" title="This content is optional but highly appreciated.">
 											<p>Can you give us more detailed information about the call:</p>
 						    				<textarea class="more_info_box padding_one border_one"></textarea>
 										</div>
@@ -318,7 +318,7 @@
 											<a  class="selectAcceptedUnclearLink linkAcceptedUnclearSeveral">Called several times.</a>
 										</div>
 					    				<div class="clear"></div>
-						    			<div class="selectAcceptedUnclearDiv more_info">
+						    			<div class="selectAcceptedUnclearDiv more_info" title="This content is optional but highly appreciated.">
 											<p>Do you have any additional info:</p>
 						    				<textarea class="more_info_box padding_one border_one"></textarea>
 										</div>
@@ -334,12 +334,12 @@
 										<div class="selectRejectedFirstDiv name_input_div">
                        						Caller name:
                        						<br>
-                      						<input type="text" class="inputKnownCompanyNameRejectedFirst gateway_input" title="This box must contain at least 3 letters.">
+                      						<input type="text" class="inputKnownCompanyNameRejectedFirst gateway_input" title="This box must contain at least three letters.">
                       						<br>
                        						<a  class="selectRejectedFirstLink linkRejectedFirstKnown name_input_button">Done</a>
 										</div>
 					    				<div class="clear"></div>	
-						    			<div class="selectRejectedFirstDiv more_info">
+						    			<div class="selectRejectedFirstDiv more_info" title="This content is optional but highly appreciated.">
 											<p>Do you have any additional informations about the caller:</p>
 						    				<textarea class="more_info_box padding_one border_one"></textarea>
 										</div>
@@ -355,12 +355,12 @@
 										<div class="selectRejectedBeforeDiv name_input_div">
 											Caller name:
                       						<br>
-                      						<input type="text" class="inputKnownCompanyNameRejectedBefore gateway_input" title="This box must contain at least 3 letters.">
+                      						<input type="text" class="inputKnownCompanyNameRejectedBefore gateway_input" title="This box must contain at least three letters.">
                       						<br>
                        						<a  class="selectRejectedBeforeLink linkRejectedBeforeKnown name_input_button">Done</a>
 										</div>
 					    				<div class="clear"></div>
-						    			<div class="selectRejectedBeforeDiv more_info">
+						    			<div class="selectRejectedBeforeDiv more_info" title="This content is optional but highly appreciated.">
 											<p>Can you state reasons for rejecting this call:</p>
 						    				<textarea class="more_info_box padding_one border_one"></textarea>
 										</div>
@@ -373,11 +373,11 @@
                         <h3 class="gateway_step_h3">Please write a comment about this number</h3>
                         <div class="gateway_hashtag_box">
                         	<p class="no_margin">Summary:</p>
-                        	<textarea class="hashtag_box padding_one" disabled></textarea>
+                        	<textarea class="hashtag_box padding_one" title="This content is autogenerated from your previous answers." disabled></textarea>
                         </div>
                         <div class="gateway_comment_box">
                             <p>Please write your comment:</p>
-                            <textarea class="comment_box padding_one border_one"></textarea>
+                            <textarea class="comment_box padding_one border_one" title="This box must contain at least three words."></textarea>
                             <button class="submit_comment">Submit</button>
                         </div>
                     </div>
