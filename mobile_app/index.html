@@ -9,7 +9,46 @@
 	<link rel="stylesheet" href="mobile_app.css" />
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
 	<script src="../plugins/jquery.cookie.js"></script>
+	<script>
+  $(function() {
+    var projects = [
+      {
+        value: "000",
+        label: "000",
+        desc: "Test1"
+      },
+      {
+        value: "001",
+        label: "001",
+        desc: "Test2"
+      },
+		{
+        value: "002",
+        label: "002",
+        desc: "Test3"
+      }
+    ];
+ 
+    $( ".mnp_search_box_input" ).autocomplete({
+      minLength: 0,
+      source: projects,
+      focus: function( event, ui ) {
+        $( ".mnp_search_box_input" ).val( ui.item.label );
+        return false;
+      },
+      select: function( event, ui ) {
+        $( ".mnp_search_box_input" ).val( ui.item.label );
+ 
+        return false;
+      }
+    })
+    .autocomplete( "instance" )._renderItem = function( ul, item ) {
+      return $( "<li>" ).append( "<a>" + item.label + "<br>" + item.desc + "</a>").appendTo( ul );
+    };
+  });
+  </script>
 </head>
 <body>
 	
@@ -31,42 +70,21 @@
 				<img src="../images/ni_logo_small.png" alt="Number-Index.com Logo" class="mnp_logo_img">
 			</div>
 						
-			<div class="mnp_buttons_box">
-				<div class="mnp_button">
-					<a href="#search_page" data-transition="flip" class="mnp_buttons_box_button">
-					<span class="fa fa-search fa-3x"></span> 
-					<br>
-					Search
-					</a>
-				</div>
-				<div class="mnp_button">
-					<a href="#search_history_page" data-transition="flip" class="mnp_buttons_box_button">
-					<span class="fa fa-history fa-3x"></span> 
-					<br>
-					Search History
-					</a>
-				</div>
-				<div class="mnp_button">
-					<a href="#cookie_dialog" data-transition="flip" class="mnp_buttons_box_button">
-					<span class="fa fa-info fa-3x"></span> 
-					<br>
-					Our Cookie Policy
-					</a>
-				</div>
-				<div class="mnp_button">
-					<a href="#options_page" data-transition="flip" data-direction="reverse" class="mnp_buttons_box_button">
-					<span class="fa fa-gear fa-3x"></span> 
-					<br>
-					Options
-					</a>
-				</div>
-				<div class="mnp_button">
-					<a href="#" data-transition="flip" class="mnp_buttons_box_button">
-					<span class="fa fa-desktop fa-3x"></span> 
-					<br>
-					Desktop Page
-					</a>
-				</div>
+			<div data-role="none" class="mnp_search_box">
+				<form data-role="none" action="/" method="get" class="mnp_search_box_form">
+            		<input data-role="none" name="s" type="text" value="" placeholder="Lookup number" class="mnp_search_box_input"><button data-role="none" class="mnp_search_box_button">Search</button>
+            	</form>
+			</div>	
+			
+			<div class="search_history">
+				<h3>Latest searches:</h3>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#">Number 1</a></li>
+					<li><a href="#">Number 2</a></li>
+					<li><a href="#">Number 3</a></li>
+					<li><a href="#">Number 4</a></li>
+					<li><a href="#">Number 5</a></li>
+				</ul>
 			</div>
 			
 		</div><!-- /content -->
