@@ -1,3 +1,10 @@
+/*
+Gateway JS
+Date: 02. 02. 2015.
+Author: Armin
+Version: 1.0
+*/
+
 // Tooltips
 
 $(function() {
