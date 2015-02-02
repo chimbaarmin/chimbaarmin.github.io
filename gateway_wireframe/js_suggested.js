@@ -16,7 +16,7 @@ $(function() {
 	var $voteIt;
 		
 	jQuery( ".fa-thumbs-up" ).click(function() {
-		$voteIt = "Generaly, this call was rated #positive."
+		$voteIt = "Generally, this number was rated #positive."
 		jQuery( ".gateway_step3, .gateway_step2negative, .selectMe, .selectFriend, .selectCompany, .selectUnknown, .selectMePrivate, .selectMeCompany, .selectFriendPrivate, .selectFriendCompany" ).css("display", "none");
 		jQuery( ".gateway_step2positive, .selectOwner" ).css("display", "block");
 		jQuery( ".more_info_box" ).val(null);
@@ -25,7 +25,7 @@ $(function() {
 	});
 	
 	jQuery( ".fa-thumbs-down" ).click(function() {
-		$voteIt = "Generaly, this call was rated #negative."
+		$voteIt = "Generally, this number was rated #negative."
 		jQuery( ".gateway_step3, .gateway_step2positive, .selectAccepted, .selectRejected, .selectAcceptedPrivate, .selectAcceptedCompany, .selectAcceptedUnclear, .selectRejectedFirst, .selectRejectedBefore" ).css("display", "none");
 		jQuery( ".gateway_step2negative, .selectCall" ).css("display", "block");
 		jQuery( ".more_info_box" ).val(null);
