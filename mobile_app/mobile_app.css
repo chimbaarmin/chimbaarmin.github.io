@@ -225,28 +225,35 @@ ul {
 
 /* -------------------------------------- */
 
-.mnp_number_data_box {
-	height: 200px;
-	color: #fff;
-	text-shadow: none;
-	border: 1px solid #cccccc;
-}
-
-.mnp_number_data_box_list {
-	padding: 20px;
-}
-
-.mnp_li_number {
+.mnp_number_h1 {
 	display: inline-block;
 	font-size: 25px;
-	margin-bottom: 20px;
 	background-color: #6075a6;
 	padding: 5px;
+	margin: 10px;
+}
+
+.mnp_number_list {
+	display: block;
+	padding: 0 10px 0 0;
+	text-shadow: none;
 }
 
 .mnp_li {
-	margin: 10px 0;
-	text-align: right;
+	display: inline-block;
+	margin: 0 5px;
+	padding: 2px;
+	background-color: #6075a6;
+	color: #ffffff;
+	
+}
+
+.mnp_li_top_hashtag {
+	display: inline-block;
+	background-color: #ffffff;
+	color: #333;
+	margin: 90px 0 0 10px;
+	padding: 2px;
 }
 
 .mnp_vote_box {
@@ -278,20 +285,27 @@ ul {
 	margin-top: 20px;
 }
 
-.mnp_phone_buttons {
-	padding: 20px 20px 0 20px;
-	margin: 20px 0;
-	background: #fff;
-	border: 1px solid #ccc;
+.mnp_footer_buttons {
 }
 
-.mnp_phone_buttons_button {
+.mnp_footer_buttons_left_button {
 	background-color: #6075a6;
 	color: #ffffff !important;
 	display: block;
-	margin: 0 0 20px 0;
-	padding: 5px;
+	padding: 10px 0;
 	text-align: center;
+	width: 50%;
+	float: left;
+}
+
+.mnp_footer_buttons_right_button {
+	background-color: #6075a6;
+	color: #ffffff !important;
+	display: block;
+	padding: 10px 0;
+	text-align: center;
+	width: 50%;
+	float: right;
 }
 
 /* =Layout */
@@ -313,6 +327,10 @@ ul {
 	padding: 30px 0 20px 0;
 }
 
+.number_page_background {
+	background-color: #f3f3f3;
+}
+
 .number_data_background {
 	background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(images/phone_profile.gif) no-repeat center center; 
     -webkit-background-size: cover;
@@ -329,4 +347,23 @@ ul {
 
 @media screen and (min-width: 600px) {
 
+}
+
+/* */
+
+.dnp_map_wrapper { 
+	position: relative; 
+	overflow: auto;
+}
+
+.dnp_google_map {
+	height: 200px;
+}
+
+.dnp_over_map { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	z-index: 99; 
+	width: 100%;
 }

@@ -139,14 +139,7 @@
 	<!-- End of search history page -->
 	
 	<!-- Start of number profile page -->
-	<div data-role="page" id="number_page" data-next="none" data-prev="home_page" class="custom_page_background">
-	
-		<div class="mnp_header">
-			<div class="mnp_header_h1_div_only">
-				<h1 class="mnp_header_h1">Profile for xxx-xxx-xxxx</h1>
-			</div>	
-			<div class="clear"></div>
-		</div>
+	<div data-role="page" id="number_page" data-next="none" data-prev="home_page" class="number_page_background">
 	
 		<div role="main" class="ui-content">
 		
@@ -155,14 +148,20 @@
             		<input data-role="none" name="s" type="text" value="" placeholder="Lookup number" class="mnp_search_box_input"><button data-role="none" class="mnp_search_box_button">Search</button>
             	</form>
 			</div>
-		
-			<div class="mnp_number_data_box number_data_background">
-				<ul class="mnp_number_data_box_list">
-					<li class="mnp_li_number">1-234-567-8901</li>
-					<li class="mnp_li">Area code: xxx</li>
-					<li class="mnp_li">City: Lorem</li>
-					<li class="mnp_li">State: Ipsum</li>
-				</ul>
+			
+			<div class="dnp_map_wrapper">
+			   <div class="dnp_google_map">
+
+			   </div>
+			   <div class="dnp_over_map">
+					<h1 class="mnp_number_h1">1-234-567-8901</h1>
+					<ul class="mnp_number_list">
+						<li class="mnp_li">Area code: xxx</li>
+						<li class="mnp_li">City: Lorem</li>
+						<li class="mnp_li">State: Ipsum</li>
+						<li class="mnp_li_top_hashtag">#unknown_call</li>
+					</ul>
+			   </div>
 			</div>
 			
 			<div class="mnp_vote_box">
@@ -176,15 +175,18 @@
 				<div class="clear"></div>
 			</div>
 			
-			<div class="mnp_phone_buttons">
-				<a href="" class="mnp_phone_buttons_button">Read comments</a>
-				<a href="" class="mnp_phone_buttons_button">View next number</a>	
-			</div>
-			
 		</div><!-- /content -->
 		
 		<div class="mnp_footer">	
-			<p class="mnp_footer_p">Copyright &copy; 2015.</p>
+			<div class="mnp_footer_buttons">
+				<div class="mnp_footer_buttons_left">
+					<a href="" class="mnp_footer_buttons_left_button">Read comments</a>
+				</div>
+				<div class="mnp_footer_buttons_right">
+					<a href="" class="mnp_footer_buttons_right_button">View next number</a>
+				</div>
+				<div class="clear"></div>
+			</div>
 		</div>
 		
 	</div>
@@ -378,6 +380,20 @@
 			jQuery( ".fifthcookie" ).append ( jQuery.cookie('fifth') );
 		});
 		
+	</script>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script>
+		
+		jQuery( document ).ready(function() {
+			var map;
+			var myOptions = {
+				zoom: 4,
+    			center: new google.maps.LatLng(52, 13),
+    			disableDefaultUI: true
+			};
+			map = new google.maps.Map($('.dnp_google_map')[0], myOptions)										 
+		});
+	
 	</script>
 </body>
 </html>
