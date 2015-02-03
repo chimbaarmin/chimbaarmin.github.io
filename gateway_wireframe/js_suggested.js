@@ -79,6 +79,7 @@ jQuery( "a.selectOwnerBack" ).click(function() {
 	jQuery( "a.selectMeBack" ).click(function() {
         jQuery( ".selectOwner" ).css("display", "block");
 		jQuery( ".selectMe" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
     });
 		
 	jQuery( "a.linkMePrivate" ).click(function() {
@@ -96,6 +97,7 @@ jQuery( "a.selectOwnerBack" ).click(function() {
 	jQuery( "a.selectFriendBack" ).click(function() {
         jQuery( ".selectOwner" ).css("display", "block");
 		jQuery( ".selectFriend" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".more_info_box" ).val(null);
     });
@@ -123,6 +125,7 @@ jQuery( "a.selectOwnerBack" ).click(function() {
 	jQuery( "a.selectCompanyBack" ).click(function() {
         jQuery( ".selectOwner" ).css("display", "block");
 		jQuery( ".selectCompany" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".more_info_box" ).val(null);
     });
@@ -154,6 +157,7 @@ jQuery( "a.selectOwnerBack" ).click(function() {
 	jQuery( "a.selectUnknownBack" ).click(function() {
         jQuery( ".selectOwner" ).css("display", "block");
 		jQuery( ".selectUnknown" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".more_info_box" ).val(null);
     });
@@ -190,6 +194,7 @@ selectCompanyName, selectCompanyUnknown */
 	jQuery( "a.selectMePrivateBack" ).click(function() {
         jQuery( ".selectMe" ).css("display", "block");
 		jQuery( ".selectMePrivate" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".more_info_box" ).val(null);
     });
@@ -215,6 +220,7 @@ selectCompanyName, selectCompanyUnknown */
 	jQuery( "a.selectMeCompanyBack" ).click(function() {
         jQuery( ".selectMe" ).css("display", "block");
 		jQuery( ".selectMeCompany" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".more_info_box" ).val(null);
     });
@@ -238,6 +244,7 @@ selectCompanyName, selectCompanyUnknown */
 	jQuery( "a.selectFriendPrivateBack" ).click(function() {
         jQuery( ".selectFriend" ).css("display", "block");
 		jQuery( ".selectFriendPrivate" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".more_info_box" ).val(null);
     });
@@ -263,6 +270,7 @@ selectCompanyName, selectCompanyUnknown */
 	jQuery( "a.selectFriendCompanyBack" ).click(function() {
         jQuery( ".selectFriend" ).css("display", "block");
 		jQuery( ".selectFriendCompany" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".more_info_box" ).val(null);
     });
@@ -310,6 +318,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.selectAcceptedBack" ).click(function() {
         jQuery( ".selectCall" ).css("display", "block");
 		jQuery( ".selectAccepted" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
     });
 		
 	jQuery( "a.linkAcceptedPrivate" ).click(function() {
@@ -332,6 +341,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.selectRejectedBack" ).click(function() {
         jQuery( ".selectCall" ).css("display", "block");
 		jQuery( ".selectRejected" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
     });
 		
 	jQuery( "a.linkRejectedFirst" ).click(function() {
@@ -351,6 +361,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.selectAcceptedPrivateBack" ).click(function() {
         jQuery( ".selectAccepted" ).css("display", "block");
 		jQuery( ".selectAcceptedPrivate" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".more_info_box" ).val(null);
     });
@@ -392,6 +403,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.selectAcceptedCompanyBack" ).click(function() {
         jQuery( ".selectAccepted" ).css("display", "block");
 		jQuery( ".selectAcceptedCompany" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".more_info_box" ).val(null);
     });
@@ -432,6 +444,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.selectAcceptedUnclearBack" ).click(function() {
         jQuery( ".selectAccepted" ).css("display", "block");
 		jQuery( ".selectAcceptedUnclear" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".more_info_box" ).val(null);
     });
@@ -464,6 +477,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.selectRejectedFirstBack" ).click(function() {
         jQuery( ".selectRejected" ).css("display", "block");
 		jQuery( ".selectRejectedFirst" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".more_info_box" ).val(null);
     });
@@ -495,6 +509,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.selectRejectedBeforeBack" ).click(function() {
         jQuery( ".selectRejected" ).css("display", "block");
 		jQuery( ".selectRejectedBefore" ).css("display", "none");
+		jQuery( ".gateway_step3" ).css("display", "none");
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".more_info_box" ).val(null);
     });
