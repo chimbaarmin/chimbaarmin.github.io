@@ -225,6 +225,24 @@ ul {
 
 /* -------------------------------------- */
 
+.dnp_map_wrapper { 
+	position: relative; 
+	overflow: auto;
+	border:1px solid #cccccc;
+}
+
+.dnp_google_map {
+	height: 150px;
+}
+
+.dnp_over_map { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	z-index: 99; 
+	width: 100%;
+}
+
 .mnp_number_h1 {
 	display: inline-block;
 	font-size: 25px;
@@ -233,40 +251,41 @@ ul {
 	margin: 10px;
 }
 
-.mnp_number_list {
-	display: block;
-	padding: 0 10px 0 0;
-	text-shadow: none;
-}
-
-.mnp_li {
+.mnp_area_code {
 	display: inline-block;
-	margin: 0 5px;
-	padding: 2px;
 	background-color: #6075a6;
 	color: #ffffff;
-	
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin: 10px;
 }
 
-.mnp_li_top_hashtag {
+.mnp_country {
 	display: inline-block;
-	background-color: #ffffff;
-	color: #333;
-	margin: 90px 0 0 10px;
-	padding: 2px;
+	background-color: #6075a6;
+	color: #ffffff;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin: 10px;
 }
 
 .mnp_vote_box {
 	overflow: auto;
 	background: #fff;
-	padding: 20px;
+	padding: 10px;
 	border: 1px solid #ccc;
-	border-top: none;
 }
 
 .mnp_vote_box_p {
 	margin: 0 0 20px 0;
 	padding: 0;
+	text-align: center;
 }
 
 .mnp_thumbs_up {
@@ -351,20 +370,3 @@ ul {
 
 /* */
 
-.dnp_map_wrapper { 
-	position: relative; 
-	overflow: auto;
-	border:1px solid #cccccc;
-}
-
-.dnp_google_map {
-	height: 200px;
-}
-
-.dnp_over_map { 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	z-index: 99; 
-	width: 100%;
-}

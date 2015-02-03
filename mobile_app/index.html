@@ -158,6 +158,11 @@
 			   </div>
 			</div>
 			
+			<div class="mnp_number_info">
+				<div class="mnp_area_code">234</div>
+				<div class="mnp_country">DE</div>
+			</div>
+			
 			<div class="mnp_vote_box">
 				<p class="mnp_vote_box_p">Please rate this number. Positive or negative?</p>
 				<div class="mnp_thumbs_up">
@@ -381,11 +386,20 @@
 		jQuery( document ).ready(function() {
 			var map;
 			var myOptions = {
-				zoom: 4,
+				zoom: 6,
     			center: new google.maps.LatLng(52, 13),
     			disableDefaultUI: true
 			};
-			map = new google.maps.Map($('.dnp_google_map')[0], myOptions)										 
+			var styles = [
+			  	{
+					stylers: [
+						 { saturation: -100 },
+				 	]
+			  	}
+			];
+			
+			map = new google.maps.Map($('.dnp_google_map')[0], myOptions);
+			map.setOptions({styles: styles});
 		});
 	
 	</script>
