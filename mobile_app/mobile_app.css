@@ -249,6 +249,19 @@ ul {
 	text-align: right;
 }
 
+.mnp_vote_box {
+	overflow: auto;
+	background: #fff;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+
+.mnp_vote_box_p {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
 .mnp_thumbs_up {
 	width: 50%;
 	float: left;
@@ -261,11 +274,22 @@ ul {
 	text-align: center;
 }
 
-.mnp_next_number_button {
+.mnp_read_comments {
+	margin-top: 20px;
+}
+
+.mnp_phone_buttons {
+	padding: 20px 20px 0 20px;
+	margin: 20px 0;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+.mnp_phone_buttons_button {
 	background-color: #6075a6;
 	color: #ffffff !important;
 	display: block;
-	margin: 10px 0;
+	margin: 0 0 20px 0;
 	padding: 5px;
 	text-align: center;
 }

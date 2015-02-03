@@ -52,7 +52,7 @@
 </head>
 <body>
 	
-	<!-- Start of the first page -->
+	<!-- Start of home page -->
 	<div data-role="page" id="home_page" data-next="search_page" data-prev="options_page" class="custom_page_background">
 		
 		<div class="mnp_header">
@@ -101,38 +101,9 @@
 		
 		
 	</div>
-	<!-- End of the first page -->
+	<!-- End of home page -->
 	
-	<!-- Start of the second page -->
-	<div data-role="page" id="search_page" data-next="search_history_page" data-prev="home_page" class="custom_page_background">
-		
-		<div role="main" class="ui-content">
-		
-			<div class="mnp_logo">
-				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="mnp_logo_img">
-			</div>	
-			
-			<div data-role="none" class="mnp_search_box">
-				<form data-role="none" action="/" method="get" class="mnp_search_box_form">
-            		<input data-role="none" name="s" type="text" value="" placeholder="Lookup number" class="mnp_search_box_input"><button data-role="none" class="mnp_search_box_button">Search</button>
-            	</form>
-			</div>	
-				
-			<div class="mnp_button_area">
-				<a href="#search_history_page" data-transition="flip" class="mnp_button_area_button">Search History</a>
-				<a href="#home_page" data-transition="flip" data-direction="reverse" class="mnp_button_area_button">Home page</a>
-			</div>
-			
-		</div><!-- /content -->
-		
-		<div class="mnp_footer">	
-			<p class="mnp_footer_p">Copyright &copy; 2015.</p>
-		</div>
-		
-	</div>
-	<!-- End of the second page -->
-	
-	<!-- Start of the third page -->
+	<!-- Start of search history page -->
 	<div data-role="page" id="search_history_page" data-next="none" data-prev="search_page" class="custom_page_background">
 	
 		<div role="main" class="ui-content">
@@ -165,9 +136,9 @@
 		</div>
 		
 	</div>
-	<!-- End of the third page -->
+	<!-- End of search history page -->
 	
-	<!-- Start number page -->
+	<!-- Start of number profile page -->
 	<div data-role="page" id="number_page" data-next="none" data-prev="home_page" class="custom_page_background">
 	
 		<div class="mnp_header">
@@ -195,7 +166,7 @@
 			</div>
 			
 			<div class="mnp_vote_box">
-				<p>Please rate this number. Positive or negative?</p>
+				<p class="mnp_vote_box_p">Please rate this number. Positive or negative?</p>
 				<div class="mnp_thumbs_up">
 					<a href="" class="mnp_thumbs_up_link"><span class="fa fa-thumbs-up fa-4x"></span></a>
 				</div>
@@ -205,8 +176,9 @@
 				<div class="clear"></div>
 			</div>
 			
-			<div class="mnp_next_number">
-				<a href="" class="mnp_next_number_button">View next number</a>	
+			<div class="mnp_phone_buttons">
+				<a href="" class="mnp_phone_buttons_button">Read comments</a>
+				<a href="" class="mnp_phone_buttons_button">View next number</a>	
 			</div>
 			
 		</div><!-- /content -->
@@ -216,7 +188,7 @@
 		</div>
 		
 	</div>
-	<!-- end of number page -->
+	<!-- end of number profile page -->
 	
 	<!-- Options page -->
 	<div data-role="page" id="options_page" data-next="home_page" data-prev="none" class="custom_page_background">
