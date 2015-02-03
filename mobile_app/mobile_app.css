@@ -251,6 +251,10 @@ ul {
 	margin: 10px;
 }
 
+.mnp_number_info {
+	text-align: center;
+}
+
 .mnp_area_code {
 	display: inline-block;
 	background-color: #6075a6;
