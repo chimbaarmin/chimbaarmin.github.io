@@ -354,6 +354,7 @@ ul {
 .dnp_map_wrapper { 
 	position: relative; 
 	overflow: auto;
+	border:1px solid #cccccc;
 }
 
 .dnp_google_map {
