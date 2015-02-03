@@ -161,6 +161,7 @@ jQuery( "a.selectOwnerBack" ).click(function() {
 	jQuery( "a.linkUnknownOnce" ).click(function() {
 		$summary = "This number is owned by #unknown. I was #called_once.";
 		jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -168,6 +169,7 @@ jQuery( "a.selectOwnerBack" ).click(function() {
 	jQuery( "a.linkUnknownTwice" ).click(function() {
 		$summary = "This number is owned by #unknown. I was #called_twice.";
 		jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -175,6 +177,7 @@ jQuery( "a.selectOwnerBack" ).click(function() {
 	jQuery( "a.linkUnknownSeveral" ).click(function() {
 		$summary = "This number is owned by #unknown. I was #called_several_times.";
 		jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -355,6 +358,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.linkAcceptedPrivateUnfriendly" ).click(function() {
 		$summary = "I #accepted the call. It was a #private_call. Caller was #unfriendly.";
         jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -362,6 +366,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.linkAcceptedPrivateAnnoying" ).click(function() {
 		$summary = "I #accepted the call. It was a #private_call. Caller was #annoying.";
         jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -369,6 +374,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.linkAcceptedPrivateScam" ).click(function() {
 		$summary = "I #accepted the call. It was a #private_call. Call was a #scam.";
         jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -376,6 +382,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.linkAcceptedPrivateThreat" ).click(function() {
 		$summary = "I #accepted the call. It was a #private_call. I reveived a #threat.";
         jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -392,6 +399,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.linkAcceptedCompanyScam" ).click(function() {
 		$summary = "I #accepted the call. It was a #company_call. Call was a #scam.";
         jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -399,6 +407,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.linkAcceptedCompanyThreat" ).click(function() {
 		$summary = "I #accepted the call. It was a #company_call. I received a #threat.";
         jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -413,6 +422,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.linkAcceptedCompanyTheft" ).click(function() {
 		$summary = "I #accepted the call. It was a #company_call. They attempted #data_theft.";
         jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -436,6 +446,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.linkAcceptedUnclearTwice" ).click(function() {
 		$summary = "I #accepted the call. Caller is #unknown. I was #called_twice.";
         jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -443,6 +454,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.linkAcceptedUnclearSeveral" ).click(function() {
 		$summary = "I #accepted the call. Caller is #unknown. I was #called_several_times.";
         jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -459,6 +471,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.linkRejectedFirstUnknown" ).click(function() {
 		$summary = "I #rejected the call. I received it for the #first_time and caller is #unknown.";
         jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -489,6 +502,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.linkRejectedBeforeUnknown" ).click(function() {
 		$summary = "I #rejected the call. I received it #before and caller is #unknown.";
         jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary);
+		jQuery( ".gateway_step3Back" ).css("display", "none");
 		jQuery( ".gateway_step3" ).css("display", "block");
 		jQuery( ".more_info" ).css("display", "block");
     });
@@ -517,9 +531,23 @@ jQuery( "a.selectCallBack" ).click(function() {
 
 	jQuery( "a.gateway_step3Back" ).click(function() {
         if ( $voteIt == "Generally, this number was rated #positive." ) {
-	   		alert ( "Test positive" );
+			var visiblepos =( jQuery( ".gateway_step2positive" ).css("display") );
+				if ( visiblepos == "block") {
+					alert ( visiblepos );
+				}
+				else {
+	   				jQuery( ".gateway_step3" ).css("display", "none");
+					jQuery( ".gateway_step2positive" ).css("display", "block");
+				}
 	    }
 		else {
-			alert ( "Test negative" );
+			var visibleneg =( jQuery( ".gateway_step2negative" ).css("display") );
+				if ( visibleneg == "block") {
+					alert ( visibleneg );
+				}
+				else {
+	   				jQuery( ".gateway_step3" ).css("display", "none");
+					jQuery( ".gateway_step2negative" ).css("display", "block");
+				}
 		}
  	});
