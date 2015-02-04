@@ -53,14 +53,14 @@
 <body>
 	
 	<!-- Start of home page -->
-	<div data-role="page" id="home_page" data-next="search_page" data-prev="options_page" class="custom_page_background">
+	<div data-role="page" id="home_page" data-next="" data-prev="options_page" class="custom_page_background">
 		
 		<div class="mnp_header">
 			<div class="mnp_header_button_div">
 				<a href="#options_page" class="mnp_header_button" data-transition="flip" data-direction="reverse"><span class="fa fa-gear"></span> Options</a>
 			</div>
 			<div class="mnp_header_h1_div">
-				<h1 class="mnp_header_h1">Home</h1>
+				<h1 class="mnp_header_h1"></h1>
 			</div>	
 			<div class="clear"></div>
 		</div>
@@ -72,31 +72,50 @@
 						
 			<div data-role="none" class="mnp_search_box">
 				<form data-role="none" action="/" method="get" class="mnp_search_box_form">
-            		<input data-role="none" name="s" type="text" value="" placeholder="Lookup number" class="mnp_search_box_input"><button data-role="none" class="mnp_search_box_button">Search</button>
+            		<input data-role="none" name="s" type="text" value="" placeholder="Lookup number" id="search_box" class="mnp_search_box_input"><button data-role="none" class="mnp_search_box_button">Search</button>
             	</form>
 			</div>	
 			
 			<div class="mnp_live_results">
-				Live results area <br>
-				<br>
-				<a href="#number_page">Sample number page</a>
+				<h3>Live search results:</h3>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="#number_page" clas="mnp_live_results_button">Sample number page</a></li>
+					<li><a href="#number_page" clas="mnp_live_results_button">Sample number page</a></li>
+					<li><a href="#number_page" clas="mnp_live_results_button">Sample number page</a></li>
+					<li><a href="#number_page" clas="mnp_live_results_button">Sample number page</a></li>
+					<li><a href="#number_page" clas="mnp_live_results_button">Sample number page</a></li>
+				</ul>
 			</div>
 			
-			<div class="search_history">
+			<div class="mnp_main_adspace">
+			    <img src="images/adsense_mockup.png">
+			</div>
+			
+			<div class="mnp_button">
+			    <a href="" class="mnp_search_history_button">Show latest searches</a>
+			</div>
+			
+			<div class="mnp_search_history">
 				<h3>Latest searches:</h3>
 				<ul data-role="listview" data-inset="true">
-					<li><a href="#">Number 1</a></li>
-					<li><a href="#">Number 2</a></li>
-					<li><a href="#">Number 3</a></li>
-					<li><a href="#">Number 4</a></li>
-					<li><a href="#">Number 5</a></li>
+					<li><a href="#" class="fifthcookie">No Data</a></li>
+					<li><a href="#" class="fourthcookie">No Data</a></li>
+					<li><a href="#" class="thirdcookie">No Data</a></li>
+					<li><a href="#" class="secondcookie">No Data</a></li>
+					<li><a href="#" class="firstcookie">No Data</a></li>
 				</ul>
 			</div>
 			
 		</div><!-- /content -->
 		
 		<div class="mnp_footer">	
-			<p class="mnp_footer_p">Copyright &copy; 2015.</p>
+			<div class="mnp_copyright">
+			    <p class="mnp_copyright_p">Copyright &copy; 2015</p>
+			</div>
+			<div class="mnp_cookie_disclaimer">
+			    <a href="#cookie_dialog" class="mnp_cookie_disclaimer_link">Cookie policy</a>
+			</div>
+			<div class="clear"></div>
 		</div>
 		
 		
@@ -132,7 +151,13 @@
 		</div><!-- /content -->
 		
 		<div class="mnp_footer">	
-			<p class="mnp_footer_p">Copyright &copy; 2015.</p>
+			<div class="mnp_copyright">
+			    <p class="mnp_copyright_p">Copyright &copy; 2015</p>
+			</div>
+			<div class="mnp_cookie_disclaimer">
+			    <a href="#cookie_dialog" class="mnp_cookie_disclaimer_link">Cookie policy</a>
+			</div>
+			<div class="clear"></div>
 		</div>
 		
 	</div>
@@ -165,12 +190,8 @@
 			   </div>
 			</div>
 			
-			<div class="mnp_number_info">
-				<div class="mnp_area_code">234</div>
-				<div class="mnp_country">DE</div>
-				<div class="mnp_country">a</div>
-				<div class="mnp_country">b</div>
-				<div class="mnp_country">c</div>
+			<div class="mnp_number_page_adspace">
+				<img src="images/adsense_mockup.png">
 			</div>
 			
 			<div class="mnp_vote_box">
@@ -230,7 +251,13 @@
 		</div><!-- /content -->
 		
 		<div class="mnp_footer">	
-			<p class="mnp_footer_p">Copyright &copy; 2015.</p>
+			<div class="mnp_copyright">
+			    <p class="mnp_copyright_p">Copyright &copy; 2015</p>
+			</div>
+			<div class="mnp_cookie_disclaimer">
+			    <a href="#cookie_dialog" class="mnp_cookie_disclaimer_link">Cookie policy</a>
+			</div>
+			<div class="clear"></div>
 		</div>
 		
 	</div>
@@ -248,7 +275,7 @@
 		
 		<div role="main" class="ui-content">
 		
-			<h2>This website uses cookies.</h2>
+			<h2 class="mnp_cookie_dialog_h2">This website uses cookies.</h2>
 			
 			<p>By continuing to browse this site you agree with our cookie policy.<br>
 			<br>
@@ -263,29 +290,17 @@
 		</div><!-- /content -->
 		
 		<div class="mnp_footer">	
-			<p class="mnp_footer_p">Copyright &copy; 2015.</p>
+			<div class="mnp_copyright">
+			    <p class="mnp_copyright_p">Copyright &copy; 2015</p>
+			</div>
+			<div class="mnp_cookie_disclaimer">
+			    <a href="#cookie_dialog" class="mnp_cookie_disclaimer_link">Cookie policy</a>
+			</div>
+			<div class="clear"></div>
 		</div>
 		
 	</div>
-	<!-- End cookie dialog -->
-	
-	<!-- Start of the zero page -->
-	<div data-role="page" id="welcome_page" data-next="search_page" data-prev="options_page" class="greeting_background">
-		
-		<div role="main" class="ui-content">
-			<div class="mnp_logo">
-				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="mnp_logo_img">
-			</div>
-			<div class="mnp_greeting">
-				<h2 class="mnp_greeting_h2">number-index.com</h2>
-				<h3 class="mnp_greeting_h3">Advanced reverse number lookup tool for NANP numbers.</h3>
-				<a href="" class="mnp_greeting_a">Enter</a>
-			</div>			
-		</div><!-- /content -->		
-		
-	</div>
-	<!-- End of the zero page -->
-	
+	<!-- End cookie dialog -->	
 	
 	<!-- Swipe navigation -->
 	<script>
@@ -317,6 +332,11 @@
 			var $uservisit = jQuery.cookie('visit');
 			if ( $uservisit != "true" ) {
 				jQuery.cookie( 'visit', 'true', { expires: 365, path: '/' } );
+                jQuery.cookie('first', 'No Data', { expires: 365, path: '/' } );
+                jQuery.cookie('second', 'No Data', { expires: 365, path: '/' } );
+                jQuery.cookie('third', 'No Data', { expires: 365, path: '/' } );
+                jQuery.cookie('fourth', 'No Data', { expires: 365, path: '/' } );
+                jQuery.cookie('fifth', 'No Data', { expires: 365, path: '/' } );
 				jQuery( "body" ).pagecontainer( "change", "#cookie_dialog" );
 			}
 			else {
@@ -325,14 +345,14 @@
 		
 		jQuery( ".deleteCookies ").click(function() {
 			jQuery.removeCookie('visit', { path: '/' });
-			jQuery.removeCookie('first', { path: '/' });
-			jQuery.removeCookie('second', { path: '/' });
-			jQuery.removeCookie('third', { path: '/' });
-			jQuery.removeCookie('fourth', { path: '/' });
-			jQuery.removeCookie('fifth', { path: '/' });
+			jQuery.cookie('first', 'No Data', { expires: 365, path: '/' } );
+            jQuery.cookie('second', 'No Data', { expires: 365, path: '/' } );
+            jQuery.cookie('third', 'No Data', { expires: 365, path: '/' } );
+            jQuery.cookie('fourth', 'No Data', { expires: 365, path: '/' } );
+            jQuery.cookie('fifth', 'No Data', { expires: 365, path: '/' } );
 		});
 		
-		jQuery( ".search_form" ).submit(function( event ) {
+		jQuery( ".mnp_search_box_form" ).submit(function( event ) {
 			var $firstcookie = jQuery.cookie('first');
 			var $formvalue = jQuery( "#search_box" ).val();
 			if ( $formvalue != "" ) {
@@ -387,6 +407,16 @@
 			jQuery( ".thirdcookie" ).append ( jQuery.cookie('third') );
 			jQuery( ".fourthcookie" ).append ( jQuery.cookie('fourth') );
 			jQuery( ".fifthcookie" ).append ( jQuery.cookie('fifth') );
+		});
+        
+        jQuery( ".mnp_search_history_button" ).click(function() { 
+			jQuery( ".firstcookie, .secondcookie, .thirdcookie, .fourthcookie, .fifthcookie" ).empty();
+			jQuery( ".firstcookie" ).append ( jQuery.cookie('first') );
+			jQuery( ".secondcookie" ).append ( jQuery.cookie('second') );
+			jQuery( ".thirdcookie" ).append ( jQuery.cookie('third') );
+			jQuery( ".fourthcookie" ).append ( jQuery.cookie('fourth') );
+			jQuery( ".fifthcookie" ).append ( jQuery.cookie('fifth') );
+            jQuery( ".mnp_search_history" ).css( "display", "block" );
 		});
 		
 	</script>
