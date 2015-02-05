@@ -111,6 +111,11 @@ br {
 	padding:0;
 }
 
+*::selection {
+	background: #333333;
+	color: #ffffff;
+}
+
 
 /* =Layout */
 
