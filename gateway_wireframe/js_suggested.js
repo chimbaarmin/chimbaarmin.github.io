@@ -1,6 +1,6 @@
 /*
 Gateway JS
-Date: 02. 02. 2015.
+Date: 05. 02. 2015.
 Author: Armin
 Version: 1.0
 */
