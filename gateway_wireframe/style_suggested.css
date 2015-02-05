@@ -211,6 +211,7 @@ button:hover {
     margin: 20px 0 0 0;
 	padding: 10px;
 	box-shadow: none;
+	border: 0;
 }
 
 .left_sidebar {
