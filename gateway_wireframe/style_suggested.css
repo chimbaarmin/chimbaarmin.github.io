@@ -646,7 +646,7 @@ button:hover {
 }
 
 .gateway2_ribbon_frame {
-	margin: 20px 0;
+	margin: 20px 0 !important;
 	background-color: #333333;
 	margin: 0;
 	padding: 10px;
@@ -663,6 +663,7 @@ button:hover {
 .gateway2_h6 {
 	color: #333333 !important;
 	font-size: 18px !important;
+	text-align: center;
 }
 
 .gateway2_submit_button {
