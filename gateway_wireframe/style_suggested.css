@@ -674,6 +674,15 @@ button:hover {
 	background-color: #333333 !important;
 	margin: 0 10px;
 	font-weight: normal;
+	display: inline-block;
+	color: #FFF;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 12px 11px;
+	border: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 
 .gateway2_submit_button:hover {
