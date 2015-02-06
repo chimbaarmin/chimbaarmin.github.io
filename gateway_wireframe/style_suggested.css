@@ -639,7 +639,7 @@ button:hover {
 }
 
 
-/* Gateeway II */
+/* Gateeway II  - overrides current */
 
 .gateway2_form {
 	padding: 0 !important;
@@ -690,7 +690,7 @@ button:hover {
 	transition: none !important;
 }
 
-/* Gateway III */
+/* Gateway III  - overrides current */
 
 .gateway3_h3 {
 	text-align: center;
