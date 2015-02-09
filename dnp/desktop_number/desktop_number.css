@@ -13,9 +13,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
     
 /* Bootstrap grid end */   
     
-/* Main part - Number info area start */
+/* Main part - Number info module */
     
-h1.dnp_number_profile {
+.dnp_number_profile_h1 {
     text-align: left;
     margin: 20px 0 0 0;
     padding: 5px 20px 5px 10px;
@@ -31,7 +31,7 @@ h1.dnp_number_profile {
     letter-spacing: normal;
 }
     
-div.dnp_flag_area {
+.dnp_flag_area {
     float: right;
     -moz-border-radius: 0 25px 0 0;
     -webkit-border-radius: 0 25px 0 0;
@@ -41,11 +41,11 @@ div.dnp_flag_area {
     margin-top: -42px;
 }
 
-div.dnp_flag_area img {
+.dnp_flag_area img {
     height: 42px;
 }
     
-div.dnp_new_header {
+.dnp_new_header {
     background-color: #ffffff;
     overflow: auto;
     margin: 0;
@@ -55,7 +55,7 @@ div.dnp_new_header {
     letter-spacing: normal;
 }
     
-div.t_middle_body_topchart_item_half {
+.t_middle_body_topchart_item_half {
     width: 100%;
 }
     
@@ -75,7 +75,7 @@ div.t_middle_body_topchart_item_half {
     -khtml-border-radius: 25px;
 }
     
-div.meter_alert {
+.meter_alert {
     text-align: center;
     font-size: 14px;
     margin: 00;
@@ -83,23 +83,23 @@ div.meter_alert {
     border-top: 1px solid #ccc;
 }
     
-h4.meter_alert {
+.meter_alert_h4 {
     padding: 5px 10px;
     background-color: #fff;
     color: #333;
     text-align: left;
 }
     
-div.dpm_precentage {
+.dpm_precentage {
     padding: 5px;
     border-top: 1px solid #ccc;
 }
     
-div.dpm_precentage strong {
+.dpm_precentage strong {
     font-weight: 300;
 }
     
-div.widget_threat_meter h3 {
+.widget_threat_meter_h3 {
     font-size: 16px;
     line-height: 1.3;
     padding: 10px;
@@ -115,76 +115,66 @@ div.widget_threat_meter h3 {
     text-align: center;
 }
     
-div.widget_threat_meter > img {
+.widget_threat_meter_img {
     width: 80% !important;
     margin: 0 10%;
 }
     
-div.dnp_vote_box.main {
+.dnp_vote_box.main {
     border: 0;
     padding: 20px;
     margin: 0;
     text-align: center;
 }
     
-div.dnp_vote_box.main button.vote_item {
+.dnp_vote_box.main button.vote_item {
     padding: 0;
     margin: 20px;
 }
     
-div.dnp_vote_box.main div.dnp_comment_box {
+.dnp_vote_box.main div.dnp_comment_box {
     margin: 0;
 }
     
-h6.vote_box_alert {
+.vote_box_alert_h6 {
     color: #333 !important;
 }
     
-button.dnp_leave_feedback {
-    background-color: #6075a6;
-    color: #ffffff;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    -khtml-border-radius: 4px;
-    padding: 5px;
-}
-    
-div.dnp_vote_box.main button.vote_item {
+.dnp_vote_box.main button.vote_item {
     border: 0;
 }
     
-div.dnp_vote_box.main span:before {
+.dnp_vote_box.main span:before {
     background-color: #ffffff;
 }
     
-div.dnp_vote_box.main span.fa.fa-thumbs-up {
+.dnp_vote_box.main span.fa.fa-thumbs-up {
     border: 0;
     color: green;
 }
     
-div.dnp_vote_box.main span.fa.fa-thumbs-down {
+.dnp_vote_box.main span.fa.fa-thumbs-down {
     border: 0;
     color: red;
 }
     
-div.dnp_vote_box.main h6.vote_box_alert {
+.dnp_vote_box.main h6.vote_box_alert {
     font-size: 14px;
     margin: 0;
 }
     
-div.dnp_vote_box.main div.vote_box {
+.dnp_vote_box.main div.vote_box {
     margin: 0;
     padding: 0;
 }
     
-div.dnp_vote_box.main div.vote_box button.vote_item {
+.dnp_vote_box.main div.vote_box button.vote_item {
     margin: 10px;
     padding: 0;
     background-color:  #ffffff;
-}
-    
-div.dnp_header_stats {
+}  
+
+.dnp_header_stats {
     padding: 0 !important;
     font-size: 14px !important;
     text-align: center;
@@ -194,7 +184,7 @@ div.dnp_header_stats {
     border-top: 1px solid #ccc;
 }
     
-h4.dnp_views {
+.dnp_views_h4 {
     padding: 5px 10px;
     background-color: #fff;
     color: #333;
@@ -202,13 +192,13 @@ h4.dnp_views {
     text-align: left;
 }
     
-div.dnp_views {
+.dnp_views {
     padding: 5px; 
     border-top: 1px solid #ccc;
     color: #333;
 }
     
-div.t_middle_body_topchart.telefonnummer_info {
+.t_middle_body_topchart.telefonnummer_info {
     float: right;
     width: 60%;
     border: 0;
@@ -216,11 +206,11 @@ div.t_middle_body_topchart.telefonnummer_info {
     margin: 20px 2.5%;
 }
     
-div.t_middle_body_topchart_item.caption {
+.t_middle_body_topchart_item.caption {
     background-color: #ffffff !important;
 }
     
-div.t_middle_body_topchart_item.caption {
+.t_middle_body_topchart_item.caption {
     margin: 0;
     padding: 0;
     background-color: #6075a6 !important;
@@ -230,7 +220,7 @@ div.t_middle_body_topchart_item.caption {
     -khtml-border-radius: 25px 25px 0 0;
 }
     
-h3#dnp_top_header {
+.dnp_top_header_h3 {
     margin: 0;
     padding: 10px !important;
     background-color: #6075a6 !important;
@@ -246,7 +236,7 @@ h3#dnp_top_header {
     text-align: center;
 }
     
-div.dnp_code_info {
+.dnp_code_info {
     width: 100%;
     margin: 0;
     overflow: auto;
@@ -262,7 +252,7 @@ div.dnp_code_info > div {
     overflow: auto;  
 }
     
-div.dnp_code_info > div:hover {
+.dnp_code_info > div:hover {
     padding: 0;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -270,7 +260,7 @@ div.dnp_code_info > div:hover {
     color: inherit;
 }
     
-div.dnp_code_info > div > div {
+.dnp_code_info > div > div {
     padding: 5px;
     margin:0;
     border: 0;
@@ -278,22 +268,22 @@ div.dnp_code_info > div > div {
     float: left;    
 }
     
-div.dnp_code_info  div  div:nth-child(even) {
+.dnp_code_info  div  div:nth-child(even) {
     background-color: #fff;
     color: #333;
     text-align: center;
 }
     
-div.dnp_code_info > div > div.clear {
+.dnp_code_info > div > div.clear {
     display: none;
 }
     
-div.dnp_box_ad_space {
+.dnp_box_ad_space {
     overflow: auto;
     text-align: center;
 }
 
-div.t_middle_body_topchart_item.regular.dnp_number_info {
+.t_middle_body_topchart_item.regular.dnp_number_info {
     border-bottom: 1px solid #cccccc;
     text-align: center;
     line-height: 1.3;
@@ -305,7 +295,7 @@ div.t_middle_body_topchart_item.regular.dnp_number_info {
     overflow: auto;
 }
     
-h3.num_formats {
+.num_formats_h3 {
     padding: 5px;
     font-size: 14px;
     line-height: 1.3;
@@ -316,23 +306,23 @@ h3.num_formats {
     margin: 0;
 }
     
-div.t_middle_body_topchart_item_half.dnp_num_info_left {
+.t_middle_body_topchart_item_half.dnp_num_info_left {
     border-right: 1px solid #ccc;
 }
 
-div.t_middle_body_topchart_item_half.dnp_num_info_right, div.t_middle_body_topchart_item_half.dnp_num_info_left {
+.t_middle_body_topchart_item_half.dnp_num_info_right, div.t_middle_body_topchart_item_half.dnp_num_info_left {
     background-color: #ffffff !important;
     color: #444 !important;
 }
     
-div.dnp_content_space_map {
+.dnp_content_space_map {
     border: 1px solid #cccccc;
     border-top: 0;
     border-bottom: 0;
     margin: 0;
 }
     
-div.dnp_header_bottom {
+.dnp_header_bottom {
     height: 42px;
     width: 100%;
     background-color: #6075a6;
@@ -343,12 +333,106 @@ div.dnp_header_bottom {
     margin-bottom: 20px;
 }
 
-div.dnp_content_space_map > img {
+.dnp_content_space_map > img {
     width: 100%;
 }
 
-/* Main part - Number info area end*/
+/* Main part - Number info area end */
+	
+/* Main part - Business module */
+	
+.dnp_business_profile {
+    text-align: left;
+    margin: 20px 0 0 0;
+    padding: 5px 20px 5px 10px;
+    font-size: 25px;
+    border: 0;
+    background-color: #6075a6;
+    color: #f3f3f3;
+    -moz-border-radius: 0 25px 0 0;
+    -webkit-border-radius: 0 25px 0 0;
+    border-radius: 0 25px 0 0;
+    -khtml-border-radius: 0 25px 0 0;
+    line-height: 1.3;
+    letter-spacing: normal;
+}
     
+div.dnp_business_info_item_half {
+    width: 100%;
+}
+    
+.dnp_empty {
+    display: none;
+}
+    
+.dnp_business_logo {
+    float: left;
+    margin: 20px 0 20px 2.5%;
+    padding: 0;
+    width: 32.5%;
+    border: 1px solid #ccc;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px 25px;
+    -khtml-border-radius: 25px;
+}
+
+.dnp_business_about {
+	margin: 20px;
+}
+	
+.dnp_about_preview {
+	margin-bottom: 10px;
+}
+ 
+.dnp_business_logo_img {
+    width: 80% !important;
+    margin: 20px 10%;
+}
+   
+.dnp_business_info {
+    float: right;
+    width: 60%;
+    border: 0;
+    padding: 0;
+    margin: 20px 2.5%;
+}
+    
+.dnp_business_info.caption {
+    background-color: #ffffff !important;
+}
+    
+.dnp_business_info.caption {
+    margin: 0;
+    padding: 0;
+    background-color: #6075a6 !important;
+    -moz-border-radius: 25px 25px 0 0;
+    -webkit-border-radius: 25px 25px 0 0;
+    border-radius: 25px 25px 0 0;
+    -khtml-border-radius: 25px 25px 0 0;
+}
+
+.dnp_business_info_item.regular.dnp_number_info {
+    border-bottom: 1px solid #cccccc;
+    text-align: center;
+    line-height: 1.3;
+    background-color: #ffffff !important;
+    -moz-border-radius: 0 0 25px 25px;
+    -webkit-border-radius: 0 0 25px 25px;
+    border-radius: 0 0 25px 25px;
+    -khtml-border-radius: 0 0 25px 25px;
+    overflow: auto;
+}
+    
+.dnp_business_info_item_half.dnp_num_info_left {
+    border-right: 1px solid #ccc;
+}
+
+.dnp_business_info_item_half.dnp_num_info_right, .dnp_business_info_item_half.dnp_num_info_left {
+    background-color: #ffffff !important;
+    color: #444 !important;
+}	
+	
 /* Main part - Comments area  start */
     
 div.dnp_content_space_comments {
@@ -797,3 +881,7 @@ div.adspace0 img, div.adspace00 img {
     span:before {
         background: none !important;
     }
+	
+	div.dnp_clear {
+		clear: both;
+	}
