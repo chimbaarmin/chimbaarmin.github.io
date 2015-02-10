@@ -156,12 +156,13 @@
 		</div>
 	</div>
 	<div class="home_footer">
-		Menu
+		<div id="geocoding">
+   		Geocoding test: 
+    		<input id="address" type="textbox" value="Sarajevo">
+    		<input type="button" value="Geocode" onclick="codeAddress()">
+   		</div>
 	</div>
-<div id="panel">
-      <input id="address" type="textbox" value="Sydney, NSW">
-      <input type="button" value="Geocode" onclick="codeAddress()">
-    </div>
+
 	<script>
 		jQuery(function($) {
 			var script = document.createElement('script');
