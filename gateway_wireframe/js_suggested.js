@@ -30,6 +30,7 @@ jQuery(function() {
 		jQuery( ".more_info_box" ).val(null);
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".gateway_step1" ).css("display", "none");
+		jQuery( ".gateway_disclaimer" ).css("display", "none");
 	});
 	
 	jQuery( ".fa-thumbs-down" ).click(function() {
@@ -39,6 +40,7 @@ jQuery(function() {
 		jQuery( ".more_info_box" ).val(null);
 		jQuery( ".more_info" ).css("display", "none");
 		jQuery( ".gateway_step1" ).css("display", "none");
+		jQuery( ".gateway_disclaimer" ).css("display", "none");
 	});
 	
 // Step 2
@@ -607,6 +609,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 					jQuery( ".gateway_step4" ).css("display", "block");
 					jQuery( ".gateway_step3" ).css("display", "none");
 				} else {
+					alert ( "Please provide adequate input" );
 				}
 			});
 		}
