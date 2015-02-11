@@ -27,6 +27,7 @@
 		<div class="home_content_search">
 			<form action="/" method="get">
        			<label for="s" class="home_content_search_label">Search any number in our database:</label>
+       			<br>
         		<input name="s" type="text" value="" placeholder="Lookup number" class="home_content_search_input"><button class="search home_content_search_button">Search</button>
         	</form>
 		</div>
@@ -137,6 +138,13 @@
 				})(marker, i));
 
 				map.fitBounds(bounds);
+				zoomChangeBoundsListener = 
+				google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+					if ( this.getZoom() ) {
+						this.setZoom(5);
+					}
+				});
+				setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
 			}
 		}
 	</script>

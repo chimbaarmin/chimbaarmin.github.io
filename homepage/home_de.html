@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nummer-Index.de</title>
+	<link rel="stylesheet" href="homepage.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body class="home_body">
+	<div class="home_header">
+		<div class="home_header_menu">
+			
+		</div>
+		<div class="home_header_search">
+			<form action="/" method="get">
+        		<input name="s" type="text" value="" placeholder="Telefonnummer eingeben" class="home_header_search_input"><button class="search home_header_search_button">Suche</button>
+        	</form>
+		</div>
+	</div>
+	<div id="map_canvas"></div>
+	<div class="home_content">
+		<h1 class="home_content_h1">NUMMER-INDEX.DE</h1>
+		<h2 class="home_content_h2">Bewertungsportal für Telefonnummern</h2>
+		<p class="home_content_p">Auf Nummer-Index findest Du immer alle Informationen zu Telefonnummern. Wurdest du von einer unbekannten Rufnummer anrufen? Hier findest, wer dahinter stand.</p>
+		<p class="home_content_p">Unser einzigartiges Bewertungssystem zeigt dir sofort an, ob der Anruf seriös oder unseriös war. Selbstverständlich findest Du auch Erfahrungsberichte zu seriösen Firmen und Anbietern, die durch besondere Kundenfreundlichkeit aufgefallen sind.</p>
+		<p class="home_content_p_strong">Unsere Mission: Jede Rufnummer dieser Welt bewertet zu haben.</p>
+		<div class="home_content_search">
+			<form action="/" method="get">
+       			<label for="s" class="home_content_search_label">In Erfahrungsberichten nach Telefonnummer suchen:</label>
+       			<br>
+        		<input name="s" type="text" value="" placeholder="Telefonnummer eingeben" class="home_content_search_input"><button class="search home_content_search_button">Suche</button>
+        	</form>
+		</div>
+	</div>
+	<div class="home_footer">
+		<p class="home_footer_copyright">Copyright &copy; 2015 Nummer-Index.de.</p> 
+	</div>
+
+	<script>
+		jQuery(function($) {
+			var script = document.createElement('script');
+			script.src = "https://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+			document.body.appendChild(script);
+		});
+
+		function initialize() {
+			var map;
+			var bounds = new google.maps.LatLngBounds();
+			var mapOptions = {
+				mapTypeId: 'terrain',
+				disableDefaultUI: true
+			};
+			var styles = [
+			  	{
+					stylers: [
+						 
+				 	]
+			  	}
+			];
+
+			map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+			map.setTilt(45);
+			map.setOptions({styles: styles});
+			
+			var markers = [
+				['Berlin', 52.5200066,13.404954],
+				['Limburg a.d. Lahn', 50.3986005,8.0795783],
+				['München', 48.1351253,11.5819806],
+				['Frankfurt am Main', 50.1109221,8.6821267],
+				['Mannheim', 49.4874592,8.4660395],
+				['Essen', 51.4556432,7.0115552],
+				['Bensheim', 49.6861354,8.6187296],
+				['Bielefeld', 52.0302285,8.5324708],
+				['Dortmund', 51.5135872,7.4652981],
+				['Flensburg', 54.7937431,9.4469964]
+			];
+
+			var infoWindowContent = [
+				03036428369,
+				064319020710,
+				0894152157,
+				06934874196,
+				062148345434,
+				020164703528,
+				062518032871,
+				052144699934,
+				02311397056601,
+				046143070840
+			];
+
+			var infoWindow = new google.maps.InfoWindow(), marker, i;
+ 
+			for( i = 0; i < markers.length; i++ ) {
+				var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+				bounds.extend(position);
+				marker = new google.maps.Marker({
+					position: position,
+					map: map,
+					title: markers[i][0]
+				});
+ 
+				google.maps.event.addListener(marker, 'click', (function(marker, i) {
+					return function() {
+						infoWindow.setContent(infoWindowContent[i][0]);
+						infoWindow.open(map, marker);
+					}
+				})(marker, i));
+
+				map.fitBounds(bounds);
+				zoomChangeBoundsListener = 
+				google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+					if ( this.getZoom() ) {
+						this.setZoom(7);
+					}
+				});
+				setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
+			}
+		}
+	</script>
+</body>
+</html>

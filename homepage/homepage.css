@@ -53,9 +53,10 @@
 	
 .home_content {
 	position: relative;
-	left: 50px;
-	top: 50px;
-	width: 300px;
+	left: 50%;
+	top: 100px;
+	width: 500px;
+	margin-left: -250px;
 	z-index: 1;
 	background-color: #ffffff;
 	border: 1px solid #cccccc;
@@ -97,6 +98,7 @@
 	padding: 5px;
 	border: 1px solid #cccccc;
 	border-right: 0;
+	width: 350px;
 }
 	
 .home_content_search_button {
