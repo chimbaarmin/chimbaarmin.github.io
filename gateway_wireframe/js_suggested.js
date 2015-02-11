@@ -587,6 +587,8 @@ jQuery( "a.selectCallBack" ).click(function() {
 		jQuery( ".gateway_step4Back" ).css("display", "block");
 		jQuery( ".gateway_step4" ).css("display", "block");
 		jQuery( ".gateway_step3" ).css("display", "none");
+		jQuery( ".gateway_step2positive" ).css("display", "none");
+		jQuery( ".gateway_step2negative" ).css("display", "none");
 	});
 
 	jQuery( "a.inputLocationKnown" ).click(function() {
@@ -608,6 +610,8 @@ jQuery( "a.selectCallBack" ).click(function() {
 					jQuery( ".gateway_step4Back" ).css("display", "block");
 					jQuery( ".gateway_step4" ).css("display", "block");
 					jQuery( ".gateway_step3" ).css("display", "none");
+					jQuery( ".gateway_step2positive" ).css("display", "none");
+					jQuery( ".gateway_step2negative" ).css("display", "none");
 				} else {
 					alert ( "Please provide adequate input" );
 				}
@@ -619,6 +623,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 
 	jQuery( "a.gateway_step4Back" ).click(function() {
 		jQuery( ".gateway_step3" ).css("display", "block");
+		jQuery( ".gateway_step3Back" ).css("display", "block");
 		jQuery( ".gateway_step4" ).css("display", "none");
 	});
 
