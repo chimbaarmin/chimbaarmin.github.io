@@ -1,0 +1,19 @@
+		<div id="geocoding">
+   			Geocoding test: 
+    		<input id="address" type="textbox" value="Sarajevo">
+    		<input type="button" value="Geocode" onclick="codeAddress()">
+   		</div>
+		
+		<script>
+		function codeAddress() {
+			var geocoder = new google.maps.Geocoder();
+			var address = document.getElementById('address').value;
+			geocoder.geocode( { 'address': address}, function(results, status) {
+				if (status == google.maps.GeocoderStatus.OK) {
+					alert ( results[0].geometry.location );
+				} else {
+					alert('Geocode was not successful for the following reason: ' + status);
+				}
+			});
+		}
+		</script>

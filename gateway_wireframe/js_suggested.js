@@ -5,10 +5,18 @@ Author: Armin
 Version: 1.0
 */
 
+// Scripts
+
+jQuery(function($) {
+	var script = document.createElement('script');
+	script.src = "https://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+	document.body.appendChild(script);
+});	
+
 // Tooltips
 
-$(function() {
-	$( ".fa, .selectOwner, .selectCall, .gateway_input, .more_info, .comment_box" ).tooltip();
+jQuery(function() {
+	jQuery( ".fa, .selectOwner, .selectCall, .gateway_input, .more_info, .comment_box" ).tooltip();
 });
 
 // Step 1
@@ -44,6 +52,9 @@ $(function() {
 	var $namerejectedfirst;
 	var $namerejectedbefore;
 	var $moreinfo;
+	var $numgeoaddress;
+	var $numgeocity;
+	var $numgeolocation;
 
 // 0 level positive - OwnerBack
 
@@ -566,3 +577,45 @@ jQuery( "a.selectCallBack" ).click(function() {
 				}
 		}
  	});
+
+	jQuery( "a.linkLocationUnknown" ).click(function() {
+		$numgeolocation = "";
+		$summary = $summary + " Location unknown.";
+		jQuery("textarea.hashtag_box").val( $summary );
+		jQuery( ".gateway_step4Back" ).css("display", "block");
+		jQuery( ".gateway_step4" ).css("display", "block");
+		jQuery( ".gateway_step3" ).css("display", "none");
+	});
+
+	jQuery( "a.inputLocationKnown" ).click(function() {
+		$numgeoaddress = jQuery( "input.inputLocationAddress" ).val();
+		$numgeocity = jQuery("input.inputLocationCity" ).val(); 
+		if ( $numgeoaddress.length < 3 || $numgeocity.length < 3 ) {
+			alert ( "Please provide adequate input" );
+		}    			
+		else {
+			$numgeolocation = $numgeoaddress + ", " + $numgeocity;
+			var geocoder = new google.maps.Geocoder();
+			var address = $numgeolocation;
+			geocoder.geocode( { 'address': address}, function(results, status) {
+				if (status == google.maps.GeocoderStatus.OK) {
+					var georesults = results[0].geometry.location;
+					jQuery("textarea.geolocation_box").val( georesults );
+					$summary = $summary + " Location: " +$numgeolocation + ".";
+					jQuery("textarea.hashtag_box").val( $summary )
+					jQuery( ".gateway_step4Back" ).css("display", "block");
+					jQuery( ".gateway_step4" ).css("display", "block");
+					jQuery( ".gateway_step3" ).css("display", "none");
+				} else {
+				}
+			});
+		}
+    });
+
+// step 4
+
+	jQuery( "a.gateway_step4Back" ).click(function() {
+		jQuery( ".gateway_step3" ).css("display", "block");
+		jQuery( ".gateway_step4" ).css("display", "none");
+	});
+
