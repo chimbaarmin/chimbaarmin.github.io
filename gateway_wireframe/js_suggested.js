@@ -1,6 +1,6 @@
 /*
 Gateway JS
-Date: 05. 02. 2015.
+Date: 11. 02. 2015.
 Author: Armin
 Version: 1.0
 */
@@ -626,4 +626,3 @@ jQuery( "a.selectCallBack" ).click(function() {
 		jQuery( ".gateway_step3Back" ).css("display", "block");
 		jQuery( ".gateway_step4" ).css("display", "none");
 	});
-

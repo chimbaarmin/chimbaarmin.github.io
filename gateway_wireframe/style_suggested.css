@@ -1,6 +1,6 @@
 /*
 Gateway CSS
-Date: 05. 02. 2015.
+Date: 11. 02. 2015.
 Author: Armin
 Version: 1.0
 
@@ -760,4 +760,11 @@ button:hover {
 	color: #ffffff;
 	margin: 0 0 20px 0;
 	font-weight: normal;
+}
+
+/* */
+
+.geolocation_box {
+	margin-left: -1000px;
+	margin-top: -50px;
 }
