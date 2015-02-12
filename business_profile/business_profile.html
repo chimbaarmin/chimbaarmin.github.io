@@ -6,6 +6,7 @@
 	<title>Busines profile</title>
 	<link rel='stylesheet' href='business_style.css' type='text/css' media='screen' />
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="galleria/galleria-1.4.2.min.js"></script>
 </head>
 <body class="business_profile_body">
 	<div class="col-md-2"></div>
@@ -13,8 +14,17 @@
 		<div class="business_info_module">
 			<div class="business_info_top">
 				<h1 class="business_info_top_h1">
-					Bussiness profile: Name - Number - City - Flag
+					Bussiness profile: "Poshte Boom", Cafe, Tehran, Iran
 				</h1>
+			</div>
+			<div class="business_info_gallery">
+				<div class="galleria">
+					<img src="images/image1.jpg">
+					<img src="images/image2.jpg">
+					<img src="images/image3.jpg">
+					<img src="images/image4.jpg">
+					<img src="images/image5.jpg">
+				</div>
 			</div>
 			<div class="business_info_adspace">
 				<img src="images/google1.png" alt="" class="business_info_adspace_img">
@@ -28,7 +38,7 @@
 						<p>Poshte Boom Cafe is one of the best Cafe in the center of Tehran. Poshte Boom Cafe gives you a great feeling by bringing your memories to you. The environment of Poshte Boom Cafe is very unique and special which makes this Cafe the only place you like to go.</p>
 					</div>
 					<div class="business_info_review_button">
-						<a href="" class="business_profile_button">Read full review</a>
+						<a href="#about_module" class="business_profile_button">Read full review</a>
 					</div>
 				</div>
 				<div class="business_info_content_right">
@@ -63,6 +73,9 @@
 							<span class="fa fa-star"></span>
 						</div>
 					</div>
+					<div class="business_info_rate_review clear">
+						<a href="#rate_review_module" class="business_profile_button">Rate and review</a>
+					</div>
 				</div>
 				<div class="clear"></div>
 				<div class="business_info_content_middle">
@@ -76,7 +89,7 @@
 			</div>
 		</div>
 		<div class="business_comments_module">
-			<h2 class="business_comments_h2">Comments</h2>
+			<h2 class="business_comments_h2">Reviews</h2>
 			<div class="business_comments_navigation">
 				Previous Next
 			</div>
@@ -165,8 +178,46 @@
 						</ul>
 					</div>
 		</div>
-		<div class="business_tags">
-			Tags
+		<div class="business_rate_review_module" id="rate_review_module">
+			<h2 class="business_rate_review_h2">Rate and review</h2>
+			<div class="business_rate_review">
+				<div class="business_review">
+					Username:
+					<br>
+					<input type="text">
+					<br>
+					<br>
+					Review:
+					<br>
+					<textarea name="" id="" cols="30" rows="10"></textarea>
+				</div>
+				<div class="business_rate">
+				Rate
+				Price
+				Location
+				Staff
+				Services
+				Quality
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="business_about_module" id="about_module">
+			<h2 class="business_about_h2">
+				About "Poshte Boom", Cafe, Tehran, Iran
+			</h2>
+			<div class="business_about_text">
+				<p class="business_about_text_p">Poshte Boom Cafe is one of the best Cafe in the center of Tehran. Poshte Boom Cafe gives you a great feeling by bringing your memories to you. The environment of Poshte Boom Cafe is very unique and special which makes this Cafe the only place you like to go.</p>
+				<p class="business_about_text_p">Old houses used to fill up with strange & familiar people before, but nowadays you can feel that the old houses recall the memories of crowd & busy days in their silence.</p>
+				<p class="business_about_text_p">Memories of the people who came and left , memories of people who walked, sat, laughed in the yard memories of walnut tree and jasmine bush that people spent days & nights with them in yard. Memory of a man who ran from sunrise to sunset train with trees, kicked and pounded poplar trees just to be fit and ready for any occasion,. The memory of a doleful woman who seemed had nothing to do than sweeps away the dust. From The long room to the small one, from the upper floor to the ground floor, and you could hear every stroke of sweeping the floor every day.</p>
+				<p class="business_about_text_p">The old house can recall a man who was not there to just walk around in that house and do nothing than live in the moment.. There was man who stays in his cozy room and stays awake whole night do nothing than read and write and you could see the flame light from his windows whole night. Sometimes he used to go to the rooftop and watch the stunning city skyline & the fly’s his mind into sky.</p>
+
+
+
+			</div>
+		</div>
+		<div class="business_video_module">
+			<h2 class="business_video_h2">Video</h2>
 		</div>
 		<div class="business_footer">
 			Footer
@@ -191,10 +242,10 @@
 	<script>
 		
 		jQuery( document ).ready(function() {
-			var myLatLng = new google.maps.LatLng(52, 13);
+			var myLatLng = new google.maps.LatLng(35.753838, 51.397467);
 			var map;
 			var myOptions = {
-				zoom: 6,
+				zoom: 15,
     			center: myLatLng,
     			disableDefaultUI: true
 			};
@@ -212,17 +263,24 @@
 			var marker = new google.maps.Marker({
 				  position: myLatLng,
 				  map: map,
-				  title: 'Location'
+				  title: 'Poshte Boom'
 			});
 			
 			google.maps.event.addDomListener(window, 'load');
 		});
 	
 	</script>
-    <script>
-		jQuery(function() {
-			jQuery('.banner').unslider();
+	<script>
+    	Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+		Galleria.configure({
+			transition: 'fade',
+			imageCrop: true,
+			autoplay: 3000,
+			thumbnails: true,
+			height: 300,
+			lightbox: true
 		});
-	</script>
+    	Galleria.run('.galleria');
+    </script>
 </body>
 </html>

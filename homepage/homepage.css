@@ -62,6 +62,18 @@
 	border: 1px solid #cccccc;
 	opacity: .80; 
 }
+
+.home_content_fa_ir {
+	position: relative;
+	right: 50%;
+	top: 100px;
+	width: 500px;
+	z-index: 1;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	opacity: .80; 
+	margin-right: -250px;
+}
 		
 .home_content_h1 {
 	background-color: #333333;

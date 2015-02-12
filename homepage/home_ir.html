@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+	<meta charset="UTF-8">
+	<title>صفحه اصلی - NetNazar.ir</title>
+	<link rel="stylesheet" href="homepage.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body class="home_body">
+	<div class="home_header">
+		<div class="home_header_menu">
+			
+		</div>
+		<div class="home_header_search">
+			<form action="/" method="get">
+        		<input name="s" type="text" value="" placeholder="شماره تلفن ثابت یا موبایل" class="home_header_search_input"><button class="search home_header_search_button">جستجو</button>
+        	</form>
+		</div>
+	</div>
+	<div id="map_canvas"></div>
+	<div class="home_content_fa_ir">
+		<h1 class="home_content_h1">به NetNazar.ir خوش آمدید</h1>
+		<h2 class="home_content_h2">در نت نظر می توانید نظر خود را درباره هر شماره تلفنی بدهید و نیز اطلاعاتی راجب آن شماره تلفن بگیرید.</h2>
+		<p class="home_content_p">ر نت نظر همیشه می توانید هر اطلاعاتی که می خواهید را در مورد هر شماره تلفنی بگیرید.
+
+آیا تماسی از شماره تلفنی ناشناس داشته اید؟ آیا دوست دارید بفهمید چه کسی با شما تماس گرفته است؟
+
+اولین باری است که به نت نظر سر می زنید؟ شماره موبایل خود را جستجو کنید…</p>
+		<p class="home_content_p">سیستم رتبه بندی بسیار خاص نت نظر فورا به شما نمایش می دهد که تماس تلفنی شما حقیقی و یا اسکم (scam) بوده است. همچنین در مورد شرکت ها، ادارات و اشخاص که برای کاربران قابل اعتماد و احترام هستند، به شما اطلاعات ارزشمند می دهد.</p>
+		<p class="home_content_p_strong">ماموریت ما: فراهم کردن رتبه بندی برای همه شماره تلفن های دنیا</p>
+		<div class="home_content_search">
+			<form action="/" method="get">
+       			<label for="s" class="home_content_search_label">وارد کردن شماره تلفن</label>
+       			<br>
+        		<input name="s" type="text" value="" placeholder="شماره تلفن ثابت یا موبایل" class="home_content_search_input"><button class="search home_content_search_button">جستجو</button>
+        	</form>
+		</div>
+	</div>
+	<div class="home_footer">
+		<p class="home_footer_copyright">کپی رایت</p> 
+	</div>
+
+	<script>
+		jQuery(function($) {
+			var script = document.createElement('script');
+			script.src = "https://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+			document.body.appendChild(script);
+		});
+
+		function initialize() {
+			var map;
+			var bounds = new google.maps.LatLngBounds();
+			var mapOptions = {
+				mapTypeId: 'terrain',
+				zoom: 100,
+				disableDefaultUI: true
+			};
+			var styles = [
+			  	{
+					stylers: [
+						 
+				 	]
+			  	}
+			];
+
+			map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+			map.setTilt(45);
+			map.setOptions({styles: styles});
+			
+			var markers = [
+				['Iran', 32.427908,53.688046]
+			];
+
+			var infoWindowContent = [
+			];
+
+			var infoWindow = new google.maps.InfoWindow(), marker, i;
+ 
+			for( i = 0; i < markers.length; i++ ) {
+				var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+				bounds.extend(position);
+				marker = new google.maps.Marker({
+					position: position,
+					map: map,
+					title: markers[i][0]
+				});
+ 
+				google.maps.event.addListener(marker, 'click', (function(marker, i) {
+					return function() {
+						infoWindow.setContent(infoWindowContent[i][0]);
+						infoWindow.open(map, marker);
+					}
+				})(marker, i));
+
+				map.fitBounds(bounds);
+				zoomChangeBoundsListener = 
+				google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+					if ( this.getZoom() ) {
+						this.setZoom(7);
+					}
+				});
+				setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
+			}
+		}
+	</script>
+</body>
+</html>
