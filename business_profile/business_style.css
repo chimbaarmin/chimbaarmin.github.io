@@ -128,13 +128,26 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 	
 .contact_information_li_a {
-	width: 30%;
-	float: left;
+	width: 25%;
+	background-color: #f3f3f3;
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 5px;
+	-webkit-border-radius: 4px 0 0 4px;
+	-moz-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;
+	margin: 5px 0;
+	text-align: center;
+	height: 32px;
 }	
 	
 .contact_information_li_b {
+	display: inline-block;
 	width: 70%;
-	float: left;
+	border: 1px solid #cccccc;
+	padding: 5px;
+	margin: 5px 0 5px -4px;
+	height: 32px;
 }	
 	
 .business_info_content_adspace {
@@ -199,6 +212,44 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	margin: 0;
 }
 	
+.business_rate_review {
+	overflow: auto;
+	margin: 20px;
+}
+
+.business_review {
+	width: 80%;
+	float: left;
+	padding: 0 10px 0 0;
+}
+	
+.business_rate {
+	width: 20%;
+	float: right;
+	padding: 0 0 0 10px;
+}
+	
+.business_review_username {
+	width: 100%;
+	border: 1px solid #cccccc;
+}
+	
+.business_review_text {
+	width: 100%;
+	resize: none;
+	border: 1px solid #cccccc;
+}
+	
+.business_rate_h3 {
+	margin: 20px 0;
+	text-align: center;
+}
+	
+.rate_span {
+	display: block;
+	margin-right: 20px;
+}
+	
 /* =Business about module */
 	
 .business_about_module {
@@ -223,7 +274,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	margin-bottom: 20px;
 }
 	
-/* =Business gallery module*/
+/* =Business video module*/
 	
 .business_video_module {
 	background-color: #ffffff;
@@ -239,42 +290,128 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	margin: 0;
 }
 	
-.business_rate_review {
-	overflow: auto;
-	margin: 20px;
-}
-
-.business_review {
-	width: 50%;
-	float: left;
-	padding: 0 10px 0 0;
+.business_video_frame {
+	width: 100%;
+	height: 400px;
 }
 	
-.business_rate {
-	width: 50%;
-	float: right;
-	padding: 0 0 0 10px;
+/* =Business reviews module*/
+	
+.business_reviews_module {
+	margin: 20px 0 0 0;
 }
 	
-/* */
-	
-.business_comments_module {
-	margin: 20px 0;
-}
-	
-.business_comments_h2 {
+.business_reviews_h2 {
 	background-color: #333333;
 	color: #fff;
 	padding: 5px 10px;
 	font: 20px/1.3 'Alegreya', serif;
 }
 	
-.business_comments_navigation {
+.business_reviews_navigation {
 	background-color: #ffffff;
 	margin-bottom: 20px;
 	border: 1px solid #cccccc;
 	padding: 10px;
 	text-align: center;
+}
+	
+.business_navigation_button {
+	display: inline-block;
+	padding: 5px;
+	width: 150px;
+	background-color: #333333;
+	color: #ffffff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	text-align: center;
+	margin: 0 10px;
+}
+	
+.business_navigation_button:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+	
+.reviews {
+	overflow: auto;
+}
+	
+.review {
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	margin-bottom: 20px;
+}
+	
+.review_title {
+	float: left;
+	width: 70%;
+	padding: 10px;
+	overflow: auto;
+	border-bottom: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	font: 18px/1.3 'Alegreya', serif;
+}
+	
+.rating_title {
+	overflow: auto;
+	float: right;
+	width: 30%;
+	padding: 10px 5px;
+	text-align: center;
+	border-bottom: 1px solid #cccccc;
+	font: 18px/1.3 'Alegreya', serif;
+	
+}
+	
+.review_content {
+	float: left;
+	overflow: auto;
+	width: 70%;
+	padding: 20px;
+	border-right: 1px solid #cccccc;
+}
+	
+.rating_content {
+	width: 30%;
+	float: right;
+	overflow: auto;
+	text-align: center;
+	margin: 20px 0;
+}
+	
+.review_ribbon {
+	border-top: 1px solid #cccccc;
+	overflow: auto;
+}
+	
+.data_ribbon {
+	width: 70%;
+	float: left;
+	overflow: auto;
+}
+	
+.reply_ribbon {
+	width: 30%;
+	float: right;
+	overflow: auto;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.positive_votes, .negative_votes, .calendar_date, .replies {
+	display: inline-block;
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid #cccccc;
+}
+	
+/* =Business footer module */
+	
+.business_footer_module {
+	margin-top: 20px;
 }
 	
 /* =Right menu module */
@@ -297,163 +434,30 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	width:100%;
 }
 	
+.right_menu_search_text {
+	border: 1px solid #cccccc;
+	border-right: none;
+	width: 180px;
+	padding: 5px;
+	display: inline-block;
+}
+	
+.right_menu_search_button {
+	border: 1px solid #cccccc;
+	width: 70px;
+	padding: 5px;
+	color: #ffffff;
+	background: #333333;
+	display: inline-block;
+	margin-left: -4px;
+	box-shadow: none;
+}
+	
 /* Layout */
 	
 .col-md-7 {
 	margin: 20px 0;
 }
-	
-/* */
-	
-	
-/* Comments area MOCKUP start */
-
-.comment {
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    -moz-border-radius: 0 10px 10px 10px;
-    -webkit-border-radius: 0 10px 10px 10px;
-    border-radius: 0 10px 10px 10px;
-    -khtml-border-radius: 0 10px 10px 10px;
-	margin-bottom: 20px;
-}
-
-.comment_info {
-    border-bottom: 1px solid #cccccc;
-    overflow: auto;
-}
-
-.comment_title {
-    width: 80%;
-    float: left;
-    padding: 10px 20px;
-    font-size: 18px;
-    line-height: 1.3;
-    border-right: 1px solid #cccccc;
-}
-
-.comment_tags {
-    width: 20%;
-    float: right;
-    font-size: 18px;
-    padding: 10px;
-    line-height: 1.3;
-    text-align: center;
-}
-
-.comment_content {
-    clear: both;
-    overflow: auto;
-    border-bottom: 1px solid #ccc;
-}
-
-.comment_text {
-    width: 80%;
-    padding: 20px;
-    float: left;
-    border-right: 1px solid #ccc;
-    height: 200px;
-    overflow-y: scroll;
-}
-
-.comment_hashtags {
-    width: 20%;
-    float: right;
-    padding: 10px;
-    overflow-y: auto;
-    height: 200px;
-}
-
-.hashtag_span {
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    display: block;
-    background-color: #f5f5f5;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -khtml-border-radius: 10px;
-    font-size: 12px;
-    line-height: 1.3;
-    overflow: hidden;
-    max-height: 34px;
-}
-
-.hashtag_span span {
-    padding: 10px;
-    border-right: 1px solid #ccc;
-    margin-right: 10px;
-}
-
-.comment_ribbon {
-    clear: both;
-    overflow: auto;
-}
-
-.data_ribbon {
-    width: 70%;
-    float: left;
-    margin: 20px 10px;
-    font-size: 14px;
-    line-height: 1.3;
-}
-
-.positive_votes, .negative_votes, .calendar_date, .replies {
-    display: inline;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #f3f3f3;
-}
-
-.positive_votes:hover, .negative_votes:hover, .calendar_date:hover, .replies:hover {
-    background-color: #fff;
-    cursor: pointer;
-}
-
-.positive_votes {
-    -moz-border-radius: 10px 0 0 10px;
-    -webkit-border-radius: 10px 0 0 10px;
-    border-radius: 10px 0 0 10px;
-    -khtml-border-radius: 10px 0 0 10px;
-}
-
-.negative_votes, .calendar_date, .replies {
-    border-left: 0;
-}
-
-.replies {
-    -moz-border-radius: 0 10px 10px 0;
-    -webkit-border-radius: 0 10px 10px 0;
-    border-radius: 0 10px 10px 0;
-    -khtml-border-radius: 0 10px 10px 0;
-}
-
-.reply_ribbon {
-    width: 20%; 
-    float: right;
-    text-align: right;
-    padding: 10px;
-    text-align: center;
-    background: none;
-}
-
-.reply_ribbon button {
-    padding: 10px;
-    width: 100px;
-    color: #ffffff !important;
-    font-size: 14px !important;
-    line-height: 1.3;
-    border: 0 !important;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    -khtml-border-radius: 4px;
-    background-color: #333333 !important;
-}
-
-/* Comments are MOCKUP end */
-	
-/* */
 	
 .galleria-theme-classic {
 	background: #333333;
