@@ -11,7 +11,7 @@
 <body class="business_profile_body">
 	<div class="col-md-2"></div>
 	<div class="col-md-7">
-		<div class="business_info_module">
+		<div class="business_info_module" id="info_module">
 			<div class="business_info_top">
 				<h1 class="business_info_top_h1">
 					Bussiness profile: "Poshte Boom", Cafe, Tehran, Iran
@@ -79,16 +79,19 @@
 				</div>
 				<div class="clear"></div>
 				<div class="business_info_content_middle">
-					<div class="google_map">
-						
-					</div>
 				</div>
 			</div>
 			<div class="business_info_bottom">
 				
 			</div>
+			<div class="business_map_module" id="map_module">
+				<div class="clear"></div>
+				<div class="google_map">
+						
+				</div>
+			</div>
 		</div>
-		<div class="business_reviews_module">
+		<div class="business_reviews_module" id="reviews_module">
 			<h2 class="business_reviews_h2">Reviews</h2>
 			<div class="business_reviews_navigation">
 					<a href="#" class="business_navigation_button">Previous</a>
@@ -260,14 +263,27 @@
 
 			</div>
 		</div>
-		<div class="business_video_module">
+		<div class="business_video_module" id="video_module">
 			<h2 class="business_video_h2">Video</h2>
 			<div class="business_video">
 				<iframe src="https://www.aparat.com/video/video/embed/videohash/azDrf/vt/frame" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" kwframeid="1" class="business_video_frame"></iframe>
 			</div>
 		</div>
-		<div class="business_footer_module">
-			Footer
+		<div class="business_footer_module" id="footer_module">
+			<div class="business_footer_copyright">
+				<p class="copyright_p">Copyright &copy; Number-Index.com 2015.</p>
+			</div>
+			<div class="business_footer_disclaimer">
+				<p class="disclaimer_p">This website uses cookies. By continuing to browse this site, we assume that you agree with our cookie policy.</p>
+			</div>
+			<div class="business_footer_delete">
+				<a href="#" class="footer_delete_button">Delete this entry</a>
+				<a href="#" class="footer_delete_button">Report abuse</a>
+			</div>
+			<div class="clear"></div>
+			<div class="business_footer_sitemap">
+				Sitemap
+			</div>
 		</div>
 	</div>
 	<div class="col-md-3">
@@ -294,14 +310,14 @@
 				</ul>
 			</div>
 			<div class="right_menu_adspace">
-				<img src="images/google2.png" alt="">
+				<img src="images/google2.png" alt="" class="right_menu_adspace_img">
 			</div>
 			<div class="right_menu_quickmenu">
-				<a href="#" class="quickmenu_button_a">About</a>
-				<a href="#" class="quickmenu_button_b">Gallery</a>
-				<a href="#" class="quickmenu_button_b">Map</a>
-				<a href="#" class="quickmenu_button_b">Reviews</a>
-				<a href="#" class="quickmenu_button_c">Video</a>
+				<a href="#about_module" class="quickmenu_button_a">About</a>
+				<a href="#info_module" class="quickmenu_button_b">Gallery</a>
+				<a href="#map_module" class="quickmenu_button_b">Map</a>
+				<a href="#reviews_module" class="quickmenu_button_b">Reviews</a>
+				<a href="#video_module" class="quickmenu_button_c">Video</a>
 			</div>
 			<div class="right_menu_rate_review">
 				<a href="#rate_review_module" class="right_menu_button">Rate and review</a>
@@ -309,13 +325,14 @@
 			<div class="right_menu_ribbon">
 				<h3 class="ribbon_h3">Share this page</h3>
 				<div class="ribbon_icons">
-					<a href="#" class="ribbon_icon_link_f"><i class="fa fa-facebook-square fa-3x"></i></a>
-					<a href="#" class="ribbon_icon_link_t"><i class="fa fa-twitter-square fa-3x"></i></a>
-					<a href="#" class="ribbon_icon_link_e"><i class="fa fa-envelope-square fa-3x"></i></a>
+					<a href="#" class="ribbon_icon_link_f"><i class="fa fa-facebook-square fa-2x"></i></a>
+					<a href="#" class="ribbon_icon_link_t"><i class="fa fa-twitter-square fa-2x"></i></a>
+					<a href="#" class="ribbon_icon_link_e"><i class="fa fa-envelope-square fa-2x"></i></a>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- Map module JS code -->
 	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<script>
 		
@@ -348,6 +365,7 @@
 		});
 	
 	</script>
+	<!-- Gallery JS code -->
 	<script>
     	Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
 		Galleria.configure({
@@ -359,6 +377,29 @@
 			lightbox: true
 		});
     	Galleria.run('.galleria');
+    </script>
+    <!-- Right menu module JS code -->
+    <script>
+		jQuery(function($) {
+		    function fixDiv() {
+				var $cache = $('#getFixed');
+				var elemheight = document.getElementById('getFixed').offsetHeight;
+				var diffheight = elemheight - window.innerHeight + 40;
+				if ($(window).scrollTop() >  diffheight) {
+			  		$cache.css({
+						'top': '-' + diffheight +'px',
+						'position': 'fixed'
+			  		});
+				} else {
+			  		$cache.css({
+					'position': 'relative',
+					'top': 'auto'
+			  		}); 
+				}
+		  	}
+		    $(window).scroll(fixDiv);
+		  	fixDiv();
+		});
     </script>
 </body>
 </html>
