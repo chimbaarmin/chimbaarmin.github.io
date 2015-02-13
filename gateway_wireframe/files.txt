@@ -1,8 +1,11 @@
-<!-- armin CSS --> 
+<!-- armin CSS in head --> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="style_suggested.css" />
-<!-- armin js --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
-<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script> 
+<!-- armin js in head --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&"></script>
+<!-- armin js in body -->
+<script src="js_suggested.js"></script>
