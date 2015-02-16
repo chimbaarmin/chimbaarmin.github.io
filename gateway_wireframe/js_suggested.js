@@ -57,6 +57,7 @@ jQuery(function() {
 	var $numgeoaddress;
 	var $numgeocity;
 	var $numgeolocation;
+	var $wordcount;
 
 // 0 level positive - OwnerBack
 
@@ -626,3 +627,19 @@ jQuery( "a.selectCallBack" ).click(function() {
 		jQuery( ".gateway_step3Back" ).css("display", "block");
 		jQuery( ".gateway_step4" ).css("display", "none");
 	});
+
+// word counter
+
+	function checkWords(){
+	s = document.getElementById("comment_box").value;
+	s = s.replace(/(^\s*)|(\s*$)/gi,"");
+	s = s.replace(/[ ]{2,}/gi," ");
+	s = s.replace(/\n /,"\n");
+	$wordcount = s.split(' ').length;
+		if ($wordcount > 2) {
+		}
+		else {
+			alert ("Please write at least 3 words in the comment box.");
+			return false;
+		}
+}
