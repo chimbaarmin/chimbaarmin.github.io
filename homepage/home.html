@@ -19,11 +19,9 @@
 	</div>
 	<div id="map_canvas"></div>
 	<div class="home_content">
-		<h1 class="home_content_h1">NUMBER-INDEX.COM</h1>
-		<h2 class="home_content_h2">Reverse phone number lookup system and rating portal</h2>
-		<p class="home_content_p">You can always find all information you want about any phone number at Number-Index. You received an unknown call? Find out who made it.</p>
-		<p class="home_content_p">Our unique rating system shows you immediately whether the call was real or a scam. Of course you will also find advice on reputable companies and providers that are noticed by the way they treat their customers.</p>
-		<p class="home_content_p_strong">Our mission: To provide ratings for every phone number on the planet.</p>
+		<div class="home_content_header">
+			<h1 class="home_content_h1">NUMBER-INDEX.COM</h1>
+		</div>
 		<div class="home_content_search">
 			<form action="/" method="get">
        			<label for="s" class="home_content_search_label">Search any number in our database:</label>
@@ -33,7 +31,12 @@
 		</div>
 	</div>
 	<div class="home_footer">
-		<p class="home_footer_copyright">Copyright &copy; 2015 Number-Index.com.</p> 
+		<div class="home_footer_links">
+			<a href="#" class="home_footer_link">Remove entry from our database</a> <a href="#" class="home_footer_link">Disclaimer</a> <a href="#" class="home_footer_link">Contact us</a> <a href="#" class="home_footer_link">About</a>
+		</div>
+		<div class="home_footer_copyright">
+			<p class="home_footer_copyright_p">Copyright &copy; 2015 Number-Index.com.</p>
+		</div>
 	</div>
 
 	<script>
@@ -147,6 +150,27 @@
 				setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
 			}
 		}
+	</script>
+	
+	<script>
+		var $winheight;
+		var $elemheight;
+		var $finalheight;
+		$winheight = jQuery( window ).height();
+		jQuery( window ).on("resize", function() {
+			$winheight = jQuery( window ).height();
+			$elemheight = jQuery( document.getElementsByClassName("home_content") ).height()
+			$finalheight = ( $winheight - $elemheight ) / 2 ;
+			jQuery( document.getElementsByClassName("home_content") ).css( "margin-top", $finalheight );
+		});
+		
+		jQuery(function() {
+			$winheight = jQuery( window ).height();
+			$elemheight = jQuery( document.getElementsByClassName("home_content") ).height()
+			$finalheight = ( $winheight - $elemheight ) / 2 ;
+			jQuery( document.getElementsByClassName("home_content") ).css( "margin-top", $finalheight );
+		});
+		
 	</script>
 </body>
 </html>
