@@ -1,0 +1,1527 @@
+<?php
+
+
+// Include scripts
+require_once('functions_includes/scripts-include.php');
+
+
+
+// Include shortcodes
+require_once('shortcodes/SearchField_Shortcode.php');
+
+
+
+if (isset($_GET['wp_rewrite'])) {
+    global $wp_rewrite;
+    $wp_rewrite->flush_rules();
+}
+
+
+// Launch Mobile Detect
+if (!class_exists('Mobile_Detect')) {
+    require_once 'includes/Mobile_Detect.php';
+}
+
+require_once 'helpers/class.COMMENT_VOTES_HELPER.php';
+
+function ewp_remove_script_version($src) {
+    return remove_query_arg('ver', $src);
+}
+
+add_filter('script_loader_src', 'ewp_remove_script_version', 15, 1);
+add_filter('style_loader_src', 'ewp_remove_script_version', 15, 1);
+
+add_filter('query_vars', 'register_query_var');
+
+add_action('init', 'register_rewrite_rules');
+
+function register_rewrite_rules() {
+
+    add_rewrite_rule('[^/]*?/?tags/([^/]*)/?(?:page)?/?([^/]*)?/?', 'index.php?tag=$matches[1]&page_template_type=tags&paged=$matches[2]', 'top');
+
+
+    if (isset($_GET['dev_flush_rewrite_rules']))
+        flush_rewrite_rules(false);
+}
+
+function register_query_var($public_query_vars) {
+    $public_query_vars[] = 'page_template_type';
+    $public_query_vars[] = 'tag';
+    $public_query_vars[] = 'phone_number';
+    $public_query_vars[] = 'g';
+    $public_query_vars[] = 'g2';
+    $public_query_vars[] = 'error';
+    $public_query_vars[] = 'vote_type';
+    $public_query_vars[] = 'step';
+
+    return $public_query_vars;
+}
+
+// After WP object is set up. Try to assign global post variables
+add_action('wp', 'set_helper_post_var');
+
+function set_helper_post_var() {
+    global $post;
+    global $wp_query;
+    global $wpdb;
+
+    if (isset($wp_query->query_vars['g']) && !empty($wp_query->query_vars['g'])) {
+
+        $post_name = sanitize_title($wp_query->query_vars['g']);
+
+        $str = "SELECT $wpdb->posts.* FROM $wpdb->posts WHERE post_name = '$post_name' AND post_status = 'publish' LIMIT 1";
+
+
+        $result = $wpdb->get_results($str);
+        if ($result) {
+            foreach ($result as $post)
+                setup_postdata($post);
+        } else {
+            global $post;
+            $post = null;
+        }
+
+        include 'gateway.php';
+        exit();
+    } elseif (isset($wp_query->query_vars['g2']) && !empty($wp_query->query_vars['g2'])) {
+        $post_name = $wp_query->query_vars['g2'];
+
+        $str = "SELECT $wpdb->posts.* FROM $wpdb->posts WHERE post_name = '$post_name' AND post_status = 'publish' LIMIT 1";
+
+
+        $result = $wpdb->get_results($str);
+        if ($result) {
+            foreach ($result as $post)
+                setup_postdata($post);
+        } else {
+            global $post;
+            $post = null;
+        }
+
+        include 'gateway_2.php';
+        exit();
+    } elseif (isset($wp_query->query_vars['page_template_type']) && !empty($wp_query->query_vars['page_template_type'])) {
+
+        if ($wp_query->query_vars['page_template_type'] == 'tags') {
+            include 'telefonnummer-tags.php';
+            exit();
+        }
+    }
+}
+
+add_action('after_setup_theme', 'my_child_theme_setup');
+
+function my_child_theme_setup() {
+    load_child_theme_textdomain('strictthemes-child', get_stylesheet_directory() . '/assets/lang');
+}
+
+function reg_telefonnummer_taxonomy() {
+
+    $sTelefonnummerCateRewrite = '';
+    switch (get_bloginfo('language')) {
+        case 'en-EN':
+            $sTelefonnummerCateRewrite = 'phonenumbers';
+            break;
+        default:
+            $sTelefonnummerCateRewrite = 'telefonnummern';
+            break;
+    }
+
+    register_taxonomy(
+            'telefonnummer_categories', array('telefonnummer'), array(
+        'label' => __('Telefonnummer Categories'),
+        'rewrite' => array('slug' => $sTelefonnummerCateRewrite),
+        'hierarchical' => true,
+        'show_ui' => true,
+        'show_admin_column' => true,
+            )
+    );
+
+    register_taxonomy(
+            'zahlen', array('digits'), array(
+        'label' => __('Zahlen'),
+        'rewrite' => array('slug' => 'zahlen'),
+        'hierarchical' => true,
+        'show_ui' => true,
+        'show_admin_column' => true,
+            )
+    );
+}
+
+add_action('init', 'reg_telefonnummer_taxonomy');
+
+//include(locate_template(get_stylesheet_directory() . '/includes/comments/comment.php')); 
+
+require_once 'lib/blog.php';
+
+if (!class_exists('WidgetCustomSearchModule'))
+    require_once 'widgets/class.WidgetCustomSearchModule.php';
+
+function register_customSearchModule_widget() {
+    register_widget('WidgetCustomSearchModule');
+}
+
+add_action('widgets_init', 'register_customSearchModule_widget');
+
+if (!class_exists('WidgetCustomComplexSearchModule'))
+    require_once 'widgets/class.WidgetCustomComplexSearchModule.php';
+
+function register_customComplexSearchModule_widget() {
+    register_widget('WidgetCustomComplexSearchModule');
+}
+
+add_action('widgets_init', 'register_customComplexSearchModule_widget');
+
+
+
+
+
+if (!class_exists('WidgetPostCommentComplainsList'))
+    require_once 'widgets/class.WidgetPostCommentComplainsList.php';
+
+function register_PostCommentComplainsList_widget() {
+    register_widget('WidgetPostCommentComplainsList');
+}
+
+add_action('widgets_init', 'register_PostCommentComplainsList_widget');
+
+
+if (!class_exists('WidgetHeaderPhoneFormats'))
+    require_once 'widgets/class.WidgetHeaderPhoneFormats.php';
+
+function register_HeaderPhoneFormats_widget() {
+    register_widget('WidgetHeaderPhoneFormats');
+}
+
+add_action('widgets_init', 'register_HeaderPhoneFormats_widget');
+
+
+if (!class_exists('WidgetPostCommentTagsList'))
+    require_once 'widgets/class.WidgetPostCommentTagsList.php';
+
+function register_PostCommentTagssList_widget() {
+    register_widget('WidgetPostCommentTagsList');
+}
+
+add_action('widgets_init', 'register_PostCommentTagssList_widget');
+
+
+
+
+add_action('wp_head', 'add_comment_form_snapper_script');
+
+function add_comment_form_snapper_script() {
+    wp_enqueue_script('snap-comment-form', get_stylesheet_directory_uri() . '/snap-comment-form.js', array('jquery'), '1.5', true);
+    wp_enqueue_style('form-snapper2', get_stylesheet_directory_uri() . '/snap-comment-form.css', array(), '1.7');
+}
+
+function tm_child_register_sidebars() {
+    if (function_exists('register_sidebar')) {
+       
+
+
+        
+
+
+        register_sidebar(
+                array(
+                    'name' => 'Left Top Post Container Sidebar',
+                    'id' => 'left-top-post-sidebar',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Gateway Header',
+                    'id' => 'gateway-sidebar-top',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+        register_sidebar(
+                array(
+                    'name' => 'Gateway Footer',
+                    'id' => 'gateway-sidebar-bottom',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Search Page Header',
+                    'id' => 'search-sidebar-top',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Search Page Footer',
+                    'id' => 'search-sidebar-bottom',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Regular Pages Above Menu',
+                    'id' => 'header-regular-above_menu',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Regular Pages Below Menu',
+                    'id' => 'header-regular-below_menu',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Big Top Sidebar',
+                    'id' => 'telefonnummer-page-ad-top',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Below Title H1',
+                    'id' => 'telefonnummer-page-ad-h1',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Below Title H1 ~480px~',
+                    'id' => 'telefonnummer-page-ad-h1_480',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Below Title H2',
+                    'id' => 'telefonnummer-page-ad-h2',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Above Map Table',
+                    'id' => 'telefonnummer-page-above-map-table',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Above Tags Table',
+                    'id' => 'telefonnummer-page-above-tags-table',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Above Map',
+                    'id' => 'telefonnummer-page-ad-above-map',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Captions Charts',
+                    'id' => 'telefonnummer-page-ad-table-caption-charts',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Comments Area Right',
+                    'id' => 'telefonnummer-left-sidebar',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer 970 Middle Box',
+                    'id' => 'telefonnummer-page-ad-970-box',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Below Infobox',
+                    'id' => 'telefonnummer-below-infobox',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Above Menu',
+                    'id' => 'header-telefonnummer-above_menu',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Below Menu',
+                    'id' => 'header-telefonnummer-below_menu',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Below Menu ~480px~',
+                    'id' => 'header-telefonnummer-below_menu_480',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Above Comments',
+                    'id' => 'telefonnummer-above_comments',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+        
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Repeat In Comments',
+                    'id' => 'repeat-in-comments',
+                    'description' => __('Appears on posts between post comments.', 'strictthemes'),
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Below Comments',
+                    'id' => 'telefonnummer-below_comments',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+      
+        
+
+        /** TELEFONNUMMER MOBILE * */
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Below Menu >Mobile<',
+                    'id' => 'telefonnummer-page-ad-top_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Below Title >Mobile<',
+                    'id' => 'telefonnummer-page-ad-h1_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+
+
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Above Map Table >Mobile<',
+                    'id' => 'telefonnummer-page-above-map-table_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Above Map >Mobile<',
+                    'id' => 'telefonnummer-page-ad-above-map_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Above Tags Table >Mobile<',
+                    'id' => 'telefonnummer-page-above-tags-table_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Left Bottom Area >Mobile<',
+                    'id' => 'telefonnummer-left-sidebar_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Above Comments >Mobile<',
+                    'id' => 'telefonnummer-above_comments_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Telefonnummer Below Comments >Mobile<',
+                    'id' => 'telefonnummer-below_comments_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+        
+        /** DITIGS * */
+        register_sidebar(
+                array(
+                    'name' => 'Digits Below Menu',
+                    'id' => 'digits-page-ad-top',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Digits Below Title',
+                    'id' => 'digits-page-ad-h1',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Digits Map Zone',
+                    'id' => 'digits-page-ad-map_zone',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+
+        register_sidebar(
+                array(
+                    'name' => 'Digits Comments Area Right',
+                    'id' => 'digits-left-sidebar',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Digits Below Infobox',
+                    'id' => 'digits-below-infobox',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Digits Above Menu',
+                    'id' => 'header-telefonnummer-above_menu-digits',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Digits Below Menu',
+                    'id' => 'header-telefonnummer-below_menu-digits',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+
+        /** DIGITS MOBILE * */
+        register_sidebar(
+                array(
+                    'name' => 'Digits Below Menu >Mobile<',
+                    'id' => 'digits-page-ad-top_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Digits Below Title >Mobile<',
+                    'id' => 'digits-page-ad-h1_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Digits Map Zone >Mobile<',
+                    'id' => 'digits-page-ad-map_zone_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+
+        register_sidebar(
+                array(
+                    'name' => 'Digits Comments Area Right >Mobile<',
+                    'id' => 'digits-left-sidebar_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+
+        register_sidebar(
+                array(
+                    'name' => 'Digits Below Infobox >Mobile<',
+                    'id' => 'digits-below-infobox_mobile',
+                    'description' => '',
+                    'before_widget' => "\n" . '<div class="widget %2$s">' . "\n",
+                    'after_widget' => "\n" . '<div class="clear"><!-- --></div></div>' . "\n",
+                    'before_title' => '<h5>',
+                    'after_title' => '</h5>' . "\n"
+                )
+        );
+    }
+}
+
+add_filter('gform_post_data', 'tm_gform_post_data');
+
+function tm_gform_post_data($post_data) {
+    if (!is_array($post_data) || !isset($post_data['post_custom_fields']) || !isset($post_data['post_custom_fields']['_excerpt'])) {
+        return $post_data;
+    }
+
+    add_filter('add_post_metadata', 'tm_catch_excerpt_value', 10, 4);
+
+    return $post_data;
+}
+
+function tm_catch_excerpt_value($check, $object_id, $meta_key, $meta_value) {
+    if ($meta_key != '_excerpt') {
+        return $check;
+    }
+
+    $post = get_post($object_id);
+    $post->post_excerpt = $meta_value;
+    wp_update_post($post);
+
+    return false;
+}
+
+//We need to register additional sidebars AFTER TrueMag's initials to avoid sidebar's ID shifting
+add_action('after_setup_theme', 'tm_child_register_sidebars');
+
+function tm_strip_hentry($classes) {
+    $classes = str_replace('hentry', '', $classes);
+    return $classes;
+}
+
+add_filter('post_class', 'tm_strip_hentry');
+
+
+add_image_size('blog_post_banner', 575, 100, true);
+
+
+
+// Allow user with management permission + admin + author seaprately to see the dashborad
+if (current_user_can('manage_options') || is_admin() || current_user_can('author')) {
+    // reserverd for future enchancements
+    add_filter('show_admin_bar', '__return_true');
+    add_action('admin_print_scripts-profile.php', 'habfna_hide_admin_bar_settings');
+}
+
+function set_global_views($iPostID) {
+
+    global $wpdb;
+    global $views_total;
+
+    $sQueryMostViewed = "SELECT `view_value` FROM `tj_views` WHERE `view_date` = '" . date("Y-m-d") . "' AND `post_id` = '$iPostID' ";
+
+    $iViewsToday = $wpdb->get_var($sQueryMostViewed);
+    $iViewsToday = ($iViewsToday) ? $iViewsToday : '1';
+
+
+    $sQueryMostViewed = "SELECT SUM(`view_value`) FROM `tj_views` WHERE `post_id` = '$iPostID'";
+    $iViewsTotal = $wpdb->get_var($sQueryMostViewed);
+    $iViewsTotal = ($iViewsTotal) ? $iViewsTotal : '1';
+
+
+    $views_total = array('views_today' => $iViewsToday, 'views_total' => $iViewsTotal);
+
+    return true;
+}
+
+function get_global_vliews($sViewType = 'views_today') {
+
+    global $views_total;
+
+    if (!isset($views_total[$sViewType]) || empty($views_total[$sViewType]))
+        return '';
+
+    return $views_total[$sViewType];
+}
+
+/**
+ * Comments AJAX
+ */
+add_action('wp_ajax_comments_switcher', 'comments_switcher');
+add_action('wp_ajax_nopriv_comments_switcher', 'comments_switcher');
+
+function comments_switcher() {
+
+    if (isset($_POST['post_id'])) {
+
+        global $post;
+        global $wpdb;
+
+        if (isset($_POST['vote_type']) && !empty($_POST['vote_type']))
+            $_GET['vote_type'] = $_POST['vote_type'];
+        if (isset($_POST['paged']) && !empty($_POST['paged']))
+            $_GET['paged'] = (int) $_POST['paged'];
+
+        $sQuery = "SELECT $wpdb->posts.* FROM $wpdb->posts WHERE ID = '{$_POST['post_id']}' AND post_status = 'publish' LIMIT 1";
+
+
+        $result = $wpdb->get_results($sQuery);
+        if ($result) {
+            foreach ($result as $post)
+                setup_postdata($post);
+        } else {
+            // error
+        }
+
+        ob_start();
+
+        //echo "TEST";
+        include 'telefonnummer-comments.php';
+        $sHTML = ob_get_contents();
+        ob_end_clean();
+
+        header('Content-type: application/json');
+        echo json_encode(array('comment_votes_summary' => $sHTML));
+        exit();
+    }
+    header("HTTP/1.1 404 Not Found");
+    exit();
+}
+
+wp_enqueue_style('st-responsive', get_stylesheet_directory_uri() . '/assets/css/responsive.css', array('st-style'), null, 'all');
+
+
+
+
+
+/**
+ * Remove built-in vcard feature from content body
+ */
+add_action('the_content', 'kill_vcard', 0);
+
+function kill_vcard($content) {
+    remove_filter('the_content', 'st_the_content_hatom', 100);
+
+    return $content;
+}
+
+/**
+ * Remove adsenceExplosion of telefonnummer and digits page
+ */
+add_action('the_content', 'kill_adexplosion', 0);
+
+function kill_adexplosion($content) {
+
+    global $post;
+    if (isset($post->post_type) && ($post->post_type == 'telefonnummer' || $post->post_type == 'digits')) {
+        remove_class_object_filter(
+                'the_content', 'aeopt', 'adsenseoptimize'
+        );
+    }
+    return $content;
+}
+
+if (!function_exists('remove_class_object_filter')) {
+
+    /**
+     * Remove an anonymous object filter.
+     *
+     * EXTREMELY COOL FUNCTION TO KILL CLASS-DEPENDANT FILTERS.
+     * FUCK WP! USE CUSOM!
+     * 
+     * @param  string $tag    Hook name.
+     * @param  string $class  Class name
+     * @param  string $method Method name
+     * @return void
+     */
+    function remove_class_object_filter($tag, $class, $method) {
+        $filters = $GLOBALS['wp_filter'][$tag];
+
+        if (empty($filters)) {
+            return;
+        }
+
+        foreach ($filters as $priority => $filter) {
+            foreach ($filter as $identifier => $function) {
+                if (is_array($function)
+                        and is_a($function['function'][0], $class)
+                        and $method === $function['function'][1]
+                ) {
+                    remove_filter(
+                            $tag, array($function['function'][0], $method), $priority
+                    );
+                }
+            }
+        }
+    }
+
+}
+
+
+
+/* Some AJAX here */
+add_action('wp_ajax_popup_confirm_business', 'popup_confirm_business_callback');
+add_action('wp_ajax_nopriv_popup_confirm_business', 'popup_confirm_business_callback');
+
+function popup_confirm_business_callback() {
+
+    $return = array();
+
+    if (is_email($_POST['email']) && !empty($_POST['email'])) {
+        wp_send_json_success($return);
+    } else {
+        wp_send_json_error($return);
+    }
+
+    die(); // this is required to return a proper result
+}
+
+add_action('wp_ajax_additions_subscribe_form', 'additions_subscribe_form_callback');
+add_action('wp_ajax_nopriv_additions_subscribe_form', 'additions_subscribe_form_callback');
+
+function additions_subscribe_form_callback() {
+    $return = array();
+
+    if (is_email($_POST['email']) && !empty($_POST['email'])) {
+
+        $headers = 'From: NummerIndex <no-reply@nummer-index.de>' . "\r\n";
+        wp_mail('info@nummer-index.de', 'Business Application Form', 'Email: ' . $_POST['email'] . ' <br> Post_id: ' . $_POST['phone'] . '  <br> Language:' . get_bloginfo('language'), $headers);
+
+        wp_send_json_success($return);
+    } else {
+        wp_send_json_error($return);
+    }
+
+    die(); // this is required to return a proper result
+}
+
+add_action('wp_ajax_additions_comment_form', 'additions_comment_form_callback');
+add_action('wp_ajax_nopriv_additions_comment_form', 'additions_comment_form_callback');
+
+function additions_comment_form_callback() {
+
+    parse_str($_POST['data'], $_POST['data']);
+
+
+    $sCommentPID = !empty($_POST['data']['comment_post_ID']) ? $_POST['data']['comment_post_ID'] : '';
+    $sCommentMetaCallType = !empty($_POST['data']['comment_meta']['call_type']) ? $_POST['data']['comment_meta']['call_type'] : '';
+    $sCommentMetaVoteType = !empty($_POST['data']['comment_meta']['vote_type']) ? $_POST['data']['comment_meta']['vote_type'] : '';
+    $sCommentMetaTextFormatted = !empty($_POST['data']['comment_meta']['text_formatted']) ? $_POST['data']['comment_meta']['text_formatted'] : '';
+    $sCommentMetaText = !empty($_POST['data']['comment_meta']['comment_text']) ? $_POST['data']['comment_meta']['comment_text'] : '';
+    // If is not set - cat_id = 1023 (default)
+    $sCommentMetaComplainTypeID = !empty($_POST['data']['comment_meta']['complain_type_id']) ? $_POST['data']['comment_meta']['complain_type_id'] : '1023';
+
+
+    if (!empty($sCommentPID) && !empty($sCommentMetaCallType) && !empty($sCommentMetaVoteType) && !empty($sCommentMetaTextFormatted)) {
+
+        global $post;
+        $post = get_post($sCommentPID);
+        setup_postdata($post);
+
+        // All musthave data is on. Lets rock
+        // Set up user data
+        $oCurrentUser = wp_get_current_user();
+
+        $sUserName = (0 != $oCurrentUser->ID) ? $oCurrentUser->user_email : __('Anonym', 'strictthemes-child');
+        $sUserEmail = (0 != $oCurrentUser->ID) ? $oCurrentUser->display_name : 'anonym@nummer-index.de';
+
+        $data = array(
+            'comment_post_ID' => $sCommentPID,
+            'comment_author' => $sUserName,
+            'comment_author_email' => $sUserEmail,
+            'comment_author_url' => '',
+            'comment_content' => $sCommentMetaTextFormatted,
+            'comment_type' => '',
+            'comment_parent' => 0,
+            'user_id' => (0 != $oCurrentUser->ID) ? $oCurrentUser->ID : 0,
+            'comment_author_IP' => $_SERVER['REMOTE_ADDR'],
+            'comment_agent' => $_SERVER['HTTP_USER_AGENT'],
+            'comment_date' => current_time('mysql'),
+            'comment_approved' => 1,
+        );
+        $iCommentID = wp_insert_comment($data);
+
+
+        // Add Comment_meta in case if comment creation succeed
+        if ($iCommentID) {
+            add_comment_meta($iCommentID, 'call_type', $sCommentMetaCallType);
+            add_comment_meta($iCommentID, 'vote_type', $sCommentMetaVoteType);
+            add_comment_meta($iCommentID, 'comment_text', $sCommentMetaText);
+
+            if (!empty($sCommentMetaComplainTypeID)) {
+                // Assign category to post in case if new post created
+                // Else coun category as comment-base complain type
+                if (empty($post->comment_count) || $post->comment_count === 0) {
+                    wp_set_object_terms($sCommentPID, (int) $sCommentMetaComplainTypeID, 'telefonnummer_categories', false);
+                } else {
+                    add_comment_meta($iCommentID, 'complain_type_id', (int) $sCommentMetaComplainTypeID);
+                }
+            }
+
+            // Save Tags
+            preg_match_all("/(#[\w\säöüÄÖÜß]+)/", $sCommentMetaTextFormatted, $matches);
+
+            if (!empty($matches[0])) {
+                //$sTags = implode(', ', $matches[0]);
+                // Process Tags
+                $bSaveTagsReslt = HELPER_saveTags($matches[0], $iCommentID);
+                if ($bSaveTagsReslt) {
+                    // Error with tags into tag table.
+                }
+            }
+            $return = array();
+            wp_send_json_success($return);
+        } else {
+            //error
+        }
+    }
+    //error
+    $return = array();
+    wp_send_json_error($return);
+
+    die(); // this is required to return a proper result
+}
+
+function HELPER_saveTags($aTags, $iCommentID) {
+    global $wpdb;
+    global $post;
+
+    $aTags = array_unique($aTags);
+
+    foreach ($aTags as $sTag) {
+        $sTag = trim(strip_tags($sTag));
+        $sTag = mysql_real_escape_string($sTag);
+        $sTag = substr($sTag, 1, strlen($sTag));
+        if (!empty($sTag))
+            $aValues[] = "( '{$post->ID}', '$iCommentID', '$sTag', '" . current_time('mysql') . "')";
+    }
+    $query = "INSERT INTO `{$wpdb->prefix}tags` (`post_id`, `comment_id`, `tag_value`, `tag_date`) VALUES ";
+
+
+    $query .= implode(', ', $aValues);
+    $sQueryReslt = $wpdb->query($query);
+
+    return ($sQueryReslt == false) ? false : true;
+}
+
+// EXTREMELY IMPORTANT FOR LOCALIZETION AND TEMPLATE FUNCTIONS!! //
+function date_localized($sFormat, $sTimestamp = 'now') {
+    switch (get_bloginfo('language')) {
+        case 'fa-IR':
+            if (!class_exists('PersianDateHelper')) {
+                require_once 'helpers/class.PersianDateHelper.php';
+            }
+            $oPersianDateHelper = new PersianDateHelper();
+            return FARSIE_HELPER::ConvertNumber2Farsi($oPersianDateHelper->pdate($sFormat, $sTimestamp));
+            break;
+        default:
+            return date($sFormat, $sTimestamp);
+            break;
+    }
+}
+
+function relative_date_localized($sFormat, $sTimestamp) {
+
+    $today = strtotime(date('M j, Y'));
+    $reldays = ($sTimestamp - $today) / 86400;
+
+    if ($reldays >= 0 && $reldays < 1) {
+        return __('Heute', 'strictthemes-child');
+    } else if ($reldays >= -1 && $reldays < 0) {
+        return __('Gestern', 'strictthemes-child');
+    } else if ($reldays >= -2 && $reldays < 0) {
+        return __('Vor zwei Tagen', 'strictthemes-child');
+    }
+    return date($sFormat, $sTimestamp);
+}
+
+function numbers_localized($sString) {
+    switch (get_bloginfo('language')) {
+        case 'fa-IR':
+            return FARSIE_HELPER::ConvertNumber2Farsi($sString);
+            break;
+        default:
+            return $sString;
+            break;
+    }
+}
+
+
+function phoneformat_AreaNumber_localized($sLocalFormat) {
+    switch (get_bloginfo('language')) {
+        case 'en-EN':
+            if(strlen($sLocalFormat) > 6){
+                return  substr($sLocalFormat, 0, 3) . '-' . substr($sLocalFormat, 3, 3) . '-' . substr($sLocalFormat, 6);
+            } else {
+                return $sLocalFormat;
+            }
+            break;
+        default:
+            return $sLocalFormat;
+            break;
+    }
+
+}
+    
+function phoneformat_Number_localized($sLocalFormat) {
+
+    switch (get_bloginfo('language')) {
+        case 'en-EN':
+            return  trim(substr($sLocalFormat, 0, 3) . '-' . substr($sLocalFormat, 3),'-');
+            break;
+        default:
+            return $sLocalFormat;
+            break;
+    }
+}
+
+
+
+// workaround for the Truemag theme loading it's stylesheet via get_stylesheet_uri() function 
+// load the main theme styleshet first
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles_1', 1);
+
+function theme_enqueue_styles_1() {
+    wp_enqueue_style('truemag-style', get_template_directory_uri() . '/style.css');
+    
+
+}
+
+// load the child theme stylesheetts later
+add_action('wp_enqueue_scripts', 'theme_enqueue_styles_11', 11);
+
+function theme_enqueue_styles_11() {
+//	wp_enqueue_style( 'st-style', get_stylesheet_uri(), false, null, 'all' );
+    wp_dequeue_style('st-style');
+//	wp_enqueue_style( 'st-responsive', get_stylesheet_directory_uri() . '/assets/css/responsive.css', array('st-style'), null, 'all' );
+    wp_dequeue_style('st-responsive');
+    wp_enqueue_style('st-style', get_stylesheet_uri(), array('truemag-style'));
+    wp_enqueue_style('st-responsive', get_stylesheet_directory_uri() . '/assets/css/responsive.css', array('st-style'), null, 'all');
+    
+    if(get_bloginfo('language') == 'fa-IR')
+        wp_enqueue_style('truemag-style_fa-IR', get_stylesheet_directory_uri() . '/style_fa-IR.css');
+}
+
+if (!function_exists('wp_new_user_notification_overwritted')) {
+
+    function wp_new_user_notification_overwritted($user_id, $plaintext_pass = '') {
+
+        $user = new WP_User($user_id);
+
+        $user_login = stripslashes($user->user_login);
+        $user_email = stripslashes($user->user_email);
+
+        $message = sprintf(__('New user registration on %s:'), get_option('blogname')) . "\r\n\r\n";
+        $message .= sprintf(__('Username: %s'), $user_login) . "\r\n\r\n";
+        $message .= sprintf(__('E-mail: %s'), $user_email) . "\r\n";
+
+        @wp_mail(get_option('admin_email'), sprintf(__('[%s] New User Registration'), get_option('blogname')), $message);
+
+        if (empty($plaintext_pass))
+            return;
+
+
+        $message = __('Hallo,', 'strictthemes-child') . "\r\n";
+        $message .= __('und herzlich willkommen auf Nummer-Index.de', 'strictthemes-child') . "\r\n\r\n\r\n";
+        $message .= __('Wir freuen uns, dass Du dich gerade angemeldet hast.', 'strictthemes-child') . "\r\n";
+        $message .= sprintf(__('Dein Passwort lautet: %s', 'strictthemes-child'), $plaintext_pass) . "\r\n";
+        $message .= sprintf(__('Du kannst dich jederzeit mit deinem %s unter %s einloggen.', 'strictthemes-child'), $user_login, get_site_url() . "/wp-login") . "\r\n";
+        $message .= __('Wenn du Fragen hast, antworte einfach auf diese Email.', 'strictthemes-child') . "\r\n\r\n\r\n";
+        $message .= __('Liebe Grüße,', 'strictthemes-child') . "\r\n\r\n";
+        $message .= __('dein Nummer-Index.de Team', 'strictthemes-child') . "\r\n\r\n";
+        
+        
+        $headers = __('From: NummerIndex <info@nummer-index.de>', 'strictthemes-child') . "\r\n";
+
+
+        wp_mail(
+                $user_email, 
+                __('Deine Zugangsdaten für Nummer-Index.de', 'strictthemes-child'), 
+                $message, 
+                $headers
+        );
+    }
+
+}
+
+function add_theme_caps() {
+    // gets the administrator role
+    $admins = get_role('subscriber');
+
+    $admins->add_cap('publish_blogpost');
+    $admins->add_cap('edit_blogpost');
+    //$admins->add_cap( 'edit_others_blogpost' ); 
+    //$admins->add_cap( 'delete_blogpost' ); 
+    //$admins->add_cap( 'delete_others_blogpost' ); 
+    //$admins->add_cap( 'read_private_blogpost' ); 
+    $admins->add_cap('edit_blogpost');
+    $admins->add_cap('delete_blogpost');
+    $admins->add_cap('read_blogpost');
+}
+
+add_action('admin_init', 'add_theme_caps');
+
+//capabilities for lvl-0 user
+
+
+
+
+function email_login_check() {
+    $return = array();
+
+    if (is_email($_POST['email']) && !empty($_POST['email'])) {
+
+        $user_id = email_exists($_POST['email']);
+
+        if ($user_id) {
+            // User exists in the system. Everything fine!
+            $return['user_exists'] = true;
+            wp_send_json_success($return);
+            die();
+        } else {
+            // User does not exists in the system. Register!
+
+
+            $sSubscriberEmail = $_POST['email'];
+            $sSubscriberNewPassword = wp_generate_password(6, true, false);
+            // Generate User Name From user email
+            $aUserEmailParticles = explode('@', strtolower($sSubscriberEmail));
+
+            $aUserEmailParticles[1] = substr($aUserEmailParticles[1], 0, strpos($aUserEmailParticles[1], '.'));
+
+            $sSubscriberName = (strlen($aUserEmailParticles[0]) > 3 ) ? substr($aUserEmailParticles[0], 0, 3) : $aUserEmailParticles[0];
+            $sSubscriberName .= (strlen($aUserEmailParticles[1]) > 3 ) ? substr($aUserEmailParticles[1], 0, 3) : $aUserEmailParticles[1];
+
+            $sSubscriberName = makeUserNameUnique($sSubscriberName);
+
+            $user_id = wp_create_user($sSubscriberName, $sSubscriberNewPassword, $sSubscriberEmail);
+
+            // Notify with email from functions.php
+            wp_new_user_notification_overwritted($user_id, $sSubscriberNewPassword);
+
+            $return['user_exists'] = false;
+            wp_send_json_success($return);
+            die();
+        }
+    }
+    wp_send_json_error($return);
+
+
+    die(); // this is required to return a proper result
+}
+
+add_action('wp_ajax_email_login_check', 'email_login_check');
+add_action('wp_ajax_nopriv_email_login_check', 'email_login_check');
+
+function makeUserNameUnique($sUserName) {
+
+    $user_id = username_exists($sUserName);
+
+    if (!$user_id) {
+        return $sUserName;
+    }
+
+    global $wpdb;
+
+    $sQuery = "SELECT count(*) FROM  `wp_5u4wet_users` 
+                WHERE  `user_login` LIKE  '{$sUserName}%'";
+
+    $iCount = $wpdb->get_var($sQuery);
+
+    return $sUserName . "_" . $iCount;
+}
+
+
+
+
+//add_filter('comments_clauses', 'comment_extend_query_filter');
+
+function comment_extend_query_filter($clauses, $query_object) {
+
+    global $wpdb;
+
+    $join = &$clauses['join'];
+    if (!empty($join))
+        $join .= ' '; // add a space only if we have to 
+    $join .= "LEFT JOIN (SELECT SUM(tcv_value) tcv_value , comment_ID FROM `theme_comment_votes` GROUP BY comment_ID) TCV ON TCV.comment_id = {$wpdb->comments}.comment_ID";
+
+
+    $orderby = &$clauses['orderby'];
+    if (!empty($orderby))
+        $orderby = ' ' . $orderby;
+    $orderby = "TCV.tcv_value DESC, " . $orderby;
+
+    return $clauses;
+}
+
+
+function get_comments_CUSTOM($aOptions) {
+    
+    global $wpdb;
+    
+    
+    if(isset($aOptions['meta_query'])){
+        $sMetaQuerySQL = " INNER JOIN 
+                                (SELECT * 
+                                 FROM {$wpdb->prefix}commentmeta 
+                                 WHERE meta_key='{$aOptions['meta_query'][0]['key']}' 
+                                     AND meta_value ='{$aOptions['meta_query'][0]['value']}'
+                                ) T1
+                                ON T0.comment_ID = T1.comment_id ";
+    }
+
+    $sQuery = "
+                SELECT 
+                    T0.comment_ID, 
+                    T0.comment_post_ID, 
+                    T0.comment_author, 
+                    T0.comment_author_email,
+                    T0.comment_author_url, 
+                    T0.comment_author_IP, 
+                    T0.comment_date,
+                    T0.comment_date_gmt,
+                    T0.comment_content,
+                    T0.comment_karma,
+                    T0.comment_approved,
+                    T0.comment_agent,
+                    T0.comment_type,
+                    T0.comment_parent,
+                    T0.user_id,
+                    T0.accepted_by,
+                    COALESCE(TCV.tcv_value, 0) tcv_value
+                FROM wp_5u4wet_comments T0
+                LEFT JOIN 
+                        (SELECT SUM(tcv_value) tcv_value, comment_ID FROM `theme_comment_votes` GROUP BY comment_ID) TCV 
+                    ON TCV.comment_id = T0.comment_ID
+                $sMetaQuerySQL
+                WHERE ( comment_approved = '0'
+                    OR comment_approved = '1' )
+                    AND comment_post_ID = {$aOptions['post_id']}
+                    AND comment_parent = 0
+                ORDER BY tcv_value DESC, comment_date_gmt DESC
+                LIMIT {$aOptions['offset']},{$aOptions['number']}";
+   
+
+        $result = @mysql_unbuffered_query($sQuery, $wpdb->dbh);
+
+   	//$result = @mysql_query($sQuery , $wpdb->dbh);
+        if ($result) {
+            while ( $row = @mysql_fetch_array($result, MYSQL_ASSOC)) {
+                $data[] = (object)$row;
+        }
+        @mysql_free_result($result);
+    }
+    
+    return $data;
+}
+
+
+
+
+add_action('wp_ajax_comment_vote', 'comment_vote');
+add_action('wp_ajax_nopriv_comment_vote', 'comment_vote');
+
+function comment_vote() {
+
+    if (!empty($_POST['post_id']) && !empty($_POST['vote_type']) && !empty($_POST['comment_id'])) {
+
+        global $post;
+        global $wpdb;
+
+        // TODO:: check if user voted getUserVoteResult
+        
+        // Check if comment is valid
+        $sGetCommentQuery = "SELECT $wpdb->comments.* FROM $wpdb->comments WHERE comment_ID = '{$_POST['comment_id']}' AND comment_post_ID = '{$_POST['post_id']}' LIMIT 1";
+        $oGetCommentResult = $wpdb->get_row($sGetCommentQuery);
+        if (!$oGetCommentResult) {
+            // error
+            header("HTTP/1.1 404 Not Found");
+            exit();
+        }
+        
+        $sGetPostQuery = "SELECT $wpdb->posts.* FROM $wpdb->posts WHERE ID = '{$_POST['post_id']}' AND post_status = 'publish' LIMIT 1";
+        $oGetPostRerults = $wpdb->get_results($sGetPostQuery);
+        if ($oGetPostRerults) {
+            foreach ($oGetPostRerults as $post)
+                setup_postdata($post);
+        } else {
+            // error
+            header("HTTP/1.1 404 Not Found");
+            exit();
+        }
+
+
+        // Prepare Vote Entity data. Use helper
+        $aVoteEntity = array();
+        $aVoteEntity['comment_id'] = $_POST['comment_id'];
+        $aVoteEntity['user_id'] = get_current_user_id();
+        $aVoteEntity['tcv_value'] = ($_POST['vote_type'] == 'vote_down') ? -1 : 1;
+        $aVoteEntity['tcv_ip'] = $_POST['user_ip'];
+
+        // Save Vote Entity
+        COMMENT_VOTES_HELPER::saveVote($aVoteEntity);
+            
+        
+        unset($_POST['vote_type']);
+        unset($_POST['paged']);
+
+        
+        // Set up paged value on voted comment position.
+        // With somplex query achieve ranking position of current comment
+        $sPagedSql = "SELECT * FROM
+                        ( SELECT 
+                            @rn:=@rn+1 AS rank, 
+                            comment_ID, 
+                            tcv_value
+                          FROM (
+                            SELECT 
+                                T0.comment_ID, 
+                                COALESCE(TCV.tcv_value, 0) tcv_value                 
+                            FROM wp_5u4wet_comments T0
+                            LEFT JOIN 
+                                (SELECT SUM(tcv_value) tcv_value, comment_ID FROM `theme_comment_votes` GROUP BY comment_ID) TCV 
+                                ON TCV.comment_id = T0.comment_ID
+                            WHERE ( comment_approved = '0'
+                                OR comment_approved = '1' )
+                                AND comment_post_ID = '{$post->ID}'
+                                AND comment_parent = 0
+                            ORDER BY tcv_value DESC, comment_date_gmt DESC
+                            )t1, (SELECT @rn:=0) t2 
+                          ) x 
+                        WHERE x.comment_ID='{$_POST['comment_id']}';";
+             
+        $oPagedResults = $wpdb->get_row($sPagedSql);
+        
+        if($oPagedResults){
+            
+            $_GET['paged'] =  floor ($oPagedResults->rank / 7);
+        }
+
+        ob_start();
+        include 'telefonnummer-comments.php';
+        $sHTML = ob_get_contents();
+        ob_end_clean();
+
+        
+       header('Content-type: application/json');
+        echo json_encode(array('comment_html' => $sHTML));
+        exit();
+    }
+    header("HTTP/1.1 404 Not Found");
+    exit();
+}
+
+
+
+function get_the_user_ip() {
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ip;
+}
