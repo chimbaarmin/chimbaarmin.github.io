@@ -202,13 +202,46 @@
 	right: 0;
 	z-index: 1;
 	margin: 0 0 0 20px;
-	background: #333333;
-	color: #ffffff;
-	display:none;
+	display: none;
 }
 
 .home_marker_info {
-	margin: 20px;
-	height: 400px;
+	margin: 0;
 	width: 300px;
+	background: #ffffff;
+	color: #333333;
+	border: 1px solid #333333;
+	overflow: auto;
+}
+
+.marker_info_h2 {
+	background: #333333;
+	color: #ffffff;
+	padding: 5px 10px;
+	margin: 0;
+	font: 22px/1.3 'Alegreya', serif;
+}
+
+.marker_info_basic_ul {
+	list-style-type: none;
+	padding: 0 20px;	
+}
+
+.marker_info_basic_li {
+	border: 1px solid #333333;
+	padding: 5px 10px;
+	margin: 0 0 10px 0;
+	border-radius: 10px;
+	background: #ededed;
+}
+
+.more_info_basic_link {
+	text-align: right;
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+
+.marker_info_basic_li_a, .marker_info_basic_li_a:hover, .marker_info_basic_li_a:visited, .marker_info_basic_li_a:active, .marker_info_basic_li_a:focus {
+	text-decoration: none;
+	color: #333333;
 }

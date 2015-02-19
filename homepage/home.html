@@ -47,6 +47,17 @@
 	</div>
 	<div class="home_marker_info_divs">
 		<div class="home_marker_info">
+			<h2 class="marker_info_h2">Phone number: 12345679</h2>
+			<div class="marker_info_basic">
+				<ul class="marker_info_basic_ul">
+					<li class="marker_info_basic_li area_code_li">Area code: 123</li>
+					<li class="marker_info_basic_li country_li">Country: USA</li>
+					<li class="marker_info_basic_li city_service_li"></li>
+					<div class="more_info_basic_link">
+						<a href="#" class="marker_info_basic_li_a">More info</a>
+					</div>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<script>
@@ -89,6 +100,7 @@
 				['Scranton, Pennsylvania', 41.408969,-75.6624122]
 			];
 
+			/*
 			var infoWindowContent = [
 				['<div class="info_content">' +
 				'<h3>061-698-02150</h3>' +
@@ -133,6 +145,7 @@
 				'<a href="http://number-index.com/2014/5702242193/">More information</a>' +
 				'</div>']
 			];
+			*/
 
 			var infoWindow = new google.maps.InfoWindow(), marker, i;
 			
@@ -150,9 +163,11 @@
 					return function() {
 						var imarker = markers[i][0];
 						jQuery( ".home_marker_info_divs").css("display", "block")
-						jQuery( ".home_marker_info").empty().append( imarker + "<br>" + markers[i][1] + ", " + markers[i][2] );
+						jQuery( ".city_service_li").empty().append( "City, state/Service: " + imarker );
+						/*
 						infoWindow.setContent(infoWindowContent[i][0]);
 						infoWindow.open(map, marker); 
+						*/
 					}
 				})(marker, i));
 
