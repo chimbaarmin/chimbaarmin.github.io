@@ -45,6 +45,10 @@
 			<p class="more_info_help_pop_p_strong">Our mission: To provide ratings for every phone number on the planet.</p>
 		</div>
 	</div>
+	<div class="home_marker_info_divs">
+		<div class="home_marker_info">
+		</div>
+	</div>
 	<script>
 		jQuery(function($) {
 			var script = document.createElement('script');
@@ -73,7 +77,7 @@
 			map.setOptions({styles: styles});
 			
 			var markers = [
-				['Grand Rapids, Michigan', 42.9633599,-85.6680863],
+				['Grand Rapids', 42.9633599,-85.6680863],
 				['Melbourne, Florida', 28.0836269,-80.6081089],
 				['Miami, Florida', 25.7616798,-80.1917902],
 				['San Jose, California', 37.3382082,-121.8863286],
@@ -131,20 +135,24 @@
 			];
 
 			var infoWindow = new google.maps.InfoWindow(), marker, i;
- 
+			
 			for( i = 0; i < markers.length; i++ ) {
 				var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
 				bounds.extend(position);
 				marker = new google.maps.Marker({
 					position: position,
 					map: map,
-					title: markers[i][0]
+					title: markers[i][0],
+					optimized: false
 				});
  
 				google.maps.event.addListener(marker, 'click', (function(marker, i) {
 					return function() {
+						var imarker = markers[i][0];
+						jQuery( ".home_marker_info_divs").css("display", "block")
+						jQuery( ".home_marker_info").empty().append( imarker + "<br>" + markers[i][1] + ", " + markers[i][2] );
 						infoWindow.setContent(infoWindowContent[i][0]);
-						infoWindow.open(map, marker);
+						infoWindow.open(map, marker); 
 					}
 				})(marker, i));
 
@@ -158,6 +166,19 @@
 				setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
 			}
 		}
+		
+	</script>
+	
+	<script>
+	
+		$(document).mouseup(function (e) {
+			var home_container = $(".home_marker_info_divs");
+
+			if (!home_container.is(e.target) && home_container.has(e.target).length === 0) {
+				home_container.hide();
+			}
+		});
+		
 	</script>
 	
 	<script>
@@ -177,6 +198,20 @@
 			$elemheight = jQuery( document.getElementsByClassName("home_content") ).height()
 			$finalheight = ( $winheight - $elemheight ) / 2 ;
 			jQuery( document.getElementsByClassName("home_content") ).css( "margin-top", $finalheight );
+		});
+		
+		jQuery( window ).on("resize", function() {
+			$winheight = jQuery( window ).height();
+			$elemheight = jQuery( document.getElementsByClassName("home_marker_info_divs") ).height()
+			$finalheight = ( $winheight - $elemheight ) / 2 ;
+			jQuery( document.getElementsByClassName("home_marker_info_divs") ).css( "margin-top", $finalheight );
+		});
+		
+		jQuery(function() {
+			$winheight = jQuery( window ).height();
+			$elemheight = jQuery( document.getElementsByClassName("home_marker_info_divs") ).height()
+			$finalheight = ( $winheight - $elemheight ) / 2 ;
+			jQuery( document.getElementsByClassName("home_marker_info_divs") ).css( "margin-top", $finalheight );
 		});
 		
 	</script>
@@ -221,6 +256,7 @@
 				$(target).css('top', topD).css('left', leftD);
 			});
 		});
+		
 	</script>
 </body>
 </html>
