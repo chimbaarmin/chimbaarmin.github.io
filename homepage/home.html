@@ -54,7 +54,7 @@
 					<li class="marker_info_basic_li country_li"></li>
 					<li class="marker_info_basic_li city_service_li"></li>
 					<div class="more_info_basic_link">
-						<a href="#" class="marker_info_basic_li_a">More info</a>
+						<a href="" class="marker_info_basic_li_a">More info</a>
 					</div>
 				</ul>
 			</div>
@@ -88,11 +88,11 @@
 			map.setOptions({styles: styles});
 			
 			var markers = [
-				['Grand Rapids', 42.9633599,-85.6680863, '616-980-2150', 'USA', 616],
-				['Melbourne, Florida', 28.0836269,-80.6081089, '321-255-5798', 'USA', 321],
-				['Miami, Florida', 25.7616798,-80.1917902, '305-200-7795', 'USA', 305],
-				['San Jose, California', 37.3382082,-121.8863286, '408-618-5204', 'USA', 408],
-				['Fargo, North Dakota', 46.8771863,-96.7898034, '701-857-6400', 'USA', 701]
+				['Grand Rapids', 42.9633599,-85.6680863, '6169802150', 'USA', 616],
+				['Melbourne, Florida', 28.0836269,-80.6081089, '3212555798', 'USA', 321],
+				['Miami, Florida', 25.7616798,-80.1917902, '3052007795', 'USA', 305],
+				['San Jose, California', 37.3382082,-121.8863286, '4086185204', 'USA', 408],
+				['Fargo, North Dakota', 46.8771863,-96.7898034, '7018576400', 'USA', 701]
 			];
 
 			/*
@@ -136,11 +136,12 @@
  
 				google.maps.event.addListener(marker, 'click', (function(marker, i) {
 					return function() {
-						jQuery( ".home_marker_info_divs").css("display", "block")
 						jQuery( ".marker_info_h2").empty().append( "Phone number: " + markers[i][3] );
 						jQuery( ".area_code_li").empty().append( "Area code: " + markers[i][5] );
 						jQuery( ".country_li").empty().append( "Country: " + markers[i][4] );
 						jQuery( ".city_service_li").empty().append( "City, state/Service: " + markers[i][0] );
+						jQuery(".marker_info_basic_li_a").attr("href", "http://www.number-index.com/" + markers[i][3] );
+						jQuery( ".home_marker_info_divs").css("display", "block");
 						/*
 						infoWindow.setContent(infoWindowContent[i][0]);
 						infoWindow.open(map, marker); 
@@ -190,20 +191,6 @@
 			$elemheight = jQuery( document.getElementsByClassName("home_content") ).height()
 			$finalheight = ( $winheight - $elemheight ) / 2 ;
 			jQuery( document.getElementsByClassName("home_content") ).css( "margin-top", $finalheight );
-		});
-		
-		jQuery( window ).on("resize", function() {
-			$winheight = jQuery( window ).height();
-			$elemheight = jQuery( document.getElementsByClassName("home_marker_info_divs") ).height()
-			$finalheight = ( $winheight - $elemheight ) / 2 ;
-			jQuery( document.getElementsByClassName("home_marker_info_divs") ).css( "margin-top", $finalheight );
-		});
-		
-		jQuery(function() {
-			$winheight = jQuery( window ).height();
-			$elemheight = jQuery( document.getElementsByClassName("home_marker_info_divs") ).height()
-			$finalheight = ( $winheight - $elemheight ) / 2 ;
-			jQuery( document.getElementsByClassName("home_marker_info_divs") ).css( "margin-top", $finalheight );
 		});
 		
 	</script>

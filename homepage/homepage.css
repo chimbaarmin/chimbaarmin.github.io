@@ -198,10 +198,10 @@
 
 .home_marker_info_divs {
 	position: absolute;
-	top: 0;
+	top: 70px;
 	right: 0;
 	z-index: 1;
-	margin: 0 0 0 20px;
+	margin: 0;
 	display: none;
 }
 
