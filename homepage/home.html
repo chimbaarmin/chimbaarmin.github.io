@@ -47,11 +47,11 @@
 	</div>
 	<div class="home_marker_info_divs">
 		<div class="home_marker_info">
-			<h2 class="marker_info_h2">Phone number: 12345679</h2>
+			<h2 class="marker_info_h2"></h2>
 			<div class="marker_info_basic">
 				<ul class="marker_info_basic_ul">
-					<li class="marker_info_basic_li area_code_li">Area code: 123</li>
-					<li class="marker_info_basic_li country_li">Country: USA</li>
+					<li class="marker_info_basic_li area_code_li"></li>
+					<li class="marker_info_basic_li country_li"></li>
 					<li class="marker_info_basic_li city_service_li"></li>
 					<div class="more_info_basic_link">
 						<a href="#" class="marker_info_basic_li_a">More info</a>
@@ -88,16 +88,11 @@
 			map.setOptions({styles: styles});
 			
 			var markers = [
-				['Grand Rapids', 42.9633599,-85.6680863],
-				['Melbourne, Florida', 28.0836269,-80.6081089],
-				['Miami, Florida', 25.7616798,-80.1917902],
-				['San Jose, California', 37.3382082,-121.8863286],
-				['Fargo, North Dakota', 46.8771863,-96.7898034],
-				['Seattle, Washington', 47.6062095,-122.3320708],
-				['Sacremento, California', 38.5815719,-121.4943996],
-				['Kansas City, Missouri', 39.0997265,-94.5785667],
-				['New York, New York', 40.7127837,-74.0059413],
-				['Scranton, Pennsylvania', 41.408969,-75.6624122]
+				['Grand Rapids', 42.9633599,-85.6680863, '616-980-2150', 'USA', 616],
+				['Melbourne, Florida', 28.0836269,-80.6081089, '321-255-5798', 'USA', 321],
+				['Miami, Florida', 25.7616798,-80.1917902, '305-200-7795', 'USA', 305],
+				['San Jose, California', 37.3382082,-121.8863286, '408-618-5204', 'USA', 408],
+				['Fargo, North Dakota', 46.8771863,-96.7898034, '701-857-6400', 'USA', 701]
 			];
 
 			/*
@@ -123,26 +118,6 @@
 				['<div class="info_content">' +
 				'<h3>070-185-76400</h3>' +
 				'<a href="http://number-index.com/2014/7018576400/">More information</a>' +
-				'</div>'],
-				['<div class="info_content">' +
-				'<h3>020-642-47272</h3>' +
-				'<a href="http://number-index.com/2014/2064247272/">More information</a>' +
-				'</div>'],
-				['<div class="info_content">' +
-				'<h3>091-634-70717</h3>' +
-				'<a href="http://number-index.com/2015/9163470717/">More information</a>' +
-				'</div>'],
-				['<div class="info_content">' +
-				'<h3>091-367-48956</h3>' +
-				'<a href="http://number-index.com/2015/9136748956/">More information</a>' +
-				'</div>'],
-				['<div class="info_content">' +
-				'<h3>021-266-21932</h3>' +
-				'<a href="http://number-index.com/2014/2126621932/">More information</a>' +
-				'</div>'],
-				['<div class="info_content">' +
-				'<h3>057-022-42193</h3>' +
-				'<a href="http://number-index.com/2014/5702242193/">More information</a>' +
 				'</div>']
 			];
 			*/
@@ -161,9 +136,11 @@
  
 				google.maps.event.addListener(marker, 'click', (function(marker, i) {
 					return function() {
-						var imarker = markers[i][0];
 						jQuery( ".home_marker_info_divs").css("display", "block")
-						jQuery( ".city_service_li").empty().append( "City, state/Service: " + imarker );
+						jQuery( ".marker_info_h2").empty().append( "Phone number: " + markers[i][3] );
+						jQuery( ".area_code_li").empty().append( "Area code: " + markers[i][5] );
+						jQuery( ".country_li").empty().append( "Country: " + markers[i][4] );
+						jQuery( ".city_service_li").empty().append( "City, state/Service: " + markers[i][0] );
 						/*
 						infoWindow.setContent(infoWindowContent[i][0]);
 						infoWindow.open(map, marker); 
