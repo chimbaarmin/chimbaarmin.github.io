@@ -133,6 +133,29 @@ body {
 	width: 80px;
 }
 
+.dnp_comments_button_format_v2:hover {
+	padding: 5px 10px;
+	background: #ededed;
+	box-shadow: none;
+	border: 1px solid #333333;
+	color: #333333;
+	border-radius: 4px;
+	width: 80px;
+	transition: all 0.5s linear;
+}
+
+.dnp_green_button:hover {
+	background: green;
+	transition: all 1s linear;
+	border: 1px solid #333333;
+}
+
+.dnp_red_button:hover {
+	background: red;
+	transition: all 1s linear;
+	border: 1px solid #333333;
+}
+
 .dnp_hashtag {
 	background: #ededed;
 	padding: 2px 5px;
