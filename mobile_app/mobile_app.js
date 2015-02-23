@@ -97,6 +97,7 @@ function initialize() {
 			google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
 				if ( this.getZoom() ) {
 					this.setZoom(3);
+					this.panBy(0,-10)
 				}
 			});
 
