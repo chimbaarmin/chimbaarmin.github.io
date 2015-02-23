@@ -4,453 +4,54 @@
 	<meta charset="UTF-8">
 	<title>Mobile App Demo v0.1</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" href="mobile_app.css" />
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
 	<script src="../plugins/jquery.cookie.js"></script>
-	<script>
-  $(function() {
-    var projects = [
-      {
-        value: "000",
-        label: "000",
-        desc: "Test1"
-      },
-      {
-        value: "001",
-        label: "001",
-        desc: "Test2"
-      },
-		{
-        value: "002",
-        label: "002",
-        desc: "Test3"
-      }
-    ];
- 
-    $( ".mnp_search_box_input" ).autocomplete({
-      minLength: 0,
-      source: projects,
-      focus: function( event, ui ) {
-        $( ".mnp_search_box_input" ).val( ui.item.label );
-        return false;
-      },
-      select: function( event, ui ) {
-        $( ".mnp_search_box_input" ).val( ui.item.label );
- 
-        return false;
-      }
-    })
-    .autocomplete( "instance" )._renderItem = function( ul, item ) {
-      return $( "<li>" ).append( "<a>" + item.label + "<br>" + item.desc + "</a>").appendTo( ul );
-    };
-  });
-  </script>
+	<script src="mobile_app.js"></script>
 </head>
 <body>
-	
-	<!-- Start of home page -->
-	<div data-role="page" id="home_page" data-next="" data-prev="options_page" class="custom_page_background">
-		
-		<div class="mnp_header">
-			<div class="mnp_header_button_div">
-				<a href="#options_page" class="mnp_header_button" data-transition="flip" data-direction="reverse"><span class="fa fa-gear"></span> Options</a>
-			</div>
-			<div class="mnp_header_h1_div">
-				<h1 class="mnp_header_h1"></h1>
-			</div>	
-			<div class="clear"></div>
-		</div>
-				
-		<div role="main" class="ui-content">
-			<div class="mnp_logo">
-				<img src="../images/ni_logo_small.png" alt="Number-Index.com Logo" class="mnp_logo_img">
-			</div>
-						
-			<div data-role="none" class="mnp_search_box">
-				<form data-role="none" action="/" method="get" class="mnp_search_box_form">
-            		<input data-role="none" name="s" type="text" value="" placeholder="Lookup number" id="search_box" class="mnp_search_box_input"><button data-role="none" class="mnp_search_box_button">Search</button>
-            	</form>
-			</div>	
-			
-			<div class="mnp_live_results">
-				<h3>Live search results:</h3>
-				<ul data-role="listview" data-inset="true">
-					<li><a href="#number_page" clas="mnp_live_results_button">Sample number page</a></li>
-					<li><a href="#number_page" clas="mnp_live_results_button">Sample number page</a></li>
-					<li><a href="#number_page" clas="mnp_live_results_button">Sample number page</a></li>
-					<li><a href="#number_page" clas="mnp_live_results_button">Sample number page</a></li>
-					<li><a href="#number_page" clas="mnp_live_results_button">Sample number page</a></li>
-				</ul>
-			</div>
-			
-			<div class="mnp_main_adspace">
-			    <img src="images/adsense_mockup.png">
-			</div>
-			
-			<div class="mnp_button">
-			    <a href="" class="mnp_search_history_button">Show latest searches</a>
-			</div>
-			
-			<div class="mnp_search_history">
-				<h3>Latest searches:</h3>
-				<ul data-role="listview" data-inset="true">
-					<li><a href="#" class="fifthcookie">No Data</a></li>
-					<li><a href="#" class="fourthcookie">No Data</a></li>
-					<li><a href="#" class="thirdcookie">No Data</a></li>
-					<li><a href="#" class="secondcookie">No Data</a></li>
-					<li><a href="#" class="firstcookie">No Data</a></li>
-				</ul>
-			</div>
-			
-		</div><!-- /content -->
-		
-		<div class="mnp_footer">	
-			<div class="mnp_copyright">
-			    <p class="mnp_copyright_p">Copyright &copy; 2015</p>
-			</div>
-			<div class="mnp_cookie_disclaimer">
-			    <a href="#cookie_dialog" class="mnp_cookie_disclaimer_link">Cookie policy</a>
-			</div>
-			<div class="clear"></div>
-		</div>
-		
-		
-	</div>
-	<!-- End of home page -->
-	
-	<!-- Start of search history page -->
-	<div data-role="page" id="search_history_page" data-next="none" data-prev="search_page" class="custom_page_background">
-	
-		<div role="main" class="ui-content">
-		
-			<div class="mnp_logo">
-				<img src="../images/ni_logo_small_only.png" alt="Number-Index.com Logo" class="mnp_logo_img">
-			</div>
-			
-			<p>Search history page.</p>
-			
-			<div class="search_history">
-				<ul class="search_history">
-					<li class="firstcookie"></li>
-					<li class="secondcookie"></li>
-					<li class="thirdcookie"></li>
-					<li class="fourthcookie"></li>
-					<li class="fifthcookie"></li>
-				</ul>
-			</div>
-			
-			<div class="mnp_button_area">
-				<a href="#search_page" data-transition="flip" data-direction="reverse" class="mnp_button_area_button">Search</a>
-				<a href="#home_page" data-transition="flip" data-direction="reverse" class="mnp_button_area_button">Home page</a>
-			</div>
-			
-		</div><!-- /content -->
-		
-		<div class="mnp_footer">	
-			<div class="mnp_copyright">
-			    <p class="mnp_copyright_p">Copyright &copy; 2015</p>
-			</div>
-			<div class="mnp_cookie_disclaimer">
-			    <a href="#cookie_dialog" class="mnp_cookie_disclaimer_link">Cookie policy</a>
-			</div>
-			<div class="clear"></div>
-		</div>
-		
-	</div>
-	<!-- End of search history page -->
-	
-	<!-- Start of number profile page -->
-	<div data-role="page" id="number_page" data-next="none" data-prev="home_page" class="number_page_background">
-	
-		<div role="main" class="ui-content">
-		
-			<div data-role="none" class="mnp_search_box">
-				<form data-role="none" action="/" method="get" class="mnp_search_box_form">
-            		<input data-role="none" name="s" type="text" value="" placeholder="Lookup number" class="mnp_search_box_input"><button data-role="none" class="mnp_search_box_button">Search</button>
-            	</form>
-			</div>
-			
-			<div class="dnp_map_wrapper">
-			   <div class="dnp_google_map">
 
-			   </div>
-			   <div class="dnp_over_map">
-				   <div class="dnp_over_map_h1">
-						<h1 class="mnp_number_h1">1-234-567-8901</h1>
-				   </div>
-					<h2 class="mnp_number_h2">Area code: 234</h2><br>
-					<h2 class="mnp_number_h2">City/state: Lorem/Ipsum</h2><br>
-					<div class="dnp_over_map_h2_hashtag">
-						<h2 class="mnp_number_h2_hashtag">#hashtag</h2>
-					</div>
-			   </div>
-			</div>
-			
-			<div class="mnp_number_page_adspace">
-				<img src="images/adsense_mockup.png">
-			</div>
-			
-			<div class="mnp_vote_box">
-				<p class="mnp_vote_box_p">Please rate this number. Positive or negative?</p>
-				<div class="mnp_thumbs_up">
-					<a href="" class="mnp_thumbs_up_link"><span class="fa fa-thumbs-up fa-4x"></span></a>
-				</div>
-				<div class="mnp_thumbs_down">
-					<a href="" class="mnp_thumbs_down_link"><span class="fa fa-thumbs-down fa-4x"></span></a>
-				</div>
-				<div class="clear"></div>
-			</div>
-			
-		</div><!-- /content -->
+	<div data-role="page" id="home_page" data-next="" data-prev="" class="home_page_div">
 		
-		<div class="mnp_footer">	
-			<div class="mnp_footer_buttons">
-				<div class="mnp_footer_buttons_left">
-					<a href="" class="mnp_footer_buttons_left_button">Read comments</a>
-				</div>
-				<div class="mnp_footer_buttons_right">
-					<a href="" class="mnp_footer_buttons_right_button">Call number</a>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-		
-	</div>
-	<!-- end of number profile page -->
-	
-	<!-- Options page -->
-	<div data-role="page" id="options_page" data-next="home_page" data-prev="none" class="custom_page_background">
-	
 		<div class="mnp_header">
-			<div class="mnp_header_h1_div">
-				<h1 class="mnp_header_h1">Options</h1>
-			</div>	
-			<div class="clear"></div>
+			<h1 class="mnp_header_h1">
+				NUMBER-INDEX.COM
+			</h1>
+		</div>	
+		<div class="mnp_content">
+			<div class="mnp_content_map" id="google_map">
+			</div>
+			<div class="mnp_content_search_box">
+				<form action="/" method="get" clas="mnp_content_search_form">
+        		<input name="s" type="text" value="" placeholder="Lookup number" class="mnp_content_search_form_input"><button class="mnp_content_search_form_button">Search</button>
+        		</form>
+        		<div class="mnp_content_search_box_help">
+        			<a href="#help_box" class="mnp_content_search_box_help_link">Help</a>
+        		</div>
+			</div>
 		</div>
-		
-		<div role="main" class="ui-content">
-			
-			<div class="mnp_options_page_logo">
-				<span class="fa fa-gear fa-4x mnp_options_page_logo_span"></span>
+		<div class="mnp_footer">
+			<div class="mnp_footer_menu">
+				<i class="fa fa-bars mnp_footer_menu_i"></i>
 			</div>
-		
-			<div class="mnp_options_page_buttons_div">
-				<a href="#" class="mnp_options_page_button deleteCookies" >Delete Cookies</a>
-				<a href="#search_history_page" class="mnp_options_page_button display_history" data-transition="flip">Search History</a>
-				<a href="#" class="mnp_options_page_button">Switch Theme</a>
-				<div class="mnp_options_page_adspace">
-					<img src="../images/fakeads/half_banner.png" alt="" class="mnp_options_page_adspace_img">
-				</div>
-				<a href="#home_page" class="mnp_options_page_button" data-transition="flip">Home page</a>
+			<div class="mnp_footer_copyright">
+				<p class="mnp_footer_copyright_p">
+					Copyright &copy; 2015.
+				</p>
 			</div>
-						
-		</div><!-- /content -->
-		
-		<div class="mnp_footer">	
-			<div class="mnp_copyright">
-			    <p class="mnp_copyright_p">Copyright &copy; 2015</p>
-			</div>
-			<div class="mnp_cookie_disclaimer">
-			    <a href="#cookie_dialog" class="mnp_cookie_disclaimer_link">Cookie policy</a>
-			</div>
-			<div class="clear"></div>
 		</div>
-		
-	</div>
-	<!-- End options page -->
-	
-	<!-- Cookie dialog -->
-	<div data-role="page" id="cookie_dialog" data-next="none" data-prev="none" class="custom_page_background">
-	
-		<div class="mnp_header">
-			<div class="mnp_header_h1_div">
-				<h1 class="mnp_header_h1">Our cookie policy</h1>
-			</div>	
-			<div class="clear"></div>
+		<div class="mnp_hidden_menu">
+			<ul class="mnp_hidden_menu_ul">
+				<li class="mnp_hidden_menu_li"><a href="/" class="mnp_hidden_menu_link">Remove entry</a></li>
+				<li class="mnp_hidden_menu_li"><a href="/s" class="mnp_hidden_menu_link">Disclaimer</a></li>
+				<li class="mnp_hidden_menu_li"><a href="#" class="mnp_hidden_menu_link">Contact us</a></li>
+				<li class="mnp_hidden_menu_li"><a href="#" class="mnp_hidden_menu_link">About</a></li>
+			</ul>
 		</div>
-		
-		<div role="main" class="ui-content">
-		
-			<h2 class="mnp_cookie_dialog_h2">This website uses cookies.</h2>
-			
-			<p>By continuing to browse this site you agree with our cookie policy.<br>
-			<br>
-			You can delete stored cookies anytime by clicking Options > Delete Cookies.
-			</p>
-			
-			<div class="mnp_cookie_dialog_button_div">
-				<a href="about:clear" data-transition="flip" class="mnp_cookie_dialog_button">Cancel</a>
-				<a href="#home_page" data-transition="flip" data-direction="reverse" class="mnp_cookie_dialog_button">OK</a>
-			</div>
-			
-		</div><!-- /content -->
-		
-		<div class="mnp_footer">	
-			<div class="mnp_copyright">
-			    <p class="mnp_copyright_p">Copyright &copy; 2015</p>
-			</div>
-			<div class="mnp_cookie_disclaimer">
-			    <a href="#cookie_dialog" class="mnp_cookie_disclaimer_link">Cookie policy</a>
-			</div>
-			<div class="clear"></div>
-		</div>
-		
-	</div>
-	<!-- End cookie dialog -->	
-	
-	<!-- Swipe navigation -->
-	<script>
-		
-		jQuery( document ).on( "swiperight", ".ui-page", rightHandler );
-				
-		function rightHandler( event ){
-			var prev = jQuery( ".ui-page-active" ).jqmData( "prev" );
-			if ( prev && ( event.target === $( this )[ 0 ] ) ) {
-				jQuery( "body" ).pagecontainer( "change", "#" + prev, { transition: "flip", reverse: true } );
-			}
-		}
-		
-		jQuery( document ).on( "swipeleft", ".ui-page", leftHandler );
-		
-		function leftHandler( event ){
-			var next = jQuery( ".ui-page-active" ).jqmData( "next" );
-			if ( next && ( event.target === $( this )[ 0 ] ) ) {
-				jQuery( "body" ).pagecontainer( "change", "#" + next, { transition: "flip" } );
-			}
-		}
-		
-	</script>
-	
-	<!-- Cookies -->
-	<script>
-		
-		jQuery(document).ready(function(){     
-			var $uservisit = jQuery.cookie('visit');
-			if ( $uservisit != "true" ) {
-				jQuery.cookie( 'visit', 'true', { expires: 365, path: '/' } );
-                jQuery.cookie('first', 'No Data', { expires: 365, path: '/' } );
-                jQuery.cookie('second', 'No Data', { expires: 365, path: '/' } );
-                jQuery.cookie('third', 'No Data', { expires: 365, path: '/' } );
-                jQuery.cookie('fourth', 'No Data', { expires: 365, path: '/' } );
-                jQuery.cookie('fifth', 'No Data', { expires: 365, path: '/' } );
-				jQuery( "body" ).pagecontainer( "change", "#cookie_dialog" );
-			}
-			else {
-			}
-    	});	
-		
-		jQuery( ".deleteCookies ").click(function() {
-			jQuery.removeCookie('visit', { path: '/' });
-			jQuery.cookie('first', 'No Data', { expires: 365, path: '/' } );
-            jQuery.cookie('second', 'No Data', { expires: 365, path: '/' } );
-            jQuery.cookie('third', 'No Data', { expires: 365, path: '/' } );
-            jQuery.cookie('fourth', 'No Data', { expires: 365, path: '/' } );
-            jQuery.cookie('fifth', 'No Data', { expires: 365, path: '/' } );
-		});
-		
-		jQuery( ".mnp_search_box_form" ).submit(function( event ) {
-			var $firstcookie = jQuery.cookie('first');
-			var $formvalue = jQuery( "#search_box" ).val();
-			if ( $formvalue != "" ) {
-				if (typeof $firstcookie === 'undefined') {
-					jQuery.cookie('first', $formvalue, { expires: 365, path: '/' } );
-				}
-				else {
-					var $secondcookie = jQuery.cookie('second');
-					if (typeof $secondcookie === 'undefined') {
-						jQuery.cookie('second', $formvalue, { expires: 365, path: '/' } );
-					}
-					else {
-						var $thirdcookie = jQuery.cookie('third');
-						if (typeof $thirdcookie === 'undefined') {
-							jQuery.cookie('third', $formvalue, { expires: 365, path: '/' } );
-						}
-						else {
-							var $fourthcookie = jQuery.cookie('fourth');
-							if (typeof $fourthcookie === 'undefined') {
-								jQuery.cookie('fourth', $formvalue, { expires: 365, path: '/' } );
-							}
-							else {
-								var $fifthcookie = jQuery.cookie('fifth');
-								if (typeof $fifthcookie === 'undefined') {
-									jQuery.cookie('fifth', $formvalue, { expires: 365, path: '/' } );
-								}
-								else {
-									var $movesecond = jQuery.cookie('second');
-									var $movethird = jQuery.cookie('third');
-									var $movefourth = jQuery.cookie('fourth');
-									var $movefifth = jQuery.cookie('fifth');
-									jQuery.cookie('first', $movesecond, { expires: 365, path: '/' } );
-									jQuery.cookie('second', $movethird, { expires: 365, path: '/' } );
-									jQuery.cookie('third', $movefourth, { expires: 365, path: '/' } );
-									jQuery.cookie('fourth', $movefifth, { expires: 365, path: '/' } );
-									jQuery.cookie('fifth', $formvalue, { expires: 365, path: '/' } );
-								}
-							}
-						}
-					}
-				}
-			}
-			else {
-				alert ( "Search field empty." );
-			}
-		});
-		
-		jQuery( ".display_history" ).click(function() { 
-			jQuery( ".firstcookie, .secondcookie, .thirdcookie, .fourthcookie, .fifthcookie" ).empty();
-			jQuery( ".firstcookie" ).append ( jQuery.cookie('first') );
-			jQuery( ".secondcookie" ).append ( jQuery.cookie('second') );
-			jQuery( ".thirdcookie" ).append ( jQuery.cookie('third') );
-			jQuery( ".fourthcookie" ).append ( jQuery.cookie('fourth') );
-			jQuery( ".fifthcookie" ).append ( jQuery.cookie('fifth') );
-		});
-        
-        jQuery( ".mnp_search_history_button" ).click(function() { 
-			jQuery( ".firstcookie, .secondcookie, .thirdcookie, .fourthcookie, .fifthcookie" ).empty();
-			jQuery( ".firstcookie" ).append ( jQuery.cookie('first') );
-			jQuery( ".secondcookie" ).append ( jQuery.cookie('second') );
-			jQuery( ".thirdcookie" ).append ( jQuery.cookie('third') );
-			jQuery( ".fourthcookie" ).append ( jQuery.cookie('fourth') );
-			jQuery( ".fifthcookie" ).append ( jQuery.cookie('fifth') );
-            jQuery( ".mnp_search_history" ).css( "display", "block" );
-		});
-		
-	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script>
-		
-		jQuery( document ).ready(function() {
-			var myLatLng = new google.maps.LatLng(52, 13);
-			var map;
-			var myOptions = {
-				zoom: 6,
-    			center: myLatLng,
-    			disableDefaultUI: true
-			};
-			var styles = [
-			  	{
-					stylers: [
-						 { saturation: -100 },
-				 	]
-			  	}
-			];
-			
-			map = new google.maps.Map($('.dnp_google_map')[0], myOptions);
-			map.setOptions({styles: styles});
-			
-			var marker = new google.maps.Marker({
-				  position: myLatLng,
-				  map: map,
-				  title: 'Hello World!'
-			});
-			
-			google.maps.event.addDomListener(window, 'load', initialize);
-		});
-	
-	</script>
+	</div><!-- End of home page -->
+
 </body>
 </html>
