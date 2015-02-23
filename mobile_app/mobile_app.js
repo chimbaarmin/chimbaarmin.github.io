@@ -36,9 +36,9 @@ function toogleMenu() {
 	}
 }
 
-$(document).on('click', '.mnp_footer_menu_i', toogleMenu);
+$(document).on('vclick', '.mnp_footer_menu_i', toogleMenu);
 
-$(document).on('click', function(event) {
+$(document).on('vclick', function(event) {
 	if (!$(event.target).closest('.mnp_hidden_menu').length & !$(event.target).is( '.mnp_footer_menu_i' ) ) {
 		jQuery( '.mnp_hidden_menu' ).css('display', 'none');
 	}
