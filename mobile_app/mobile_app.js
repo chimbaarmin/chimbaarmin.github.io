@@ -43,7 +43,7 @@ $(document).on('click', function(event) {
 });
 
 $(function(){
-  $( document ).bind( 'tap', '.mnp_footer_menu_i', toogleMenu);
+  $( '.mnp_footer_menu_i' ).bind( 'tap', '.mnp_footer_menu_i', toogleMenu);
 });
 
 /* */
