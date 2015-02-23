@@ -36,11 +36,13 @@ function toogleMenu() {
 	}
 }
 
-$(document).on('click', function(event) {
+function toogleMenu2(event) {
 	if (!$(event.target).closest('.mnp_hidden_menu').length & !$(event.target).is( '.mnp_footer_menu_i' ) ) {
 		jQuery( '.mnp_hidden_menu' ).css('display', 'none');
 	}
-});
+}
+
+$(document).bind('tap', toogleMenu2);
 
 $(function(){
   $( '.mnp_footer_menu_i' ).bind( 'tap', '.mnp_footer_menu_i', toogleMenu);
