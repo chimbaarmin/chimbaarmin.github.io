@@ -127,11 +127,10 @@
 }
 
 .mnp_hidden_menu_li {
-	
 }
 
 .mnp_hidden_menu_link, .mnp_hidden_menu_link:hover, .mnp_hidden_menu_link:active, .mnp_hidden_menu_link:visited, .mnp_hidden_menu_link:focus {
-	font: 14px/1.3 'Open Sans', sans-serif !important;
+	font: 18px/1.3 'Open Sans', sans-serif !important;
 	color: #ffffff !important;
 	text-decoration: none !important;
 }
