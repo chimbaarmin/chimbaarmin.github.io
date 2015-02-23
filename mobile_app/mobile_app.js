@@ -137,6 +137,6 @@ function showHiddenMenu() {
 	}
 }
 
-jQuery( document ).on('click', '.mnp_footer_menu', showHiddenMenu);
+jQuery( '.mnp_footer_menu' ).on('tap', showHiddenMenu);
 	
 jQuery(document).mouseup( hideHiddenMenu );
