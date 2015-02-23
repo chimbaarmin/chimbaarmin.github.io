@@ -42,8 +42,9 @@
 
 .mnp_content_search_box {
 	position: absolute;
-	top: 0;
+	top: 50px;
 	z-index: 1;
+	width: 80%;
 }
 
 .mnp_content_search_form_input {
@@ -84,6 +85,7 @@
 	width: 20%;
 	float: left;
 	display: inline-block;
+	z-index: 2;
 }
 
 .mnp_footer_menu_i {
@@ -91,7 +93,7 @@
 	color: #ffffff;
 	margin: 8px 10px 7px 10px;
 	font-size: 18px;
-	z-index: 1;
+	z-index: 2;
 }
 
 .mnp_footer_copyright {
@@ -110,13 +112,12 @@
 }
 
 .mnp_hidden_menu {
-	background: #333333;
-	color: #ffffff;
+	z-index: 1;
 	position: absolute;
 	bottom: 33px;
 	left: 0;
-	z-index: 1;
 	display: none;
+	background: #333333;
 }
 
 .mnp_hidden_menu_ul {
@@ -125,8 +126,51 @@
 	margin: 20px;
 }
 
-.mnp_hidden_menu_link, .mnp_hidden_menu_link:visited, .mnp_hidden_menu_link:active, .mnp_hidden_menu_link:hover, .mnp_hidden_menu_link:focus {
+.mnp_hidden_menu_li {
+	
+}
+
+.mnp_hidden_menu_link, .mnp_hidden_menu_link:hover, .mnp_hidden_menu_link:active, .mnp_hidden_menu_link:visited, .mnp_hidden_menu_link:focus {
+	font: 14px/1.3 'Open Sans', sans-serif !important;
 	color: #ffffff !important;
 	text-decoration: none !important;
-	font: 14px/1.3 'Open Sans', sans-serif !important;
+}
+
+/* =Help page */
+
+.help_page_div {
+	color: #ffffff;
+	background: #333333;
+	font: 14px/1.3 'Open Sans', sans-serif;
+	text-shadow: none !important;
+}
+
+.mnp_help_page_h1 {
+	font: 18px/1.3 'Open Sans', sans-serif;
+	padding: 5px 20px;
+	margin: 0;
+}
+
+.mnp_help_page_p {
+	margin: 20px;
+}
+
+.mnp_help_page_p_bold {
+	margin: 20px;
+	font-weight: bold;
+}
+
+.mnp_help_page_button_div {
+	text-align: center;
+}
+
+.mnp_help_page_button {
+	color: #ffffff !important;
+	background: #333333 !important;
+	border: 1px solid #cccccc;
+	text-decoration: none !important;
+	padding: 10px;
+	width: 100px;
+	margin: 0;
+	display: inline-block;
 }

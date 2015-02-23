@@ -1,17 +1,52 @@
 /* GM size */
 
-$winh = jQuery( window ).height();
-jQuery( window ).on("resize", function() {
+var $winh;
+function windowHeight() {
 	$winh = jQuery( window ).height();
 	jQuery( document.getElementById("google_map") ).css( "height", $winh );
-});
-		
-jQuery(function() {
-	$winh = jQuery( window ).height();
-	jQuery( document.getElementById("google_map") ).css( "height", $winh );
+}
+
+jQuery( window ).on("resize", windowHeight);	
+jQuery( windowHeight );
+
+/* Search position */
+
+var $winw;
+var $elemw;
+var $finalw;
+function windowWidth() {
+	$winw = jQuery( window ).width() / 2;
+	$elemw = jQuery( '.mnp_content_search_box' ).width() / 2;
+	$finalw = $winw - $elemw;
+	jQuery( document.getElementsByClassName("mnp_content_search_box") ).css( "left", $finalw );
+}
+
+jQuery( window ).on("resize", windowWidth);		
+jQuery( windowWidth );
+
+
+/* Hidden menu */
+
+function toogleMenu() {
+	if ( jQuery( '.mnp_hidden_menu' ).css('display') == 'none' ) {
+		jQuery( '.mnp_hidden_menu' ).css('display', 'block');
+	}
+	else {
+		jQuery( '.mnp_hidden_menu' ).css('display', 'none');
+	}
+}
+
+$(document).on('click', '.mnp_footer_menu_i', toogleMenu);
+
+$(document).on('click', function(event) {
+	if (!$(event.target).closest('.mnp_hidden_menu').length & !$(event.target).is( '.mnp_footer_menu_i' ) ) {
+		jQuery( '.mnp_hidden_menu' ).css('display', 'none');
+	}
 });
 
-/* GM */
+/* */
+
+/* Google Map */
 
 jQuery(function($) {
 	var script = document.createElement('script');
@@ -68,75 +103,3 @@ function initialize() {
 			setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
 			}
 		}
-
-/* */
-
-jQuery( document ).on( "swiperight", ".ui-page", rightHandler );
-				
-		function rightHandler( event ){
-			var prev = jQuery( ".ui-page-active" ).jqmData( "prev" );
-			if ( prev && ( event.target === $( this )[ 0 ] ) ) {
-				jQuery( "body" ).pagecontainer( "change", "#" + prev, { transition: "flip", reverse: true } );
-			}
-		}
-		
-		jQuery( document ).on( "swipeleft", ".ui-page", leftHandler );
-		
-		function leftHandler( event ){
-			var next = jQuery( ".ui-page-active" ).jqmData( "next" );
-			if ( next && ( event.target === $( this )[ 0 ] ) ) {
-				jQuery( "body" ).pagecontainer( "change", "#" + next, { transition: "flip" } );
-			}
-		}
-
-/* */
-
-var $winh2;
-var $elemh2;
-var $finalh;
-var $winw2;
-var $elemw2;
-var $finalw;
-jQuery( window ).on("resize", function() {
-	$winh2 = jQuery( window ).height() / 2;
-	$elemh2 = jQuery( '.mnp_content_search_box' ).height() / 2;
-	$finalh = $winh2 - $elemh2;
-	jQuery( document.getElementsByClassName("mnp_content_search_box") ).css( "top", $finalh );
-	$winw2 = jQuery( window ).width() / 2;
-	$elemw2 = jQuery( '.mnp_content_search_box' ).width() / 2;
-	$finalw = $winw2 - $elemw2;
-	jQuery( document.getElementsByClassName("mnp_content_search_box") ).css( "left", $finalw );
-});
-		
-jQuery(function() {
-	$winh2 = jQuery( window ).height() / 2;
-	$elemh2 = jQuery( '.mnp_content_search_box' ).height() / 2;
-	$finalh = $winh2 - $elemh2;
-	jQuery( document.getElementsByClassName("mnp_content_search_box") ).css( "top", $finalh );
-	$winw2 = jQuery( window ).width() / 2;
-	$elemw2 = jQuery( '.mnp_content_search_box' ).width() / 2;
-	$finalw = $winw2 - $elemw2;
-	jQuery( document.getElementsByClassName("mnp_content_search_box") ).css( "left", $finalw );
-});
-
-/* */
-
-function hideHiddenMenu (e) {
-	var home_container = $(".mnp_hidden_menu");
-	if (!home_container.is(e.target) && home_container.has(e.target).length === 0) {
-		jQuery( '.mnp_hidden_menu' ).css('display', 'none' );
-	}
-}
-
-function showHiddenMenu() {
-	if ( jQuery( '.mnp_hidden_menu' ).css('display') == 'none' ) {
-		jQuery( '.mnp_hidden_menu' ).css( 'display', 'block' );
-	}
-	else {
-		jQuery( '.mnp_hidden_menu' ).css( 'display', 'none' );
-	}
-}
-
-jQuery( '.mnp_footer_menu' ).on('tap', showHiddenMenu);
-	
-jQuery(document).mouseup( hideHiddenMenu );
