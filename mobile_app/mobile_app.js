@@ -104,4 +104,8 @@ function initialize(condition) {
 
 /* Rerun GM */
 
-$(document).on( "pageshow", "#business_page", initialize );
+jQuery(document).on( "pageshow", "#business_page", initialize );
+
+jQuery(document).on( "pageshow", "#home_page", function() {
+	jQuery( '.mnp_content_search_form_input' ).focus();
+});
