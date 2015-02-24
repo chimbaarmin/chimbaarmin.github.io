@@ -186,6 +186,10 @@
 	display: inline-block;
 }
 
+.mnp_business_content {
+	margin: 20px;
+}
+
 /* =Help page */
 
 .help_page_div {
