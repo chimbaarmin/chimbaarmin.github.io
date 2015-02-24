@@ -1,4 +1,4 @@
-/* GM size */
+/* GM size  (home) */
 
 var $winh;
 function windowHeight() {
@@ -8,6 +8,17 @@ function windowHeight() {
 
 jQuery( window ).on("resize", windowHeight);	
 jQuery( windowHeight );
+
+/* GM size  (business) */
+
+var $bwinh;
+function windowHeightB() {
+	$bwinh = jQuery( window ).height() / 2;
+	jQuery( document.getElementById("business_google_map") ).css( "height", $bwinh );
+}
+
+jQuery( window ).on("resize", windowHeightB);	
+jQuery( windowHeightB );
 
 /* Search position */
 
@@ -28,17 +39,17 @@ jQuery( windowWidth );
 /* Hidden menu */
 
 function toogleMenu() {
-	if ( jQuery( '.mnp_hidden_menu' ).css('display') == 'none' ) {
-		jQuery( '.mnp_hidden_menu' ).css('display', 'block');
+	if ( jQuery( '.mnp_hidden_menu' ).css('height') == '0px' ) {
+		jQuery( '.mnp_hidden_menu' ).css('height', 'auto');
 	}
 	else {
-		jQuery( '.mnp_hidden_menu' ).css('display', 'none');
+		jQuery( '.mnp_hidden_menu' ).css('height', '0px');
 	}
 }
 
 function toogleMenu2(event) {
 	if (!$(event.target).closest('.mnp_hidden_menu').length & !$(event.target).is( '.mnp_footer_menu_i' ) ) {
-		jQuery( '.mnp_hidden_menu' ).css('display', 'none');
+		jQuery( '.mnp_hidden_menu' ).css('height', '0px');
 	}
 }
 
@@ -50,7 +61,7 @@ $(function(){
 
 /* */
 
-/* Google Map */
+/* Google Map (home) */
 
 jQuery(function($) {
 	var script = document.createElement('script');
@@ -58,53 +69,39 @@ jQuery(function($) {
 	document.body.appendChild(script);
 });
 
-function initialize() {
-	var map;
-	var bounds = new google.maps.LatLngBounds();
-	var mapOptions = {
-		mapTypeId: 'terrain',
-		zoom: 100,
-		disableDefaultUI: true
-	};
+var map, map2;
 
-	map = new google.maps.Map(document.getElementById("google_map"), mapOptions);
-	map.setTilt(45);
+function initialize(condition) {
 	
-	var markers = [
-		['Grand Rapids', 42.9633599,-85.6680863, '6169802150', 'USA', 616],
-		['Melbourne, Florida', 28.0836269,-80.6081089, '3212555798', 'USA', 321],
-		['Miami, Florida', 25.7616798,-80.1917902, '3052007795', 'USA', 305],
-		['San Jose, California', 37.3382082,-121.8863286, '4086185204', 'USA', 408],
-		['Fargo, North Dakota', 46.8771863,-96.7898034, '7018576400', 'USA', 701]
-	];
+	var myLatlng = new google.maps.LatLng(38.9071923,-77.0368707);
+	
+	var myOptions = {
+    	zoom: 14,
+    	center: myLatlng,
+		disableDefaultUI: true,
+    	mapTypeId: google.maps.MapTypeId.ROADMAP
+  	}
+	
+	var myOptions2 = {
+    	zoom: 5,
+    	center: myLatlng,
+		disableDefaultUI: true,
+    	mapTypeId: google.maps.MapTypeId.ROADMAP,
+  	}
+	
+	map = new google.maps.Map(document.getElementById("google_map"), myOptions);
+    map2 = new google.maps.Map(document.getElementById("business_google_map"), myOptions2);
+	map2.panBy(0, -70);
+	
+	var marker = new google.maps.Marker({
+      	position: myLatlng,
+      	map: map2,
+      	title: 'Hello World!'
+  	});
+	
+	google.maps.event.addDomListener(window, 'load', initialize);
+}
 
-	var infoWindow = new google.maps.InfoWindow(), marker, i;
-			
-	for( i = 0; i < markers.length; i++ ) {
-		var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-		bounds.extend(position);
-		marker = new google.maps.Marker({
-			position: position,
-			map: map,
-			title: markers[i][0],
-			optimized: false
-		});
- 
-		google.maps.event.addListener(marker, 'click', (function(marker, i) {
-			return function() {
-				
-			}
-			})(marker, i));
+/* Rerun GM */
 
-			map.fitBounds(bounds);
-			zoomChangeBoundsListener = 
-			google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
-				if ( this.getZoom() ) {
-					this.setZoom(3);
-					this.panBy(0,-10)
-				}
-			});
-
-			setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
-			}
-		}
+$(document).on( "pageshow", "#business_page", initialize );

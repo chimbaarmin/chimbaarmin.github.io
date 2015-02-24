@@ -25,12 +25,14 @@
 			</div>
 			<div class="mnp_content_search_box">
 				<form action="/" method="get" clas="mnp_content_search_form">
-        		<input name="s" type="text" value="" placeholder="Lookup number" class="mnp_content_search_form_input"><button class="mnp_content_search_form_button">Search</button>
+					<input name="s" type="text" value="" placeholder="Lookup number" class="mnp_content_search_form_input" data-role="none">
+					<button class="mnp_content_search_form_button" data-role="none"><i class="fa fa-search"></i></button>
         		</form>
         		<div class="mnp_content_search_box_help">
         			<a href="#help_page" class="mnp_content_search_box_help_link">Help</a>
         		</div>
 			</div>
+			
 		</div>
 		<div class="mnp_footer">
 			<div class="mnp_footer_menu">
@@ -48,9 +50,47 @@
 				<li class="mnp_hidden_menu_li"><a href="#" class="mnp_hidden_menu_link">Disclaimer</a></li>
 				<li class="mnp_hidden_menu_li"><a href="#" class="mnp_hidden_menu_link">Contact</a></li>
 				<li class="mnp_hidden_menu_li"><a href="#" class="mnp_hidden_menu_link">About</a></li>
+				<li class="mnp_hidden_menu_li"><a href="#business_page" class="mnp_hidden_menu_link">Business page example</a></li>
 			</ul>
 		</div>
 	</div><!-- End of home page -->
+	
+	<div data-role="page" id="business_page" data-next="" data-prev="" class="business_page_div">
+		
+		<div class="mnp_header">
+			<h1 class="mnp_header_h1">
+				NUMBER-INDEX.COM
+			</h1>
+		</div>	
+		
+		<div class="mnp_content">
+			<div class="mnp_business_map" id="business_google_map">
+			</div>
+			<div class="business_google_map_overlay">
+				<h2 class="business_google_map_overlay_h2">123 456 7890</h2>
+				<div class="mnp_business_info">
+					<ul class="mnp_business_info_ul">
+						<li class="mnp_business_info_li">Washington DC</li>
+						<li class="mnp_business_info_li">USA</li>
+						<li class="mnp_business_info_li">123</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mnp_footer">
+			<div class="mnp_footer_menu">
+				<a class="mnp_footer_menu_link"><i class="fa fa-bars mnp_footer_menu_i"></i></a>
+			</div>
+			<div class="mnp_footer_copyright">
+				<p class="mnp_footer_copyright_p">
+					Copyright &copy; 2015.
+				</p>
+			</div>
+		</div>
+		<div class="mnp_hidden_menu">
+		</div>
+	</div><!-- End of business page -->
 	
 	<div data-role="page" id="help_page" data-next="" data-prev="" class="help_page_div">
 		
@@ -62,6 +102,6 @@
 			<a href="#home_page" class="mnp_help_page_button">OK</a>
 		</div>
 	</div><!-- End of help page -->
-
+	
 </body>
 </html>

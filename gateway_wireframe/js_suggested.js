@@ -25,6 +25,7 @@ jQuery(function() {
 		
 	jQuery( ".fa-thumbs-up" ).click(function() {
 		$voteIt = "Generally, this number was rated #positive."
+		jQuery("input.votetype_box").val( jQuery( ".vote_up" ).val() );
 		jQuery( ".gateway_step3, .gateway_step2negative, .selectMe, .selectFriend, .selectCompany, .selectUnknown, .selectMePrivate, .selectMeCompany, .selectFriendPrivate, .selectFriendCompany" ).css("display", "none");
 		jQuery( ".gateway_step2positive, .selectOwner" ).css("display", "block");
 		jQuery( ".more_info_box" ).val(null);
@@ -35,6 +36,7 @@ jQuery(function() {
 	
 	jQuery( ".fa-thumbs-down" ).click(function() {
 		$voteIt = "Generally, this number was rated #negative."
+		jQuery("input.votetype_box").val( jQuery( ".vote_down" ).val() );
 		jQuery( ".gateway_step3, .gateway_step2positive, .selectAccepted, .selectRejected, .selectAcceptedPrivate, .selectAcceptedCompany, .selectAcceptedUnclear, .selectRejectedFirst, .selectRejectedBefore" ).css("display", "none");
 		jQuery( ".gateway_step2negative, .selectCall" ).css("display", "block");
 		jQuery( ".more_info_box" ).val(null);
@@ -584,7 +586,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 	jQuery( "a.linkLocationUnknown" ).click(function() {
 		$numgeolocation = "";
 		$summary = $summary + " Location unknown.";
-		jQuery("textarea.hashtag_box").val( $summary );
+		jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary );
 		jQuery( ".gateway_step4Back" ).css("display", "block");
 		jQuery( ".gateway_step4" ).css("display", "block");
 		jQuery( ".gateway_step3" ).css("display", "none");
@@ -605,9 +607,9 @@ jQuery( "a.selectCallBack" ).click(function() {
 			geocoder.geocode( { 'address': address}, function(results, status) {
 				if (status == google.maps.GeocoderStatus.OK) {
 					var georesults = results[0].geometry.location;
-					jQuery("textarea.geolocation_box").val( georesults );
+					jQuery("input.geolocation_box").val( georesults );
 					$summary = $summary + " Location: " +$numgeolocation + ".";
-					jQuery("textarea.hashtag_box").val( $summary )
+					jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary );
 					jQuery( ".gateway_step4Back" ).css("display", "block");
 					jQuery( ".gateway_step4" ).css("display", "block");
 					jQuery( ".gateway_step3" ).css("display", "none");
@@ -630,16 +632,34 @@ jQuery( "a.selectCallBack" ).click(function() {
 
 // word counter
 
-	function checkWords(){
-	s = document.getElementById("comment_box").value;
-	s = s.replace(/(^\s*)|(\s*$)/gi,"");
-	s = s.replace(/[ ]{2,}/gi," ");
-	s = s.replace(/\n /,"\n");
-	$wordcount = s.split(' ').length;
+	function checkWords() {
+		s = document.getElementById("comment_box").value;
+		s = s.replace(/(^\s*)|(\s*$)/gi,"");
+		s = s.replace(/[ ]{2,}/gi," ");
+		s = s.replace(/\n /,"\n");
+		$wordcount = s.split(' ').length;
 		if ($wordcount > 2) {
+			return true;
 		}
 		else {
 			alert ("Please write at least 3 words in the comment box.");
 			return false;
 		}
+	}
+
+// simulate click
+
+function checkClicks() {
+	var $clicksbefore = GATEWAY_VOTE;
+	if ( $clicksbefore == "vote_up" ) {
+		jQuery( ".fa-thumbs-up" ).click();
+	}
+	else if ( $clicksbefore == "vote_down" ) {
+		jQuery( ".fa-thumbs-down" ).click();
+	}
+	else {
+		
+	}
 }
+
+jQuery(document).ready( checkClicks );
