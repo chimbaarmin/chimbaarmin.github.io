@@ -23,21 +23,39 @@
 
 .mnp_header {
 	z-index: 1;
+	background: #333333;
+	color: #ffffff;
+}
+
+.mnp_header_menu {
+	width: 20%;
+	z-index: 2;
+	display: inline;
+	float: left;
+	background: #333333;
+	color: #ffffff;
+}
+
+.mnp_header_menu_i {
+ 	background: #333333;
+	color: #ffffff;
+	margin: 8px 10px 7px 10px;
+	font-size: 18px;
+}
+
+.mnp_header_header {
+	width: 80%;
+	float: right;
+	display: inline;
+	background: #333333;
+	color: #ffffff;
+	text-align: right;
 }
 
 .mnp_header_h1 {
 	font: 18px/1.3 'Alegreya', serif;
-	text-align: center;
 	padding: 5px 10px;
 	margin: 0;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background: #333333;
-	color: #ffffff;
-	display: block;
-	width: 100%;
-	z-index: 1;
 }
 
 .mnp_content_search_box {
@@ -86,21 +104,6 @@
 	left: 0;
 }
 
-.mnp_footer_menu {
-	width: 20%;
-	float: left;
-	display: inline-block;
-	z-index: 2;
-}
-
-.mnp_footer_menu_i {
-	background: #333333;
-	color: #ffffff;
-	margin: 8px 10px 7px 10px;
-	font-size: 18px;
-	z-index: 2;
-}
-
 .mnp_footer_copyright {
 	color: #ffffff;
 	background: #333333;
@@ -117,9 +120,9 @@
 }
 
 .mnp_hidden_menu {
-	z-index: 1;
+	z-index: 3;
 	position: absolute;
-	bottom: 33px;
+	top: 33px;
 	left: 0;
 	background: #333333;
 	width: 100%;
@@ -144,24 +147,33 @@
 
 /* */
 
-.business_page_div {
+.profile_page_div {
 	background: #ededed;
 	text-shadow: none !important;
 	font: 14px/1.3 'Open Sans', sans-serif !important;
 }
 
-#business_google_map {
+
+
+.mnp_header_menu_home_i {
+	background: #333333;
+	color: #ffffff;
+	margin: 8px 10px 7px 10px;
+	font-size: 18px;
+}
+
+#profile_google_map {
 	border-bottom: 1px solid #333333;
 }
 
-.business_google_map_overlay {
+.profile_google_map_overlay {
 	position: absolute;
 	top: 33px;
 	left: 0;
 	width: 100%;
 }
 
-.business_google_map_overlay_h2 {
+.profile_google_map_overlay_h2 {
 	padding: 5px;
 	margin: 5px;
 	background: #ededed;
@@ -169,17 +181,17 @@
 	border: 1px solid #333333;
 }
 
-.mnp_business_info {
+.mnp_profile_info {
 	width: 100%;
 }
 
-.mnp_business_info_ul {
+.mnp_profile_info_ul {
 	margin: 0;
 	list-style-type: none;
 	padding: 0 20px 0 5px;
 }
 
-.mnp_business_info_li {
+.mnp_profile_info_li {
 	padding: 5px 10px;
 	margin: 0;
 	background: #333333;
@@ -187,15 +199,15 @@
 	display: inline-block;
 }
 
-.mnp_business_content {
+.mnp_profile_content {
 	margin: 20px;
 }
 
-.mnp_business_button {
+.mnp_profile_button {
 	width: 100%;
 }
 
-.mnp_business_button_link, .mnp_business_button_link:hover, .mnp_business_button_link:active, .mnp_business_button_link:visited, .mnp_business_button_link:focus {
+.mnp_profile_button_link, .mnp_profile_button_link:hover, .mnp_profile_button_link:active, .mnp_profile_button_link:visited, .mnp_profile_button_link:focus {
 	background: #333333 !important;
 	color: #ffffff !important;
 	padding: 10px;
@@ -242,4 +254,10 @@
 	width: 100px;
 	margin: 0;
 	display: inline-block;
+}
+
+/* */
+
+.mnp_clear {
+	clear: both;
 }

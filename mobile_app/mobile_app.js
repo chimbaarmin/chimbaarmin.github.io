@@ -9,12 +9,12 @@ function windowHeight() {
 jQuery( window ).on("resize", windowHeight);	
 jQuery( windowHeight );
 
-/* GM size  (business) */
+/* GM size  (profile) */
 
 var $bwinh;
 function windowHeightB() {
 	$bwinh = jQuery( window ).height() / 2;
-	jQuery( document.getElementById("business_google_map") ).css( "height", $bwinh );
+	jQuery( document.getElementById("profile_google_map") ).css( "height", $bwinh );
 }
 
 jQuery( window ).on("resize", windowHeightB);	
@@ -48,15 +48,21 @@ function toogleMenu() {
 }
 
 function toogleMenu2(event) {
-	if (!$(event.target).closest('.mnp_hidden_menu').length & !$(event.target).is( '.mnp_footer_menu_i' ) ) {
+	if (!$(event.target).closest('.mnp_hidden_menu').length & !$(event.target).is( '.mnp_header_menu_i' ) ) {
 		jQuery( '.mnp_hidden_menu' ).css('height', '0px');
 	}
 }
 
-$(document).bind('tap', toogleMenu2);
+jQuery(document).bind('tap', toogleMenu2);
 
-$(function(){
-  $( '.mnp_footer_menu_i' ).bind( 'tap', '.mnp_footer_menu_i', toogleMenu);
+jQuery(function(){
+  	jQuery( '.mnp_header_menu_i' ).bind( 'tap', '.mnp_header_menu_i', toogleMenu);
+});
+
+jQuery(function(){
+	jQuery( '.mnp_hidden_menu_li' ).bind( 'tap', '.mnp_hidden_menu_link', function() {
+ 		jQuery( '.mnp_hidden_menu' ).css('height', '0px');
+	});
 });
 
 /* */
@@ -90,7 +96,7 @@ function initialize(condition) {
   	}
 	
 	map = new google.maps.Map(document.getElementById("google_map"), myOptions);
-    map2 = new google.maps.Map(document.getElementById("business_google_map"), myOptions2);
+    map2 = new google.maps.Map(document.getElementById("profile_google_map"), myOptions2);
 	map2.panBy(0, -70);
 	
 	var marker = new google.maps.Marker({
@@ -102,10 +108,11 @@ function initialize(condition) {
 	google.maps.event.addDomListener(window, 'load', initialize);
 }
 
-/* Rerun GM */
+/* Other (refresh GM + delay, search.focus) */
 
-jQuery(document).on( "pageshow", "#business_page", initialize );
+jQuery(document).on( "pageshow", "#profile_page", initialize );
 
 jQuery(document).on( "pageshow", "#home_page", function() {
 	jQuery( '.mnp_content_search_form_input' ).focus();
+	setTimeout( initialize, 500 );
 });
