@@ -110,9 +110,21 @@ function initialize(condition) {
 
 /* Other (refresh GM + delay, search.focus) */
 
-jQuery(document).on( "pageshow", "#profile_page", initialize );
+function hideLoader() {
+	jQuery.mobile.loading( "hide" );
+}
+
+jQuery(document).on( "pageshow", "#profile_page", function() {
+	jQuery.mobile.loading( "show" );
+	setTimeout( initialize, 100 );
+	setTimeout( hideLoader, 300 );
+});
 
 jQuery(document).on( "pageshow", "#home_page", function() {
+	jQuery.mobile.loading( "show" );
+	setTimeout( initialize, 100 );
+	setTimeout( hideLoader, 300 );
 	jQuery( '.mnp_content_search_form_input' ).focus();
-	setTimeout( initialize, 500 );
 });
+
+
