@@ -149,8 +149,8 @@ jQuery(document).on( "pageshow", "#profile_page", function() {
 
 jQuery(document).on( "beforepageload", "#home_page", function() {
 	jQuery.mobile.loading( "show" );
+	navigator.geolocation.getCurrentPosition(success, error, uloptions);
 	setTimeout( initialize, 100 );
 	setTimeout( hideLoader, 300 );
-	navigator.geolocation.getCurrentPosition(success, error, uloptions);
 	jQuery( '.mnp_content_search_form_input' ).focus();
 });
