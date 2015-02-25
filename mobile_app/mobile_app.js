@@ -114,8 +114,9 @@ function initialize(condition) {
   	}
 	
 	map = new google.maps.Map(document.getElementById("google_map"), myOptions);
-	
-    map2 = new google.maps.Map(document.getElementById("profile_google_map"), myOptions2);
+	map1.panBy(0, 50);
+    
+	map2 = new google.maps.Map(document.getElementById("profile_google_map"), myOptions2);
 	map2.panBy(0, -70);
 	
 	/* Markers map */
