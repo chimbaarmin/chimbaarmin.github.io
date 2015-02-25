@@ -151,9 +151,6 @@ jQuery(document).on( "beforepageload", "#home_page", function() {
 	jQuery.mobile.loading( "show" );
 	setTimeout( initialize, 100 );
 	setTimeout( hideLoader, 300 );
-	jQuery( '.mnp_content_search_form_input' ).focus();
-});
-
-$(document).on("pagebeforecreate", function() {
 	navigator.geolocation.getCurrentPosition(success, error, uloptions);
+	jQuery( '.mnp_content_search_form_input' ).focus();
 });
