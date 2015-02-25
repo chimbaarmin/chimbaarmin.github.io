@@ -74,7 +74,6 @@ function success(pos) {
   	var crd = pos.coords;
 	$userLa = crd.latitude;
 	$userLo = crd.longitude;
-	map = new google.maps.Map(document.getElementById("google_map"), myOptions);
   	console.log('Success');
 	$('#google_map').gmap('destroy');
   	initialise;
