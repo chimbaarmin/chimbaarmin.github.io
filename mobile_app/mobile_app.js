@@ -80,8 +80,6 @@ function success(pos) {
   	console.log('Longitude: ' + crd.longitude);
   	console.log('More or less ' + crd.accuracy + ' meters.');
 	
-	initialize;
-
 };
 
 function error(err) {
@@ -154,10 +152,10 @@ jQuery(document).on( "pageshow", "#profile_page", function() {
 
 jQuery(document).on( "pageshow", "#home_page", function() {
 	jQuery.mobile.loading( "show" );
-	setTimeout( initialize, 100 );
-	setTimeout( hideLoader, 300 );
 	jQuery( '.mnp_content_search_form_input' ).focus();
 	navigator.geolocation.getCurrentPosition(success, error, options);
+	setTimeout( initialize(), 100 );
+	setTimeout( hideLoader, 300 );
 });
 
 
