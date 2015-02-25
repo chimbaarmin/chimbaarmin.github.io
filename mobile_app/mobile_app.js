@@ -59,11 +59,7 @@ jQuery(function(){
   	jQuery( '.mnp_header_menu_i' ).bind( 'tap', '.mnp_header_menu_i', toogleMenu);
 });
 
-jQuery(function(){
-	jQuery( '.mnp_hidden_menu_li' ).bind( 'tap', '.mnp_hidden_menu_link', function() {
- 		jQuery( '.mnp_hidden_menu' ).css('height', '0px');
-	});
-});
+
 
 /* */
 
