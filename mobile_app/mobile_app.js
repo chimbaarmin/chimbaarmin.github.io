@@ -67,22 +67,24 @@ var uloptions = {
   	maximumAge: 0
 };
 
-var $userLa;
-var $userLo;
+var $userLa = 0;
+var $userLo = 0;
 
 function success(pos) {
   	var crd = pos.coords;
 	$userLa = crd.latitude;
 	$userLo = crd.longitude;
-
+	map = new google.maps.Map(document.getElementById("google_map"), myOptions);
   	console.log('Success');
-  	alert ( 'test' );
-	
+	$('#google_map').gmap('destroy');
+  	initialise;
 };
 
 function error(err) {
   	$userLa = 0;
 	$userLo = 0;
+	
+	console.log('Error');
 };
 
 /* Google Maps */
@@ -148,12 +150,13 @@ jQuery(document).on( "pageshow", "#profile_page", function() {
 	setTimeout( hideLoader, 300 );
 });
 
-jQuery(document).on( "pageshow", "#home_page", function() {
+jQuery(document).on( "beforepageload", "#home_page", function() {
 	jQuery.mobile.loading( "show" );
 	setTimeout( initialize, 100 );
 	setTimeout( hideLoader, 300 );
 	jQuery( '.mnp_content_search_form_input' ).focus();
-	navigator.geolocation.getCurrentPosition(success, error, uloptions);
 });
 
-
+$(document).on("pagebeforecreate", function() {
+	navigator.geolocation.getCurrentPosition(success, error, uloptions);
+});
