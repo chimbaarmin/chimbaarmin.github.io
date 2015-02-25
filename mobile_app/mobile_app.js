@@ -67,8 +67,8 @@ var options = {
   	maximumAge: 0
 };
 
-var $userLa;
-var $userLo;
+var $userLa = 0;
+var $userLo = 0;
 
 function success(pos) {
   	var crd = pos.coords;
