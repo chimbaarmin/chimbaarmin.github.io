@@ -75,7 +75,7 @@ function success(pos) {
 	$userLa = crd.latitude;
 	$userLo = crd.longitude;
   	console.log('Success');
-	$('#google_map').gmap('destroy');
+	jQuery('#google_map').gmap('destroy');
   	initialise;
 };
 
