@@ -61,24 +61,22 @@ jQuery(function(){
 
 /* User location */
 
-var options = {
+var uloptions = {
 	enableHighAccuracy: true,
   	timeout: 5000,
   	maximumAge: 0
 };
 
-var $userLa = 0;
-var $userLo = 0;
+var $userLa;
+var $userLo;
 
 function success(pos) {
   	var crd = pos.coords;
 	$userLa = crd.latitude;
 	$userLo = crd.longitude;
 
-  	console.log('Your current position is:');
-  	console.log('Latitude : ' + crd.latitude);
-  	console.log('Longitude: ' + crd.longitude);
-  	console.log('More or less ' + crd.accuracy + ' meters.');
+  	console.log('Success');
+  	alert ( 'test' );
 	
 };
 
@@ -152,10 +150,10 @@ jQuery(document).on( "pageshow", "#profile_page", function() {
 
 jQuery(document).on( "pageshow", "#home_page", function() {
 	jQuery.mobile.loading( "show" );
-	jQuery( '.mnp_content_search_form_input' ).focus();
-	navigator.geolocation.getCurrentPosition(success, error, options);
-	setTimeout( initialize(), 100 );
+	setTimeout( initialize, 100 );
 	setTimeout( hideLoader, 300 );
+	jQuery( '.mnp_content_search_form_input' ).focus();
+	navigator.geolocation.getCurrentPosition(success, error, uloptions);
 });
 
 
