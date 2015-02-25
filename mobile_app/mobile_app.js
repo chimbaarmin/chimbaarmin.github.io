@@ -59,11 +59,7 @@ jQuery(function(){
   	jQuery( '.mnp_header_menu_i' ).bind( 'tap', '.mnp_header_menu_i', toogleMenu);
 });
 
-
-
-/* */
-
-/* Google Map (home) */
+/* Google Maps 
 
 jQuery(function($) {
 	var script = document.createElement('script');
@@ -78,31 +74,68 @@ function initialize(condition) {
 	var myLatlng = new google.maps.LatLng(38.9071923,-77.0368707);
 	
 	var myOptions = {
-    	zoom: 14,
+    	zoom: 5,
     	center: myLatlng,
 		disableDefaultUI: true,
     	mapTypeId: google.maps.MapTypeId.ROADMAP
   	}
 	
 	var myOptions2 = {
-    	zoom: 5,
+    	zoom: 10,
     	center: myLatlng,
 		disableDefaultUI: true,
     	mapTypeId: google.maps.MapTypeId.ROADMAP,
   	}
 	
 	map = new google.maps.Map(document.getElementById("google_map"), myOptions);
+	
     map2 = new google.maps.Map(document.getElementById("profile_google_map"), myOptions2);
 	map2.panBy(0, -70);
 	
+	
 	var marker = new google.maps.Marker({
       	position: myLatlng,
-      	map: map2,
-      	title: 'Hello World!'
+      	map: map
+  	});
+	
+	
+	var marker = new google.maps.Marker({
+      	position: myLatlng,
+      	map: map2
   	});
 	
 	google.maps.event.addDomListener(window, 'load', initialize);
 }
+
+*/
+
+$( document ).on( "pageinit", "#google_map", function() {
+    var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);
+    if ( navigator.geolocation ) {
+        function success(pos) {
+            drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+        }
+        function fail(error) {
+            drawMap(defaultLatLng);
+        }
+        navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
+    } else {
+        drawMap(defaultLatLng);
+    }
+    function drawMap(latlng) {
+        var myOptions = {
+            zoom: 10,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("google_map"), myOptions);
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            title: "Greetings!"
+        });
+    }
+});
 
 /* Other (refresh GM + delay, search.focus) */
 
@@ -117,9 +150,6 @@ jQuery(document).on( "pageshow", "#profile_page", function() {
 });
 
 jQuery(document).on( "pageshow", "#home_page", function() {
-	jQuery.mobile.loading( "show" );
-	setTimeout( initialize, 100 );
-	setTimeout( hideLoader, 300 );
 	jQuery( '.mnp_content_search_form_input' ).focus();
 });
 
