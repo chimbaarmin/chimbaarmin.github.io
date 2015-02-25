@@ -75,7 +75,6 @@ function success(pos) {
 	$userLa = crd.latitude;
 	$userLo = crd.longitude;
   	console.log('Success');
-	location.reload(true);
 };
 
 function error(err) {
