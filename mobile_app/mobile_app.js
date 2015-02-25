@@ -59,7 +59,7 @@ jQuery(function(){
   	jQuery( '.mnp_header_menu_i' ).bind( 'tap', '.mnp_header_menu_i', toogleMenu);
 });
 
-/////
+/* User location */
 
 var options = {
 	enableHighAccuracy: true,
@@ -67,8 +67,8 @@ var options = {
   	maximumAge: 0
 };
 
-var $userLa;
-var $userLo;
+var $userLa = 0;
+var $userLo = 0;
 
 function success(pos) {
   	var crd = pos.coords;
@@ -83,10 +83,9 @@ function success(pos) {
 };
 
 function error(err) {
-  	console.warn('ERROR(' + err.code + '): ' + err.message);
+  	$userLa = 0;
+	$userLo = 0;
 };
-
-//////
 
 /* Google Maps */
 
