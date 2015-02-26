@@ -31,7 +31,7 @@
 	</div>
 	<div class="home_footer">
 		<div class="home_footer_links">
-			<a href="#" class="home_footer_link">Remove entry from our database</a> <a href="#" class="home_footer_link">Disclaimer</a> <a href="#" class="home_footer_link">Contact us</a> <a href="#" class="home_footer_link">About</a>
+			<a href="#" class="home_footer_link">Remove entry from our database</a> <a href="#" class="home_footer_link">About</a>
 		</div>
 		<div class="home_footer_copyright">
 			<p class="home_footer_copyright_p">Copyright &copy; 2015 Number-Index.com.</p>
@@ -95,33 +95,6 @@
 				['Fargo, North Dakota', 46.8771863,-96.7898034, '7018576400', 'USA', 701]
 			];
 
-			/*
-			var infoWindowContent = [
-				['<div class="info_content">' +
-				'<h3>061-698-02150</h3>' +
-				 '<img src="http://postharvest.ucdavis.edu/files/137869display.jpg">' +
-				 '<br>' +
-				'<a href="http://number-index.com/2014/6169802150/">More information</a>' +
-				'</div>'],
-				['<div class="info_content">' +
-				'<h3>032-125-55798</h3>' +
-				'<a href="http://number-index.com/2014/3212555798/">More information</a>' +
-				'</div>'],
-				['<div class="info_content">' +
-				'<h3>030-520-07795</h3>' +
-				'<a href="http://number-index.com/2014/3052007795/">More information</a>' +
-				'</div>'],
-				['<div class="info_content">' +
-				'<h3>40-861-85204</h3>' +
-				'<a href="http://number-index.com/2014/4086185204/">More information</a>' +
-				'</div>'],
-				['<div class="info_content">' +
-				'<h3>070-185-76400</h3>' +
-				'<a href="http://number-index.com/2014/7018576400/">More information</a>' +
-				'</div>']
-			];
-			*/
-
 			var infoWindow = new google.maps.InfoWindow(), marker, i;
 			
 			for( i = 0; i < markers.length; i++ ) {
@@ -141,11 +114,7 @@
 						jQuery( ".country_li").empty().append( "Country: " + markers[i][4] );
 						jQuery( ".city_service_li").empty().append( "City, state/Service: " + markers[i][0] );
 						jQuery(".marker_info_basic_li_a").attr("href", "http://www.number-index.com/" + markers[i][3] );
-						jQuery( ".home_marker_info_divs").css("display", "block");
-						/*
-						infoWindow.setContent(infoWindowContent[i][0]);
-						infoWindow.open(map, marker); 
-						*/
+						jQuery( ".home_marker_info_divs").css("margin-right", "0px");
 					}
 				})(marker, i));
 
@@ -168,7 +137,7 @@
 			var home_container = $(".home_marker_info_divs");
 
 			if (!home_container.is(e.target) && home_container.has(e.target).length === 0) {
-				home_container.hide();
+				home_container.css('margin-right', '-310px');
 			}
 		});
 		

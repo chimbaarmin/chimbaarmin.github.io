@@ -201,8 +201,8 @@
 	top: 70px;
 	right: 0;
 	z-index: 1;
-	margin: 0;
-	display: none;
+	margin-right: -310px;
+	transition: all 0.7s linear;
 }
 
 .home_marker_info {

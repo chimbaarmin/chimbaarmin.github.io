@@ -555,7 +555,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 // more_info_box
 		
 	jQuery( ".more_info_box" ).change(function() {
-		jQuery("textarea.hashtag_box").val( $voteIt + " " + $summary + " " + jQuery( this ).val() );
+		$summary = ( $summary + " " + jQuery( this ).val() );
 	});
 
 // step 3
@@ -564,21 +564,27 @@ jQuery( "a.selectCallBack" ).click(function() {
         if ( $voteIt == "Generally, this number was rated #positive." ) {
 			var visiblepos =( jQuery( ".gateway_step2positive" ).css("display") );
 				if ( visiblepos == "block") {
-					alert ( visiblepos );
+					
 				}
 				else {
 	   				jQuery( ".gateway_step3" ).css("display", "none");
 					jQuery( ".gateway_step2positive" ).css("display", "block");
+					jQuery( ".gateway_step3Back" ).css("display", "none");
+					jQuery( ".more_info" ).css("display", "none");
+					jQuery( ".more_info_box" ).val(null);
 				}
 	    }
 		else {
 			var visibleneg =( jQuery( ".gateway_step2negative" ).css("display") );
 				if ( visibleneg == "block") {
-					alert ( visibleneg );
+					
 				}
 				else {
 	   				jQuery( ".gateway_step3" ).css("display", "none");
+					jQuery( ".gateway_step3Back" ).css("display", "none");
 					jQuery( ".gateway_step2negative" ).css("display", "block");
+					jQuery( ".more_info" ).css("display", "none");
+					jQuery( ".more_info_box" ).val(null);
 				}
 		}
  	});
