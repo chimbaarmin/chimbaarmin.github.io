@@ -3,6 +3,7 @@
 		
 .home_body {
 	font: 14px/1.3 'Roboto', sans-serif;
+	overflow: hidden;
 }
 
 .home_footer_link, .home_footer_link:hover, .home_footer_link:active, .home_footer_link:visited, .home_footer_link:focus {
