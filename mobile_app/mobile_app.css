@@ -198,7 +198,7 @@
 }
 
 .mnp_profile_content {
-	margin: 20px;
+	margin: 10px 20px;
 }
 
 .mnp_profile_button {
@@ -213,6 +213,31 @@
 	text-decoration: none !important;
 	display: block;
 	text-align: center;
+	margin: 0 0 10px 0;
+}
+
+.mnp_profile_votebox {
+	text-align: center;
+	width: 60%;
+	float: left;
+}
+
+.mnp_profile_votebox_p {
+	margin: 0;
+}
+
+.mnp_vote_button {
+	background: none !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	width: 50% !important;
+	float: left;
+	margin: 0 !important;
+}
+
+.mnp_profile_ribbons {
+	width: 40%;
+	float: right;
 }
 
 /* =Help page */
