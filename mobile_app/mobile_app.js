@@ -67,8 +67,8 @@ var uloptions = {
   	maximumAge: 0
 };
 
-var $userLa = 0;
-var $userLo = 0;
+var $userLa = 40.7127837;
+var $userLo = -74.0059413;
 
 function success(pos) {
   	var crd = pos.coords;
@@ -78,8 +78,8 @@ function success(pos) {
 };
 
 function error(err) {
-  	$userLa = 0;
-	$userLo = 0;
+  	$userLa = 40.7127837;
+	$userLo = -74.0059413;
 	
 	console.log('Error');
 };
