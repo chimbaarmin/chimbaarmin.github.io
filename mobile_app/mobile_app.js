@@ -153,9 +153,6 @@ jQuery(document).on( "pageshow", "#home_page", function() {
 	if (navigator && navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(success, error, uloptions);
 	}
-	else {
-		alert ( 'no geolocation' );
-	}
 	setTimeout( initialize, 100 );
 	setTimeout( hideLoader, 300 );
 	jQuery( '.mnp_content_search_form_input' ).focus();
