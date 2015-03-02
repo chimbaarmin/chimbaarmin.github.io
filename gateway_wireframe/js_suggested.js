@@ -645,6 +645,7 @@ jQuery( "a.selectCallBack" ).click(function() {
 		s = s.replace(/\n /,"\n");
 		$wordcount = s.split(' ').length;
 		if ($wordcount > 2) {
+			jQuery( '.gateway_submit_button' ).prop("disabled",true);
 			return true;
 		}
 		else {
@@ -669,3 +670,5 @@ function checkClicks() {
 }
 
 jQuery(document).ready( checkClicks );
+
+/* */
