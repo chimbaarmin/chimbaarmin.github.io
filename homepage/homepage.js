@@ -159,7 +159,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-	jQuery( "li.home_stats_content_menu_ul_li.today-link" ).click(function() {
+	jQuery( "li.home_stats_content_menu_ul_li.today_link" ).click(function() {
 		jQuery( ".home_stats_content_today" ).css("display", "block");
 		jQuery( ".home_stats_content_yesterday" ).css("display", "none");
 		jQuery( ".home_stats_content_days" ).css("display", "none");
@@ -177,7 +177,16 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-	jQuery( "li.home_stats_content_menu_ul_li.days-link" ).click(function() {
+	jQuery( "li.home_stats_content_menu_ul_li.yesterday_link" ).click(function() {
+		jQuery( ".home_stats_content_today" ).css("display", "none");
+		jQuery( ".home_stats_content_yesterday" ).css("display", "block");
+		jQuery( ".home_stats_content_days" ).css("display", "none");
+		jQuery( ".home_stats_content_total" ).css("display", "none");
+	});
+});
+
+$(document).ready(function() {
+	jQuery( "li.home_stats_content_menu_ul_li.days_link" ).click(function() {
 		jQuery( ".home_stats_content_today" ).css("display", "none");
 		jQuery( ".home_stats_content_yesterday" ).css("display", "none");
 		jQuery( ".home_stats_content_days" ).css("display", "block");
@@ -186,7 +195,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-	jQuery( "li.home_stats_content_menu_ul_li.total-link" ).click(function() {
+	jQuery( "li.home_stats_content_menu_ul_li.total_link" ).click(function() {
 		jQuery( ".home_stats_content_today" ).css("display", "none");
 		jQuery( ".home_stats_content_yesterday" ).css("display", "none");
 		jQuery( ".home_stats_content_days" ).css("display", "none");
