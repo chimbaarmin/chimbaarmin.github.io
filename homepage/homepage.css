@@ -286,11 +286,11 @@
 
 .home_stats {
 	border: 1px solid #333333;
+	background: #ffffff;
 }
 
 .home_stats_content {
 	text-shadow: none;
-	background: #ffffff;
 }
 
 .home_stats_content_h2 {
@@ -307,6 +307,7 @@
 	right: 5px;
 	top: 7px;
 	color: red;
+	cursor: pointer;
 }
 
 .home_stats_content_menu_ul {
@@ -316,10 +317,6 @@
 }
 
 .home_stats_content_menu_ul_li {
-	display: inline;
-}
-
-.home_stats_content_menu_link, .home_stats_content_menu_link:hover, .home_stats_content_menu_link:active, .home_stats_content_menu_link:visited, .home_stats_content_menu_link:focus {
 	display: inline-block;
 	padding: 5px 10px;
 	margin: 10px 0 10px 10px;
@@ -327,4 +324,21 @@
 	color: #333333;
 	background: #ededed;
 	text-decoration: none;
+	cursor: pointer;
+}
+
+.home_stats_content_wrapper {
+	margin: 0 20px;
+}
+
+.home_stats_content_day {
+	border: 1px solid #333333;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+.home_stats_content_today {}
+
+.home_stats_content_yesterday, .home_stats_content_days, .home_stats_content_total {
+	display: none;
 }
