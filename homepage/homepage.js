@@ -139,3 +139,21 @@ $('.home_content_help_a').mousemove(function(e) {
 	$(target).css('top', topD).css('left', leftD);
 	});
 });
+
+/* Action area */
+
+$(document).ready(function() {
+	jQuery( ".fa-info-circle" ).click(function() {
+		jQuery( ".home_action_area_divs" ).css("margin-left", "-50px");
+		jQuery( ".home_stats_divs" ).css("margin-left", "0");
+		
+	});
+});
+
+$(document).ready(function() {
+	jQuery( ".close-btn" ).click(function() {
+		jQuery( ".home_stats_divs" ).css("margin-left", "-355px");
+		jQuery( ".home_action_area_divs" ).css("margin-left", "0");
+		
+	});
+});

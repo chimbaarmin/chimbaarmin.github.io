@@ -246,3 +246,85 @@
 	text-decoration: none;
 	color: #333333;
 }
+
+.home_action_area_divs {
+	z-index: 2;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	background: #ffffff;
+	border: 1px solid #333333;
+	transition: all 0.7s linear;
+}
+
+.home_action_area_container {
+	margin: 10px;
+}
+
+.home_action_area_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.home_action_area_ul_li {
+	display: inline-block;
+}
+
+.home_action_area_link {
+	color: #333333;
+	text-decoration: none;
+}
+
+.home_stats_divs {
+	z-index: 2;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	margin-left: -355px;
+	transition: all 0.7s linear;
+}
+
+.home_stats {
+	border: 1px solid #333333;
+}
+
+.home_stats_content {
+	text-shadow: none;
+	background: #ffffff;
+}
+
+.home_stats_content_h2 {
+	background: #333333;
+	color: #ffffff;
+	padding: 5px 10px;
+	margin: 0;
+	font: 22px/1.3 'Alegreya', serif;
+}
+
+.home_stats_content_close {
+	text-align: right;
+	position: absolute;
+	right: 5px;
+	top: 7px;
+	color: red;
+}
+
+.home_stats_content_menu_ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 10px 0 0;
+}
+
+.home_stats_content_menu_ul_li {
+	display: inline;
+}
+
+.home_stats_content_menu_link, .home_stats_content_menu_link:hover, .home_stats_content_menu_link:active, .home_stats_content_menu_link:visited, .home_stats_content_menu_link:focus {
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 10px 0 10px 10px;
+	border: 1px solid #333333;
+	color: #333333;
+	background: #ededed;
+	text-decoration: none;
+}
