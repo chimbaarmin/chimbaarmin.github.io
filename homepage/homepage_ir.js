@@ -188,7 +188,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 	jQuery( ".close-btn" ).click(function() {
-		jQuery( ".home_stats_divs" ).css("margin-right", "-355px");
+		jQuery( ".home_stats_divs" ).css("margin-right", "-370px");
 		jQuery( ".fa-info-circle" ).css("color", "#333333");
 	});
 });
