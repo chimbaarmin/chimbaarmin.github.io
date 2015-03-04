@@ -722,3 +722,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	.dnp_clear {
 		clear: both;
 	}
+	
+/* */
+	
+.rank_li {
+	height: 51px;
+}

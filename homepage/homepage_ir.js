@@ -64,7 +64,7 @@ function initialize() {
 				var $finalheight = ( $winheight - $elemheight ) / 2 ;
 				jQuery( document.getElementsByClassName("home_marker_info_divs") ).css( "margin-top", $finalheight );
 			
-				jQuery( ".home_marker_info_divs").css("margin-right", "0px");
+				jQuery( ".home_marker_info_divs").css("margin-left", "0px");
 			}
 		})(marker, i));
 	
@@ -86,7 +86,7 @@ $(document).mouseup(function (e) {
 	var home_container = $(".home_marker_info_divs");
 
 	if (!home_container.is(e.target) && home_container.has(e.target).length === 0) {
-		home_container.css('margin-right', '-310px');
+		home_container.css('margin-left', '-310px');
 	}
 });
 
@@ -181,14 +181,14 @@ $('.home_content_help_a').mousemove(function(e) {
 
 $(document).ready(function() {
 	jQuery( ".fa-info-circle" ).click(function() {
-		jQuery( ".home_stats_divs" ).css("margin-left", "0");
+		jQuery( ".home_stats_divs" ).css("margin-right", "0");
 		jQuery( ".fa-info-circle" ).css("color", "#5bc0de");
 	});
 });
 
 $(document).ready(function() {
 	jQuery( ".close-btn" ).click(function() {
-		jQuery( ".home_stats_divs" ).css("margin-left", "-355px");
+		jQuery( ".home_stats_divs" ).css("margin-right", "-355px");
 		jQuery( ".fa-info-circle" ).css("color", "#333333");
 	});
 });

@@ -1,5 +1,5 @@
 /*
-Homepage CSS
+Homepage IR CSS
 Date: 04. 03. 2015.
 Author: Armin
 Version: 1.0
@@ -63,7 +63,7 @@ Left slider
 	height: auto;
 	color: white;
 	width: 100%;
-	text-align: right;
+	text-align: left;
 }
 	
 .home_header_name_h1 {
@@ -75,28 +75,15 @@ Left slider
 	padding: 5px 10px;
 	text-align: center;
 }
-	
-.home_header_search_input {
-	padding: 5px;
-	border: 1px solid #cccccc;
-	border-right: 0;
-}
-	
-.home_header_search_button {
-	background: #333333;
-	color: #ffffff;
-	border: 1px solid #cccccc;
-	padding: 5px;
-}
 
 /* =Content */
 	
 .home_content {
 	position: relative;
-	left: 50%;
+	right: 50%;
 	top: 0;
 	width: 500px;
-	margin-left: -250px;
+	margin-right: -250px;
 }
 		
 .home_content_h1 {
@@ -126,16 +113,16 @@ Left slider
 	padding: 20px;
 	background: #ffffff;
 	border: 1px solid #333333;
-	-moz-border-radius: 0 10px 10px 10px;
-	-webkit-border-radius: 0 10px 10px 10px;
-	border-radius: 0 10px 10px 10px;
+	-moz-border-radius: 10px 0 10px 10px;
+	-webkit-border-radius: 10px 0 10px 10px;
+	border-radius: 10px 0 10px 10px;
 }
 
 .home_content_search_input {
 	margin: 10px 0;
 	padding: 5px;
 	border: 1px solid #333333;
-	border-right: 0;
+	border-left: 0;
 	width: 270px;
 }
 	
@@ -149,7 +136,7 @@ Left slider
 }
 
 .home_content_help {
-	text-align: right;
+	text-align: left;
 	margin: 5px;
 }
 
@@ -160,7 +147,7 @@ Left slider
 
 .home_content_menu {
 	position: absolute;
-	right: 0;
+	left: 0;
 	top: 0;
 
 }
@@ -203,19 +190,19 @@ Left slider
 
 .home_footer_links {
 	width: 50%;
-	float: left;
+	float: right;
 }
 
 .home_footer_copyright {
 	width: 50%;
-	float: right;
+	float: left;
 }
 
 .home_footer_copyright_p {
 	font: 14px/1.3 'Roboto', sans-serif;
 	padding: 0;
 	margin: 0 20px;
-	text-align: right;
+	text-align: left;
 }
 
 /* =Popups */
@@ -242,7 +229,7 @@ Left slider
     font: 22px/1.3 'Alegreya', serif;
     display: block;
     width: 100%;
-    margin: -10px 0px 8px -10px;
+    margin: -10px -10px 8px 0;
     padding: 5px 10px;
 }
 
@@ -260,10 +247,10 @@ Left slider
 .home_marker_info_divs {
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 0;
 	z-index: 1;
-	margin-right: -310px;
-	transition: margin-right 0.7s linear;
+	margin-left: -310px;
+	transition: margin-left 0.7s linear;
 }
 
 .home_marker_info {
@@ -273,9 +260,9 @@ Left slider
 	color: #333333;
 	border: 1px solid #333333;
 	overflow: hidden;
-	-moz-border-radius: 10px 0 0 10px;
-	-webkit-border-radius: 10px 0 0 10px;
-	border-radius: 10px 0 0 10px;
+	-moz-border-radius: 0 10px 10px 0;
+	-webkit-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
 }
 
 .marker_info_h2 {
@@ -300,7 +287,7 @@ Left slider
 }
 
 .more_info_basic_link {
-	text-align: right;
+	text-align: left;
 	margin: 0 10px 0 0;
 	padding: 0;
 }
@@ -316,17 +303,17 @@ Left slider
 	z-index: 2;
 	position: absolute;
 	top: 0;
-	left: 0;
-	margin-left: -355px;
-	transition: margin-left 0.7s linear;
+	right: 0;
+	margin-right: -355px;
+	transition: margin-right 0.7s linear;
 }
 
 .home_stats {
 	border: 1px solid #333333;
 	background: #ffffff;
-	-moz-border-radius: 0 10px 10px 0;
-	-webkit-border-radius: 0 10px 10px 0;
-	border-radius: 0 10px 10px 0;
+	-moz-border-radius: 10px 0 0 10px;
+	-webkit-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
 	overflow: hidden;
 }
 
@@ -343,9 +330,9 @@ Left slider
 }
 
 .home_stats_content_close {
-	text-align: right;
+	text-align: left;
 	position: absolute;
-	right: 5px;
+	left: 5px;
 	top: 7px;
 	color: #d9534f;
 	cursor: pointer;
