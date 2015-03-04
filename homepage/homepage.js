@@ -28,7 +28,7 @@ function initialize() {
 	var markers = [];
 		
 	for (i = 0; i < homeJSON.length; i++) {
-		markers.push( [ homeJSON[i].AREA_NAME , homeJSON[i].GEOLOCATED.lat, homeJSON[i].GEOLOCATED.lng, homeJSON[i].LOCAL_FORMAT, homeJSON[i].COUNTRY_NAME, homeJSON[i].AREA_CODE_LOCALIZED ] );
+		markers.push( [ homeJSON[i].AREA_NAME , homeJSON[i].GEOLOCATED.lat, homeJSON[i].GEOLOCATED.lng, homeJSON[i].LOCAL_FORMAT, homeJSON[i].COUNTRY_NAME, homeJSON[i].AREA_CODE_LOCALIZED, homeJSON[i].NUMBER_RANK ] );
 	}  				
 			
 	var infoWindow = new google.maps.InfoWindow(), marker, i;
@@ -49,6 +49,7 @@ function initialize() {
 				jQuery( ".area_code_li").empty().append( "Area code: " + markers[i][5] );
 				jQuery( ".country_li").empty().append( "Country: " + markers[i][4] );
 				jQuery( ".city_service_li").empty().append( "City, state/Service: " + markers[i][0] );
+				jQuery( ".number_rank_li").empty().append( "Number rank: " + markers[i][6] );
 				jQuery(".marker_info_basic_li_a").attr("href", "http://www.number-index.com/" + markers[i][3] +"/" );
 				jQuery( ".home_marker_info_divs").css("margin-right", "0px");
 			}
@@ -144,16 +145,15 @@ $('.home_content_help_a').mousemove(function(e) {
 
 $(document).ready(function() {
 	jQuery( ".fa-info-circle" ).click(function() {
-		jQuery( ".home_action_area_divs" ).css("margin-left", "-50px");
 		jQuery( ".home_stats_divs" ).css("margin-left", "0");
-		
+		jQuery( ".fa-info-circle" ).css("color", "#5bc0de");
 	});
 });
 
 $(document).ready(function() {
 	jQuery( ".close-btn" ).click(function() {
 		jQuery( ".home_stats_divs" ).css("margin-left", "-355px");
-		jQuery( ".home_action_area_divs" ).css("margin-left", "0");
+		jQuery( ".fa-info-circle" ).css("color", "#333333");
 		
 	});
 });

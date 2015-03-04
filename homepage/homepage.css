@@ -1,5 +1,29 @@
+/*
+Homepage CSS
+Date: 04. 03. 2015.
+Author: Armin
+Version: 1.0
+
+Contents:
+Imports
+Base
+Header
+Content
+Footer
+Popups
+Right slider
+Left slider
+
+*/
+
+
+/* =Imports */
+
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 @import url("//fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Alegreya:700");
+
+
+/* =Base */
 		
 .home_body {
 	font: 14px/1.3 'Roboto', sans-serif;
@@ -25,6 +49,8 @@
   left: 0; 
   z-index: 0;
 }	
+
+/* =Header */
 	
 .home_header {
 	position: fixed; 
@@ -62,6 +88,8 @@
 	border: 1px solid #cccccc;
 	padding: 5px;
 }
+
+/* =Content */
 	
 .home_content {
 	position: relative;
@@ -69,18 +97,6 @@
 	top: 0;
 	width: 500px;
 	margin-left: -250px;
-}
-
-.home_content_fa_ir {
-	position: relative;
-	right: 50%;
-	top: 0;
-	width: 500px;
-	margin-right: -250px;
-}
-
-.home_content_header {
-
 }
 		
 .home_content_h1 {
@@ -91,6 +107,9 @@
 	margin: 0;
 	text-align: center;
 	width: 250px;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
 }
 	
 .home_content_p {
@@ -107,6 +126,9 @@
 	padding: 20px;
 	background: #ffffff;
 	border: 1px solid #333333;
+	-moz-border-radius: 0 10px 10px 10px;
+	-webkit-border-radius: 0 10px 10px 10px;
+	border-radius: 0 10px 10px 10px;
 }
 
 .home_content_search_input {
@@ -132,9 +154,39 @@
 }
 
 .home_content_help_a, .home_content_help_a:hover, .home_content_help_a:visited, .home_content_help_a:active, .home_content_help_a:focus {
-	color: red;
+	color: #d9534f;
 	text-decoration: none;
 }
+
+.home_content_menu {
+	position: absolute;
+	right: 0;
+	top: 0;
+
+}
+
+.home_content_menu_ul {
+	padding: 0;
+	list-style-type: none;
+	margin: 7px 0 0 0;
+}
+
+.home_content_menu_ul_li {
+	display: inline-block;
+	margin: 0;
+	color: #333333;
+}
+
+.home_content_icons {
+	cursor: pointer;
+}
+
+.home_content_menu_link, .home_content_menu_link:hover, .home_content_menu_link:active, .home_content_menu_link:visited, .home_content_menu_link:focus {
+	color: #333333;
+	text-decoration: none;
+}
+
+/* =Footer */
 	
 .home_footer {
 	position: fixed; 
@@ -166,6 +218,8 @@
 	text-align: right;
 }
 
+/* =Popups */
+
 .popbox {
     display: none;
     position: absolute;
@@ -176,6 +230,10 @@
     color: #333333;
     border: 1px solid #333333;
     margin: 0px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .more_info_help_pop_h2 {
@@ -197,6 +255,8 @@
 	font: bold 16px/1.3 'Roboto', sans-serif;
 }
 
+/* =Right slider (more info) */
+
 .home_marker_info_divs {
 	position: absolute;
 	top: 70px;
@@ -212,7 +272,10 @@
 	background: #ffffff;
 	color: #333333;
 	border: 1px solid #333333;
-	overflow: auto;
+	overflow: hidden;
+	-moz-border-radius: 10px 0 0 10px;
+	-webkit-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
 }
 
 .marker_info_h2 {
@@ -247,33 +310,7 @@
 	color: #333333;
 }
 
-.home_action_area_divs {
-	z-index: 2;
-	position: absolute;
-	top: 70px;
-	left: 0;
-	background: #ffffff;
-	border: 1px solid #333333;
-	transition: all 0.7s linear;
-}
-
-.home_action_area_container {
-	margin: 10px;
-}
-
-.home_action_area_ul {
-	list-style-type: none;
-	padding: 0;
-}
-
-.home_action_area_ul_li {
-	display: inline-block;
-}
-
-.home_action_area_link {
-	color: #333333;
-	text-decoration: none;
-}
+/* =Left slider (stats) */
 
 .home_stats_divs {
 	z-index: 2;
@@ -287,6 +324,10 @@
 .home_stats {
 	border: 1px solid #333333;
 	background: #ffffff;
+	-moz-border-radius: 0 10px 10px 0;
+	-webkit-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+	overflow: hidden;
 }
 
 .home_stats_content {
@@ -306,7 +347,7 @@
 	position: absolute;
 	right: 5px;
 	top: 7px;
-	color: red;
+	color: #d9534f;
 	cursor: pointer;
 }
 
@@ -320,25 +361,43 @@
 	display: inline-block;
 	padding: 5px 10px;
 	margin: 10px 0 10px 10px;
-	border: 1px solid #333333;
 	color: #333333;
 	background: #ededed;
 	text-decoration: none;
 	cursor: pointer;
+	border: 1px solid #333333;
 }
 
 .home_stats_content_wrapper {
 	margin: 0 20px;
+	border: 1px solid #333333;
 }
 
 .home_stats_content_day {
-	border: 1px solid #333333;
 	margin: 10px 0;
-	padding: 10px;
+	padding: 0 10px;
 }
-
-.home_stats_content_today {}
 
 .home_stats_content_yesterday, .home_stats_content_days, .home_stats_content_total {
 	display: none;
+}
+
+.home_stats_content_wrapper {
+	overflow-x: auto;
+	height: 350px;
+	margin-bottom: 20px;
+}
+
+.home_stats_content_h3 {
+	margin: 0;
+}
+
+.home_stats_content_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.home_stats_content_link, .home_stats_content_link:hover, .home_stats_content_link:active, .home_stats_content_link:visited, .home_stats_content_link:focus {
+	color: #d9534f;
+	text-decoration: none;
 }

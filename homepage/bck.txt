@@ -1,4 +1,0 @@
-<h2 class="home_content_h2">Reverse phone number lookup system and rating portal</h2>
-		<p class="home_content_p">You can always find all information you want about any phone number at Number-Index. You received an unknown call? Find out who made it.</p>
-		<p class="home_content_p">Our unique rating system shows you immediately whether the call was real or a scam. Of course you will also find advice on reputable companies and providers that are noticed by the way they treat their customers.</p>
-		<p class="home_content_p_strong">Our mission: To provide ratings for every phone number on the planet.</p>
