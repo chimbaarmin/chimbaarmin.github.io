@@ -189,7 +189,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 	jQuery( ".close-btn" ).click(function() {
 		jQuery( ".home_stats_divs" ).css("margin-left", "-370px");
-		jQuery( ".fa-info-circle" ).css("color", "#333333");
+		jQuery( ".fa-info-circle" ).css("color", "#000000");
 	});
 });
 
@@ -238,7 +238,7 @@ $(document).ready(function() {
 	});
 });
 
-/* */
+/* Footer logic */
 
 $(document).ready(function() {
 	var $footerDrawn = "false";
@@ -259,5 +259,60 @@ $(document).ready(function() {
                  '-ms-transform' : 'rotate('+ 0 +'deg)',
                  'transform' : 'rotate('+ 0 +'deg)'});
 		}
+	});
+});
+
+$(document).ready(function() {
+	jQuery( "li.content_city_list_li.city_one_link" ).click(function() {
+		jQuery( '.content_number_list_one' ).css( 'display', 'block' );
+		jQuery( '.content_number_list_two' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_three' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_four' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_five' ).css( 'display', 'none' );
+		
+	});
+});
+
+$(document).ready(function() {
+	jQuery( "li.content_city_list_li.city_two_link" ).click(function() {
+		jQuery( '.content_number_list_one' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_two' ).css( 'display', 'block' );
+		jQuery( '.content_number_list_three' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_four' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_five' ).css( 'display', 'none' );
+		
+	});
+});
+
+$(document).ready(function() {
+	jQuery( "li.content_city_list_li.city_three_link" ).click(function() {
+		jQuery( '.content_number_list_one' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_two' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_three' ).css( 'display', 'block' );
+		jQuery( '.content_number_list_four' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_five' ).css( 'display', 'none' );
+		
+	});
+});
+
+$(document).ready(function() {
+	jQuery( "li.content_city_list_li.city_four_link" ).click(function() {
+		jQuery( '.content_number_list_one' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_two' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_three' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_four' ).css( 'display', 'block' );
+		jQuery( '.content_number_list_five' ).css( 'display', 'none' );
+		
+	});
+});
+
+$(document).ready(function() {
+	jQuery( "li.content_city_list_li.city_five_link" ).click(function() {
+		jQuery( '.content_number_list_one' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_two' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_three' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_four' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_five' ).css( 'display', 'block' );
+		
 	});
 });
