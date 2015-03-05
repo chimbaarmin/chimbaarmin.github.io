@@ -237,3 +237,27 @@ $(document).ready(function() {
 		jQuery( ".home_stats_content_total" ).css("display", "block");
 	});
 });
+
+/* */
+
+$(document).ready(function() {
+	var $footerDrawn = "false";
+	jQuery( '.slide-btn' ).click(function() {
+		if ( $footerDrawn == "false" ) {
+			$footerDrawn = "true";
+			jQuery ( '.home_footer' ).css("height", "200px");
+			jQuery( '.slide-btn' ).css({'-webkit-transform' : 'rotate('+ 180 +'deg)',
+                 '-moz-transform' : 'rotate('+ 180 +'deg)',
+                 '-ms-transform' : 'rotate('+ 180 +'deg)',
+                 'transform' : 'rotate('+ 180 +'deg)'});
+		}
+		else if ( $footerDrawn == "true" ) {
+			$footerDrawn = "false";
+			jQuery ( '.home_footer' ).css("height", "18px");
+			jQuery( '.slide-btn' ).css({'-webkit-transform' : 'rotate('+ 0 +'deg)',
+                 '-moz-transform' : 'rotate('+ 0 +'deg)',
+                 '-ms-transform' : 'rotate('+ 0 +'deg)',
+                 'transform' : 'rotate('+ 0 +'deg)'});
+		}
+	});
+});
