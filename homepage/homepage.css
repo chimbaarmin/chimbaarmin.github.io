@@ -257,11 +257,19 @@ Left slider
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
-	padding: 5px 10px;
 }
 
 .content_city_list_li {
 	cursor: pointer;
+	padding: 5px 10px;
+	border: 1px solid #ffffff;
+	display: block;
+	width: 50%;
+	border-bottom: 0;
+}
+
+.content_city_list_li:last-of-type {
+	border-bottom: 1px solid #ffffff;
 }
 
 .content_number_lists {
@@ -328,17 +336,17 @@ Left slider
 
 .list_one_left_link, .list_one_left_link:hover, .list_one_left_link:visited, .list_one_left_link:active, .list_one_left_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_one_middle_link, .list_one_middle_link:hover, .list_one_middle_link:visited, .list_one_middle_link:active, .list_one_middle_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_one_right_link, .list_one_right_link:hover, .list_one_right_link:visited, .list_one_right_link:active, .list_one_right_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_two_left {
@@ -391,17 +399,17 @@ Left slider
 
 .list_two_left_link, .list_two_left_link:hover, .list_two_left_link:visited, .list_two_left_link:active, .list_two_left_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_two_middle_link, .list_two_middle_link:hover, .list_two_middle_link:visited, .list_two_middle_link:active, .list_two_middle_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_two_right_link, .list_two_right_link:hover, .list_two_right_link:visited, .list_two_right_link:active, .list_two_right_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_three_left {
@@ -454,17 +462,17 @@ Left slider
 
 .list_three_left_link, .list_three_left_link:hover, .list_three_left_link:visited, .list_three_left_link:active, .list_three_left_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_three_middle_link, .list_three_middle_link:hover, .list_three_middle_link:visited, .list_three_middle_link:active, .list_three_middle_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_three_right_link, .list_three_right_link:hover, .list_three_right_link:visited, .list_three_right_link:active, .list_three_right_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_four_left {
@@ -517,17 +525,17 @@ Left slider
 
 .list_four_left_link, .list_four_left_link:hover, .list_four_left_link:visited, .list_four_left_link:active, .list_four_left_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_four_middle_link, .list_four_middle_link:hover, .list_four_middle_link:visited, .list_four_middle_link:active, .list_four_middle_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_four_right_link, .list_four_right_link:hover, .list_four_right_link:visited, .list_four_right_link:active, .list_four_right_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_five_left {
@@ -580,17 +588,17 @@ Left slider
 
 .list_five_left_link, .list_five_left_link:hover, .list_five_left_link:visited, .list_five_left_link:active, .list_five_left_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_five_middle_link, .list_five_middle_link:hover, .list_five_middle_link:visited, .list_five_middle_link:active, .list_five_middle_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .list_five_right_link, .list_five_right_link:hover, .list_five_right_link:visited, .list_five_right_link:active, .list_five_right_link:focus {
 	color: #ffffff;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 /* =Popups */
@@ -775,4 +783,11 @@ Left slider
 .home_stats_content_link, .home_stats_content_link:hover, .home_stats_content_link:active, .home_stats_content_link:visited, .home_stats_content_link:focus {
 	color: #d9534f;
 	text-decoration: none;
+}
+
+/* */
+
+.active_city {
+	background: #ffffff;
+	color: #000000;
 }
