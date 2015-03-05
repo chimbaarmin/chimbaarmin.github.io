@@ -268,8 +268,17 @@ Left slider
 	border-bottom: 0;
 }
 
+.content_city_list_li:first-of-type {
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+}
+
 .content_city_list_li:last-of-type {
 	border-bottom: 1px solid #ffffff;
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
 }
 
 .content_number_lists {
