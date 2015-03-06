@@ -23,6 +23,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 img {
 	vertical-align: middle;
+	max-width: 100%;
 }
     
 /* =Number info module */
@@ -818,6 +819,45 @@ img {
     .dnp_right_menu_module {
         display: none;
     }
+}
+
+@media screen and (max-width: 750px) {
+    .dnp_right_menu_module {
+        display: none;
+    }
+	
+	.dnp_basic_info_li {
+		width: 100%;
+	}
+	
+	.rank_li {
+		height: auto !important;
+	}
+	
+	.dnp_basic_info_li:nth-child(even) {
+		text-align: center;
+	}
+	
+	.dnp_alternative_formats_li {
+		width: 100%;
+	}
+	
+	.dnp_data_number_numbers_city_one, .dnp_data_number_numbers_city_two, .dnp_data_number_numbers_city_three, .dnp_data_number_numbers_city_four, .dnp_data_number_numbers_city_five {
+		overflow-y: auto;
+	}
+
+	.number_numbers_popular, .number_numbers_recent, .number_numbers_commented {
+		width: 100%;
+		margin: 0 0 20px 0;
+	}
+	
+	.dnp_alternative_formats_li:nth-last-of-type(2) {
+		border-bottom: 1px solid #cccccc;
+	}
+
+	.dnp_alternative_formats_li:last-of-type {
+		border: 0;
+}
 }
     
 /* Typography */
