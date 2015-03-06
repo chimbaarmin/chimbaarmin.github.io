@@ -821,7 +821,7 @@ img {
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
     .dnp_right_menu_module {
         display: none;
     }
@@ -832,6 +832,10 @@ img {
 	
 	.rank_li {
 		height: auto !important;
+	}
+	
+	.dnp_basic_info_li:nth-child(odd) {
+		background: #ededed;
 	}
 	
 	.dnp_basic_info_li:nth-child(even) {
@@ -849,6 +853,11 @@ img {
 	.number_numbers_popular, .number_numbers_recent, .number_numbers_commented {
 		width: 100%;
 		margin: 0 0 20px 0;
+	}
+	
+	.dnp_number_alternative_formats {
+		height: 154px;
+		overflow-y: auto;
 	}
 	
 	.dnp_alternative_formats_li:nth-last-of-type(2) {
