@@ -42,3 +42,20 @@ $(document).ready(function() {
 		jQuery( '.dnp_data_number_numbers_city_five' ).css( 'display', 'block' );
 	});
 });
+
+/* Animatons and color changes */
+
+$(document).ready(function() {
+	jQuery( '.fa-thumbs-up' ).mouseenter(function() {
+		jQuery( this ).css( 'color', 'green' );
+	});
+	jQuery( '.fa-thumbs-up' ).mouseleave(function() {
+		jQuery( this ).css( 'color', '#333333' );
+	});
+	jQuery( '.fa-thumbs-down' ).mouseenter(function() {
+		jQuery( this ).css( 'color', 'red' );
+	});
+	jQuery( '.fa-thumbs-down' ).mouseleave(function() {
+		jQuery( this ).css( 'color', '#333333' );
+	});	
+});
