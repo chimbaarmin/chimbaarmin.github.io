@@ -1,5 +1,5 @@
 /*
-Homepage IR CSS
+Homepage CSS
 Date: 04. 03. 2015.
 Author: Armin
 Version: 1.0
@@ -37,7 +37,7 @@ Left slider
 }
 	
 *::selection {
-	background: #333333;
+	background: #000000;
 	color: #ffffff;
 }
 	
@@ -49,6 +49,10 @@ Left slider
   left: 0; 
   z-index: 0;
 }	
+
+.home_clear {
+	clear:both;
+}
 
 /* =Header */
 	
@@ -63,11 +67,11 @@ Left slider
 	height: auto;
 	color: white;
 	width: 100%;
-	text-align: left;
+	text-align: right;
 }
 	
 .home_header_name_h1 {
-	background-color: #333333;
+	background-color: #000000;
 	color: #fff;
 	padding: 5px 10px;
 	font: 22px/1.3 'Alegreya', serif;
@@ -87,7 +91,7 @@ Left slider
 }
 		
 .home_content_h1 {
-	background-color: #333333;
+	background-color: #000000;
 	color: #fff;
 	padding: 5px 10px;
 	font: 22px/1.3 'Alegreya', serif;
@@ -112,7 +116,7 @@ Left slider
 	text-align: center;
 	padding: 20px;
 	background: #ffffff;
-	border: 1px solid #333333;
+	border: 1px solid #000000;
 	-moz-border-radius: 10px 0 10px 10px;
 	-webkit-border-radius: 10px 0 10px 10px;
 	border-radius: 10px 0 10px 10px;
@@ -121,15 +125,15 @@ Left slider
 .home_content_search_input {
 	margin: 10px 0;
 	padding: 5px;
-	border: 1px solid #333333;
+	border: 1px solid #000000;
 	border-left: 0;
 	width: 270px;
 }
 	
 .home_content_search_button {
-	background: #333333;
+	background: #000000;
 	color: #ffffff;
-	border: 1px solid #333333;
+	border: 1px solid #000000;
 	padding: 5px;
 	width:  170px;
 	cursor: pointer;
@@ -149,7 +153,6 @@ Left slider
 	position: absolute;
 	left: 0;
 	top: 0;
-
 }
 
 .home_content_menu_ul {
@@ -161,7 +164,7 @@ Left slider
 .home_content_menu_ul_li {
 	display: inline-block;
 	margin: 0;
-	color: #333333;
+	color: #000000;
 }
 
 .home_content_icons {
@@ -169,7 +172,7 @@ Left slider
 }
 
 .home_content_menu_link, .home_content_menu_link:hover, .home_content_menu_link:active, .home_content_menu_link:visited, .home_content_menu_link:focus {
-	color: #333333;
+	color: #000000;
 	text-decoration: none;
 }
 
@@ -182,10 +185,11 @@ Left slider
 	z-index: 1;
 	margin: 0;
 	padding: 10px;
-	background: black;
-	height: auto;
+	background: #000000;
+	height: 18px;
 	color: white;
 	width: 100%;
+	transition: all 1s linear;
 }
 
 .home_footer_links {
@@ -193,9 +197,23 @@ Left slider
 	float: right;
 }
 
+.home_footer_reveal {
+	float: right;
+	text-align: center;
+}
+
+.slide-btn {
+	position: absolute;
+	top: -30px;
+	z-index: 5;
+	color: #000000;
+	cursor: pointer;
+	transition: all 1s linear;
+}
+
 .home_footer_copyright {
 	width: 50%;
-	float: left;
+	float: right;
 }
 
 .home_footer_copyright_p {
@@ -203,6 +221,379 @@ Left slider
 	padding: 0;
 	margin: 0 20px;
 	text-align: left;
+}
+
+.home_footer_content_wrapper {
+	margin: 20px;
+	text-shadow: none;
+}
+
+.content_city_list {
+	width: 25%;
+	float: right;
+}
+
+.content_city_list_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.content_city_list_ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.content_city_list_li {
+	cursor: pointer;
+	padding: 5px 10px;
+	border: 1px solid #ffffff;
+	display: block;
+	width: 50%;
+	border-bottom: 0;
+}
+
+.content_city_list_li:first-of-type {
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+}
+
+.content_city_list_li:last-of-type {
+	border-bottom: 1px solid #ffffff;
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+}
+
+.content_number_lists {
+	width: 75%;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+.content_number_list_one {
+}
+
+.content_number_list_two, .content_number_list_three, .content_number_list_four, .content_number_list_five {
+	display: none;
+}
+
+.list_one_left {
+	width: 33%;
+	float: right;
+}
+
+.list_one_middle {
+	width: 33%;
+	float: right;
+}
+
+.list_one_right {
+	width: 33%;
+	float: right;
+}
+
+.list_one_left_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_one_middle_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_one_right_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_one_left_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_one_middle_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_one_right_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_one_left_link, .list_one_left_link:hover, .list_one_left_link:visited, .list_one_left_link:active, .list_one_left_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_one_middle_link, .list_one_middle_link:hover, .list_one_middle_link:visited, .list_one_middle_link:active, .list_one_middle_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_one_right_link, .list_one_right_link:hover, .list_one_right_link:visited, .list_one_right_link:active, .list_one_right_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_two_left {
+	width: 33%;
+	float: right;
+}
+
+.list_two_middle {
+	width: 33%;
+	float: right;
+}
+
+.list_two_right {
+	width: 33%;
+	float: right;
+}
+
+.list_two_left_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_two_middle_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_two_right_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_two_left_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_two_middle_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_two_right_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_two_left_link, .list_two_left_link:hover, .list_two_left_link:visited, .list_two_left_link:active, .list_two_left_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_two_middle_link, .list_two_middle_link:hover, .list_two_middle_link:visited, .list_two_middle_link:active, .list_two_middle_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_two_right_link, .list_two_right_link:hover, .list_two_right_link:visited, .list_two_right_link:active, .list_two_right_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_three_left {
+	width: 33%;
+	float: right;
+}
+
+.list_three_middle {
+	width: 33%;
+	float: right;
+}
+
+.list_three_right {
+	width: 33%;
+	float: right;
+}
+
+.list_three_left_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_three_middle_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_three_right_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_three_left_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_three_middle_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_three_right_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_three_left_link, .list_three_left_link:hover, .list_three_left_link:visited, .list_three_left_link:active, .list_three_left_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_three_middle_link, .list_three_middle_link:hover, .list_three_middle_link:visited, .list_three_middle_link:active, .list_three_middle_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_three_right_link, .list_three_right_link:hover, .list_three_right_link:visited, .list_three_right_link:active, .list_three_right_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_four_left {
+	width: 33%;
+	float: right;
+}
+
+.list_four_middle {
+	width: 33%;
+	float: right;
+}
+
+.list_four_right {
+	width: 33%;
+	float: right;
+}
+
+.list_four_left_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_four_middle_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_four_right_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_four_left_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_four_middle_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_four_right_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_four_left_link, .list_four_left_link:hover, .list_four_left_link:visited, .list_four_left_link:active, .list_four_left_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_four_middle_link, .list_four_middle_link:hover, .list_four_middle_link:visited, .list_four_middle_link:active, .list_four_middle_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_four_right_link, .list_four_right_link:hover, .list_four_right_link:visited, .list_four_right_link:active, .list_four_right_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_five_left {
+	width: 33%;
+	float: right;
+}
+
+.list_five_middle {
+	width: 33%;
+	float: right;
+}
+
+.list_five_right {
+	width: 33%;
+	float: right;
+}
+
+.list_five_left_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_five_middle_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_five_right_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_five_left_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_five_middle_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_five_right_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_five_left_link, .list_five_left_link:hover, .list_five_left_link:visited, .list_five_left_link:active, .list_five_left_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_five_middle_link, .list_five_middle_link:hover, .list_five_middle_link:visited, .list_five_middle_link:active, .list_five_middle_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_five_right_link, .list_five_right_link:hover, .list_five_right_link:visited, .list_five_right_link:active, .list_five_right_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
 }
 
 /* =Popups */
@@ -214,8 +605,8 @@ Left slider
     width: 400px;
     padding: 10px;
     background: #ffffff;
-    color: #333333;
-    border: 1px solid #333333;
+    color: #000000;
+    border: 1px solid #000000;
     margin: 0px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -224,7 +615,7 @@ Left slider
 }
 
 .more_info_help_pop_h2 {
-    background-color: #333333;
+    background-color: #000000;
     color:  #ffffff;
     font: 22px/1.3 'Alegreya', serif;
     display: block;
@@ -257,8 +648,8 @@ Left slider
 	margin: 0;
 	width: 300px;
 	background: #ffffff;
-	color: #333333;
-	border: 1px solid #333333;
+	color: #000000;
+	border: 1px solid #000000;
 	overflow: hidden;
 	-moz-border-radius: 0 10px 10px 0;
 	-webkit-border-radius: 0 10px 10px 0;
@@ -266,7 +657,7 @@ Left slider
 }
 
 .marker_info_h2 {
-	background: #333333;
+	background: #000000;
 	color: #ffffff;
 	padding: 5px 10px;
 	margin: 0;
@@ -279,7 +670,7 @@ Left slider
 }
 
 .marker_info_basic_li {
-	border: 1px solid #333333;
+	border: 1px solid #000000;
 	padding: 5px 10px;
 	margin: 0 0 10px 0;
 	border-radius: 10px;
@@ -288,7 +679,7 @@ Left slider
 
 .more_info_basic_link {
 	text-align: left;
-	margin: 0 10px 0 0;
+	margin: 0 0 0 10px;
 	padding: 0;
 }
 
@@ -309,7 +700,7 @@ Left slider
 }
 
 .home_stats {
-	border: 1px solid #333333;
+	border: 1px solid #000000;
 	background: #ffffff;
 	-moz-border-radius: 10px 0 0 10px;
 	-webkit-border-radius: 10px 0 0 10px;
@@ -322,7 +713,7 @@ Left slider
 }
 
 .home_stats_content_h2 {
-	background: #333333;
+	background: #000000;
 	color: #ffffff;
 	padding: 5px 10px;
 	margin: 0;
@@ -341,23 +732,23 @@ Left slider
 .home_stats_content_menu_ul {
 	list-style-type: none;
 	padding: 0;
-	margin: 0 10px 0 0;
+	margin: 0 0 0 10px;
 }
 
 .home_stats_content_menu_ul_li {
 	display: inline-block;
 	padding: 5px 10px;
-	margin: 10px 0 10px 10px;
-	color: #333333;
+	margin: 10px 10px 10px 0;
+	color: #000000;
 	background: #ededed;
 	text-decoration: none;
 	cursor: pointer;
-	border: 1px solid #333333;
+	border: 1px solid #000000;
 }
 
 .home_stats_content_wrapper {
 	margin: 0 20px;
-	border: 1px solid #333333;
+	border: 1px solid #000000;
 }
 
 .home_stats_content_day {
@@ -387,4 +778,11 @@ Left slider
 .home_stats_content_link, .home_stats_content_link:hover, .home_stats_content_link:active, .home_stats_content_link:visited, .home_stats_content_link:focus {
 	color: #d9534f;
 	text-decoration: none;
+}
+
+/* */
+
+.active_city {
+	background: #ffffff;
+	color: #000000;
 }

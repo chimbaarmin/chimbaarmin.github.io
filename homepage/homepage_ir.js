@@ -189,7 +189,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 	jQuery( ".close-btn" ).click(function() {
 		jQuery( ".home_stats_divs" ).css("margin-right", "-370px");
-		jQuery( ".fa-info-circle" ).css("color", "#333333");
+		jQuery( ".fa-info-circle" ).css("color", "#000000");
 	});
 });
 
@@ -235,5 +235,74 @@ $(document).ready(function() {
 		jQuery( ".home_stats_content_yesterday" ).css("display", "none");
 		jQuery( ".home_stats_content_days" ).css("display", "none");
 		jQuery( ".home_stats_content_total" ).css("display", "block");
+	});
+});
+
+/* Footer logic */
+
+$(document).ready(function() {
+	var $footerDrawn = "false";
+	jQuery( '.slide-btn' ).click(function() {
+		if ( $footerDrawn == "false" ) {
+			$footerDrawn = "true";
+			jQuery ( '.home_footer' ).css("height", "200px");
+			jQuery( '.slide-btn' ).css({'-webkit-transform' : 'rotate('+ 180 +'deg)',
+                 '-moz-transform' : 'rotate('+ 180 +'deg)',
+                 '-ms-transform' : 'rotate('+ 180 +'deg)',
+                 'transform' : 'rotate('+ 180 +'deg)'});
+		}
+		else if ( $footerDrawn == "true" ) {
+			$footerDrawn = "false";
+			jQuery ( '.home_footer' ).css("height", "18px");
+			jQuery( '.slide-btn' ).css({'-webkit-transform' : 'rotate('+ 0 +'deg)',
+                 '-moz-transform' : 'rotate('+ 0 +'deg)',
+                 '-ms-transform' : 'rotate('+ 0 +'deg)',
+                 'transform' : 'rotate('+ 0 +'deg)'});
+		}
+	});
+});
+
+$(document).ready(function() {
+	jQuery( "li.content_city_list_li.city_one_link" ).click(function() {
+		jQuery( '.content_number_list_one, .content_number_list_two, .content_number_list_three, .content_number_list_four, .content_number_list_five' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_one' ).css( 'display', 'block' );
+		jQuery( 'li.content_city_list_li.city_one_link, li.content_city_list_li.city_two_link, li.content_city_list_li.city_three_link, li.content_city_list_li.city_four_link, li.content_city_list_li.city_five_link' ).removeClass( 'active_city' );
+		jQuery( 'li.content_city_list_li.city_one_link' ).addClass( 'active_city' );
+	});
+});
+
+$(document).ready(function() {
+	jQuery( "li.content_city_list_li.city_two_link" ).click(function() {
+		jQuery( '.content_number_list_one, .content_number_list_two, .content_number_list_three, .content_number_list_four, .content_number_list_five' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_two' ).css( 'display', 'block' );
+		jQuery( 'li.content_city_list_li.city_one_link, li.content_city_list_li.city_two_link, li.content_city_list_li.city_three_link, li.content_city_list_li.city_four_link, li.content_city_list_li.city_five_link' ).removeClass( 'active_city' );
+		jQuery( 'li.content_city_list_li.city_two_link' ).addClass( 'active_city' );
+	});
+});
+
+$(document).ready(function() {
+	jQuery( "li.content_city_list_li.city_three_link" ).click(function() {
+		jQuery( '.content_number_list_one, .content_number_list_two, .content_number_list_three, .content_number_list_four, .content_number_list_five' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_three' ).css( 'display', 'block' );
+		jQuery( 'li.content_city_list_li.city_one_link, li.content_city_list_li.city_two_link, li.content_city_list_li.city_three_link, li.content_city_list_li.city_four_link, li.content_city_list_li.city_five_link' ).removeClass( 'active_city' );
+		jQuery( 'li.content_city_list_li.city_three_link' ).addClass( 'active_city' );
+	});
+});
+
+$(document).ready(function() {
+	jQuery( "li.content_city_list_li.city_four_link" ).click(function() {
+		jQuery( '.content_number_list_one, .content_number_list_two, .content_number_list_three, .content_number_list_four, .content_number_list_five' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_four' ).css( 'display', 'block' );
+		jQuery( 'li.content_city_list_li.city_one_link, li.content_city_list_li.city_two_link, li.content_city_list_li.city_three_link, li.content_city_list_li.city_four_link, li.content_city_list_li.city_five_link' ).removeClass( 'active_city' );
+		jQuery( 'li.content_city_list_li.city_four_link' ).addClass( 'active_city' );
+	});
+});
+
+$(document).ready(function() {
+	jQuery( "li.content_city_list_li.city_five_link" ).click(function() {
+		jQuery( '.content_number_list_one, .content_number_list_two, .content_number_list_three, .content_number_list_four, .content_number_list_five' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_five' ).css( 'display', 'block' );
+		jQuery( 'li.content_city_list_li.city_one_link, li.content_city_list_li.city_two_link, li.content_city_list_li.city_three_link, li.content_city_list_li.city_four_link, li.content_city_list_li.city_five_link' ).removeClass( 'active_city' );
+		jQuery( 'li.content_city_list_li.city_five_link' ).addClass( 'active_city' );
 	});
 });
