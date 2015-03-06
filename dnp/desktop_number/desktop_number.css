@@ -836,15 +836,6 @@ img {
 		width: 100%;
 	}
 	
-	.dnp_data_number_numbers_city_one, .dnp_data_number_numbers_city_two, .dnp_data_number_numbers_city_three, .dnp_data_number_numbers_city_four, .dnp_data_number_numbers_city_five {
-		overflow-y: auto;
-	}
-
-	.number_numbers_popular, .number_numbers_recent, .number_numbers_commented {
-		width: 100%;
-		margin: 0 0 20px 0;
-	}
-	
 	.dnp_number_alternative_formats {
 		height: 154px;
 		overflow-y: auto;
