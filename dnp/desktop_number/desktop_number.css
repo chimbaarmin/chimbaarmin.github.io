@@ -813,33 +813,33 @@ img {
 }
 	
 .dnp_right_menu_social_facebook {
-	color: #333333 !important;
+	color: #6075a6 !important;
 	display: inline-block;
 	margin: 0 10px 20px 10px;
 }
 	
 .dnp_right_menu_social_facebook:hover {
-	color: #6075a6 !important;
+	color: #333333 !important;
 }
 	
 .dnp_right_menu_social_twitter {
-	color: #333333 !important;
+	color: #00aced !important;
 	display: inline-block;
 	margin: 0 10px 20px 10px;
 }
 	
 .dnp_right_menu_social_twitter:hover {
-	color: #00aced !important;
+	color: #333333 !important;
 }
 	
 .dnp_right_menu_social_envelope {
-	color: #333333 !important;
+	color: #d9534f !important;
 	display: inline-block;
 	margin: 0 10px 20px 10px;
 }
 	
 .dnp_right_menu_social_envelope:hover {
-	color: #d9534f !important;
+	color: #333333 !important;
 }
 	
 /* =Responsive layout */
