@@ -603,64 +603,7 @@
         	</div><!-- end dnp_right_menu_module -->
         	
         </div><!-- end col-md-3 end bootstrap grid -->
-        
-        <!-- Map module JS code -->
-		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-		<script>
-
-			jQuery( document ).ready(function() {
-				var myLatLng = new google.maps.LatLng(35.753838, 51.397467);
-				var map;
-				var myOptions = {
-					zoom: 15,
-					center: myLatLng,
-					disableDefaultUI: true
-				};
-				var styles = [
-					{
-						stylers: [
-							 { saturation: -100 },
-						]
-					}
-				];
-
-				map = new google.maps.Map($('.google_map')[0], myOptions);
-				map.setOptions({styles: styles});
-
-				var marker = new google.maps.Marker({
-					  position: myLatLng,
-					  map: map,
-					  title: 'Poshte Boom'
-				});
-
-				google.maps.event.addDomListener(window, 'load');
-			});
-
-		</script>
-	
-        
-        <!-- armin start right side JS scroll script -->
-        <script>
-			jQuery(function($) {
-			    function fixDiv() {
-					var $cache = $('#getFixed');
-					var elemheight = document.getElementById('getFixed').offsetHeight;
-					var diffheight = elemheight - window.innerHeight + 40;
-					if ($(window).scrollTop() >  diffheight)
-				  		$cache.css({
-							'top': '-' + diffheight +'px',
-							'position': 'fixed'
-				  		});
-					else
-				  		$cache.css({
-						'position': 'relative',
-						'top': 'auto'
-				  		});
-			  	}
-			    $(window).scroll(fixDiv);
-			  	fixDiv();
-			});
-        </script>
-        <!-- end script -->
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		
     </body>
 </html>

@@ -1,3 +1,57 @@
+/* GM */
+
+jQuery( document ).ready(function() {
+	var myLatLng = new google.maps.LatLng(35.753838, 51.397467);
+	var map;
+	var myOptions = {
+		zoom: 15,
+		center: myLatLng,
+		disableDefaultUI: true
+	};
+	var styles = [
+		{
+			stylers: [
+				{ 
+					saturation: -100
+				},
+			]
+		}
+	];
+	map = new google.maps.Map($('.google_map')[0], myOptions);
+	map.setOptions({styles: styles});
+	var marker = new google.maps.Marker({
+		position: myLatLng,
+		map: map,
+		title: 'Poshte Boom'
+	});
+	google.maps.event.addDomListener(window, 'load');
+});
+
+
+/* Right menu JS code */
+
+jQuery(function($) {
+	function fixDiv() {
+		var $cache = $('#getFixed');
+		var elemheight = document.getElementById('getFixed').offsetHeight;
+		var diffheight = elemheight - window.innerHeight;
+		if ($(window).scrollTop() >  diffheight)
+		$cache.css({
+			'top': '-' + diffheight +'px',
+			'position': 'fixed'
+		});
+		else
+		$cache.css({
+			'position': 'relative',
+			'top': 'auto'
+		});
+	}
+	$(window).scroll(fixDiv);
+	fixDiv();
+});
+
+/* Footer JS code*/
+
 $(document).ready(function() {
 	jQuery( "li.dnp_data_number_cities_li.dnp_city_one" ).click(function() {
 		jQuery( 'li.dnp_data_number_cities_li.dnp_city_one, li.dnp_data_number_cities_li.dnp_city_two, li.dnp_data_number_cities_li.dnp_city_three, li.dnp_data_number_cities_li.dnp_city_four, li.dnp_data_number_cities_li.dnp_city_five' ).removeClass( 'dnp_active_city' );
@@ -41,21 +95,4 @@ $(document).ready(function() {
 		jQuery( '.dnp_data_number_numbers_city_one, .dnp_data_number_numbers_city_two, .dnp_data_number_numbers_city_three, .dnp_data_number_numbers_city_four, .dnp_data_number_numbers_city_five' ).css( 'display', 'none' );
 		jQuery( '.dnp_data_number_numbers_city_five' ).css( 'display', 'block' );
 	});
-});
-
-/* Animatons and color changes */
-
-$(document).ready(function() {
-	jQuery( '.fa-thumbs-up' ).mouseenter(function() {
-		jQuery( this ).css( 'color', 'green' );
-	});
-	jQuery( '.fa-thumbs-up' ).mouseleave(function() {
-		jQuery( this ).css( 'color', '#333333' );
-	});
-	jQuery( '.fa-thumbs-down' ).mouseenter(function() {
-		jQuery( this ).css( 'color', 'red' );
-	});
-	jQuery( '.fa-thumbs-down' ).mouseleave(function() {
-		jQuery( this ).css( 'color', '#333333' );
-	});	
 });
