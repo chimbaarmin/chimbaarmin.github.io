@@ -1,13 +1,36 @@
-/* Importing styles */
+/*
+Desktop number profile CSS
+Author: Armin
+Date: 11. 03. 2015.
+Version: 1.0
+Custom prefix: dnp
+
+Content:
+Imports
+Resets - Eric Meyer's Reset CSS v2.0 - http://cssreset.com
+Base
+Number info module
+Map module
+Comments module
+Tags module
+Adspace module
+Footer module
+Right menu module
+Responsive layout
+Typography
+Reskinning
+*/
+
+/* =Imports */
 
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 @import url("//fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Alegreya:700");
 
-/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+/* =Resets */
 
 html,body,div,span,applet,object,iframe,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
-/* =Basic */
+/* =Base */
 
 .dnp_body {	
 	background: url(/gateway_wireframe/background_full_.jpg) no-repeat center center fixed; 
@@ -620,6 +643,19 @@ img {
 .dnp_footer_module_extra_data_wrapper {
 	margin: 20px;
 }
+
+.extra_data_h4 {
+	font: 18px/1.3 'Alegreya', serif;
+	margin: 0 0 20px 0;	
+}
+
+.extra_data_p {
+	margin: 0 0 20px 0;
+}
+
+.extra_data_p_strong {
+	font-weight: bold;
+}
 	
 .dnp_footer_module_h6 {
 	background: #333333;
@@ -806,7 +842,7 @@ img {
 	color: #d9534f !important;
 }
 	
-/* Responsive layout */
+/* =Responsive layout */
 
 @media screen and (max-width: 1399px) {
     .dnp_basic_info_li {
@@ -897,31 +933,31 @@ img {
 	}
 }
     
-/* Typography */
+/* =Typography */
     
-    h1, h2, h3, h4, h5 ,h6 {
-		border: 0;
-		font-family: 'Alegreya', serif !important;
-		font-size: 100%;
-		letter-spacing: normal !important;
-        margin: 0;
-		padding: 0;
-		vertical-align: baseline;
-    }
+h1, h2, h3, h4, h5 ,h6 {
+	border: 0;
+	font-family: 'Alegreya', serif !important;
+	font-size: 100%;
+	letter-spacing: normal !important;
+    margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
     
-    body, button {
-        font-family: 'Roboto', sans-serif !important;
-    }
+body, button {
+    font-family: 'Roboto', sans-serif !important;
+}
     
-    span:before {
-        background: none !important;
-    }
+span:before {
+    background: none !important;
+}
+
+.dnp_clear {
+	clear: both;
+}
 	
-	.dnp_clear {
-		clear: both;
-	}
-	
-/* */
+/* =Reskinning */
 	
 .rank_li {
 	height: 51px;
@@ -943,8 +979,6 @@ img {
 .navbar a:hover {
 	color: #ffffff !important;
 }
-
-/* Colors and animations */
 
 .fa-thumbs-up {
 	color: #5cb85c;

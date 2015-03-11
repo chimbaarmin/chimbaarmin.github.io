@@ -1,4 +1,18 @@
-/* GM */
+/*
+Desktop number profile JS
+Author: Armin
+Date: 13. 03. 2015.
+Version: 1.0
+Custom prefix: none
+Custom functions: none
+
+Content:
+Google Maps JS
+Right menu JS
+Footer JS
+*/
+
+/* =Google Maps JS */
 
 jQuery( document ).ready(function() {
 	var myLatLng = new google.maps.LatLng(35.753838, 51.397467);
@@ -28,7 +42,7 @@ jQuery( document ).ready(function() {
 });
 
 
-/* Right menu JS code */
+/* =Right menu JS */
 
 jQuery(function($) {
 	function fixDiv() {
@@ -50,7 +64,7 @@ jQuery(function($) {
 	fixDiv();
 });
 
-/* Footer JS code*/
+/* =Footer JS*/
 
 $(document).ready(function() {
 	jQuery( "li.dnp_data_number_cities_li.dnp_city_one" ).click(function() {
