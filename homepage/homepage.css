@@ -30,7 +30,7 @@ Left slider
 	overflow: hidden;
 }
 
-.home_footer_link, .home_footer_link:hover, .home_footer_link:active, .home_footer_link:visited, .home_footer_link:focus {
+.home_footer_links a, .home_footer_links a:hover, .home_footer_links a:active, .home_footer_links a:visited, .home_footer_links a:focus {
 	color: #ffffff;
 	text-decoration: none;
 	margin: 0 20px;
@@ -110,7 +110,7 @@ Left slider
 	font: 22px/1.3 'Alegreya', serif;
 	margin: 0;
 	text-align: center;
-	width: 250px;
+	width: 350px;
 	-moz-border-radius: 10px 10px 0 0;
 	-webkit-border-radius: 10px 10px 0 0;
 	border-radius: 10px 10px 0 0;
@@ -166,7 +166,6 @@ Left slider
 	position: absolute;
 	right: 0;
 	top: 0;
-
 }
 
 .home_content_menu_ul {
@@ -782,6 +781,7 @@ Left slider
 
 .home_stats_content_h3 {
 	margin: 0;
+        display:inline;
 }
 
 .home_stats_content_ul {

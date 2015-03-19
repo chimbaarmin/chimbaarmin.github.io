@@ -1,0 +1,27 @@
+.cp_main_content_top_title_h1 {
+	-moz-border-radius: 25px 0 0 25px !important;
+	-webkit-border-radius: 25px 0 0 25px !important;
+	border-radius: 25px 0 0 25px !important;
+}
+
+.cp_main_content_content {
+	-moz-border-radius: 25px 0 0 25px !important;
+	-webkit-border-radius: 25px 0 0 25px !important;
+	border-radius: 25px 0 0 25px !important;
+}
+
+.cp_main_content_bottom {
+	-moz-border-radius: 25px 0 0 25px !important;
+	-webkit-border-radius: 25px 0 0 25px !important;
+	border-radius: 25px 0 0 25px !important;
+}
+
+.cp_module_search_input {
+	padding: 5px 10px 5px 0 !important;
+}
+	
+.cp_right_menu_module_basic_info {
+	-moz-border-radius: 0 0 0 10px !important;
+	-webkit-border-radius:0 0 0 10px !important;
+	border-radius: 0 0 0 10px !important;
+}
