@@ -734,6 +734,9 @@ img {
 	background: #ffffff;
 	border: 1px solid #cccccc;
 	margin: 0 0 20px 0;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
 }
 
 .dnp_right_menu_module_warning_h2 {
