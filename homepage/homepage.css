@@ -243,7 +243,7 @@ Left slider
 
 .home_footer_buttons {
 	float: left;
-	width: 150px;
+	width: 20%;
 }
 
 .home_footer_trigger {
@@ -266,10 +266,10 @@ Left slider
 }
 
 .home_footer_numbers {
-	float: left;
+	float: right;
 	height: 146px;
 	overflow: hidden;
-	width: 600px;
+	width: 80%;
 }
 
 .home_footer_numbers_wrapper {
@@ -278,9 +278,9 @@ Left slider
 }
 
 .home_footer_numbers_subwrapper_recent, .home_footer_numbers_subwrapper_popular, .home_footer_numbers_subwrapper_commented {
-	width: 180px;
 	float: left;
 	overflow: hidden;
+	margin: 0 0 0 20px;
 }
 
 .home_footer_numbers_header {
