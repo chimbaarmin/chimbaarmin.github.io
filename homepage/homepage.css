@@ -243,7 +243,7 @@ Left slider
 
 .home_footer_buttons {
 	float: left;
-	width: 20%;
+	width: 150px;
 }
 
 .home_footer_trigger {
@@ -266,7 +266,7 @@ Left slider
 }
 
 .home_footer_numbers {
-	float: right;
+	float: left;
 	height: 146px;
 	overflow: hidden;
 	width: 80%;
