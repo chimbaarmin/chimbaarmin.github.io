@@ -292,11 +292,46 @@ jQuery(document).ready(function(){
 });
 
 jQuery(document).ready(function(){
-	jQuery( '.home_footer_trigger' ).click(function() {
-		var $activeItem = jQuery( this ).attr( 'data-item' );
-		jQuery( '.home_footer_trigger' ).removeClass('active_button');
-		jQuery( this ).addClass('active_button');
-		jQuery ( '.home_footer_numbers_wrapper' ).removeClass('active_item');
-		jQuery( "." + $activeItem ).addClass('active_item');
+	jQuery( "li.content_city_list_li.city_one_link" ).click(function() {
+		jQuery( '.content_number_list_one, .content_number_list_two, .content_number_list_three, .content_number_list_four, .content_number_list_five' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_one' ).css( 'display', 'block' );
+		jQuery( 'li.content_city_list_li.city_one_link, li.content_city_list_li.city_two_link, li.content_city_list_li.city_three_link, li.content_city_list_li.city_four_link, li.content_city_list_li.city_five_link' ).removeClass( 'active_city' );
+		jQuery( 'li.content_city_list_li.city_one_link' ).addClass( 'active_city' );
+	});
+});
+
+jQuery(document).ready(function(){
+	jQuery( "li.content_city_list_li.city_two_link" ).click(function() {
+		jQuery( '.content_number_list_one, .content_number_list_two, .content_number_list_three, .content_number_list_four, .content_number_list_five' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_two' ).css( 'display', 'block' );
+		jQuery( 'li.content_city_list_li.city_one_link, li.content_city_list_li.city_two_link, li.content_city_list_li.city_three_link, li.content_city_list_li.city_four_link, li.content_city_list_li.city_five_link' ).removeClass( 'active_city' );
+		jQuery( 'li.content_city_list_li.city_two_link' ).addClass( 'active_city' );
+	});
+});
+
+jQuery(document).ready(function(){
+	jQuery( "li.content_city_list_li.city_three_link" ).click(function() {
+		jQuery( '.content_number_list_one, .content_number_list_two, .content_number_list_three, .content_number_list_four, .content_number_list_five' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_three' ).css( 'display', 'block' );
+		jQuery( 'li.content_city_list_li.city_one_link, li.content_city_list_li.city_two_link, li.content_city_list_li.city_three_link, li.content_city_list_li.city_four_link, li.content_city_list_li.city_five_link' ).removeClass( 'active_city' );
+		jQuery( 'li.content_city_list_li.city_three_link' ).addClass( 'active_city' );
+	});
+});
+
+jQuery(document).ready(function(){
+	jQuery( "li.content_city_list_li.city_four_link" ).click(function() {
+		jQuery( '.content_number_list_one, .content_number_list_two, .content_number_list_three, .content_number_list_four, .content_number_list_five' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_four' ).css( 'display', 'block' );
+		jQuery( 'li.content_city_list_li.city_one_link, li.content_city_list_li.city_two_link, li.content_city_list_li.city_three_link, li.content_city_list_li.city_four_link, li.content_city_list_li.city_five_link' ).removeClass( 'active_city' );
+		jQuery( 'li.content_city_list_li.city_four_link' ).addClass( 'active_city' );
+	});
+});
+
+jQuery(document).ready(function(){
+	jQuery( "li.content_city_list_li.city_five_link" ).click(function() {
+		jQuery( '.content_number_list_one, .content_number_list_two, .content_number_list_three, .content_number_list_four, .content_number_list_five' ).css( 'display', 'none' );
+		jQuery( '.content_number_list_five' ).css( 'display', 'block' );
+		jQuery( 'li.content_city_list_li.city_one_link, li.content_city_list_li.city_two_link, li.content_city_list_li.city_three_link, li.content_city_list_li.city_four_link, li.content_city_list_li.city_five_link' ).removeClass( 'active_city' );
+		jQuery( 'li.content_city_list_li.city_five_link' ).addClass( 'active_city' );
 	});
 });

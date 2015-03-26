@@ -166,7 +166,6 @@ Left slider
 	position: absolute;
 	right: 0;
 	top: 0;
-
 }
 
 .home_content_menu_ul {
@@ -237,75 +236,377 @@ Left slider
 	text-align: right;
 }
 
-.home_footer_content {
-	margin: 20px 0 0 0;
+.home_footer_content_wrapper {
+	margin: 20px;
+	text-shadow: none;
 }
 
-.home_footer_buttons {
+.content_city_list {
+	width: 25%;
 	float: left;
-	width: 150px;
 }
 
-.home_footer_trigger {
-	display: block;
-	border: 1px solid #333333;
-	border-bottom: 0;
-	padding: 5px 10px;
-	background: #ffffff;
-	color: #333333;
-	cursor: pointer;
-}
-
-.home_footer_trigger:first-of-type {
-	border-radius: 10px 10px 0 0;
-}
-
-.home_footer_trigger:last-of-type {
-	border: 1px solid #333333;
-	border-radius: 0 0 10px 10px;
-}
-
-.home_footer_numbers {
-	float: left;
-	height: 146px;
-	overflow: hidden;
-	width: 600px;
-}
-
-.home_footer_numbers_wrapper {
-	margin: 0 0 0 20px;
-	display: none;
-}
-
-.home_footer_numbers_subwrapper_recent, .home_footer_numbers_subwrapper_popular, .home_footer_numbers_subwrapper_commented {
-	width: 180px;
-	float: left;
-	overflow: hidden;
-}
-
-.home_footer_numbers_header {
-	font: 20px/1.3 'Alegreya', serif;
+.content_city_list_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
 	margin: 0;
 }
 
-.home_footer_numbers_ul {
-	margin: 15px 10px;
+.content_city_list_ul {
 	padding: 0;
+	margin: 0;
 	list-style-type: none;
-	overflow: hidden;
 }
 
-.home_footer_numbers_link, .home_footer_numbers_link:hover, .home_footer_numbers_link:active, .home_footer_numbers_link:visited, .home_footer_numbers_link:focus {
-	color: #ffffff;
-}
-
-.active_button {
-	color: #ffffff;
-	background: #333333;
-}
-
-.active_item {
+.content_city_list_li {
+	cursor: pointer;
+	padding: 5px 10px;
+	border: 1px solid #ffffff;
 	display: block;
+	width: 50%;
+	border-bottom: 0;
+}
+
+.content_city_list_li:first-of-type {
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+}
+
+.content_city_list_li:last-of-type {
+	border-bottom: 1px solid #ffffff;
+	-moz-border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+}
+
+.content_number_lists {
+	width: 75%;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+.content_number_list_one {
+}
+
+.content_number_list_two, .content_number_list_three, .content_number_list_four, .content_number_list_five {
+	display: none;
+}
+
+.list_one_left {
+	width: 33%;
+	float: left;
+}
+
+.list_one_middle {
+	width: 33%;
+	float: left;
+}
+
+.list_one_right {
+	width: 33%;
+	float: left;
+}
+
+.list_one_left_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_one_middle_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_one_right_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_one_left_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_one_middle_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_one_right_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_one_left_link, .list_one_left_link:hover, .list_one_left_link:visited, .list_one_left_link:active, .list_one_left_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_one_middle_link, .list_one_middle_link:hover, .list_one_middle_link:visited, .list_one_middle_link:active, .list_one_middle_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_one_right_link, .list_one_right_link:hover, .list_one_right_link:visited, .list_one_right_link:active, .list_one_right_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_two_left {
+	width: 33%;
+	float: left;
+}
+
+.list_two_middle {
+	width: 33%;
+	float: left;
+}
+
+.list_two_right {
+	width: 33%;
+	float: left;
+}
+
+.list_two_left_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_two_middle_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_two_right_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_two_left_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_two_middle_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_two_right_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_two_left_link, .list_two_left_link:hover, .list_two_left_link:visited, .list_two_left_link:active, .list_two_left_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_two_middle_link, .list_two_middle_link:hover, .list_two_middle_link:visited, .list_two_middle_link:active, .list_two_middle_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_two_right_link, .list_two_right_link:hover, .list_two_right_link:visited, .list_two_right_link:active, .list_two_right_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_three_left {
+	width: 33%;
+	float: left;
+}
+
+.list_three_middle {
+	width: 33%;
+	float: left;
+}
+
+.list_three_right {
+	width: 33%;
+	float: left;
+}
+
+.list_three_left_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_three_middle_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_three_right_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_three_left_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_three_middle_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_three_right_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_three_left_link, .list_three_left_link:hover, .list_three_left_link:visited, .list_three_left_link:active, .list_three_left_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_three_middle_link, .list_three_middle_link:hover, .list_three_middle_link:visited, .list_three_middle_link:active, .list_three_middle_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_three_right_link, .list_three_right_link:hover, .list_three_right_link:visited, .list_three_right_link:active, .list_three_right_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_four_left {
+	width: 33%;
+	float: left;
+}
+
+.list_four_middle {
+	width: 33%;
+	float: left;
+}
+
+.list_four_right {
+	width: 33%;
+	float: left;
+}
+
+.list_four_left_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_four_middle_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_four_right_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_four_left_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_four_middle_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_four_right_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_four_left_link, .list_four_left_link:hover, .list_four_left_link:visited, .list_four_left_link:active, .list_four_left_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_four_middle_link, .list_four_middle_link:hover, .list_four_middle_link:visited, .list_four_middle_link:active, .list_four_middle_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_four_right_link, .list_four_right_link:hover, .list_four_right_link:visited, .list_four_right_link:active, .list_four_right_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_five_left {
+	width: 33%;
+	float: left;
+}
+
+.list_five_middle {
+	width: 33%;
+	float: left;
+}
+
+.list_five_right {
+	width: 33%;
+	float: left;
+}
+
+.list_five_left_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_five_middle_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_five_right_h3 {
+	font: 18px/1.3 'Alegreya', serif;
+	padding: 0;
+	margin: 0;
+}
+
+.list_five_left_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_five_middle_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_five_right_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.list_five_left_link, .list_five_left_link:hover, .list_five_left_link:visited, .list_five_left_link:active, .list_five_left_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_five_middle_link, .list_five_middle_link:hover, .list_five_middle_link:visited, .list_five_middle_link:active, .list_five_middle_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.list_five_right_link, .list_five_right_link:hover, .list_five_right_link:visited, .list_five_right_link:active, .list_five_right_link:focus {
+	color: #ffffff;
+	text-decoration: underline;
 }
 
 /* =Popups */
