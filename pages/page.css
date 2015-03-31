@@ -179,6 +179,9 @@
 	background: #ffffff;
 	border: 1px solid #cccccc;
 	margin: 0 0 20px 0;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
 }
 
 .cp_right_menu_module_warning_h2 {
@@ -186,7 +189,7 @@
 	-moz-border-radius: 10px 10px 0 0;
 	-webkit-border-radius: 10px 10px 0 0;
 	border-radius: 10px 10px 0 0;
-	color: red;
+	color: #ffffff;
 	font: 22px/1.3 'Alegreya', serif;
 	margin: 0;
 	padding: 5px 10px;
