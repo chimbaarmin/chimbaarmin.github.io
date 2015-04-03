@@ -1,0 +1,16 @@
+SEO information for Desktop Number Page v2.0
+
+Meta title: "%numberformat1% / %numberformat2% | %hashtag% in %country%, %city/service%"
+Where:
+	- %numberformat1% = ordinary format
+	- %numberformat2% = international format
+	
+Meta description: "Phone Number %numberformat1% (%city/service% / %country%) tagged as %hashtag% by %usernumber% users since %date%. Look up caller identity, rating and more for %numberfromat2%."
+Where:
+	- %usernumber% - number of users that commented on this number/number of comments
+	
+Meta keywrods: "%numberformat1%, %numberformat2%, %area/service%, %country%"
+
+Header stats:
+H1	H2	H3	H4	H5	H6
+1	1	3	4	18	2
