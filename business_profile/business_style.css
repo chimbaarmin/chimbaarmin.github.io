@@ -25,7 +25,7 @@ Responsive
 
 /* =Imports */
 
-@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 @import url("//fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Alegreya:700");
 
 /* =Eric Mayer's Reset */
@@ -103,114 +103,62 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	overflow: auto;
 }
 	
-.business_info_content_left {
-	border: 1px solid #cccccc;
-	float: left;
+.business_info_content_h4 {
 	margin: 20px;
+	font: 22px/1.3 'Alegreya', serif;
+}
+	
+.business_info_content_ul {
+	margin: 20px 20px 0 20px;
+	overflow: auto;
+	border: 1px solid #cccccc;
+}
+	
+.business_info_content_li:nth-child(odd) {
 	width: 30%;
 }
 	
-.business_info_logo {
-	padding: 20px;
+.business_info_content_li:nth-child(even) {
+	width: 70%
 }
 	
-.business_info_logo_img {
-	width: 100%;
+.business_info_content_li {
+	float: left;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding: 5px 10px;
+	border-bottom: 1px solid #cccccc;
+}
+
+	
+.business_info_content_li:last-of-type, .business_info_content_li:nth-last-of-type(2) {
+	border-bottom: none;
 }
 	
-.business_info_review {
+.business_info_social_ribbon {
+	margin: 0 20px 20px 20px;
+	border: 1px solid #cccccc;
+	border-top: 0;
+	overflow: auto;
+}
+	
+.business_info_social_ribbon_wrapper {
+	margin: 10px;
+}
+	
+.business_info_social_icon_f, .business_info_social_icon_t, .business_info_social_icon_e {
+	color: #333333;
+}
+	
+.business_info_company_description {
 	margin: 0 20px 20px 20px;
 }
 	
-.business_info_review_button {
-	margin: 20px 0;
-	text-align: center;
-}
-	
-.business_info_content_right {
-	border: 1px solid #cccccc;
-	float: right;
-	margin: 20px 20px 20px 0;
-	overflow: auto;
-	width: 60%;
-}
-	
-.business_info_content_right_h2 {
-	background-color: #333333;
-	color: #fff;
-	font: 20px/1.3 'Alegreya', serif;
-	margin: 0;
-	padding: 5px 10px;
-}
-
-.contact_information_ul {
-	margin: 20px;
-	overflow: auto;
-}
-	
-.contact_information_li_a {
-	background-color: #f3f3f3;
-	border: 1px solid #ccc;
-	-webkit-border-radius: 4px 0 0 4px;
-	-moz-border-radius: 4px 0 0 4px;
-	border-radius: 4px 0 0 4px;
-	display: inline-block;
-	height: 32px;
-	margin: 5px 0;
-	padding: 5px;
-	text-align: center;
-	width: 25%;
-}	
-	
-.contact_information_li_b {
-	border: 1px solid #cccccc;
-	display: inline-block;
-	height: 32px;
-	margin: 5px 0 5px -4px;
-	padding: 5px;
-	width: 70%;
-}	
-	
-.business_info_content_adspace {
-	text-align: center;
-}
-	
-.business_info_ratings {
-	margin: 20px 0;
-	overflow: auto;
-}
-
-.business_info_ratings_h3 {
-	background-color: #333333;
-	color: #fff;
-	font: 16px/1.3 'Alegreya', serif;
+.business_info_company_description_h4 {
+	font: 22px/1.3 'Alegreya', serif;
 	margin: 0 0 20px 0;
-	padding: 5px 10px;
-}
-	
-.business_info_ratings_number {
-	float: left;
-	width: 50%;
-}
-	
-.ratings_number_li_a {
-	display: inline-block;
-	padding-left: 20px;
-}
-	
-.ratings_number_li_b {
-	display: inline-block;
-}
-
-.business_info_ratings_stars {
-	float: right;
-	width: 50%;
-	
-}
-	
-.business_info_rate_review {
-	margin-bottom: 20px;
-	text-align: center;
+	border-bottom: 1px dashed #cccccc;
 }
 	
 /* =Business map module */
@@ -218,6 +166,98 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .google_map {
 	border-top: 1px solid #cccccc;
 	height: 250px;
+}
+	
+/* =Business additional info module */
+	
+.business_additional_info_module {
+	margin: 20px;
+}
+	
+.business_additional_info_h4 {
+	font: 22px/1.3 'Alegreya', serif;
+	margin: 0 0 20px 0;
+	border-bottom: 1px dashed #cccccc;
+}
+	
+.business_additional_info_ul {
+	border: 1px solid #cccccc;
+	overflow: auto;
+}
+	
+.business_additional_info_li:nth-child(odd) {
+	width: 30%;
+}
+		
+.business_additional_info_li:nth-child(even) {
+	width: 70%;
+}
+	
+.business_additional_info_li {
+	float: left;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding: 5px 10px;
+	border-bottom: 1px solid #cccccc;
+}
+	
+.business_additional_info_li:last-of-type, .business_additional_info_li:nth-last-of-type(2) {
+	border-bottom: none;
+}
+	
+.business_additional_info_company_age {
+	margin: 20px 0 0 0;
+}
+	
+.business_additional_info_company_age_h4 {
+	font: 22px/1.3 'Alegreya', serif;
+	margin: 0 0 20px 0;
+	border-bottom: 1px dashed #cccccc;
+}
+	
+.company_age_item {
+	position: relative;
+	display: inline-block;
+	padding: 30px 10px 0 0;
+	vertical-align: bottom;
+	text-align: center;
+	line-height: 1.3;
+	width: 70px;
+	text-align: center;
+}
+	
+.company_age_item:before {
+	width: 70px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #bbb;
+	content: "✓";
+	text-align: center;
+	font-size: 25px;
+	font-weight: 700;
+	text-align: center;
+}
+	
+.business_additional_info_directors {
+	margin: 20px 0 0 0;
+}
+	
+.business_additional_info_directors_h4 {
+	font: 22px/1.3 'Alegreya', serif;
+	margin: 0 0 20px 0;
+	border-bottom: 1px dashed #cccccc;
+}
+	
+.business_additional_info_names {
+	margin: 20px 0 0 0;
+}
+	
+.business_additional_info_names_h4 {
+	font: 22px/1.3 'Alegreya', serif;
+	margin: 0 0 20px 0;
+	border-bottom: 1px dashed #cccccc;
 }
 	
 /* =Business reviews module*/
