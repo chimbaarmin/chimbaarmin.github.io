@@ -7,16 +7,12 @@
 	<link rel='stylesheet' href='business_style.css' type='text/css' media='screen' />
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="galleria/galleria-1.4.2.min.js"></script>
+	<script src="business_profile.js"></script>
 </head>
 <body class="business_profile_body">
 	<div class="col-md-2"></div>
 	<div class="col-md-7">
 		<div class="business_info_module" id="info_module">
-			<div class="business_info_top">
-				<h1 class="business_info_top_h1">
-					Bussiness profile: Küchen Pohl Gmbh
-				</h1>
-			</div>
 			<div class="business_info_gallery">
 				<div class="galleria">
 					<img src="images/image1.jpg">
@@ -26,16 +22,21 @@
 					<img src="images/image5.jpg">
 				</div>
 			</div>
+			<div class="business_info_company_name">
+				<h1 class="business_info_company_name_h1">
+					Küchen Pohl Gmbh
+				</h1>
+			</div>
 			<div class="business_info_adspace">
-				<img src="images/google1.png" alt="" class="business_info_adspace_img">
+				<img src="images/google3.png" alt="" class="business_info_adspace_img">
 			</div>
 			<div class="business_info_content">
 				<div class="business_info_content_wrapper">
-					<h4 class="business_info_content_h4">Basic info</h4>
+					<h2 class="business_info_content_h2">Information about Küchen Pohl GmbH ( 030-145778487 )</h2>
 					<ul class="business_info_content_ul">
-						<li class="business_info_content_li"><i class="fa fa-fw fa-tag"></i> Registration number:</li>
+						<li class="business_info_content_li"><i class="fa fa-fw fa-barcode"></i> Registration number:</li>
 						<li class="business_info_content_li">Hrb106945 berlin (charlottenburg)</li>
-						<li class="business_info_content_li"><i class="fa fa-fw fa-map-marker"></i> Registered address:</li>
+						<li class="business_info_content_li"><i class="fa fa-fw fa-thumb-tack"></i> Registered address:</li>
 						<li class="business_info_content_li">Deutschland, Kinzigstr. 40, 10247, Friedrichshain, Berlin</li>
 						<li class="business_info_content_li"><i class="fa fa-fw fa-random"></i> Company status:</li>
 						<li class="business_info_content_li">ACTIVE</li>
@@ -49,7 +50,7 @@
 					</div>
 					<div class="business_info_company_description">
 						<div class="business_info_company_description_wrapper">
-							<h4 class="business_info_company_description_h4"><i class="fa fa-fw fa-info-circle"></i> Company description</h4>
+							<h4 class="business_info_company_description_h4"><i class="fa fa-fw fa-info-circle"></i> Description of Küchen Pohl in Berlin</h4>
 							<div class="business_info_company_description_p_wrapper">
 								<p class="business_info_company_description_p">
 									KÜCHEN POHL GMBH registered in Deutschland with the Company reg no HRB106945 BERLIN (CHARLOTTENBURG). It can be contacted at Deutschland, Kinzigstr. 40, 10247, Friedrichshain, Berlin. It's current status is active. Company was founded 22.12.2006 (8 years and 3 months ago).
@@ -59,15 +60,51 @@
 					</div>
 				</div>
 			</div>
-			<div class="business_map_module" id="map_module">
+			<div class="business_map_tags_module" id="map_module">
 				<div class="clear"></div>
-				<div class="google_map">
+				<div class="business_map_tags_module_tags">
+					<div class="map_tags_module_tags_rating">
+						<h5 class="map_tags_module_tags_rating_h5">
+							<i class="fa fa-fw fa-star-half-o"></i> Average rating
+						</h5>
+						<div class="map_tags_module_tags_rating_content">
+							<div class="map_tags_module_tags_rating_span">
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div>
+						</div>
+					</div>
+					<div class="map_tags_module_tags_tags">
+						<h5 class="map_tags_module_tags_tags_h5">
+							<i class="fa fa-fw fa-tags"></i> Tags
+						</h5>
+						<div class="map_tags_module_tags_tags_ul_wrapper">
+							<ul class="map_tags_module_tags_tags_ul">
+								<li class="map_tags_module_tags_tags_li">One</li>
+								<li class="map_tags_module_tags_tags_li">Two</li>
+								<li class="map_tags_module_tags_tags_li">Three</li>
+								<li class="map_tags_module_tags_tags_li">Four</li>
+								<li class="map_tags_module_tags_tags_li">Five</li>
+								<li class="map_tags_module_tags_tags_li">Six</li>
+								<li class="map_tags_module_tags_tags_li">Seven</li>
+								<li class="map_tags_module_tags_tags_li">Eight</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="business_map_tags_module_map">
+					<div class="google_map">
 						
 				</div>
+				</div>
+				<div class="clear"></div>
 			</div>
 			<div class="business_additional_info_module">
 				<div class="business_additional_info_module_wrapper">
-					<h4 class="business_additional_info_h4">Additional info</h4>
+					<h4 class="business_additional_info_h4"><i class="fa fa-fw fa-plus-circle"></i> Additional info</h4>
 					<ul class="business_additional_info_ul">
 						<li class="business_additional_info_li"><i class="fa fa-fw fa-calendar"></i> Incorporated:</li>
 						<li class="business_additional_info_li">22.12.2006</li>
@@ -75,33 +112,31 @@
 						<li class="business_additional_info_li">Gesellschaft mit beschränkter haftung</li>
 					</ul>
 					<div class="business_additional_info_company_age">
-						<h4 class="business_additional_info_company_age_h4"><i class="fa fa-fw fa-birthday-cake"></i> Age of company</h4>
+						<h5 class="business_additional_info_company_age_h5"><i class="fa fa-fw fa-birthday-cake"></i> Company age</h5>
 						<div class="company_age_items">
-							<div class="company_age_item">
-								0-2
-							</div>
-							<div class="company_age_item">
-								2-5
-							</div>
-							<div class="company_age_item">
-								5-20
-							</div>
-							<div class="company_age_item">
-								20-50
-							</div>
-							<div class="company_age_item">
-								50+
-							</div>
+							<ul class="company_age_items_ul">
+								<li class="company_age_items_li"><i class="fa fa-fw fa-circle-o"></i></li>
+								<li class="company_age_items_li">0-1</li>
+								<li class="company_age_items_li"><i class="fa fa-fw fa-circle-o"></i></li>
+								<li class="company_age_items_li">1-5</li>
+								<li class="company_age_items_li"><i class="fa fa-fw fa-check-circle"></i></li>
+								<li class="company_age_items_li">5-10</li>
+								<li class="company_age_items_li"><i class="fa fa-fw fa-circle-o"></i></li>
+								<li class="company_age_items_li">10-50</li>
+								<li class="company_age_items_li"><i class="fa fa-fw fa-circle-o"></i></li>
+								<li class="company_age_items_li">50+</li>
+							</ul>
 						</div>
 					</div>
+					<div class="clear"></div>
 					<div class="business_additional_info_directors">
-						<h4 class="business_additional_info_directors_h4"><i class="fa fa-fw fa-user"></i> Directors</h4>
+						<h5 class="business_additional_info_directors_h5"><i class="fa fa-fw fa-users"></i> Directors</h5>
 						<ul class="business_additional_info_directiors_ul">
 							<li class="business_additional_info_directors_li">Frau Janina Pohl</li>
 						</ul>
 					</div>
 					<div class="business_additional_info_names">
-						<h4 class="business_additional_info_names_h4"><i class="fa fa-fw fa-bullseye"></i> Previous names</h4>
+						<h5 class="business_additional_info_names_h5"><i class="fa fa-fw fa-pencil"></i> Previous names</h5>
 						<ul class="business_additional_info_names_ul">
 							<li class="business_additional_info_names_li">Siebzehnte New Building Verwaltungsgesellschaft mbH</li>
 						</ul>
@@ -111,7 +146,7 @@
 			</div>
 		</div>
 		<div class="business_reviews_module" id="reviews_module">
-			<h2 class="business_reviews_h2">Reviews</h2>
+			<h4 class="business_reviews_h4">Reviews</h4>
 			<div class="business_reviews_navigation">
 					<a href="#" class="business_navigation_button">Previous</a>
 					<a href="#" class="business_navigation_button">Next</a>
@@ -210,7 +245,7 @@
 					</div>
 		</div>
 		<div class="business_rate_review_module" id="rate_review_module">
-			<h2 class="business_rate_review_h2">Rate and review</h2>
+			<h4 class="business_rate_review_h4">Rate and review</h4>
 			<div class="business_rate_review">
 				<div class="business_review">
 					Username:
@@ -223,7 +258,7 @@
 					<textarea name="" id="" cols="30" rows="10" class="business_review_text"></textarea>
 				</div>
 				<div class="business_rate">
-					<h3 class="business_rate_h3">Rate:</h3>
+					<h6 class="business_rate_h6">Rate:</h6>
 					<div class="business_rate_price">
 						<span class="rate_span">Price:</span> 
 						<span class="fa fa-star"></span>
@@ -268,22 +303,89 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-		<div class="business_footer_module" id="footer_module">
-			<div class="business_footer_copyright">
-				<p class="copyright_p">Copyright &copy; Number-Index.com 2015.</p>
-			</div>
-			<div class="business_footer_disclaimer">
-				<p class="disclaimer_p">This website uses cookies. By continuing to browse this site, we assume that you agree with our cookie policy.</p>
-			</div>
-			<div class="business_footer_delete">
-				<a href="#" class="footer_delete_button">Delete this entry</a>
-				<a href="#" class="footer_delete_button">Report abuse</a>
-			</div>
-			<div class="clear"></div>
-			<div class="business_footer_sitemap">
-				Sitemap
+		
+		<div class="business_footer_module">
+			<div class="business_footer_module_wrapper">
+				<div class="business_footer_module_menu">
+					<ul class="business_footer_module_ul">
+						<li class="business_footer_module_li"><a data-item="footer_sheet_1" class="business_footer_module_trigger footer_trigger_1 footer_trigger_active">Numbers</a></li>
+						<li class="business_footer_module_li"><a data-item="footer_sheet_2" class="business_footer_module_trigger footer_trigger_2">Business</a></li>
+					</ul>
+				</div>
+				<div class="business_footer_module_sheet_wrapper">
+					<div class="business_footer_module_sheet footer_sheet_1 footer_sheet_active">
+						Sheet one
+					</div>
+					<div class="business_footer_module_sheet footer_sheet_2">
+						<div class="footer_sheet_wrapper">
+							<div class="footer_sheet_buttons">
+								<ul class="footer_sheet_buttons_ul">
+									<li class="footer_sheet_buttons_li"><a data-item="sheet_numbers_1" class="fotter_sheet_buttons_link buttons_link_active">Test of a very long link name</a></li>
+									<li class="footer_sheet_buttons_li"><a data-item="sheet_numbers_2" class="fotter_sheet_buttons_link">b</a></li>
+									<li class="footer_sheet_buttons_li"><a data-item="sheet_numbers_3" class="fotter_sheet_buttons_link">c</a></li>
+								</ul>
+							</div>
+							<div class="footer_sheet_numbers sheet_numbers_1 sheet_numbers_active">
+								<ul class="footer_sheet_numbers_ul">
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111 1111111111111111111111 111111111111111111111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">111 111 1111</a></li>
+								</ul>
+							</div>
+							<div class="footer_sheet_numbers sheet_numbers_2">
+								<ul class="footer_sheet_numbers_ul">
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">222 222 2222</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">222 222 2222</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">222 222 2222</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">222 222 2222</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">222 222 2222</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">222 222 2222</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">222 222 2222</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">222 222 2222</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">222 222 2222</a></li>
+								</ul>
+							</div>
+							<div class="footer_sheet_numbers sheet_numbers_3">
+								<ul class="footer_sheet_numbers_ul">
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">333 333 333 333</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">333 333 333 333</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">333 333 333 333</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">333 333 333 333</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">333 333 333 333</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">333 333 333 333</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">333 333 333 333</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">333 333 333 333</a></li>
+									<li class="footer_sheet_numbers_li"><a href="#" class="footer_sheet_numbers_link">333 333 333 333</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+		
 	</div>
 	<div class="col-md-3">
 		<div class="right_menu_module" id="getFixed">
@@ -322,7 +424,7 @@
 				<a href="#rate_review_module" class="right_menu_button">Rate and review</a>
 			</div>
 			<div class="right_menu_ribbon">
-				<h3 class="ribbon_h3">Share this page</h3>
+				<h5 class="ribbon_h5">Share this page</h5>
 				<div class="ribbon_icons">
 					<a href="#" class="ribbon_icon_link_f"><i class="fa fa-facebook-square fa-2x"></i></a>
 					<a href="#" class="ribbon_icon_link_t"><i class="fa fa-twitter-square fa-2x"></i></a>
