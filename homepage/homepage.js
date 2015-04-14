@@ -51,23 +51,11 @@ function initialize() {
  		google.maps.event.addListener(marker, 'click', (function(marker, i) {
 	
 		return function() {
-				jQuery( ".marker_info_h2").empty().append( _LANG.PHONE_NUMBER + " " + markers[i][3] );
-				jQuery( ".area_code_li").empty().append( _LANG.AREA_CODE + " " + markers[i][5] );
-				jQuery( ".country_li").empty().append( _LANG.COUNTRY + " " + markers[i][4] );
-				jQuery( ".city_service_li").empty().append( _LANG.CITY_STATE + " " + markers[i][0] );
-				jQuery( ".number_rank_li").empty().append( _LANG.RANK + " " + markers[i][6] );
-				jQuery(".marker_info_basic_li_a").attr("href",  markers[i][7]);
-			
-				var $winheight = jQuery( window ).height();
-				var $elemheight = jQuery( document.getElementsByClassName("home_marker_info_divs") ).height()
-				var $finalheight = ( $winheight - $elemheight ) / 2 ;
-				jQuery( document.getElementsByClassName("home_marker_info_divs") ).css( "margin-top", $finalheight );
-				if ( jQuery( 'html' ).attr( 'dir' ) == "rtl" ) {
-					jQuery( ".home_marker_info_divs").css("margin-left", "0px");
-				}
-				else {
-					jQuery( ".home_marker_info_divs").css("margin-right", "0px");
-				}
+				
+				map.setCenter(marker.getPosition());
+				jQuery( document.getElementsByClassName("home_content") ).css( "transition", "margin-top 1s linear" );
+				jQuery( document.getElementsByClassName("home_content") ).css( "margin-top", "50px" );
+				
 			}
 		})(marker, i));
 	
@@ -105,44 +93,28 @@ var $winheight;
 var $elemheight;
 var $finalheight;
 
-jQuery( window ).on("resize", function() {
+function home_resize() {
 	$winheight = jQuery( window ).height();
 	$elemheight = jQuery( document.getElementsByClassName("home_content") ).height()
 	$finalheight = ( $winheight - $elemheight ) / 2 ;
+	jQuery( document.getElementsByClassName("home_content") ).css( "transition", "none" );
 	jQuery( document.getElementsByClassName("home_content") ).css( "margin-top", $finalheight );
-});
+}
 
-jQuery(function() {
-	$winheight = jQuery( window ).height();
-	$elemheight = jQuery( document.getElementsByClassName("home_content") ).height()
-	$finalheight = ( $winheight - $elemheight ) / 2 ;
-	jQuery( document.getElementsByClassName("home_content") ).css( "margin-top", $finalheight );
-});
+jQuery( window ).on("resize", home_resize);
+jQuery(home_resize);
 
 /* */
 
-jQuery( window ).on("resize", function() {
+function home_stats_resize() {
 	$winheight = jQuery( window ).height();
 	$elemheight = jQuery( document.getElementsByClassName("home_stats_divs") ).height()
 	$finalheight = ( $winheight - $elemheight ) / 2 ;
 	jQuery( document.getElementsByClassName("home_stats_divs") ).css( "margin-top", $finalheight );
-});
+}
 
-jQuery(function() {
-	$winheight = jQuery( window ).height();
-	$elemheight = jQuery( document.getElementsByClassName("home_stats_divs") ).height()
-	$finalheight = ( $winheight - $elemheight ) / 2 ;
-	jQuery( document.getElementsByClassName("home_stats_divs") ).css( "margin-top", $finalheight );
-});
-
-/* */
-
-jQuery( window ).on("resize", function() {
-	$winheight = jQuery( window ).height();
-	$elemheight = jQuery( document.getElementsByClassName("home_marker_info_divs") ).height()
-	$finalheight = ( $winheight - $elemheight ) / 2 ;
-	jQuery( document.getElementsByClassName("home_marker_info_divs") ).css( "margin-top", $finalheight );
-});
+jQuery( window ).on("resize", home_stats_resize);
+jQuery(home_stats_resize);
 
 /* Hover Help */
 
