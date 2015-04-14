@@ -19,3 +19,12 @@ jQuery(document).ready(function(){
 		jQuery( "." + $activeItem ).addClass('sheet_numbers_active');
 	});
 });
+
+/* Button blinker */
+
+function blinker() {
+    $('.blink_button').fadeTo(1000, 0.33);
+    $('.blink_button').fadeTo(1000, 0.99);
+}
+
+setInterval(blinker, 2000);

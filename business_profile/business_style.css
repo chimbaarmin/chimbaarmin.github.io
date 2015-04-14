@@ -73,7 +73,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 	
 /* =Modules */
-	
+		
 /* ==Business info module */
 	
 .business_info_module {
@@ -180,7 +180,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 /* =Business map and tags module */
 	
 .business_map_tags_module {
-	margin: 0 20px;
+	margin: 0 20px 20px 20px;
 	border: 1px solid #cccccc;
 }
 	
@@ -318,7 +318,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .business_reviews_h4 {
 	background-color: #333333;
 	color: #fff;
-	font: 22px/1.3 'Alegreya', serif;
+	font: 20px/1.3 'Alegreya', serif;
 	padding: 5px 10px;
 }
 	
@@ -361,38 +361,27 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	
 .review_title {
 	border-bottom: 1px solid #cccccc;
-	border-right: 1px solid #cccccc;
 	float: left;
-	font: 18px/1.3 'Alegreya', serif;
+	font: 16px/1.3 'Alegreya', serif;
 	overflow: auto;
 	padding: 10px;
-	width: 70%;
-}
-	
-.rating_title {
-	border-bottom: 1px solid #cccccc;
-	float: right;
-	font: 18px/1.3 'Alegreya', serif;
-	overflow: auto;
-	padding: 10px 5px;
-	text-align: center;
-	width: 30%;
+	width: 100%;
 }
 	
 .review_content {
-	border-right: 1px solid #cccccc;
 	float: left;
 	overflow: auto;
 	padding: 20px;
-	width: 70%;
+	width: 100%;
+	font-size: 14px;
 }
 	
-.rating_content {
-	float: right;
-	margin: 20px 0;
-	overflow: auto;
-	text-align: center;
-	width: 30%;
+.review_text_p {
+	margin-bottom: 20px;
+}
+	
+.review_text_p:last-of-type {
+	margin: 0;
 }
 	
 .review_ribbon {
@@ -414,7 +403,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	width: 30%;
 }
 
-.positive_votes, .negative_votes, .calendar_date, .replies {
+.positive_votes, .negative_votes, .calendar_date, .replies, .rating {
 	border: 1px solid #cccccc;
 	display: inline-block;
 	margin: 10px;
@@ -593,8 +582,6 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 /* =Right menu module */
 	
 .right_menu_module {
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
 	margin: 20px 20px 0 0;
 	position: static;
 	text-align: center;
@@ -656,6 +643,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	border: 1px solid #ccc;
 	border-top: 0;
 	padding: 5px;
+	background: #ffffff;
 }
 	
 .basic_info_li_c {
@@ -673,6 +661,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	border-radius: 0 0 4px 4px;
 	border-top: 0;
 	padding: 5px;
+	background: #ffffff;
 }
 	
 .right_menu_adspace {
@@ -736,7 +725,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 	
 .right_menu_button {
-	background: #333333;
+	background: #428bca;
 	border: 1px solid #cccccc;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -748,8 +737,8 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 	
 .right_menu_button:hover {
-	color: #6075a6;
-	text-decoration: none;
+	color: #ffffff !important;
+	text-decoration: underline;
 }
 	
 .right_menu_ribbon {
