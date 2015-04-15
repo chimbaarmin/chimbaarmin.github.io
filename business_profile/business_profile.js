@@ -20,11 +20,12 @@ jQuery(document).ready(function(){
 	});
 });
 
-/* Button blinker */
-
-function blinker() {
-    $('.blink_button').fadeTo(1000, 0.33);
-    $('.blink_button').fadeTo(1000, 0.99);
-}
-
-setInterval(blinker, 2000);
+jQuery(document).ready(function(){
+	jQuery( '.business_new_footer_trigger' ).click(function() {
+		var $activeItem = jQuery( this ).attr( 'data-item' );
+		jQuery( '.business_new_footer_trigger' ).removeClass('active_button');
+		jQuery( this ).addClass('active_button');
+		jQuery ( '.business_new_footer_numbers_wrapper' ).removeClass('active_item');
+		jQuery( "." + $activeItem ).addClass('active_item');
+	});
+});
