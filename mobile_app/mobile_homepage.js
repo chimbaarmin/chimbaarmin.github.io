@@ -66,7 +66,7 @@ var $userLo = -74.0059413;
 var $jsonResponse = "";
 var $jsonArray = [];
 
-$.get("http://ipinfo.io", function(response) {
+$.get("https://ipinfo.io", function(response) {
 	$jsonResponse = response.loc;
 	console.log( $jsonResponse );
 	$jsonArray = $jsonResponse.split(",").map(Number);
