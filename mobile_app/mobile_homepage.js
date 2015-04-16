@@ -61,8 +61,21 @@ jQuery(function(){
 
 /* User location */
 
-var $userLa = geoplugin_latitude();
-var $userLo = geoplugin_longitude();
+var $userLa = 40.7127837;
+var $userLo = -74.0059413;
+var $jsonResponse = "";
+var $jsonArray = [];
+
+$.get("http://ipinfo.io", function(response) {
+	$jsonResponse = response.loc;
+	console.log( $jsonResponse );
+	$jsonArray = $jsonResponse.split(",").map(Number);
+	$userLa = $jsonArray[0];
+	$userLo = $jsonArray[1];
+}, "jsonp");
+
+
+
 
 /* Google Maps */
 
