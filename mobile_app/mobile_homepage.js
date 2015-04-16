@@ -61,28 +61,8 @@ jQuery(function(){
 
 /* User location */
 
-var uloptions = {
-	enableHighAccuracy: true,
-  	timeout: 5000,
-  	maximumAge: 0
-};
-
-var $userLa = 40.7127837;
-var $userLo = -74.0059413;
-
-function success(pos) {
-  	var crd = pos.coords;
-	$userLa = crd.latitude;
-	$userLo = crd.longitude;
-  	console.log('Success');
-};
-
-function error(err) {
-  	$userLa = 40.7127837;
-	$userLo = -74.0059413;
-	
-	console.log('Error');
-};
+var $userLa = geoplugin_latitude();
+var $userLo = geoplugin_longitude();
 
 /* Google Maps */
 
@@ -92,11 +72,10 @@ jQuery(function($) {
 	document.body.appendChild(script);
 });
 
-var map, map2;
+var map;
 
 function initialize(condition) {
 	
-	var myLatlng = new google.maps.LatLng(38.9071923,-77.0368707);
 	var userLatlng = new google.maps.LatLng( $userLa, $userLo); 
 	
 	var myOptions = {
@@ -106,31 +85,12 @@ function initialize(condition) {
     	mapTypeId: google.maps.MapTypeId.ROADMAP
   	}
 	
-	var myOptions2 = {
-    	zoom: 10,
-    	center: myLatlng,
-		disableDefaultUI: true,
-    	mapTypeId: google.maps.MapTypeId.ROADMAP,
-  	}
-	
 	map = new google.maps.Map(document.getElementById("google_map"), myOptions);
-	map.panBy(0, 80);
-    
-	map2 = new google.maps.Map(document.getElementById("profile_google_map"), myOptions2);
-	map2.panBy(0, -70);
-	
-	/* Markers map */
+	map.panBy(0, 30);
 	
 	var marker = new google.maps.Marker({
       	position: userLatlng,
       	map: map
-  	});
-	
-	/* Markers map2 */
-	
-	var marker = new google.maps.Marker({
-      	position: myLatlng,
-      	map: map2
   	});
 	
 	google.maps.event.addDomListener(window, 'load', initialize);
@@ -142,18 +102,10 @@ function hideLoader() {
 	jQuery.mobile.loading( "hide" );
 }
 
-jQuery(document).on( "pageshow", "#profile_page", function() {
-	jQuery.mobile.loading( "show" );
-	setTimeout( initialize, 100 );
-	setTimeout( hideLoader, 300 );
-});
-
 jQuery(document).on( "pageshow", "#home_page", function() {
 	jQuery.mobile.loading( "show" );
-	if (navigator && navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(success, error, uloptions);
-	}
 	setTimeout( initialize, 100 );
 	setTimeout( hideLoader, 300 );
 	jQuery( '.mnp_content_search_form_input' ).focus();
 });
+

@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Mobile App Demo v0.1</title>
+	<title>Number-Index.com | Phone Number Reviews &amp; Caller Identity Check</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<link rel="stylesheet" href="mobile_app.css" />
+	<link rel="stylesheet" href="mobile_homepage.css" />
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script src="../plugins/jquery.cookie.js"></script>
-	<script src="mobile_app.js"></script>
+	<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+	<script src="mobile_homepage.js"></script>
 </head>
 <body>
 
@@ -22,7 +22,7 @@
 			</div>
 			<div class="mnp_header_header">
 				<h1 class="mnp_header_h1">
-					NUMBER-INDEX.COM
+					Number-Index.com
 				</h1>
 			</div>
 			<div class="mnp_clear">
@@ -31,11 +31,8 @@
 		
 		<div class="mnp_hidden_menu">
 			<ul class="mnp_hidden_menu_ul">
-				<li class="mnp_hidden_menu_li"><a href="#" class="mnp_hidden_menu_link">Remove Entry</a></li>
-				<li class="mnp_hidden_menu_li"><a href="#" class="mnp_hidden_menu_link">Disclaimer</a></li>
-				<li class="mnp_hidden_menu_li"><a href="#" class="mnp_hidden_menu_link">Contact</a></li>
-				<li class="mnp_hidden_menu_li"><a href="#" class="mnp_hidden_menu_link">About</a></li>
-				<li class="mnp_hidden_menu_li"><a href="#profile_page" class="mnp_hidden_menu_link">profile page example</a></li>
+				<li class="mnp_hidden_menu_li"><a href="#" class="mnp_hidden_menu_link">Remove entry or comment</a></li>
+				<li class="mnp_hidden_menu_li"><a href="#about_us_page" class="mnp_hidden_menu_link">About us</a></li>
 			</ul>
 		</div>
 			
@@ -43,6 +40,9 @@
 			<div class="mnp_content_map" id="google_map">
 			</div>
 			<div class="mnp_content_search_box">
+				<div class="mnp_content_search_logo_wrapper">
+					<img src="images/right_menu_logo.png" class="mnp_content_search_logo" alt="">
+				</div>
 				<form action="/" method="get" clas="mnp_content_search_form">
 					<input name="s" type="text" value="" placeholder="Lookup number" class="mnp_content_search_form_input" data-role="none">
 					<button class="mnp_content_search_form_button" data-role="none"><i class="fa fa-search"></i></button>
@@ -64,79 +64,15 @@
 		
 	</div><!-- End of home page -->
 	
-	<div data-role="page" id="profile_page" data-next="" data-prev="" class="profile_page_div">
+	<div data-role="page" id="about_us_page" data-next="" data-prev="" class="about_us_page_div">
 		
-		<div class="mnp_header">
-			<div class="mnp_header_menu">
-				<a href="#home_page" class="mnp_header_menu_link_home"><i class="fa fa-home mnp_header_menu_home_i"></i></a>
-			</div>
-			<div class="mnp_header_header">
-				<h1 class="mnp_header_h1">
-					NUMBER-INDEX.COM
-				</h1>
-			</div>
-			<div class="mnp_clear">
-			</div>
-		</div>	
-		
-		<div class="mnp_content">
-			<div class="mnp_profile_map" id="profile_google_map">
-			</div>
-			<div class="profile_google_map_overlay">
-				<h2 class="profile_google_map_overlay_h2">123 456 7890</h2>
-				<div class="mnp_profile_info">
-					<ul class="mnp_profile_info_ul">
-						<li class="mnp_profile_info_li">Washington DC</li>
-						<li class="mnp_profile_info_li">USA</li>
-						<li class="mnp_profile_info_li">123</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="mnp_profile_content">
-			<div class="mnp_profile_votebox">
-				<p class="mnp_profile_votebox_p">Please rate this number:</h6>
-				<div class="mnp_clear">
-				</div>
-				<button class="mnp_vote_button vote_item vote_up" value="vote_up"><span class="fa fa-thumbs-up fa-3x" ></span></button>
-                <button class="mnp_vote_button vote_item vote_down" value="vote_down"><span class="fa fa-thumbs-down fa-3x"></span></button>
-                <div class="mnp_clear">
-                </div>
-			</div>
-			<div class="mnp_profile_ribbons">
-				
-			</div>
-			<div class="mnp_clear">
-            </div>
-			<div class="mnp_profile_buttons">
-				<div class="mnp_profile_button">
-					<a href="tel:1234567890" class="mnp_profile_button_link">Call this number</a>
-					<a href="#" class="mnp_profile_button_link">View feedback</a>
-				</div>
-			</div>
-		</div>
-		<div class="mnp_footer">
-			<div class="mnp_footer_copyright">
-				<p class="mnp_footer_copyright_p">
-					Copyright &copy; 2015.
-				</p>
-			</div>
-		</div>
-		<div class="mnp_hidden_menu">
-		</div>
-	</div><!-- End of profile page -->
-	
-	
-	
-	<div data-role="page" id="help_page" data-next="" data-prev="" class="help_page_div">
-		
-		<h1 class="mnp_help_page_h1">What is Number-Index.com?</h1>
-		<p class="mnp_help_page_p">You can always find all information you want about any phone number at Number-Index. You received an unknown call? You want to find out who is calling? Number-Index makes it easy for you to find out who called.</p>
-		<p class="mnp_help_page_p">But what if you want to find out more than simply who called? Do not worry, Number-Index offers a lot of additional information related to both phone number and caller. We will not only tell you who is calling – our unique rating system will show you immediately whether the call was real or a scam. On our website you will also find advice on reputable companies and providers that are noticed by the way they treat their customers.</p>
-		<p class="mnp_help_page_p_bold">Our mission: To provide ratings for every phone number on the planet.</p>
+		<h1 class="mnp_help_page_h2">Introducing: Number-Index.com</h2>
+		<p class="mnp_help_page_p">We provide publicly available information like Reputation, Background, Location and Reviews on ANY phone number worldwide. Based on our unique Popularity and Threat Score, you can determine the purpose of a call from an unknown number and share your own experience about a caller.</p>
+		<p class="mnp_help_page_p_bold">Help us in our mission to index and review EVERY phone number on the planet..</p>
 		<div class="mnp_help_page_button_div">
 			<a href="#home_page" class="mnp_help_page_button">OK</a>
 		</div>
+		
 	</div><!-- End of help page -->
 	
 </body>
