@@ -96,7 +96,7 @@ function initialize(condition) {
   	}
 	
 	map = new google.maps.Map(document.getElementById("google_map"), myOptions);
-	map.panBy(0, 80);
+	map.panBy(0, 100);
 	
 	var marker = new google.maps.Marker({
       	position: userLatlng,
