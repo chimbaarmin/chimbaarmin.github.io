@@ -89,7 +89,7 @@ function initialize(condition) {
 	var userLatlng = new google.maps.LatLng( $userLa, $userLo); 
 	
 	var myOptions = {
-    	zoom: 10,
+    	zoom: 8,
 		center: userLatlng,
 		disableDefaultUI: true,
     	mapTypeId: google.maps.MapTypeId.ROADMAP
