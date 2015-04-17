@@ -119,21 +119,6 @@ function initialize() {
     }
 }
 
-/* Close More Info Box on click */
-
-jQuery(document).mouseup(function (e) {
-    var home_container = jQuery(".home_marker_info_divs");
-
-    if (!home_container.is(e.target) && home_container.has(e.target).length === 0) {
-        if ( jQuery( 'html' ).attr( 'dir' ) == "rtl" ) {
-            home_container.css('margin-left', '-310px');
-        }
-        else {
-            home_container.css('margin-right', '-310px');
-        }
-    }
-});
-
 /* Center Search Box */
 
 var $winheight;
@@ -150,19 +135,6 @@ function home_resize() {
 
 jQuery( window ).on("resize", home_resize);
 jQuery(home_resize);
-
-
-
-function home_stats_resize() {
-    $winheight = jQuery( window ).height();
-    $elemheight = jQuery( document.getElementsByClassName("home_stats_divs") ).height()
-    $finalheight = ( $winheight - $elemheight ) / 2 ;
-    jQuery( document.getElementsByClassName("home_stats_divs") ).css( "margin-top", $finalheight );
-}
-
-jQuery( window ).on("resize", home_stats_resize);
-jQuery(home_stats_resize);
-
 
 /* Hover Help */
 

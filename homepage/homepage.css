@@ -382,18 +382,19 @@ Left slider
 .home_stats_divs {
 	z-index: 2;
 	position: absolute;
-	top: 0;
+	bottom: 37px;
 	left: 0;
 	margin-left: -370px;
 	transition: margin-left 0.7s linear;
+	width: 300px;
 }
 
 .home_stats {
 	border: 1px solid #000000;
 	background: #ffffff;
-	-moz-border-radius: 0 10px 10px 0;
-	-webkit-border-radius: 0 10px 10px 0;
-	border-radius: 0 10px 10px 0;
+	-moz-border-radius: 0 10px 0 0;
+	-webkit-border-radius: 0 10px 0 0;
+	border-radius: 0 10px 0 0;
 	overflow: hidden;
 }
 
