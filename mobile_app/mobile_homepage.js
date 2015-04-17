@@ -74,9 +74,6 @@ $.get("//ipinfo.io", function(response) {
 	$userLo = $jsonArray[1];
 }, "jsonp");
 
-
-
-
 /* Google Maps */
 
 jQuery(function($) {
@@ -99,7 +96,7 @@ function initialize(condition) {
   	}
 	
 	map = new google.maps.Map(document.getElementById("google_map"), myOptions);
-	map.panBy(0, 30);
+	map.panBy(0, 80);
 	
 	var marker = new google.maps.Marker({
       	position: userLatlng,

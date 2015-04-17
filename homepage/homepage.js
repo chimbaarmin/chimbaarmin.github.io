@@ -1,6 +1,6 @@
 /*
 Homepage JS
-Date: 15. 04. 2015.
+Date: 17. 04. 2015.
 Author: Armin
 Version: 2.0
 */

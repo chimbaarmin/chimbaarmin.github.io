@@ -155,7 +155,26 @@
 
 /* =About us page */
 
+.about_us_page_div {
+	background: #333333;
+	color: #ffffff;
+	text-shadow: none !important;
+}
 
+.about_us_page_wrapper {
+	margin: 20px;
+}
+
+.mnp_about_us_page_button, .mnp_about_us_page_button:active, .mnp_about_us_page_button:visited, .mnp_about_us_page_button:hover, .mnp_about_us_page_button:focus {
+	padding: 5px 10px;
+	border: 1px solid #cccccc;
+	background: #ffffff !important;
+	text-decoration: none !important;
+	color: #333333 !important;
+	width: 150px;
+	display: block;
+	text-align: center;
+}
 
 /* */
 
