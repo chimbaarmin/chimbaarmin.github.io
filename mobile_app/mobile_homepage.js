@@ -127,5 +127,9 @@ $( window ).on( "orientationchange", function( event ) {
 	}
 	if ( $orientationVal == "portrait" ) {
 		jQuery( "body" ).css("display", "block");
+		jQuery.mobile.loading( "show" );
+		setTimeout( initialize, 100 );
+		setTimeout( hideLoader, 300 );
+		jQuery( '.mnp_content_search_form_input' ).focus();
 	}
 });
