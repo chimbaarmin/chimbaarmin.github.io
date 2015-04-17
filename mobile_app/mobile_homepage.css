@@ -91,17 +91,6 @@
 	color: #ffffff;
 }
 
-.mnp_content_search_box_help {
-	
-}
-
-.mnp_content_search_box_help_link, .mnp_content_search_box_help_link:hover, .mnp_content_search_box_help_link:visited, .mnp_content_search_box_help_link:active, .mnp_content_search_box_help_link:focus {
-	color: #d9534f !important;
-	text-decoration: none !important; 
-	margin: 5px 5px 0 0 !important;
-	padding: 0 !important;
-}
-
 .mnp_footer {
 	z-index: 1;
 	color: #ffffff;

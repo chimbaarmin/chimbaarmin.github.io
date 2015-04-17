@@ -119,3 +119,7 @@ jQuery(document).on( "pageshow", "#home_page", function() {
 	jQuery( '.mnp_content_search_form_input' ).focus();
 });
 
+$( window ).on( "orientationchange", function( event ) {
+	var $orientationVal = event.orientation;
+  	alert ( $orientationVal );
+});
