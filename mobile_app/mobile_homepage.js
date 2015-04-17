@@ -121,5 +121,11 @@ jQuery(document).on( "pageshow", "#home_page", function() {
 
 $( window ).on( "orientationchange", function( event ) {
 	var $orientationVal = event.orientation;
-  	alert ( $orientationVal );
+  	if ( $orientationVal == "landscape" ) {
+		jQuery( "body" ).css("display", "none");
+		alert ( "This App can only be used in Portrait mode. Please rotate your device." );
+	}
+	if ( $orientationVal == "portrait" ) {
+		jQuery( "body" ).css("display", "block");
+	}
 });
