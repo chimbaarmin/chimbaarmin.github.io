@@ -63,16 +63,10 @@ jQuery(function(){
 
 var $userLa = 40.7127837;
 var $userLo = -74.0059413;
-var $jsonResponse = "";
-var $jsonArray = [];
 
 $(document).ready(function() {
 	$.getJSON("//www.telize.com/geoip?callback=?",
 		function(json) {
-    		console.log("Geolocation information for IP address : ", json.ip);
-    		console.log("Country : ", json.country);
-    		console.log("Latitude : ", json.latitude);
-	    	console.log("Longitude : ", json.longitude);
 			$userLa = json.latitude;
 			$userLo = json.longitude;
 		}
