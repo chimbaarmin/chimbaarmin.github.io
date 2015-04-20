@@ -66,13 +66,18 @@ var $userLo = -74.0059413;
 var $jsonResponse = "";
 var $jsonArray = [];
 
-$.get("//ipinfo.io", function(response) {
-	$jsonResponse = response.loc;
-	console.log( $jsonResponse );
-	$jsonArray = $jsonResponse.split(",").map(Number);
-	$userLa = $jsonArray[0];
-	$userLo = $jsonArray[1];
-}, "jsonp");
+$(document).ready(function() {
+	$.getJSON("//www.telize.com/geoip?callback=?",
+		function(json) {
+    		console.log("Geolocation information for IP address : ", json.ip);
+    		console.log("Country : ", json.country);
+    		console.log("Latitude : ", json.latitude);
+	    	console.log("Longitude : ", json.longitude);
+			$userLa = json.latitude;
+			$userLo = json.longitude;
+		}
+	);
+});
 
 /* Google Maps */
 
