@@ -115,7 +115,7 @@ jQuery(document).on( "pageshow", "#home_page", function() {
 	jQuery.mobile.loading( "show" );
 	setTimeout( initialize, 100 );
 	setTimeout( hideLoader, 300 );
-	jQuery( '.mnp_content_search_form_input' ).focus();
+	jQuery( document.getElementById("main_input") ).focus();
 });
 
 $( window ).on( "orientationchange", function( event ) {
