@@ -64,14 +64,39 @@ jQuery(function(){
 var $userLa = 40.7127837;
 var $userLo = -74.0059413;
 
-$(document).ready(function() {
-	$.getJSON("//www.telize.com/geoip?callback=?",
-		function(json) {
-			$userLa = json.latitude;
-			$userLo = json.longitude;
-		}
-	);
-});
+var geoOptions = {
+  enableHighAccuracy: true, 
+  maximumAge        : 30000, 
+  timeout           : 27000
+};
+
+function geoSuccess(p) {
+	$userLa = p.coords.latitude;
+	$userLo = p.coords.longitude;
+	console.log ( "HTML geolocation complete: " + $userLa + ", " + $userLo );
+	initialize();
+}
+
+function geoError() {
+	$.getJSON("//freegeoip.net/json/", function(json) {
+		$userLa = json.latitude;
+		$userLo = json.longitude;
+		console.log ( "FreeGeoIP geolocation complete: " + $userLa + ", " + $userLo );
+		initialize();
+	});
+}
+
+if (geoPosition.init()) {
+	geoPosition.getCurrentPosition(geoSuccess, geoError, geoOptions);
+}
+else {
+	$.getJSON("//freegeoip.net/json/", function(json) {
+		$userLa = json.latitude;
+		$userLo = json.longitude;
+		console.log ( "FreeGeoIP geolocation complete: " + $userLa + ", " + $userLo );
+		initialize();
+	});
+}
 
 /* Google Maps */
 
@@ -115,7 +140,7 @@ jQuery(document).on( "pageshow", "#home_page", function() {
 	jQuery.mobile.loading( "show" );
 	setTimeout( initialize, 100 );
 	setTimeout( hideLoader, 300 );
-	jQuery( document.getElementById("main_input") ).focus();
+	jQuery( '.mnp_content_search_form_input' ).focus();
 });
 
 $( window ).on( "orientationchange", function( event ) {
