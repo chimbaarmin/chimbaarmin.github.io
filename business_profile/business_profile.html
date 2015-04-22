@@ -151,8 +151,8 @@
 		<div class="business_reviews_module" id="business_reviews">
 			<h4 class="business_reviews_h4">Reviews</h4>
 			<div class="business_reviews_navigation">
-					<a href="#" class="business_navigation_button">Previous</a>
-					<a href="#" class="business_navigation_button">Next</a>
+					<a href="#" class="business_navigation_button hvr-skew-backward">Previous</a>
+					<a href="#" class="business_navigation_button hvr-skew-forward">Next</a>
 					<div class="right_menu_adspace">
 						<img src="images/google6.png" alt="" class="right_menu_adspace_img">
 					</div>
@@ -174,23 +174,23 @@
 								<div class="review_ribbon">
 									<div class="data_ribbon">
 										<div class="positive_votes">
-											<span class="fa fa-thumbs-up"></span> 2047
+											<span class="fa fa-thumbs-up fa_positive hvr-icon-float-away"></span> 2047
 										</div>
 										<div class="negative_votes">
-											<span class="fa fa-thumbs-down"></span> 64
+											<span class="fa fa-thumbs-down fa_negative hvr-icon-sink-away"></span> 64
 										</div>
 										<div class="calendar_date">
-											<span class="fa fa-calendar"></span> 12. 01. 2015.
+											<span class="fa fa-calendar fa_calendar"></span> 12. 01. 2015.
 										</div>
 										<div class="replies">
-											<span class="fa fa-comments"></span> 6
+											<span class="fa fa-comments fa_comments"></span> 6
 										</div>
 										<div class="rating">
-											<span class="fa fa-star"></span> 3
+											<span class="fa fa-star fa_stars"></span> 3
 										</div>
 									</div>
 									<div class="reply_ribbon">
-										<a href="" class="business_profile_button">Reply</a>
+										<a href="" class="business_profile_button hvr-pulse">Reply</a>
 									</div>
 								</div>
 							</li>
@@ -291,6 +291,10 @@
 						<span class="fa fa-star"></span>
 						<span class="fa fa-star"></span>
 					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="business_rate_submit_button_div">
+					<a href="" class="business_rate_submit_button">Submit</a>
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -584,7 +588,7 @@
 				</ul>
 			</div>
 			<div class="right_menu_rate_review">
-				<a href="#business_rate_review" class="right_menu_button">Rate and review</a>
+				<a href="#business_rate_review" class="right_menu_button hvr-grow-rotate">Rate and review</a>
 			</div>
 			<div class="right_menu_adspace">
 				<img src="images/google4.png" alt="" class="right_menu_adspace_img">
@@ -605,74 +609,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- Map module JS code -->
 	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script>
-		
-		jQuery( document ).ready(function() {
-			var myLatLng = new google.maps.LatLng(52.5128318, 13.4656515);
-			var map;
-			var myOptions = {
-				zoom: 15,
-    			center: myLatLng,
-    			disableDefaultUI: true
-			};
-			var styles = [
-			  	{
-					stylers: [
-						 { saturation: -100 },
-				 	]
-			  	}
-			];
-			
-			map = new google.maps.Map($('.google_map')[0], myOptions);
-			map.setOptions({styles: styles});
-			
-			var marker = new google.maps.Marker({
-				  position: myLatLng,
-				  map: map,
-				  title: 'Poshte Boom'
-			});
-			
-			google.maps.event.addDomListener(window, 'load');
-		});
-	
-	</script>
-	<!-- Gallery JS code -->
-	<script>
-    	Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
-		Galleria.configure({
-			transition: 'fade',
-			imageCrop: true,
-			autoplay: 3000,
-			thumbnails: true,
-			height: 300,
-			lightbox: true
-		});
-    	Galleria.run('.galleria');
-    </script>
-    <!-- Right menu module JS code -->
-    <script>
-		jQuery(function($) {
-		    function fixDiv() {
-				var $cache = $('#getFixed');
-				var elemheight = document.getElementById('getFixed').offsetHeight;
-				var diffheight = elemheight - window.innerHeight + 40;
-				if ($(window).scrollTop() >  diffheight) {
-			  		$cache.css({
-						'top': '-' + diffheight +'px',
-						'position': 'fixed'
-			  		});
-				} else {
-			  		$cache.css({
-					'position': 'relative',
-					'top': 'auto'
-			  		}); 
-				}
-		  	}
-		    $(window).scroll(fixDiv);
-		  	fixDiv();
-		});
-    </script>
 </body>
 </html>
