@@ -857,6 +857,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	display: block;
 	padding: 5px;
 	text-decoration: none;
+	overflow: hidden;
 }
 	
 .quickmenu_button_b, .quickmenu_button_b:active, .quickmenu_button_b:hover, .quickmenu_button_b:focus, .quickmenu_button_b:visited {
@@ -876,6 +877,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	display: block;
 	padding: 5px;
 	text-decoration: none;
+	overflow: hidden;
 }
 	
 .right_menu_button, .right_menu_button:active, .right_menu_button:hover, .right_menu_button:visited, .right_menu_button:focus {
@@ -1348,9 +1350,6 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
   transition-duration: 0.5s;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
 }
 .hvr-bounce-to-top:hover, .hvr-bounce-to-top:focus, .hvr-bounce-to-top:active {
   color: white;
