@@ -56,7 +56,10 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .business_info_module {
 	background: #ffffff;
 	border: 1px solid #cccccc;
-	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	overflow: hidden;
 }
 	
 .business_info_gallery_img {
@@ -305,6 +308,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	color: #fff;
 	font: 20px/1.3 'Alegreya', serif;
 	padding: 5px 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
 }
 	
 .business_reviews_navigation {
@@ -313,6 +319,20 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	margin-bottom: 20px;
 	padding: 10px;
 	text-align: center;
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+}
+	
+.business_reviews_navigation_bottom {
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	margin-bottom: 20px;
+	padding: 10px;
+	text-align: center;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 	
 .business_navigation_button, .business_navigation_button:active, .business_navigation_button:hover, .business_navigation_button:visited, .business_navigation_button:focus {
@@ -343,6 +363,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	background: #ffffff;
 	border: 1px solid #cccccc;
 	margin-bottom: 20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 	
 .review_title {
@@ -422,6 +445,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .business_rate_review_module {
 	background-color: #ffffff;
 	border: 1px solid #cccccc;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 	
 .business_rate_review_h4 {
@@ -430,6 +456,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	font: 22px/1.3 'Alegreya', serif;
 	margin: 0;
 	padding: 5px 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
 }
 	
 .business_rate_review {
@@ -515,6 +544,10 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	margin: 0 0 -1px 0;
 	text-decoration: none;
 	cursor: pointer;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+}
 }
 	
 .footer_trigger_1 {
@@ -534,6 +567,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	background: #ffffff;
 	color: #333333;
 	border: 1px solid #cccccc;
+	-webkit-border-radius: 0 10px 10px 10px;
+	-moz-border-radius: 0 10px 10px 10px;
+	border-radius: 0 10px 10px 10px;
 }
 	
 .business_footer_module_sheet {
@@ -732,21 +768,21 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	
 .right_menu_search_text {
 	border: 1px solid #cccccc;
-	-webkit-border-radius: 4px 0 0 4px;
-	-moz-border-radius: 4px 0 0 4px;
-	border-radius: 4px 0 0 4px;
+	-webkit-border-radius: 10px 0 0 10px;
+	-moz-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
 	border-right: none;
 	display: inline-block;
-	padding: 5px;
+	padding: 5px 5px 5px 10px;
 	width: 180px;
 }
 	
 .right_menu_search_button, .right_menu_search_button:active, .right_menu_search_button:visited, .right_menu_search_button:focus {
 	background: #d9534f;
 	border: 1px solid #cccccc;
-	-webkit-border-radius: 0 4px 4px 0;
-	-moz-border-radius: 0 4px 4px 0;
-	border-radius: 0 4px 4px 0;
+	-webkit-border-radius: 0 10px 10px 0;
+	-moz-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
 	box-shadow: none;
 	color: #ffffff;
 	display: inline-block;
@@ -767,16 +803,16 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .basic_info_li_a {
 	background: #f3f3f3;
 	border: 1px solid #ccc;
-	-webkit-border-radius: 4px 4px 0 0;
-	-moz-border-radius: 4px 4px 0 0;
-	border-radius: 4px 4px 0 0;
-	padding: 5px;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	padding: 5px 10px;
 }
 	
 .basic_info_li_b {
 	border: 1px solid #ccc;
 	border-top: 0;
-	padding: 5px;
+	padding: 5px 10px;
 	background: #ffffff;
 	text-align: left;
 }
@@ -785,16 +821,16 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	background: #f3f3f3;
 	border: 1px solid #ccc;
 	border-top: 0;
-	padding: 5px;
+	padding: 5px 10px;
 }
 	
 .basic_info_li_d {
 	border: 1px solid #ccc;
-	-webkit-border-radius: 0 0 4px 4px;
-	-moz-border-radius: 0 0 4px 4px;
-	border-radius: 0 0 4px 4px;
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
 	border-top: 0;
-	padding: 5px;
+	padding: 5px 10px;
 	background: #ffffff;
 	text-align: left;
 }
@@ -814,9 +850,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	
 .quickmenu_button_a, .quickmenu_button_a:active, .quickmenu_button_a:hover, .quickmenu_button_a:visited, .quickmenu_button_a:focus {
 	background: #333333;
-	-webkit-border-radius: 4px 4px 0 0;
-	-moz-border-radius: 4px 4px 0 0;
-	border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
 	color: #ffffff;
 	display: block;
 	padding: 5px;
@@ -833,9 +869,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	
 .quickmenu_button_c, .quickmenu_button_c:active, .quickmenu_button_c:visited, .quickmenu_button_c:focus, .quickmenu_button_c:hover {
 	background: #333333;
-	-webkit-border-radius: 0 0 4px 4px;
-	-moz-border-radius: 0 0 4px 4px;
-	border-radius: 0 0 4px 4px;
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
 	color: #ffffff;
 	display: block;
 	padding: 5px;
@@ -863,6 +899,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	border: 1px solid #cccccc;
 	padding: 15px 0;
 	background: #ffffff;
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
 }
 	
 .ribbon_h5 {
@@ -872,6 +911,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	padding: 5px;
 	border: 1px solid #cccccc;
 	border-bottom: 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
 }
 	
 .ribbon_icon_link_f {
