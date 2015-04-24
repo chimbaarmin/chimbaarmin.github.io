@@ -9,33 +9,6 @@ function windowHeight() {
 jQuery( window ).on("resize", windowHeight);	
 jQuery( windowHeight );
 
-/* GM size  (profile) */
-
-var $bwinh;
-function windowHeightB() {
-	$bwinh = jQuery( window ).height() / 2;
-	jQuery( document.getElementById("profile_google_map") ).css( "height", $bwinh );
-}
-
-jQuery( window ).on("resize", windowHeightB);	
-jQuery( windowHeightB );
-
-/* Search position */
-
-var $winw;
-var $elemw;
-var $finalw;
-function windowWidth() {
-	$winw = jQuery( window ).width() / 2;
-	$elemw = jQuery( '.mnp_content_search_box' ).width() / 2;
-	$finalw = $winw - $elemw;
-	jQuery( document.getElementsByClassName("mnp_content_search_box") ).css( "left", $finalw );
-}
-
-jQuery( window ).on("resize", windowWidth);		
-jQuery( windowWidth );
-
-
 /* Hidden menu */
 
 function toogleMenu() {
@@ -129,6 +102,21 @@ function initialize(condition) {
 	
 	google.maps.event.addDomListener(window, 'load', initialize);
 }
+
+/* Search position */
+
+var $winw;
+var $elemw;
+var $finalw;
+function windowWidth() {
+	$winw = jQuery( document ).width() / 2;
+	$elemw = jQuery( '.mnp_content_search_box' ).width() / 2;
+	$finalw = $winw - $elemw;
+	jQuery( document.getElementsByClassName("mnp_content_search_box") ).css( "left", $finalw );
+}
+
+jQuery( window ).on("resize", windowWidth);		
+jQuery( windowWidth );
 
 /* Other (refresh GM + delay, search.focus) */
 
