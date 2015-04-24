@@ -470,7 +470,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 	
 .business_rate_submit_button_div {
-	margin: 20px 0;
+	margin: 20px 0 0 0;
 }
 	
 .business_rate_submit_button, .business_rate_submit_button:active, .business_rate_submit_button:hover, .business_rate_submit_button:focus, .business_rate_submit_button:visited {
