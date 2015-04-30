@@ -96,6 +96,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	margin: 20px 20px 0 20px;
 	overflow: auto;
 	border: 1px solid #cccccc;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
 }
 	
 .business_info_content_li:nth-child(odd) {
@@ -125,6 +128,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	border: 1px solid #cccccc;
 	border-top: 0;
 	overflow: auto;
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
 }
 	
 .business_info_social_ribbon_wrapper {
@@ -170,6 +176,10 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .business_map_tags_module {
 	margin: 0 20px 20px 20px;
 	border: 1px solid #cccccc;
+	-webkit-border-radius: 4px 0 0 4px;
+	-moz-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;
+	overflow: hidden;
 }
 	
 .business_map_tags_module_tags {
@@ -229,6 +239,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .business_additional_info_ul {
 	border: 1px solid #cccccc;
 	overflow: auto;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 	
 .business_additional_info_li:nth-child(odd) {
@@ -417,6 +430,9 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	display: inline-block;
 	margin: 10px;
 	padding: 5px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 	
 .rate_span {
@@ -481,12 +497,18 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 .business_review_username {
 	border: 1px solid #cccccc;
 	width: 100%;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 	
 .business_review_text {
 	border: 1px solid #cccccc;	
 	resize: none;
 	width: 100%;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 	
 .business_rate_h5 {
@@ -698,8 +720,17 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 	padding: 5px 10px;
 }
 
+.business_new_footer_trigger:first-of-type {
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
 .business_new_footer_trigger:last-of-type {
 	border: 1px solid #333333;
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
 }
 
 .business_new_footer_numbers {
