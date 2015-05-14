@@ -1,8 +1,8 @@
 /*
 Business page JS
-Date: 22. 04. 2015.
+Date: 14. 05. 2015.
 Author: Armin
-Version: 1.0
+Version: 2.0
 */
 
 /* =Google Maps */
@@ -16,11 +16,11 @@ jQuery( document ).ready(function() {
 		disableDefaultUI: true
 	};
 	var styles = [
-	  	{
+		{
 			stylers: [
 				 { saturation: 0 },
 		 	]
-	  	}
+		}
 	];
 			
 	map = new google.maps.Map($('.google_map')[0], myOptions);
