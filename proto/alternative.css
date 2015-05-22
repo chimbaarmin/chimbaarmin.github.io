@@ -100,3 +100,7 @@ div.comment-wrapper > p{
 .middle_title {
 	text-align: center;
 }
+
+#telefonnummer_wrapper > div.t_upper_body > div.t_upper_body_item.t_upper_body_highglight > div.t_upper_body_right_subitem_vote > div {
+	background: none;
+}
