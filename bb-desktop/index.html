@@ -6,6 +6,7 @@
     <title>Phone number</title>
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <style>
         body {
             background: #2b3e50;
@@ -16,7 +17,7 @@
 <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-11">
                     <style>
                         .clear {
                             clear: both;
@@ -79,6 +80,8 @@
                             width: 50%;
                             float: left;
                             background: #4e5d6c;
+                            white-space: nowrap;overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                         .li-separator {
                             border-bottom: 2px solid #2b3e50;
@@ -596,8 +599,70 @@
                             </div>
                         </div>
                         <div class="bb-desktop-footer-bottom">
-                            Copryright &copy; 2015 Number-Index.com.
+                            Copryright &copy;2015 Number-Index.com.
                         </div>
+                    </div>
+                </div>
+                <style>
+                    .bb-desktop-right-menu {
+                        position: fixed;
+                        top: 20px;
+                    }
+                    .bb-desktop-right-menu-ul {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    .bb-desktop-right-menu-li {
+                        
+                    }
+                    .bb-desktop-right-menu-a {
+                        display: block;
+                        color: #4e5d6c;
+                        padding: 11px 14px;
+                        border: 3px solid #4e5d6c;
+                        margin: 0 0 10px 0;
+                        width: 50px;
+                        height: 50px;
+                        text-decoration: none;
+                        border-radius: 25px;
+                        text-align: center;
+                    }
+                    .bb-desktop-right-menu-a:hover {
+                        border: 3px solid #ccc;
+                        text-decoration: none;
+                        color: #ccc;
+                    }
+                </style>
+                <div class="col-md-1">
+                    <div class="bb-desktop-right-menu">
+                        <ul class="bb-desktop-right-menu-ul">
+                            <li class="bb-desktop-right-menu-li">
+                                <a href="#" class="bb-desktop-right-menu-a">
+                                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li class="bb-desktop-right-menu-li">
+                                <a href="#" class="bb-desktop-right-menu-a">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li class="bb-desktop-right-menu-li">
+                                <a href="#" class="bb-desktop-right-menu-a facebook">
+                                    <i class="fa fa-facebook fa-lg"></i>
+                                </a>
+                            </li>
+                            <li class="bb-desktop-right-menu-li">
+                                <a href="#" class="bb-desktop-right-menu-a facebook">
+                                    <i class="fa fa-twitter fa-lg"></i>
+                                </a>
+                            </li>
+                            <li class="bb-desktop-right-menu-li">
+                                <a href="#" class="bb-desktop-right-menu-a facebook">
+                                    <i class="fa fa-envelope fa"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
