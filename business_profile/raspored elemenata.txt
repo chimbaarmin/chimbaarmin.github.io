@@ -1,9 +1,0 @@
-Logo/img
-Contact details (Address, telephone, mobile)
-Reviews (number + avg rating in stars)
-Working Hours
-About (text)
-Gallery
-Review (comment + rating in stars)
-Comment (?? in Farsi)
-
