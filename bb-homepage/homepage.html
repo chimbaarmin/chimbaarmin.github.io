@@ -12,6 +12,18 @@
         .clear {
             clear: both;
         }
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0,0,0,0.2);
+        }
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: rgba(0,0,0,0.2);
+        }
     </style>
 </head>
 <body>
@@ -35,27 +47,30 @@
                     <h1 class="homepage-header-h1"><a href="#" class="homepage-header-h1-a">Number-Index.com</a></h1>
                 </div>
                 <style>
-                    .homepage-map-area {
-                        margin: 20px 0 0 0;
+                    .homepage-welcome-area {
+                        margin: 0;
                         overflow: auto;
                     }
-                    .map-canvas {
-                        width: 100%;
-                        height: 350px;
-                    }
-                    .map-overlay {
-                        border: 1px solid #cccccc;
-                        margin-top: -350px;
+                    .homepage-welcome-msg-area {
                         color: #333;
-                        height: 350px;
+                        height: 200px;
                         width: 100%;
                         display: table;
                     }
-                    .map-overlay-wrapper {
+                    .homepage-welcome-msg-area-wrapper {
                         display: table-cell;
                         vertical-align: middle;
                         text-align: center;
                         margin: 0 auto;
+                    }
+                    .homepage-h2 {
+                        color: #ffffff;
+                        margin: 0;
+                    }
+                    .homepage-welcome-p {
+                        color: #ffffff;
+                        padding: 10px;
+                        font-size: 18px;
                     }
                     .homepage-search-form {
                         width: 400px;
@@ -64,13 +79,38 @@
                     .form-group {
                         margin: 0;
                     }
+                    .homepage-map-area {
+                        width: 50%;
+                        float: left;
+                    }
+                    .map-canvas {
+                        width: 100%;
+                        height: 350px;
+                    }
+                    .homepage-comments-area {
+                        width: 50%;
+                        float: right;
+                    }
+                    .homepage-comments-area-wrapper {
+                        margin: 10px 0 0 10px;
+                        background: #4e5d6c;
+                        height: 377px;
+                    }
+                    .homepage-comments-ul {
+                        height: 330px;
+                        overflow: auto;
+                        margin: 10px;
+                        list-style-type: none;
+                        padding: 0;
+                    }
                 </style>
-                <div class="homepage-map-area">
-                    <div class="map-canvas" id="map-canvas"></div>
-                    <div class="map-overlay">
-                        <div class="map-overlay-wrapper">
+                <div class="homepage-welcome-area">
+                    <div class="homepage-welcome-msg-area">
+                        <div class="homepage-welcome-msg-area-wrapper">
+                            <h2 class="homepage-h2">When you just have to find out who it was...</h2>
+                            <p class="homepage-welcome-p">"Treasure trove of useful information and advice on dealing with unwanted calls and callers."</p>
                             <div class="homepage-search-form">
-                            
+
                                 <div class="form-group">
                                   <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-search"></i></span>
@@ -80,7 +120,60 @@
                                     </span>
                                   </div>
                                 </div>
-                            
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="homepage-map-comments-area">
+                        <div class="homepage-map-area">
+                            <h3 class="homepage-h3">Latest entries</h3>
+                            <div class="map-canvas" id="map-canvas"></div>
+                        </div>
+                        <div class="homepage-comments-area">
+                            <div class="homepage-comments-area-wrapper">
+                                <h3 class="homepage-h3 no-margin-h3">Latest comments</h3>
+                                <ul class="homepage-comments-ul">
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi excepturi rem, perferendis illum dolorum fugit commodi dolor! Odit illum odio, aliquam tenetur quia aliquid placeat voluptatem, praesentium aspernatur, necessitatibus assumenda!<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quis distinctio porro ullam itaque rerum minima consequatur modi odio nam libero illo hic molestiae rem sapiente aut in, repellat dolorem.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum quibusdam, corrupti itaque quasi obcaecati saepe quo animi qui soluta porro rerum placeat incidunt nulla perspiciatis consequatur, vitae eum consequuntur neque.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nesciunt quia quis repellat blanditiis voluptatibus tempore doloremque fugiat vitae laborum odio, quo recusandae, adipisci, ab laudantium facilis temporibus iste odit.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ipsa quidem voluptate aliquam, sed ullam maxime earum quasi quaerat asperiores cupiditate saepe distinctio atque, similique sint. Dolorem tempore mollitia, quis.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae quod eum porro nam, incidunt atque praesentium voluptate totam alias aperiam quasi impedit amet cum in ipsum, assumenda tempore provident!<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis ratione ad cupiditate. Ducimus neque, iure id reiciendis, consequuntur sint architecto quod quae ipsum distinctio. Laudantium molestiae obcaecati, neque voluptatem.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aut, impedit ea voluptates eos delectus neque provident suscipit quod odio repudiandae cupiditate cum dolore numquam quisquam labore natus! Hic, non.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam minus pariatur, autem itaque. Quidem magnam qui quas, autem ducimus dignissimos nobis amet odio? Consequuntur expedita at nam natus vero autem.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dignissimos, pariatur praesentium alias quisquam, expedita voluptatibus laboriosam repellendus earum excepturi eligendi blanditiis temporibus mollitia eveniet. Pariatur quos eum laborum et.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore eaque iure obcaecati magnam veritatis iste tempora, laborum delectus consequuntur, natus, facere porro? Quae deserunt nemo repellendus dolor consequuntur, expedita ratione.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia mollitia ipsum labore deleniti natus incidunt dolore necessitatibus corporis voluptates odit. Cumque aspernatur voluptatum tenetur nemo nostrum assumenda culpa minima incidunt!<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores cupiditate ipsam at reprehenderit praesentium illo repellat odio mollitia veniam, blanditiis beatae. Similique nihil rerum quo ipsa iure tempora eius eum.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem dolorem fugiat ipsum velit placeat nostrum, ipsam corporis fugit, quia repellendus ratione, nihil voluptates non. Quod fugit ea beatae odio!<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique temporibus minima hic ea dignissimos nostrum suscipit quas beatae tenetur deleniti porro molestias sint rerum, quasi est voluptatibus ex facere nam.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat obcaecati voluptates eaque corporis, reiciendis exercitationem veniam! Quisquam eum voluptatibus consequuntur! Sapiente iure corporis deleniti nisi odit veniam molestiae non reprehenderit!<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatum dignissimos ipsa error iste quod quae asperiores, fuga quo nostrum saepe, quas necessitatibus. Odio totam veniam expedita atque aperiam possimus.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa consequuntur quibusdam inventore, natus doloribus, recusandae consequatur nostrum animi magnam quis atque, molestias adipisci repellat incidunt impedit saepe labore harum perspiciatis.<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam rem obcaecati impedit quos modi nam ut accusamus, voluptatem alias atque dolore nesciunt natus magni dolorem mollitia ducimus, provident distinctio consequatur?<br><br></li>
+                                    <li class="homepage-comments-li"><h5>Author</h5>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et vel asperiores hic eum nam nihil totam fugiat magni ipsam, officia odit magnam modi repudiandae labore, ad iusto non aliquam nobis.<br><br></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -445,19 +538,6 @@
                 </div>
                 <div class="clear"></div>
                 <style>
-                    .homepage-comments-area-wrapper {
-                        height: 500px;
-                        background: #4e5d6c;
-                    }
-                </style>
-                <div class="homepage-comments-area">
-                    <h3 class="homepage-h3 no-margin-h3">Latest comments</h3>
-                    <div class="homepage-comments-area-wrapper">
-                        
-                    </div>
-                </div>
-                <div class="clear"></div>
-                <style>
                     .homepage-footer {
                         margin: 20px 0 0 0;
                         border-top: 1px solid #cccccc;
@@ -476,9 +556,9 @@
         var mapOptions = {
           center: new google.maps.LatLng(38.907192, -77.036871),
           zoom: 8,
-          mdraggable: false, 
-                    zoomControl: false, 
-                    scrollwheel: false, 
+          mdraggable: false,
+                    zoomControl: false,
+                    scrollwheel: false,
                     disableDoubleClickZoom: true,
                     streetViewControl: false,
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
