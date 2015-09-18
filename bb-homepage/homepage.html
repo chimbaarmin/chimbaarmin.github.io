@@ -34,6 +34,7 @@
                     .homepage-header {
                         overflow: auto;
                         border-bottom: 1px solid #cccccc;
+                        margin: 0 0 20px 0;
                     }
                     .homepage-header-h1 {
                         text-align: center;
@@ -43,6 +44,7 @@
                         text-decoration: none;
                     }
                 </style>
+                <div id="top"></div>
                 <div class="homepage-header">
                     <h1 class="homepage-header-h1"><a href="#" class="homepage-header-h1-a">Number-Index.com</a></h1>
                 </div>
@@ -58,7 +60,7 @@
                         display: table;
                         background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(images/hero1.jpg) no-repeat 50% 30%;
                         background-size: cover;
-                        margin: 20px 0 0 0;
+                        margin: 0;
                         border: 1px solid #333333;
                     }
                     .homepage-welcome-msg-area-wrapper {
@@ -109,6 +111,32 @@
                         padding: 0;
                     }
                 </style>
+
+                <style>
+                    .homepage-social-media-area {
+                        position: absolute;
+                        right: -35px;
+                        width: 35px;
+                        display: block;
+                        margin:  0 15px 0 0;
+                        text-align: center;
+                    }
+                    .homepage-social-media-area-a, .homepage-social-media-area-a:active, .homepage-social-media-area-a:focus, .homepage-social-media-area-a:visited {
+                        color: #4e5d6c;
+                        text-decoration: none;
+                    }
+                    .homepage-social-media-area-a:hover {
+                        color: #ccc;
+                        text-decoration: none;
+                    }
+                </style>
+                <div class="homepage-social-media-area">
+                    <a href="#" class="homepage-social-media-area-a"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    <a href="#" class="homepage-social-media-area-a"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    <a href="#" class="homepage-social-media-area-a"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                    <a href="#" class="homepage-social-media-area-a"><i class="fa fa-envelope-square fa-2x"></i></a>
+                </div>
+
                 <div class="homepage-welcome-area">
                     <div class="homepage-welcome-msg-area">
                         <div class="homepage-welcome-msg-area-wrapper">
@@ -242,7 +270,7 @@
                             </li>
                             <li class="homepage-about-us-li">
                                 <h4 class="homepage-h4">Reverse Number Lookup System</h4>
-                                <p>Most advanced reverse number lookup system on the market, delivering detailed and 100% correct information on any number in North American Numbering Plan (NANP).</p>
+                                <p>Most advanced reverse 411 system on the market, delivering detailed and 100% correct information on any number in North American Numbering Plan (NANP).</p>
                             </li>
                             <li class="homepage-about-us-li">
                                 <h4 class="homepage-h4">Phone Number Reviews Database</h4>
@@ -676,6 +704,8 @@
                     </div>
                 </div>
                 <div class="clear"></div>
+
+                <div class="clear"></div>
                 <style>
                     .homepage-footer {
                         margin: 20px 0 0 0;
@@ -684,6 +714,25 @@
                 </style>
                 <div class="homepage-footer">
                     Footer area
+                </div>
+                <style>
+                    .homepage-back-to-top {
+                        position: fixed;
+                        bottom: 10px;
+                        right: 10px;
+                        display: none;
+                    }
+                    .homepage-back-to-top-a, .homepage-back-to-top-a:active, .homepage-back-to-top-a:focus, .homepage-back-to-top-a:visited {
+                        color: #4e5d6c;
+                        text-decoration: none;
+                    }
+                    .homepage-back-to-top-a:hover {
+                        color: #ccc;
+                        text-decoration: none
+                    }
+                </style>
+                <div class="homepage-back-to-top">
+                    <a href="#top" class="homepage-back-to-top-a"><i class="fa fa-caret-square-o-up fa-3x"></i></a>
                 </div>
             </div>
         </div>
@@ -706,6 +755,21 @@
         var map = new google.maps.Map(mapCanvas, mapOptions)
       }
       google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <script>
+        var lastScrollTop = 100;
+        var scroolChecker = true;
+        $(window).scroll(function(event){
+           var st = $(this).scrollTop();
+           if (st > lastScrollTop && scroolChecker == true){
+               $('.homepage-back-to-top').fadeIn(500, 0)
+               scroolChecker = false;
+           } if (st == 0 && scroolChecker == false) {
+              $('.homepage-back-to-top').fadeOut(500, 0)
+              scroolChecker = true;
+           }
+           lastScrollTop = st;
+        });
     </script>
 </body>
 </html>
