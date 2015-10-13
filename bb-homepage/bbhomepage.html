@@ -24,138 +24,290 @@
         ::-webkit-scrollbar-thumb:window-inactive {
             background: rgba(0,0,0,0.2);
         }
+        .homepage-header {
+            overflow: auto;
+            border-bottom: 1px solid #cccccc;
+            margin: 0 0 20px 0;
+        }
+        .homepage-header-h1 {
+            text-align: center;
+        }
+        .homepage-header-h1-a, .homepage-header-h1-a:active, .homepage-header-h1-a:focus, .homepage-header-h1-a:hover, .homepage-header-h1-a:visited {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .homepage-welcome-area {
+            margin: 0;
+            overflow: auto;
+        }
+        .homepage-welcome-msg-area {
+            color: #333;
+            height: 300px;
+            width: 100%;
+            display: table;
+            background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(images/hero1.jpg) no-repeat 50% 30%;
+            background-size: cover;
+            margin: 0;
+            border: 1px solid #333333;
+        }
+        .homepage-welcome-msg-area-wrapper {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .homepage-h2 {
+            color: #ffffff;
+            margin: 0;
+            font-weight: 500;
+        }
+        .homepage-welcome-p {
+            color: #ffffff;
+            padding: 10px;
+            font-size: 18px;
+        }
+        .homepage-search-form {
+            width: 400px;
+            margin: auto;
+        }
+        .form-group {
+            margin: 0;
+        }
+        .homepage-map-area {
+            width: 50%;
+            float: left;
+        }
+        .map-canvas {
+            width: 100%;
+            height: 350px;
+        }
+        .homepage-comments-area {
+            width: 50%;
+            float: right;
+        }
+        .homepage-comments-area-wrapper {
+            margin: 10px 0 0 10px;
+            background: #4e5d6c;
+            height: 377px;
+        }
+        .homepage-comments-ul {
+            height: 330px;
+            overflow: auto;
+            margin: 10px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .homepage-social-media-area {
+            position: absolute;
+            right: -35px;
+            width: 35px;
+            display: block;
+            margin:  0 15px 0 0;
+            text-align: center;
+        }
+        .homepage-social-media-area-a, .homepage-social-media-area-a:active, .homepage-social-media-area-a:focus, .homepage-social-media-area-a:visited {
+            color: #4e5d6c;
+            text-decoration: none;
+        }
+        .homepage-social-media-area-a:hover {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .input-group-addon, .input-group-addon:active, .input-group-addon:focus, .input-group-addon:hover, .input-group-addon:visited {
+            border: 2px solid #ffffff;
+            background: none !important;
+        }
+        .btn-default, .btn-default:active, .btn-default:focus, .btn-default:hover, .btn-default:visited {
+            border: 2px solid #ffffff;
+            background: none !important;
+            padding: 7px 10px;
+            font-weight: 500;
+        }
+        .homepage-h3 {
+            margin: 10px 0 0 0;
+            padding: 5px;
+            font-size: 16px;
+            background: #333;
+        }
+        .homepage-about-us-wrapper {
+            background: #4e5d6c;
+            width: 100%;
+            overflow: auto;
+        }
+        .homepage-about-us-ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px;
+            overflow: auto;
+        }
+        .homepage-about-us-li {
+            width: 33.33%;
+            float: left;
+            padding: 0 10px;
+            text-align: center;
+        }
+        .img-li {
+            padding: 10px 20px 20px 20px;
+        }
+        .homepage-h4 {
+            font-weight: 700;
+        }
+        .homepage-cta-area {
+            margin: 10px 0 0 0;
+        }
+        .homepage-cta-area-wrapper {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/survey.jpg) no-repeat 50% 30%;
+            background-size: cover;
+            height: 200px;
+            display: table;
+            width: 100%;
+            border: 1px solid #333333;
+        }
+        .homepage-cta {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .homepage-cta-h3 {
+            margin: 20px 0;
+        }
+        .homepage-cta-a, .homepage-cta-a:active, .homepage-cta-a:focus, .homepage-cta-a:visited {
+            padding: 5px 10px;
+            display: block;
+            border: 2px solid #ccc;
+            width: 150px;
+            margin: 10px auto;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .homepage-cta-a:hover {
+            text-decoration: none;
+            background: #ccc;
+            color: #333333;
+            border: 2px solid #fff;
+        }
+        .homepage-cta-strong {
+            background: #ffffff;
+            color: #333333;
+            padding: 3px 5px;
+        }
+        .no-margin-h3 {
+            margin: 0;
+        }
+        .right-margin-h3 {
+            margin: 0 10px 0 0;
+        }
+        .homepage-numbers-area {
+            overflow: auto;
+        }
+        .homepage-numbers-area-wrapper {
+            margin: 10px 0 0 0;
+            overflow: auto;
+        }
+        .homepage-numbers-area-box {
+            float: left;
+            width: 25%;
+        }
+        .homepage-numbers-area-ul {
+            margin: 0 10px 10px 0;
+            padding: 0;
+            list-style-type: none;
+            overflow: auto;
+            min-height: 155px;
+        }
+        .no-margin-ul {
+            margin: 0 0 10px 0;
+        }
+        .homepage-numbers-area-li {
+            background: #4e5d6c;
+            padding: 5px;
+            width: 50%;
+            float: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .homepage-numbers-area-a, .homepage-numbers-area-a:active, .homepage-numbers-area-a:focus, .homepage-numbers-area-a:hover, .homepage-numbers-area-a:visited {
+            color: #ccc;
+        }
+        .homepage-areacodes-area {
+            background: #4e5d6c;
+            overflow: auto;
+        }
+        .homepage-areacodes-area-left {
+            width: 60%;
+            float: left;
+        }
+        .homepage-areacodes-map {
+            width: 640px;
+            overflow: auto;
+            margin: 10px auto;
+        }
+         .homepage-footer {
+            margin: 20px 0 0 0;
+            border-top: 1px solid #cccccc;
+        }
+        .homepage-footer-area-one, .homepage-footer-area-two, .homepage-footer-area-three {
+            width: 33.33%;
+            float: left;
+            min-height: 10px;
+        }
+        .homepage-footer-menu {
+            margin: 10px;
+        }
+        .homepage-footer-menu-ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .homepage-footer-menu-a, .homepage-footer-menu-a:active, .homepage-footer-menu-a:focus, .homepage-footer-menu-a:hover, .homepage-footer-menu-a:visited {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .homepage-footer-copyright {
+            text-align: right;
+            margin: 10px;
+            font-size: 12px;
+            color: #cccccc;
+        }
+        .homepage-back-to-top {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            display: none;
+        }
+        .homepage-back-to-top-a, .homepage-back-to-top-a:active, .homepage-back-to-top-a:focus, .homepage-back-to-top-a:visited {
+            color: #4e5d6c;
+            text-decoration: none;
+        }
+        .homepage-back-to-top-a:hover {
+            color: #ccc;
+            text-decoration: none
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <style>
-                    .homepage-header {
-                        overflow: auto;
-                        border-bottom: 1px solid #cccccc;
-                        margin: 0 0 20px 0;
-                    }
-                    .homepage-header-h1 {
-                        text-align: center;
-                    }
-                    .homepage-header-h1-a, .homepage-header-h1-a:active, .homepage-header-h1-a:focus, .homepage-header-h1-a:hover, .homepage-header-h1-a:visited {
-                        color: #ffffff;
-                        text-decoration: none;
-                    }
-                </style>
                 <div id="top"></div>
                 <div class="homepage-header">
                     <h1 class="homepage-header-h1"><a href="#" class="homepage-header-h1-a">Number-Index.com</a></h1>
                 </div>
-                <style>
-                    .homepage-welcome-area {
-                        margin: 0;
-                        overflow: auto;
-                    }
-                    .homepage-welcome-msg-area {
-                        color: #333;
-                        height: 300px;
-                        width: 100%;
-                        display: table;
-                        background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(images/hero1.jpg) no-repeat 50% 30%;
-                        background-size: cover;
-                        margin: 0;
-                        border: 1px solid #333333;
-                    }
-                    .homepage-welcome-msg-area-wrapper {
-                        display: table-cell;
-                        vertical-align: middle;
-                        text-align: center;
-                        margin: 0 auto;
-                    }
-                    .homepage-h2 {
-                        color: #ffffff;
-                        margin: 0;
-                        font-weight: 500;
-                    }
-                    .homepage-welcome-p {
-                        color: #ffffff;
-                        padding: 10px;
-                        font-size: 18px;
-                    }
-                    .homepage-search-form {
-                        width: 400px;
-                        margin: auto;
-                    }
-                    .form-group {
-                        margin: 0;
-                    }
-                    .homepage-map-area {
-                        width: 50%;
-                        float: left;
-                    }
-                    .map-canvas {
-                        width: 100%;
-                        height: 350px;
-                    }
-                    .homepage-comments-area {
-                        width: 50%;
-                        float: right;
-                    }
-                    .homepage-comments-area-wrapper {
-                        margin: 10px 0 0 10px;
-                        background: #4e5d6c;
-                        height: 377px;
-                    }
-                    .homepage-comments-ul {
-                        height: 330px;
-                        overflow: auto;
-                        margin: 10px;
-                        list-style-type: none;
-                        padding: 0;
-                    }
-                </style>
-
-                <style>
-                    .homepage-social-media-area {
-                        position: absolute;
-                        right: -35px;
-                        width: 35px;
-                        display: block;
-                        margin:  0 15px 0 0;
-                        text-align: center;
-                    }
-                    .homepage-social-media-area-a, .homepage-social-media-area-a:active, .homepage-social-media-area-a:focus, .homepage-social-media-area-a:visited {
-                        color: #4e5d6c;
-                        text-decoration: none;
-                    }
-                    .homepage-social-media-area-a:hover {
-                        color: #ccc;
-                        text-decoration: none;
-                    }
-                </style>
                 <div class="homepage-social-media-area">
                     <a href="#" class="homepage-social-media-area-a"><i class="fa fa-facebook-square fa-2x"></i></a>
                     <a href="#" class="homepage-social-media-area-a"><i class="fa fa-twitter-square fa-2x"></i></a>
                     <a href="#" class="homepage-social-media-area-a"><i class="fa fa-google-plus-square fa-2x"></i></a>
                     <a href="#" class="homepage-social-media-area-a"><i class="fa fa-envelope-square fa-2x"></i></a>
                 </div>
-
                 <div class="homepage-welcome-area">
                     <div class="homepage-welcome-msg-area">
                         <div class="homepage-welcome-msg-area-wrapper">
                             <h2 class="homepage-h2">When you just have to find out who it was...</h2>
                             <p class="homepage-welcome-p">"Treasure trove of useful information and advice on dealing with unwanted calls and callers."</p>
                             <div class="homepage-search-form">
-
-                                <style>
-                                    .input-group-addon, .input-group-addon:active, .input-group-addon:focus, .input-group-addon:hover, .input-group-addon:visited {
-                                        border: 2px solid #ffffff;
-                                        background: none !important;
-                                    }
-                                    .btn-default, .btn-default:active, .btn-default:focus, .btn-default:hover, .btn-default:visited {
-                                        border: 2px solid #ffffff;
-                                        background: none !important;
-                                        padding: 7px 10px;
-                                        font-weight: 500;
-                                    }
-                                </style>
                                 <div class="form-group">
                                   <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-search"></i></span>
@@ -224,37 +376,6 @@
                     </div>
                 </div>
                 <div class="clear"></div>
-                <style>
-                    .homepage-h3 {
-                        margin: 10px 0 0 0;
-                        padding: 5px;
-                        font-size: 16px;
-                        background: #333;
-                    }
-                    .homepage-about-us-wrapper {
-                        background: #4e5d6c;
-                        width: 100%;
-                        overflow: auto;
-                    }
-                    .homepage-about-us-ul {
-                        list-style-type: none;
-                        padding: 0;
-                        margin: 10px;
-                        overflow: auto;
-                    }
-                    .homepage-about-us-li {
-                        width: 33.33%;
-                        float: left;
-                        padding: 0 10px;
-                        text-align: center;
-                    }
-                    .img-li {
-                        padding: 10px 20px 20px 20px;
-                    }
-                    .homepage-h4 {
-                        font-weight: 700;
-                    }
-                </style>
                 <div class="homepage-about-us">
                     <h3 class="homepage-h3">What is Number-Index.com?</h3>
                     <div class="homepage-about-us-wrapper">
@@ -284,121 +405,20 @@
                     </div>
                 </div>
                 <div class="clear"></div>
-                <style>
-                    .homepage-cta-area {
-                        margin: 10px 0 0 0;
-                    }
-                    .homepage-cta-area-wrapper {
-                        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/survey.jpg) no-repeat 50% 30%;
-                        background-size: cover;
-                        height: 200px;
-                        display: table;
-                        width: 100%;
-                        border: 1px solid #333333;
-                    }
-                    .homepage-cta {
-                        display: table-cell;
-                        vertical-align: middle;
-                        text-align: center;
-                        margin: 0 auto;
-                    }
-                    .homepage-cta-h3 {
-                        margin: 20px 0;
-                    }
-                    .homepage-cta-a, .homepage-cta-a:active, .homepage-cta-a:focus, .homepage-cta-a:visited {
-                        padding: 5px 10px;
-                        display: block;
-                        border: 2px solid #ccc;
-                        width: 150px;
-                        margin: 10px auto;
-                        font-size: 16px;
-                        font-weight: bold;
-                        color: #ffffff;
-                        text-decoration: none;
-                    }
-                    .homepage-cta-a:hover {
-                        text-decoration: none;
-                        background: #ccc;
-                        color: #333333;
-                        border: 2px solid #fff;
-                    }
-                    .homepage-cta-strong {
-                        background: #ffffff;
-                        color: #333333;
-                        padding: 3px 5px;
-                    }
-                </style>
                 <div class="homepage-cta-area">
                     <div class="homepage-cta-area-wrapper">
                         <div class="homepage-cta">
                             <h3 class="homepage-cta-h3">Hey, would you be kind enough to <strong class="homepage-cta-strong">do us a favour</strong> and </h3>
                             <a href="#" class="homepage-cta-a">Take a Survey</a>
                         </div>
-
                     </div>
                 </div>
                 <div class="clear"></div>
-                <style>
-                    .homepage-numbers-area {
-                        overflow: auto;
-                    }
-                    .homepage-numbers-area-wrapper {
-                        margin: 10px 0 0 0;
-                        overflow: auto;
-                    }
-                    .homepage-numbers-area-box {
-                        float: left;
-                        width: 50%;
-                    }
-                    .homepage-numbers-area-ul {
-                        margin: 0 10px 10px 0;
-                        padding: 0;
-                        list-style-type: none;
-                        overflow: auto;
-                        min-height: 155px;
-                    }
-                    .right-margin-h3 {
-                        margin: 0 10px 0 0;
-                    }
-                    .no-margin-h3 {
-                        margin: 0;
-                    }
-                    .no-margin-ul {
-                        margin: 0 0 10px 0;
-                    }
-                    .homepage-numbers-area-li {
-                        background: #4e5d6c;
-                        padding: 5px;
-                        width: 20%;
-                        float: left;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-                    .homepage-numbers-area-a, .homepage-numbers-area-a:active, .homepage-numbers-area-a:focus, .homepage-numbers-area-a:hover, .homepage-numbers-area-a:visited {
-                        color: #ccc;
-                    }
-                </style>
                 <div class="homepage-numbers-area">
                     <div class="homepage-numbers-area-wrapper">
                         <div class="homepage-numbers-area-box">
                             <h3 class="homepage-h3 right-margin-h3">Most visited</h3>
                             <ul class="homepage-numbers-area-ul">
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890123456</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
                                 <li class="homepage-numbers-area-li">
                                     <a href="#" class="homepage-numbers-area-a">1234567890</a>
                                 </li>
@@ -462,23 +482,8 @@
                             </ul>
                         </div>
                         <div class="homepage-numbers-area-box">
-                            <h3 class="homepage-h3 no-margin-h3">Most commented</h3>
-                            <ul class="homepage-numbers-area-ul no-margin-ul">
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
+                            <h3 class="homepage-h3 right-margin-h3">Most commented</h3>
+                            <ul class="homepage-numbers-area-ul">
                                 <li class="homepage-numbers-area-li">
                                     <a href="#" class="homepage-numbers-area-a">1234567890</a>
                                 </li>
@@ -604,21 +609,6 @@
                                 <li class="homepage-numbers-area-li">
                                     <a href="#" class="homepage-numbers-area-a">1234567890</a>
                                 </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
                             </ul>
                         </div>
                         <div class="homepage-numbers-area-box">
@@ -684,43 +674,11 @@
                                 <li class="homepage-numbers-area-li">
                                     <a href="#" class="homepage-numbers-area-a">1234567890</a>
                                 </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
-                                <li class="homepage-numbers-area-li">
-                                    <a href="#" class="homepage-numbers-area-a">1234567890</a>
-                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="clear"></div>
-                <style>
-                    .homepage-areacodes-area {
-                        background: #4e5d6c;
-                        overflow: auto;
-                    }
-                    .homepage-areacodes-area-left {
-                        width: 60%;
-                        float: left;
-                    }
-                    .homepage-areacodes-map {
-                        width: 640px;
-                        overflow: auto;
-                        margin: 10px auto;
-                    }
-                    .homepage-areacodes-infobox {
-                    }
-                </style>
                 <div class="homepage-areacodes-area">
                     <h3 class="homepage-h3 no-margin-h3">Area codes</h3>
                     <div class="homepage-areacodes-area-left">
@@ -728,13 +686,11 @@
                             <img src="images/usa_map_.png" alt="" usemap="#Map" class="homepage-areacodes-img" />
                             <map name="Map" id="Map">
                                 <area alt="" title="" href="#" shape="poly" coords="47,8,49,29,46,40,55,46,57,52,70,55,88,56,96,56,113,62,123,20,69,6,71,21,65,17,57,15" data-areacode="206, 253, 360, 425, 509"  data-state="Washington"/>
-                                <area alt="" title="" href="#" shape="rect" coords="25,99" />
                                 <area alt="" title="" href="#" shape="poly" coords="24,100,99,118,108,88,105,87,108,81,112,76,118,67,113,63,97,58,84,57,75,57,65,54,60,55,55,53,55,45,46,41,37,67,31,81,25,86" data-areacode="503, 541, 971" data-state="Oregon"/>
             <area alt="" title="" href="#" shape="poly" coords="25,101,21,114,16,123,19,133,16,146,21,156,21,161,24,165,24,175,28,179,25,187,36,210,34,219,45,223,55,231,58,237,63,236,67,244,67,251,98,256,101,253,99,250,102,248,103,241,108,239,104,227,58,157,69,111" data-areacode="209, 213, 310, 323, 408, 415, 510, 530, 559, 562, 619, 626, 650, 661, 707, 714, 760, 805, 818, 831, 858, 909, 916, 925, 949" data-state="California"/>
                                 <area alt="" title="" href="#" shape="poly" coords="69,110,131,124,117,209,113,212,107,209,106,224,105,226,57,156" data-areacode="702, 775" data-state="Nevada"/>
             <area alt="" title="" href="#" shape="poly" coords="163,130,131,124,119,200,174,208,183,148,161,145" data-areacode="435, 801" data-state="Utah"/>
                                 <area alt="" title="" href="#" shape="poly" coords="95,257,139,284,163,287,174,207,119,200,115,212,108,209,104,228,108,238,103,244,99,251,103,254" data-areacode="480, 520, 602, 623, 928" data-state="Arizona"/>
-                                <area alt="" title="" href="#" shape="rect" coords="131,125" />
                                 <area alt="" title="" href="#" shape="poly" coords="132,21,125,19,115,61,105,86,109,89,100,116,163,130,169,93,166,92,153,92,149,93,149,87,145,85,145,73,136,73,141,59,129,44,132,40,129,36,133,21" data-areacode="208" data-state="Idaho">
                                 <area alt="" title="" href="#" shape="poly" coords="247,38,201,33,167,28,134,21,129,36,132,38,130,44,141,58,137,72,143,72,145,84,149,90,149,93,158,92,167,90,168,94,170,87,241,95" data-areacode="406" data-state="Montana"/>
                                 <area alt="" title="" href="#" shape="poly" coords="241,96,170,87,161,147,237,155,238,126" data-areacode="307" data-state="Wyoming"/>
@@ -759,29 +715,28 @@
                                 <area alt="" title="" href="#" shape="poly" coords="423,141,416,146,417,179,418,188,415,199,425,199,433,195,437,195,441,189,443,186,448,184,447,171,445,153,443,140" data-areacode="219, 260, 317, 574, 765, 812" data-state="Indiana" />
                                 <area alt="" title="" href="#" shape="poly" coords="449,179,454,179,457,183,465,183,473,181,477,185,478,189,480,195,485,198,477,209,471,213,442,216,415,219,415,220,400,221,401,215,404,211,408,213,409,207,415,205,415,200,426,199,437,195" data-areacode="270, 502, 606, 859" data-state="Kentucky" />
                                 <area alt="" title="" href="#" shape="poly" coords="399,220,393,237,395,243,463,236,470,227,491,208,417,216,414,220" data-areacode="423, 615, 731, 865, 901, 931" data-state="Tennessee" />
-                                <area alt="" title="" href="#" shape="poly" coords="492,208,489,215,481,219,470,226,463,234,478,234,486,229,504,229,506,231,518,231,535,240,543,239,545,230,555,226,559,222,555,218,555,215,559,216,564,208,557,196,535,202,509,206" />
+                                <area alt="" title="" href="#" shape="poly" coords="492,208,489,215,481,219,470,226,463,234,478,234,486,229,504,229,506,231,518,231,535,240,543,239,545,230,555,226,559,222,555,218,555,215,559,216,564,208,557,196,535,202,509,206" data-areacode="252, 336, 704, 828, 910, 919, 980" data-state="North Carolina" />
                                 <area alt="" title="" href="#" shape="poly" coords="420,239,395,241,386,259,385,274,387,281,381,296,382,300,404,300,407,312,413,308,423,306,419,288" data-areacode="228, 601, 662" data-state="Mississippi" />
                                 <area alt="" title="" href="#" shape="poly" coords="425,307,427,304,429,311,433,308,433,301,430,298,461,295,460,284,461,274,449,237,421,239,419,288" data-areacode="205, 251, 256, 334" data-state="Alabama" />
                                 <area alt="" title="" href="#" shape="poly" coords="431,299,461,296,465,299,496,297,501,301,500,293,508,294,511,306,519,317,524,323,524,325,529,335,534,347,535,363,534,371,525,372,522,366,516,363,511,357,509,359,504,349,499,343,497,339,496,331,497,325,492,319,484,313,479,307,473,308,473,311,467,313,461,315,459,311,455,308,442,307,434,309,431,311,435,305" data-areacode="239, 305, 321, 352, 386, 407, 561, 727, 754, 772, 786, 813, 850, 863, 904, 941, 954" data-state="Florida" />
                                 <area alt="" title="" href="#" shape="poly" coords="478,235,450,239,458,267,462,277,460,285,463,295,466,299,499,298,503,301,501,294,507,294,511,273,508,273,504,268,503,261,486,251,481,243,475,239,477,234" data-areacode="229, 404, 478, 678, 706, 770, 912" data-state="Georgia" />
                                 <area alt="" title="" href="#" shape="poly" coords="461,139,444,141,449,180,454,179,460,183,472,181,477,185,482,175,485,175,485,172,487,169,492,167,495,149,491,130,483,139,472,142,469,141,463,139,460,139" data-areacode="216, 234, 330, 419, 440, 513, 567, 614, 740, 937" data-state="Ohio"  />
-                                <area alt="" title="" href="#" shape="poly" coords="477,235,489,229,503,230,507,233,519,231,534,243,530,247,529,255,511,273,504,267,501,260,492,252,485,246,482,243,477,241,477,235" />
-                                <area alt="" title="" href="#" shape="rect" coords="463,236" />
-                                <area alt="" title="" href="#" shape="poly" coords="485,197,494,200,505,194,506,190,509,184,509,177,515,178,516,174,521,168,524,162,529,165,530,161,535,164,535,169,537,172,539,174,547,176,549,181,551,185,550,186,552,190,551,193,555,193,559,196,476,210" />
-                                <area alt="" title="" href="#" shape="poly" coords="495,147,493,162,485,171,484,176,477,186,488,201,504,196,511,177,515,178,521,169,524,162,530,164,530,161,524,157,510,166,509,158,499,162,498,162" />
-                                <area alt="" title="" href="#" shape="poly" coords="511,160,510,167,523,159,535,165,540,165,541,169,537,171,539,175,548,177,544,167,545,161,547,165,548,174,553,178,554,189,557,185,561,177,561,170,554,170,550,153" />
-                                <area alt="" title="" href="#" shape="poly" coords="537,164,536,170,541,171,543,167,541,164" />
-                                <area alt="" title="" href="#" shape="poly" coords="553,149,550,151,553,169,561,168,558,162,553,155,551,154" />
-                                <area alt="" title="" href="#" shape="poly" coords="498,123,491,128,497,160,551,152,557,143,551,138,553,126,546,118,500,128" />
-                                <area alt="" title="" href="#" shape="poly" coords="502,107,506,115,500,125,501,129,546,120,553,127,565,131,565,138,583,127,581,126,567,128,565,121,563,108,564,93,559,87,557,73,540,75,532,89,529,90,531,99,523,105,513,107" />
-                                <area alt="" title="" href="#" shape="poly" coords="554,126,566,129,566,136,566,152,561,159,553,154,558,146,551,139" />
+                                <area alt="" title="" href="#" shape="poly" coords="477,235,489,229,503,230,507,233,519,231,534,243,530,247,529,255,511,273,504,267,501,260,492,252,485,246,482,243,477,241,477,235" data-areacode="803, 843, 864" data-state="South Carolina" />
+                                <area alt="" title="" href="#" shape="poly" coords="485,197,494,200,505,194,506,190,509,184,509,177,515,178,516,174,521,168,524,162,529,165,530,161,535,164,535,169,537,172,539,174,547,176,549,181,551,185,550,186,552,190,551,193,555,193,559,196,476,210" data-areacode=276, 434, 540, 571, 703, 757, 804" data-state="Virginia" />
+                                <area alt="" title="" href="#" shape="poly" coords="495,147,493,162,485,171,484,176,477,186,488,201,504,196,511,177,515,178,521,169,524,162,530,164,530,161,524,157,510,166,509,158,499,162,498,162" data-areacode="304" data-state="West Virginia" />
+                                <area alt="" title="" href="#" shape="poly" coords="511,160,510,167,523,159,535,165,540,165,541,169,537,171,539,175,548,177,544,167,545,161,547,165,548,174,553,178,554,189,557,185,561,177,561,170,554,170,550,153" data-areacode="240, 301, 410, 443" data-state="Maryland" />
+                                <area alt="" title="" href="#" shape="poly" coords="537,164,536,170,541,171,543,167,541,164" data-areacode="202" data-state="District of Columbia" />
+                                <area alt="" title="" href="#" shape="poly" coords="553,149,550,151,553,169,561,168,558,162,553,155,551,154" data-areacode="302" data-state="Delaware" />
+                                <area alt="" title="" href="#" shape="poly" coords="498,123,491,128,497,160,551,152,557,143,551,138,553,126,546,118,500,128" data-areacode="215, 267, 412, 484, 570, 610, 717, 724, 814, 878" data-state="Pennsylvania" />
+                                <area alt="" title="" href="#" shape="poly" coords="502,107,506,115,500,125,501,129,546,120,553,127,565,131,565,138,583,127,581,126,567,128,565,121,563,108,564,93,559,87,557,73,540,75,532,89,529,90,531,99,523,105,513,107" data-areacode="212, 315, 347, 516, 518, 585, 607, 631, 646, 716, 718, 845, 914, 917" data-state="New York" />
+                                <area alt="" title="" href="#" shape="poly" coords="554,126,566,129,566,136,566,152,561,159,553,154,558,146,551,139" data-areacode="201, 551, 609, 732, 848, 856, 862, 908, 973" data-state="New Jersey" />
                                 <area alt="" title="" href="#" shape="rect" coords="553,127" />
-                                <area alt="" title="" href="#" shape="poly" coords="557,72,574,66,575,74,571,79,572,88,572,102,564,104,564,96,561,91,559,84,558,74" />
-                                <area alt="" title="" href="#" shape="poly" coords="573,67,576,75,573,80,572,95,573,102,589,97,588,91,585,91,577,63" />
-                                <area alt="" title="" href="#" shape="poly" coords="565,104,590,97,588,105,594,105,596,109,603,109,592,117,587,110,565,114" />
-                                <area alt="" title="" href="#" shape="poly" coords="581,110,587,109,590,115,585,118" />
-                                <area alt="" title="" href="#" shape="poly" coords="581,111,584,120,573,125,567,129,565,115" />
-                                <area alt="" title="" href="#" shape="poly" coords="579,60,582,52,582,45,582,38,587,28,590,29,595,24,601,29,608,48,612,48,613,52,616,53,619,57,610,66,607,72,604,68,603,72,600,78,595,82,593,81,591,88,589,93,588,90,585,90,577,63" />
+                                <area alt="" title="" href="#" shape="poly" coords="557,72,574,66,575,74,571,79,572,88,572,102,564,104,564,96,561,91,559,84,558,74" data-areacode="802" data-state="Vermont" />
+                                <area alt="" title="" href="#" shape="poly" coords="573,67,576,75,573,80,572,95,573,102,589,97,588,91,585,91,577,63" data-areacode="603" data-state="New Hampshire" />
+                                <area alt="" title="" href="#" shape="poly" coords="565,104,590,97,588,105,594,105,596,109,603,109,592,117,587,110,565,114" data-areacode="339, 351, 413, 508, 617, 774, 781, 857, 978" data-state="Massachusetts" />
+                                <area alt="" title="" href="#" shape="poly" coords="581,110,587,109,590,115,585,118" data-areacode="401" data-state="Rhode Island" />
+                                <area alt="" title="" href="#" shape="poly" coords="581,111,584,120,573,125,567,129,565,115" data-areacode="203, 860" data-state="Connecticut" />
+                                <area alt="" title="" href="#" shape="poly" coords="579,60,582,52,582,45,582,38,587,28,590,29,595,24,601,29,608,48,612,48,613,52,616,53,619,57,610,66,607,72,604,68,603,72,600,78,595,82,593,81,591,88,589,93,588,90,585,90,577,63" data-areacode="207" data-state="Maine" />
                                 <area alt="" title="" href="#" shape="poly" coords="219,370,215,370,215,375,216,386,218,390,224,386,231,382,225,374,211,365,201,363,197,356,205,356,215,360" data-areacode="808" data-state="Hawaii" />
                                 <area alt="" title="" href="#" shape="poly" coords="192,354,187,348,181,351,185,354,191,353"  data-areacode="808" data-state="Hawaii" />
                                 <area alt="" title="" href="#" shape="poly" coords="155,346,169,341,167,347,157,346" data-areacode="808" data-state="Hawaii" />
@@ -803,34 +758,6 @@
                     </script>
                 </div>
                 <div class="clear"></div>
-                <style>
-                    .homepage-footer {
-                        margin: 20px 0 0 0;
-                        border-top: 1px solid #cccccc;
-                    }
-                    .homepage-footer-area-one, .homepage-footer-area-two, .homepage-footer-area-three {
-                        width: 33.33%;
-                        float: left;
-                        min-height: 10px;
-                    }
-                    .homepage-footer-menu {
-                        margin: 10px;
-                    }
-                    .homepage-footer-menu-ul {
-                        list-style-type: none;
-                        padding: 0;
-                    }
-                    .homepage-footer-menu-a, .homepage-footer-menu-a:active, .homepage-footer-menu-a:focus, .homepage-footer-menu-a:hover, .homepage-footer-menu-a:visited {
-                        color: #ccc;
-                        text-decoration: none;
-                    }
-                    .homepage-footer-copyright {
-                        text-align: right;
-                        margin: 10px;
-                        font-size: 12px;
-                        color: #cccccc;
-                    }
-                </style>
                 <div class="homepage-footer">
                     <div class="homepage-footer-area-one">
                         <div class="homepage-footer-menu">
@@ -853,22 +780,6 @@
                         </div>
                     </div>
                 </div>
-                <style>
-                    .homepage-back-to-top {
-                        position: fixed;
-                        bottom: 10px;
-                        right: 10px;
-                        display: none;
-                    }
-                    .homepage-back-to-top-a, .homepage-back-to-top-a:active, .homepage-back-to-top-a:focus, .homepage-back-to-top-a:visited {
-                        color: #4e5d6c;
-                        text-decoration: none;
-                    }
-                    .homepage-back-to-top-a:hover {
-                        color: #ccc;
-                        text-decoration: none
-                    }
-                </style>
                 <div class="homepage-back-to-top">
                     <a href="#top" class="homepage-back-to-top-a"><i class="fa fa-caret-square-o-up fa-3x"></i></a>
                 </div>
